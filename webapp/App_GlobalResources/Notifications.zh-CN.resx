@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="Contract_EndReminderBody" xml:space="preserve">
+    <value>亲爱的{0}， &lt;br&gt; &lt;br&gt;该合同{ObjectNumber}即将到期。合同的详情如下： &lt;br&gt; &lt;br&gt;合同编号：{ObjectNumber} &lt;br&gt;合约名称： &lt;br&gt;  {ObjectName} &lt;br&gt;描述： &lt;br&gt;  {Description} &lt;br&gt; &lt;br&gt;合约开始：{ContractStartDate：dd-MMM-yyyy} &lt;br&gt;合同结束：{ContractEndDate：dd-MMM-yyyy} &lt;br&gt; &lt;br&gt;联系人：{ContactPerson} &lt;br&gt;联系传真：{ContactFax} &lt;br&gt;联系邮件：{ContactEmail} &lt;br&gt;联系手机：{ContactCellphone} &lt;br&gt; &lt;br&gt;合同管理：{ContractManager.ObjectName} &lt;br&gt; &lt;br&gt;条款： &lt;br&gt;{Terms} &lt;br&gt; &lt;br&gt;保修： &lt;br&gt;{Warranty} &lt;br&gt; &lt;br&gt;保险： &lt;br&gt;{Insurance}</value>
+  </data>
+	<data name="Contract_EndReminderSubject" xml:space="preserve">
+    <value>合同到期{0}，{1}</value>
+  </data>
+	<data name="Work_EscalationAckBody" xml:space="preserve">
+    <value>亲爱的{0}， &lt;br&gt; &lt;br&gt;这项工作{ObjectNumber}尚待确认。工作的详情如下： &lt;br&gt; &lt;br&gt;位置路径：{Location.Path} &lt;br&gt;设备路径：{Equipment.Path} &lt;br&gt;职位描述：{WorkDescription} &lt;br&gt; &lt;br&gt;类型的工作：{TypeOfWork.ObjectName} &lt;br&gt;服务类型：{TypeOfService.ObjectName} &lt;br&gt;问题类型：{TypeOfProblem.ObjectName} &lt;br&gt;优先：{Priority} &lt;br&gt; &lt;br&gt;预定开始：{ScheduledStartDateTime} &lt;br&gt;预定结束：{ScheduledEndDateTime} &lt;br&gt; &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;分配对象： &lt;br&gt;承建商：{Contract.Vendor.ObjectName} &lt;br&gt;技术员：{AssignedTechniciansNames} &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;这是供大家参考。</value>
+  </data>
+	<data name="Work_EscalationAckSubject" xml:space="preserve">
+    <value>工作{0} -升级，仍有待确认</value>
+  </data>
+	<data name="Work_EscalationArrBody" xml:space="preserve">
+    <value>亲爱的{0}， &lt;br&gt; &lt;br&gt;这项工作{ObjectNumber}仍悬而未决抵达现场。工作的详情如下： &lt;br&gt; &lt;br&gt;位置路径：{Location.Path} &lt;br&gt;设备路径：{Equipment.Path} &lt;br&gt;职位描述：{WorkDescription} &lt;br&gt; &lt;br&gt;类型的工作：{TypeOfWork.ObjectName} &lt;br&gt;服务类型：{TypeOfService.ObjectName} &lt;br&gt;问题类型：{TypeOfProblem.ObjectName} &lt;br&gt;优先：{Priority} &lt;br&gt; &lt;br&gt;预定开始：{ScheduledStartDateTime} &lt;br&gt;预定结束：{ScheduledEndDateTime} &lt;br&gt; &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;分配对象： &lt;br&gt;承建商：{Contract.Vendor.ObjectName} &lt;br&gt;技术员：{AssignedTechniciansNames} &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;这是供大家参考。</value>
+  </data>
+	<data name="Work_EscalationArrSubject" xml:space="preserve">
+    <value>工作{0} -升级，仍有待抵达现场</value>
+  </data>
+	<data name="Work_EscalationComBody" xml:space="preserve">
+    <value>亲爱的{0}， &lt;br&gt; &lt;br&gt;这项工作{ObjectNumber}尚待完成。工作的详情如下： &lt;br&gt; &lt;br&gt;位置路径：{Location.Path} &lt;br&gt;设备路径：{Equipment.Path} &lt;br&gt;职位描述：{WorkDescription} &lt;br&gt; &lt;br&gt;类型的工作：{TypeOfWork.ObjectName} &lt;br&gt;服务类型：{TypeOfService.ObjectName} &lt;br&gt;问题类型：{TypeOfProblem.ObjectName} &lt;br&gt;优先：{Priority} &lt;br&gt; &lt;br&gt;预定开始：{ScheduledStartDateTime} &lt;br&gt;预定结束：{ScheduledEndDateTime} &lt;br&gt; &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;分配对象： &lt;br&gt;承建商：{Contract.Vendor.ObjectName} &lt;br&gt;技术员：{AssignedTechniciansNames} &lt;br&gt;-------------------------------------------------- --------------------------- &lt;br&gt;这是供大家参考。</value>
+  </data>
+	<data name="Work_EscalationComSubject" xml:space="preserve">
+    <value>工作{0} -升级，仍尚待完成</value>
+  </data>
+	<data name="Work_SmsNotifyExecution" xml:space="preserve">
+    <value>亲爱的{0}，工作{1} -待您的执行。优先：{2} 说明：{3}</value>
+  </data>
+	<data name="Work_SmsNotifyPendingPlanning" xml:space="preserve">
+    <value>亲爱的{0}，工作{1} -待您的规划。优先：{2} 说明：{3}</value>
+  </data>
+	<data name="Store_InventorySubject" xml:space="preserve">
+    <value>仓库低库存通知- {0}</value>
+  </data>
+	<data name="Store_InventoryBody1" xml:space="preserve">
+    <value>亲爱的仓库管理员，\ n以下清单上的项目已经低于它们的临界值。请补充这些项目。\ n\n仓库名称：{0}\ n仓库位置：{1} \n\n库存物品跌破临界值：\n{2：50}{3：40}{4：40}{5：40}{6：40}{7：40}</value>
+  </data>
+	<data name="Store_InventoryBody2" xml:space="preserve">
+    <value>{Catalogue.ObjectName}{Catalogue.UnitOfMeasure：40}{TotalAvailableQuantity：40}{TotalPhysicalQuantity：40}{ReorderThreshold：40}{ReorderDefault：40）</value>
+  </data>
+	<data name="Work_NotifyExecutionBody" xml:space="preserve">
+    <value>工作号码{0}已被接受和分配。</value>
+  </data>
+	<data name="Work_NotifyExecutionSubject" xml:space="preserve">
+    <value>工作号码{0} - 已被接受和分配</value>
+  </data>
+	<data name="Insurance_EndReminderBody" xml:space="preserve">
+    <value>亲爱的{0}，\n\ n下列保险结束日期临近。\n\n保险详情：\ nI保险名称：{ObjectName} \n保险开始日期：{InsuranceStartDate：dd-MMM-yyyy} \n保险结束日期：{InsuranceEndDate：dd-MMM-yyyy} \ n投保金额：{InsuredAmount :#,## 0.00} \n保险条款：{InsuranceTerms} \n保险备注：{InsuranceRemarks} \n\n保险公司详情：\n公司名称：{CompanyName}\n联系人：{CompanyContactPerson}\n联系号码：{CompanyContactNumber} \n邮政地址：{CompanyPostalAddress}</value>
+  </data>
+	<data name="Insurance_EndReminderSubject" xml:space="preserve">
+    <value>保险结束日期临近- {0}</value>
+  </data>
+	<data name="Vendor_EndReminderBody" xml:space="preserve">
+    <value>亲爱的{0}，\n\n以下供应商的排外结束日期临近。\n\n供应商详情：\n供应商名称：{ObjectName}\n供应商取消资格期限：从{DebarmentStartDate：dd-MMM-yyyy}至{DebarmentEndDate：dd-MMM-yyyy}\n\n供应商国家：{OperatingAddressCountry}\n供应商城市：{OperatingAddressCity}\n供应商省份：{OperatingAddressState} &lt;br&gt;供应商地址：{OperatingAddress}\n供应商手提电话：{OperatingCellPhone}\n供应商电邮：{OperatingEmail}\n供应商传真：{OperatingFax}\n供应商电话：{OperatingPhone}\n供应商联系人：{OperatingContactPerson}</value>
+  </data>
+	<data name="Vendor_EndReminderSubject" xml:space="preserve">
+    <value>供应商取消资格结束日期临近- {0}</value>
+  </data>
+	<data name="Work_SmsSupervisorNotify" xml:space="preserve">
+    <value>亲爱的{0}，工作{1}已分配。请更新状态</value>
+  </data>
+	<data name="VendorApplication_EndReminderBody" xml:space="preserve">
+    <value>致财务：&lt;br&gt;&lt;br&gt;特意告知供应商申请已截止，并可对供应商进行结算。供应商申请的详情如下： &lt;br&gt; &lt;br&gt;申请号：{ObjectNumber} &lt;br&gt;公司名称：{CompanyName} &lt;br&gt;公司地址：{CompanyAddress} &lt;br&gt;公司邮编：{CompanyPostalCode} &lt;br&gt;公司电话号码：{CompanyTelNo} &lt;br&gt;公司传真号码：{CompanyFaxNo} &lt;br&gt;联系人：{CompanyContactPerson} &lt;br&gt;公司注册号码：{CompanyNRICNumber} &lt;br&gt;联系电话：{CompanyContactPersonContactNo} &lt;br&gt;申请地址：{AddressApplyingFor} &lt;br&gt;服务：{Service.ObjectName} &lt;br&gt;目的：{Purpose} &lt;br&gt;从日期：{FromDate：dd-MM-yyyy} &lt;br&gt;至日期：{ToDate：dd-MM-yyyy} &lt;br&gt; &lt;br&gt;收费：{ChargeAmount :#,## 0.00} &lt;br&gt;备注：{RemarksToFinance} &lt;br&gt; &lt;br&gt;批准者：{Approver.ObjectName} &lt;br&gt;处理日期：{ProcessDate：dd-MM-yyyy}</value>
+  </data>
+	<data name="VendorApplication_EndReminderSubject" xml:space="preserve">
+    <value>通知财务结算的供应商应用- {0}</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPendingApproverBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+亲爱的用户,
+&lt;br&gt;
+&lt;br&gt;
+以下采购单:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;采购单号码：&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;说明：&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;总额：&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;开始日期：&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;结束日期：&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+已向以下批准者提出批准申请（次序以批准限额由低至高排列）：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPendingApproverSubject" xml:space="preserve">
+    <value>采购单号码：{0}待您的批准</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+亲爱的用户，
+&lt;br&gt;
+&lt;br&gt;
+以下采购单：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;采购单号码：&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;说明：&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;总额：&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;开始日期：&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;结束日期：&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+已向以下批准者提出批准申请（次序以批准限额由低至高排列）：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="200px"&gt;用户&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsSubject" xml:space="preserve">
+    <value>采购单号码：{0}报批</value>
+  </data>
+	<data name="Purchaseorder_NotifyPOhasbeenApprovedBody" xml:space="preserve">
+    <value>采购单号码{0}已于{1}获批准 &lt;br&gt;有关详细信息，请登录到该系统</value>
+  </data>
+	<data name="Purchaseorder_NotifyPOhasbeenApprovedSubject" xml:space="preserve">
+    <value>采购单号码{0}已获批准</value>
+  </data>
+	<data name="Purchaseorder_NotifyOriginalApproverBody" xml:space="preserve">
+    <value>采购单号码：{ObjectNumber} &lt;br&gt;说明：{Description} &lt;br&gt;总额：{TotalPOAmount} &lt;br&gt;已于{1}获得{0}的批准</value>
+  </data>
+	<data name="Purchaseorder_NotifyOriginalApproverSubject" xml:space="preserve">
+    <value>采购单号码：{0}已获{1}的批准</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPendingApproverBody2" xml:space="preserve">
+    <value>&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPendingApproverBody3" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;br&gt;
+请登录系统批准/退回采购单。
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+亲爱的用户，
+&lt;br&gt;
+&lt;br&gt;
+以下采购单：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;采购单号码：&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;说明：&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;总额：&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;开始日期：&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;结束日期：&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+已于{1}获得{0}的批准&lt;br&gt;
+&lt;br&gt;
+并等待以下用户的操作（次序以批准限额由低至高排列）：&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0" cellspacing="0"&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody4" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody5" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingSubject" xml:space="preserve">
+    <value>采购单号码：{0}已被批准{1}</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+亲爱的用户，
+&lt;br&gt;
+&lt;br&gt;
+以下采购单：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;采购单号码：&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;说明：&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;总额：&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;开始日期：&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;结束日期：&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+已于{0}获得批准。
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedSubject" xml:space="preserve">
+    <value>采购单号码：{0}已完全获得批准</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+亲爱的用户，
+&lt;br&gt;
+&lt;br&gt;
+以下采购单：
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;采购单号码：&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;说明：&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;总额：&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;开始日期：&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;结束日期：&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+已于{1}被{0}退回。
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedSubject" xml:space="preserve">
+    <value>采购单号码：{0}已被{1}退回</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsBody2" xml:space="preserve">
+    <value>&lt;tr&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyPOAdministratorsBody3" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+	<data name="PurchaseOrder_NotifyGoodReceiptBody" xml:space="preserve">
+    <value>亲爱的用户，&lt;br&gt;&lt;br&gt;以下的工作已经结束，与采购单相应的货物收据也已创建：&lt;br&gt;工作号码：{0}&lt;br&gt;货物收据金额：{1 :#,## 0.00}&lt;br&gt;采购单号码：{2}</value>
+  </data>
+	<data name="PurchaseOrder_NotifyGoodReceiptHeader" xml:space="preserve">
+    <value>自采购单{0}定期合约产生的工作已结束</value>
+  </data>
+</root>

@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://crv.dc.capitaland.com/crvservice/TenderService.asm" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://crv.dc.capitaland.com/crvservice/TenderService.asm" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://crv.dc.capitaland.com/crvservice/TenderService.asm">
+      <s:element name="GetActiveCRVSerialNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveCRVSerialNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveCRVSerialNumbersResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmCRVSerialUsage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsInUse" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmCRVSerialUsageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConfirmCRVSerialUsageResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTenderProjectRefNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTenderProjectRefNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTenderProjectRefNoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullTenderInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFullTenderInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFullTenderInfoResult" type="tns:CRVTender" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CRVTender">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TargetType" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Department" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectRefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AwardReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoAwardReason" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AwardDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnticipatedAwardDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfContracts" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRVTenderVendors" type="tns:ArrayOfCRVTenderVendor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCRVTenderVendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CRVTenderVendor" nillable="true" type="tns:CRVTenderVendor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CRVTenderVendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorBRN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AwardDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTenderNoOfContracts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTenderNoOfContractsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTenderNoOfContractsResult" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseTender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CloseTenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CloseTenderResult" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelTender">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancelreason" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelTenderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelTenderResult" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTenderVendorAwardStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="v" type="tns:CRVTenderVendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTenderVendorAwardStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTenderVendorAwardStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupProjectInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupProjectInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupProjectInformationResult" type="tns:GroupProjectInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GroupProjectInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectRefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectManager" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossFloorArea" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SiteArea" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConstructionCost" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConstructionFloorArea" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GProjectContracts" type="tns:ArrayOfGProjectContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGProjectContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GProjectContract" nillable="true" type="tns:GProjectContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GProjectContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractRefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArchitectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorBRN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AwardedAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContractStatus" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsTermContract" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateGroupProjectInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpi" type="tns:GroupProjectInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProjectInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGroupProjectInformationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroupProjectContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpc" type="tns:GProjectContract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroupProjectContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateGroupProjectContractResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProjectContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpc" type="tns:GProjectContract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProjectContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGroupProjectContractResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupProcurementInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupProcurementInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupProcurementInformationResult" type="tns:GroupProcurementInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GroupProcurementInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectRefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContractSum" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GProcurementContracts" type="tns:ArrayOfGProcurementContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGProcurementContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GProcurementContract" nillable="true" type="tns:GProcurementContract" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GProcurementContract">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractRefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorBRN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AwardedAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContractStatus" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsTermContract" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateGroupProcurementInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpi" type="tns:GroupProcurementInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProcurementInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGroupProcurementInformationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroupProcurementContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpc" type="tns:GProcurementContract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGroupProcurementContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateGroupProcurementContractResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProcurementContract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVSerialNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gpc" type="tns:GProcurementContract" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGroupProcurementContractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGroupProcurementContractResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetActiveCRVSerialNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveCRVSerialNumbers" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveCRVSerialNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveCRVSerialNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCRVSerialUsageSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmCRVSerialUsage" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmCRVSerialUsageSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmCRVSerialUsageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTenderProjectRefNoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTenderProjectRefNo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTenderProjectRefNoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTenderProjectRefNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFullTenderInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFullTenderInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFullTenderInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFullTenderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTenderNoOfContractsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTenderNoOfContracts" />
+  </wsdl:message>
+  <wsdl:message name="GetTenderNoOfContractsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTenderNoOfContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CloseTenderSoapIn">
+    <wsdl:part name="parameters" element="tns:CloseTender" />
+  </wsdl:message>
+  <wsdl:message name="CloseTenderSoapOut">
+    <wsdl:part name="parameters" element="tns:CloseTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelTenderSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelTender" />
+  </wsdl:message>
+  <wsdl:message name="CancelTenderSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelTenderResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTenderVendorAwardStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTenderVendorAwardStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTenderVendorAwardStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTenderVendorAwardStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupProjectInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupProjectInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupProjectInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupProjectInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProjectInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProjectInformation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProjectInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProjectInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupProjectContractSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateGroupProjectContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupProjectContractSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateGroupProjectContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProjectContractSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProjectContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProjectContractSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProjectContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupProcurementInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupProcurementInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupProcurementInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupProcurementInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProcurementInformationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProcurementInformation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProcurementInformationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProcurementInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupProcurementContractSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateGroupProcurementContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupProcurementContractSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateGroupProcurementContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProcurementContractSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProcurementContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupProcurementContractSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGroupProcurementContractResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TenderServiceSoap">
+    <wsdl:operation name="GetActiveCRVSerialNumbers">
+      <wsdl:input message="tns:GetActiveCRVSerialNumbersSoapIn" />
+      <wsdl:output message="tns:GetActiveCRVSerialNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCRVSerialUsage">
+      <wsdl:input message="tns:ConfirmCRVSerialUsageSoapIn" />
+      <wsdl:output message="tns:ConfirmCRVSerialUsageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderProjectRefNo">
+      <wsdl:input message="tns:UpdateTenderProjectRefNoSoapIn" />
+      <wsdl:output message="tns:UpdateTenderProjectRefNoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFullTenderInfo">
+      <wsdl:input message="tns:GetFullTenderInfoSoapIn" />
+      <wsdl:output message="tns:GetFullTenderInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTenderNoOfContracts">
+      <wsdl:input message="tns:GetTenderNoOfContractsSoapIn" />
+      <wsdl:output message="tns:GetTenderNoOfContractsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseTender">
+      <wsdl:input message="tns:CloseTenderSoapIn" />
+      <wsdl:output message="tns:CloseTenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelTender">
+      <wsdl:input message="tns:CancelTenderSoapIn" />
+      <wsdl:output message="tns:CancelTenderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderVendorAwardStatus">
+      <wsdl:input message="tns:UpdateTenderVendorAwardStatusSoapIn" />
+      <wsdl:output message="tns:UpdateTenderVendorAwardStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProjectInformation">
+      <wsdl:input message="tns:GetGroupProjectInformationSoapIn" />
+      <wsdl:output message="tns:GetGroupProjectInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectInformation">
+      <wsdl:input message="tns:UpdateGroupProjectInformationSoapIn" />
+      <wsdl:output message="tns:UpdateGroupProjectInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProjectContract">
+      <wsdl:input message="tns:CreateGroupProjectContractSoapIn" />
+      <wsdl:output message="tns:CreateGroupProjectContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectContract">
+      <wsdl:input message="tns:UpdateGroupProjectContractSoapIn" />
+      <wsdl:output message="tns:UpdateGroupProjectContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProcurementInformation">
+      <wsdl:input message="tns:GetGroupProcurementInformationSoapIn" />
+      <wsdl:output message="tns:GetGroupProcurementInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementInformation">
+      <wsdl:input message="tns:UpdateGroupProcurementInformationSoapIn" />
+      <wsdl:output message="tns:UpdateGroupProcurementInformationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProcurementContract">
+      <wsdl:input message="tns:CreateGroupProcurementContractSoapIn" />
+      <wsdl:output message="tns:CreateGroupProcurementContractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementContract">
+      <wsdl:input message="tns:UpdateGroupProcurementContractSoapIn" />
+      <wsdl:output message="tns:UpdateGroupProcurementContractSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TenderServiceSoap" type="tns:TenderServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveCRVSerialNumbers">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetActiveCRVSerialNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCRVSerialUsage">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/ConfirmCRVSerialUsage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderProjectRefNo">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateTenderProjectRefNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullTenderInfo">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetFullTenderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTenderNoOfContracts">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetTenderNoOfContracts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTender">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CloseTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTender">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CancelTender" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderVendorAwardStatus">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateTenderVendorAwardStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProjectInformation">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetGroupProjectInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectInformation">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProjectInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProjectContract">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CreateGroupProjectContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectContract">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProjectContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProcurementInformation">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetGroupProcurementInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementInformation">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProcurementInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProcurementContract">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CreateGroupProcurementContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementContract">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProcurementContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TenderServiceSoap12" type="tns:TenderServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetActiveCRVSerialNumbers">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetActiveCRVSerialNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCRVSerialUsage">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/ConfirmCRVSerialUsage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderProjectRefNo">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateTenderProjectRefNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFullTenderInfo">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetFullTenderInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTenderNoOfContracts">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetTenderNoOfContracts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseTender">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CloseTender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelTender">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CancelTender" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTenderVendorAwardStatus">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateTenderVendorAwardStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProjectInformation">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetGroupProjectInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectInformation">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProjectInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProjectContract">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CreateGroupProjectContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProjectContract">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProjectContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupProcurementInformation">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/GetGroupProcurementInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementInformation">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProcurementInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroupProcurementContract">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/CreateGroupProcurementContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroupProcurementContract">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/TenderService.asm/UpdateGroupProcurementContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TenderService">
+    <wsdl:port name="TenderServiceSoap" binding="tns:TenderServiceSoap">
+      <soap:address location="http://demo.anacle.com/crvservice/tenderservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TenderServiceSoap12" binding="tns:TenderServiceSoap12">
+      <soap12:address location="http://demo.anacle.com/crvservice/tenderservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

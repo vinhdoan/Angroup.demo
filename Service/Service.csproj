@@ -1,0 +1,285 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E709478-9CBB-4DB5-88F7-1095174FC603}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Service</RootNamespace>
+    <AssemblyName>Service</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>Service.ServiceMain</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Anacle.DataFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.DataFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.WorkflowActivityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.WorkflowFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="OpcAENet, Version=4.2.1.0, Culture=neutral, PublicKeyToken=3bc02131d82f92b2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OpcAENet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmlDANet, Version=4.2.0.0, Culture=neutral, PublicKeyToken=620e8f44092b787a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\XmlDANet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContractExpiryReminderService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland-ccl\CRVReSyncService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland-ccl\CRVDataPullingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationBillingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationPostBillingServiceA.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationPostBillingServiceB.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadBillingServiceA.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadBillingServiceB.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadMasterService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationPostBillingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadBillingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadMasterServiceA.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\AmosIntegrationReadMasterServiceB.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\BMSReadingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\ContractReminderService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\InboxNotificationService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\SurveyPlannerNotification.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\UpdateContractStatus.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\StoreItemExpiryReminderService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\EquipmentExpiryReminderService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\EquipmentReminderService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\PositionAssignmentService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\ReminderForMeterReadingService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\ReadEmailService.cs" />
+    <Compile Include="CustomizedServiceForCapitaland\WorkNotification.cs" />
+    <Compile Include="Global\Common.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="WorkflowService.cs" />
+    <Compile Include="NotificationService.cs" />
+    <Compile Include="VendorDebarmentNotificationService.cs" />
+    <Compile Include="OPCAEService.cs">
+    </Compile>
+    <Compile Include="DataClearingService.cs">
+    </Compile>
+    <Compile Include="Global\GlobalService.cs" />
+    <Compile Include="Global\AnacleTimer.cs">
+    </Compile>
+    <Compile Include="BudgetNotificationService.cs">
+    </Compile>
+    <Compile Include="OPCDAService.cs">
+    </Compile>
+    <Compile Include="Global\AnacleServiceBase.cs">
+    </Compile>
+    <Compile Include="Global\AnacleTimerEventHandler.cs" />
+    <Compile Include="Global\ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global\ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Errors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Errors.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Notifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notifications.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Global\ServiceMain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global\ServiceMain.designer.cs">
+      <DependentUpon>ServiceMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduledWorkService.cs" />
+    <Compile Include="StoreNotificationService.cs">
+    </Compile>
+    <Compile Include="SurveyPlannerNotification.cs">
+    </Compile>
+    <Compile Include="Tables\OLoglog.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="MessageService.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmsCommunication.cs" />
+    <Compile Include="Tables\TablesService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global\ProjectInstaller.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Errors.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Errors.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Notifications.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Notifications.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global\ServiceMain.resx">
+      <DependentUpon>ServiceMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{47211713-8A42-41DE-8BAB-73096B90DF3D}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,329 @@
+<%@ Page Language="C#" Theme="Corporate" Inherits="PageBase" Culture="auto" meta:resourcekey="PageResource1"
+    UICulture="auto" %>
+
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="Anacle.DataFramework" %>
+<%@ Import Namespace="LogicLayer" %>
+
+<%@ Register assembly="Anacle.UIFramework" namespace="Anacle.UIFramework" tagprefix="cc1" %>
+
+<script runat="server">
+
+    /// <summary>
+    /// Populates the form.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void panel_PopulateForm(object sender, EventArgs e)
+    {
+        OFunction function = panel.SessionObject as OFunction;
+        //listRoles.Bind(ORole.GetAllRoles(), "RoleName", "ObjectID");
+        //foreach (ListItem item in listRoles.Items)
+        //{
+        //    string translatedText = Resources.Roles.ResourceManager.GetString(item.Text);
+        //    if (translatedText != null)
+        //        item.Text = translatedText;
+        //}
+
+        panel.ObjectPanel.BindObjectToControls(function);
+    }
+
+
+    /// <summary>
+    /// Validates and saves the function object into the database.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void panel_ValidateAndSave(object sender, EventArgs e)
+    {
+        using (Connection c = new Connection())
+        {
+            OFunction function = panel.SessionObject as OFunction;
+            panel.ObjectPanel.BindControlsToObject(function);
+
+            // Validate
+            //
+            if (function.IsDuplicateObjectType())
+                txt_ObjectIDCode.ErrorMessage = Resources.Errors.Function_DuplicateObjectType;
+
+            if (!panel.ObjectPanel.IsValid)
+                return;
+
+            // Save
+            //
+            function.Save();
+            c.Commit();
+        }
+    }
+
+    
+    /// <summary>
+    /// Occurs when the user clicks on the Add Roles button.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void buttonAddRoles_Click(object sender, EventArgs e)
+    {
+        OFunction function = panel.SessionObject as OFunction;
+        panel.ObjectPanel.BindControlsToObject(function);
+        panel.Message = "";
+
+        // Validate the ensure the selected roles have not already
+        // been granted to this function.
+        //
+        foreach (ListItem item in listRoles.Items)
+        {
+            if (item.Selected)
+            {
+                Guid roleId = new Guid(item.Value);
+                
+                bool found = false;
+                foreach (ORoleFunction roleFunction in function.RoleFunctions)
+                {
+                    if (roleFunction.RoleID != null &&
+                        roleFunction.RoleID.Value == roleId)
+                    {
+                        panel.Message = Resources.Errors.Function_RoleAlreadyGranted;
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    ORoleFunction newRoleFunction = TablesLogic.tRoleFunction.Create();
+                    newRoleFunction.RoleID = roleId;
+                    function.RoleFunctions.Add(newRoleFunction);
+                }
+            }
+        }
+        
+        panel.ObjectPanel.BindObjectToControls(function);
+    }
+
+    protected void gridRoleFunction_Action(object sender, string commandName, List<object> dataKeys)
+    {
+        if (commandName == "AddRoles")
+        {
+            searchRoles.Show();
+        }
+    }
+
+    protected void searchRoles_Selected(object sender, EventArgs e)
+    {
+        OFunction function = panel.SessionObject as OFunction;
+        panel.ObjectPanel.BindControlsToObject(function);
+        panel.Message = "";
+
+        // Validate the ensure the selected roles have not already
+        // been granted to this function.
+        //
+        foreach (Guid item in searchRoles.SelectedDataKeys)
+        {
+            if (function.RoleFunctions.Find((rf) => rf.RoleID == item) == null)
+            {
+                ORoleFunction newRoleFunction = TablesLogic.tRoleFunction.Create();
+                newRoleFunction.RoleID = item;
+                function.RoleFunctions.Add(newRoleFunction);
+            }
+            else
+                panel.Message = Resources.Errors.Function_RoleAlreadyGranted;
+                
+            
+        }
+
+        panel.ObjectPanel.BindObjectToControls(function);
+
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Simplism.EAM</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <link href="../../App_Themes/Corporate/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ui:UIObjectPanel runat="server" ID="panelMain" BorderStyle="NotSet" 
+            meta:resourcekey="panelMainResource1">
+            <web:object runat="server" ID="panel" Caption="Function" BaseTable="tFunction"
+                OnPopulateForm="panel_PopulateForm" meta:resourcekey="panelResource1" OnValidateAndSave="panel_ValidateAndSave">
+            </web:object>
+            <div class="div-main">
+                <ui:UITabStrip runat="server" ID="tabObject" 
+                    meta:resourcekey="tabObjectResource1" BorderStyle="NotSet">
+                    <ui:UITabView runat="server" ID="uitabview1" Caption="Details" 
+                        meta:resourcekey="uitabview1Resource1" BorderStyle="NotSet">
+                        <web:base runat="server" ID="objectBase" ObjectNumberVisible="false" ObjectNameVisible="false"
+                            meta:resourcekey="objectBaseResource1"></web:base>
+                        <ui:UISeparator runat="server" id="sep1" Caption="Menu" 
+                            meta:resourcekey="sep1Resource1" />
+                        <ui:UIFieldTextBox runat="server" ID="textCategoryName" Caption="Category Name" 
+                            PropertyName="CategoryName" Span="Half" MaxLength="255"
+                            ValidateRequiredField="True" InternalControlWidth="95%" 
+                            meta:resourcekey="textCategoryNameResource1" />
+                        <ui:UIFieldTextBox runat="server" ID="textSubCategoryName" 
+                            Caption="Sub-Category Name" PropertyName="SubCategoryName" Span="Half" 
+                            MaxLength="255" InternalControlWidth="95%" meta:resourcekey="textSubCategoryNameResource1"
+                            />
+                        <ui:UIFieldTextBox runat="server" ID="textFunctionName" Caption="Function Name" 
+                            PropertyName="FunctionName" MaxLength="255"
+                            ValidateRequiredField="True" InternalControlWidth="95%" 
+                            meta:resourcekey="textFunctionNameResource1" />
+                        <ui:UIFieldTextBox ID="UIFieldTextBox2" PropertyName="MainUrl" runat="server" 
+                            Caption="Main URL" Span="Half" MaxLength="255" InternalControlWidth="95%" 
+                            meta:resourcekey="UIFieldTextBox2Resource1" />
+                        <ui:UIFieldTextBox ID="UIFieldTextBox3" PropertyName="EditUrl" runat="server" 
+                            Caption="Edit URL" Span="Half" MaxLength="255" InternalControlWidth="95%" 
+                            meta:resourcekey="UIFieldTextBox3Resource1" />
+                        <ui:UIFieldTextBox ID="UIFieldTextBox4" runat="server" PropertyName="DisplayOrder"
+                            Caption="Display Order" Span="Half" InternalControlWidth="95%" 
+                            meta:resourcekey="UIFieldTextBox4Resource1" />
+                        <ui:UISeparator runat="server" id="UISeparator1" 
+                            Caption="Miscellaneous Settings" meta:resourcekey="UISeparator1Resource1"/>
+                        <ui:UIFieldTextBox runat="server" ID="txt_ObjectIDCode" PropertyName="ObjectTypeName"
+                            Caption="Object Type" ValidateRequiredField="True" 
+                            InternalControlWidth="95%" meta:resourcekey="txt_ObjectIDCodeResource1" />
+                        <ui:UIFieldCheckBox runat="server" ID="cb_IsCustomizable" PropertyName="IsCustomizable"
+                            Caption="Is Customizable" meta:resourcekey="cb_IsCustomizableResource1" 
+                            TextAlign="Right" />
+                        &nbsp; &nbsp;&nbsp;
+                    </ui:UITabView>
+                    <ui:UITabView runat="server" ID="tabRoleAccess" Caption="Role Access" 
+                        BorderStyle="NotSet" meta:resourcekey="tabRoleAccessResource1">
+                        <ui:UIFieldListBox runat="server" ID="listRoles" Caption="Roles" Visible="false"
+                            meta:resourcekey="listRolesResource1"></ui:UIFieldListBox>
+                        <table cellpadding='0' cellspacing='0' border='0' style="clear: both">
+                            <tr>
+                                <td style="width: 150px"></td>
+                                <td>
+                                    <ui:UIButton runat="server" ID="buttonAddRoles" Text="Add Role(s)" 
+                                        ImageUrl="~/images/add.gif" OnClick="buttonAddRoles_Click" Visible="false"
+                                        meta:resourcekey="buttonAddRolesResource1" />
+                                </td>
+                            </tr>
+                        </table>
+                        <web:searchdialogbox runat="server" ID="searchRoles"
+                            AdvancedSearchOnLoad="false" AllowMultipleSelection="true"
+                            AutoSearchOnLoad="true" MaximumNumberOfResults="100" BaseTable="tRole"
+                            SearchTextBoxPropertyNames="RoleName,RoleCode" OnSelected="searchRoles_Selected">
+                            <Columns>
+                                <ui:UIGridViewBoundColumn HeaderText="Role Name" HeaderStyle-Width="350px" PropertyName="RoleName"></ui:UIGridViewBoundColumn>
+                                <ui:UIGridViewBoundColumn HeaderText="Role Code" HeaderStyle-Width="350px" PropertyName="RoleCode"></ui:UIGridViewBoundColumn>
+                            </Columns>
+                        </web:searchdialogbox>
+                        <br />
+                        <ui:UIGridView runat="server" Span="Half" Caption="Roles Granted This Function" BindObjectsToRows="True"
+                            SortExpression="Role.RoleName ASC"
+                            PropertyName="RoleFunctions" ID="gridRoleFunction"
+                            PageSize="500" DataKeyNames="ObjectID" GridLines="Both" 
+                            ImageRowErrorUrl="" meta:resourcekey="gridRoleFunctionResource1" 
+                            RowErrorColor="" style="clear:both;" OnAction="gridRoleFunction_Action">
+                            <PagerSettings Mode="NumericFirstLast" />
+                            <commands>
+                                <cc1:UIGridViewCommand AlwaysEnabled="False" CausesValidation="False" 
+                                    CommandName="AddRoles" CommandText="Grant Roles" 
+                                    ImageUrl="~/images/add.gif" />
+                                <cc1:UIGridViewCommand AlwaysEnabled="False" CausesValidation="False" 
+                                    CommandName="RemoveObject" CommandText="Remove" 
+                                    ConfirmText="Are you sure you wish to remove this item?" 
+                                    ImageUrl="~/images/delete.gif" meta:resourcekey="UIGridViewCommandResource1" />
+                            </commands>
+                            <Columns>
+                                <cc1:UIGridViewButtonColumn ButtonType="Image" CommandName="RemoveObject" 
+                                    ConfirmText="Are you sure you wish to remove this item?" 
+                                    ImageUrl="~/images/delete.gif" 
+                                    meta:resourcekey="UIGridViewButtonColumnResource1">
+                                    <HeaderStyle HorizontalAlign="Left" Width="16px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewButtonColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Role.RoleName" HeaderText="Role" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource1" PropertyName="Role.RoleName" 
+                                    ResourceAssemblyName="" SortExpression="Role.RoleName">
+                                    <HeaderStyle HorizontalAlign="Left" Width="130px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewTemplateColumn HeaderText="Allow Create" 
+                                    meta:resourcekey="UIGridViewTemplateColumnResource1">
+                                    <ItemTemplate>
+                                        <cc1:UIFieldCheckBox ID="ckb_Create" runat="server" CaptionWidth="1px" 
+                                            FieldLayout="Flow" meta:resourcekey="ckb_CreateResource1" 
+                                            PropertyName="AllowCreate" ShowCaption="False" TextAlign="Right">
+                                        </cc1:UIFieldCheckBox>
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Left" Width="150px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewTemplateColumn>
+                                <cc1:UIGridViewTemplateColumn HeaderText="Allow Edit All" 
+                                    meta:resourcekey="UIGridViewTemplateColumnResource2">
+                                    <ItemTemplate>
+                                        <cc1:UIFieldCheckBox ID="ckb_Edit" runat="server" CaptionWidth="1px" 
+                                            FieldLayout="Flow" meta:resourcekey="ckb_EditResource1" 
+                                            PropertyName="AllowEditAll" ShowCaption="False" TextAlign="Right">
+                                        </cc1:UIFieldCheckBox>
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Left" Width="150px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewTemplateColumn>
+                                <cc1:UIGridViewTemplateColumn HeaderText="Allow View All" 
+                                    meta:resourcekey="UIGridViewTemplateColumnResource3">
+                                    <ItemTemplate>
+                                        <cc1:UIFieldCheckBox ID="ckb_View" runat="server" CaptionWidth="1px" 
+                                            FieldLayout="Flow" meta:resourcekey="ckb_ViewResource1" 
+                                            PropertyName="AllowViewAll" ShowCaption="False" TextAlign="Right">
+                                        </cc1:UIFieldCheckBox>
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Left" Width="150px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewTemplateColumn>
+                                <cc1:UIGridViewTemplateColumn HeaderText="Allow Delete All" 
+                                    meta:resourcekey="UIGridViewTemplateColumnResource4">
+                                    <ItemTemplate>
+                                        <cc1:UIFieldCheckBox ID="ckb_Delete" runat="server" CaptionWidth="1px" 
+                                            FieldLayout="Flow" meta:resourcekey="ckb_DeleteResource1" 
+                                            PropertyName="AllowDeleteAll" ShowCaption="False" TextAlign="Right">
+                                        </cc1:UIFieldCheckBox>
+                                    </ItemTemplate>
+                                    <HeaderStyle HorizontalAlign="Left" Width="150px" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewTemplateColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Function.CategoryAndFunctionName" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource2" 
+                                    PropertyName="Function.CategoryAndFunctionName" ResourceAssemblyName="" 
+                                    SortExpression="Function.CategoryAndFunctionName" Visible="False">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="IsNew" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource3" PropertyName="IsNew" 
+                                    ResourceAssemblyName="" SortExpression="IsNew" Visible="False">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="CreatedDateTime" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource4" 
+                                    PropertyName="CreatedDateTime" ResourceAssemblyName="" 
+                                    SortExpression="CreatedDateTime" Visible="False">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                            </Columns>
+                        </ui:UIGridView>                    
+                        <ui:UIObjectPanel ID="panelRoleFunction" runat="server" BorderStyle="NotSet" 
+                            meta:resourcekey="panelRoleFunctionResource1">
+                            <web:subpanel runat="server" ID="subpanelRoleFunction" GridViewID="gridRoleFunction" />
+                        </ui:UIObjectPanel>
+                    </ui:UITabView>
+                    <ui:UITabView runat="server" ID="uitabview3" Caption="Memo"  
+                        meta:resourcekey="uitabview3Resource1" BorderStyle="NotSet">
+                        <web:memo ID="Memo1" runat="server"></web:memo>
+                    </ui:UITabView>
+                    <ui:UITabView runat="server" ID="uitabview2" Caption="Attachments" 
+                        meta:resourcekey="uitabview2Resource1" BorderStyle="NotSet">
+                        <web:attachments runat="server" ID="attachments"></web:attachments>
+                    </ui:UITabView>
+                </ui:UITabStrip>
+            </div>
+        </ui:UIObjectPanel>
+    </form>
+</body>
+</html>

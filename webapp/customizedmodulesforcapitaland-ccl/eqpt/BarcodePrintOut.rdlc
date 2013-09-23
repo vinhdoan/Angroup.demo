@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <rd:DataSourceID>a24afcd6-da33-45ba-8b96-7691d05bde06</rd:DataSourceID>
+      <DataSourceReference>DataSource1</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>0.8in</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="F_PostedDateStart">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PostedDateStart</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="F_PostedDateEnd">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PostedDateEnd</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>2.2in</InteractiveWidth>
+  <rd:GridSpacing>0.06125in</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:ReportID>f96b6302-39d8-4cb7-b72f-9ad0fbd29f29</rd:ReportID>
+  <PageWidth>2.2in</PageWidth>
+  <DataSets>
+    <DataSet Name="Body">
+      <Fields>
+        <Field Name="TagNumberBarcode">
+          <DataField>TagNumberBarcode</DataField>
+        </Field>
+        <Field Name="TagNumber">
+          <DataField>TagNumber</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>select
+'TagNumberBarcode' as 'TagNumberBarcode',
+'TagNumber' as 'TagNumber'</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>2.2in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!TagNumber.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>Body</DataSetName>
+        <ReportItems>
+          <Textbox Name="TagNumber">
+            <rd:DefaultName>TagNumber</rd:DefaultName>
+            <Top>0.5in</Top>
+            <Width>1.9in</Width>
+            <Style>
+              <FontSize>8pt</FontSize>
+              <TextAlign>Center</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.05in</Left>
+            <Height>0.2in</Height>
+            <Value>=Fields!TagNumber.Value</Value>
+          </Textbox>
+          <Image Name="image1">
+            <Sizing>AutoSize</Sizing>
+            <ToolTip>=Fields!TagNumber.Value</ToolTip>
+            <Top>0.05in</Top>
+            <Width>1.9in</Width>
+            <MIMEType>image/png</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <Left>0.05in</Left>
+            <Height>0.4in</Height>
+            <Value>=Convert.FromBase64String(Fields!TagNumberBarcode.Value)</Value>
+          </Image>
+        </ReportItems>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!TagNumber.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtStart>true</PageBreakAtStart>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>0.8in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageHeight>0.8in</PageHeight>
+</Report>

@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adjust_InsufficientItems" xml:space="preserve">
+    <value>The following items in the store are insufficient for the adjustment. {0}</value>
+  </data>
+  <data name="Budget_DeleteBudgetItemFailed" xml:space="preserve">
+    <value>Unable to delete one or more budget items. A budget items cannot be deleted if it refers to any yearly budget item or any purchase transaction</value>
+  </data>
+  <data name="Budget_DuplicatedBudgetCategory" xml:space="preserve">
+    <value>Duplicated budget category item found in the same budget. If you are trying to create a new budget item that have the same budget category to an inactive budget item, activate this item instead of creating new item. Otherwise, please select another budget category.</value>
+  </data>
+  <data name="Budget_DuplicatedItem" xml:space="preserve">
+    <value>An item refer to the same budget item exist, please select another budget item</value>
+  </data>
+  <data name="Budget_InactivateBudgetItemFailed" xml:space="preserve">
+    <value>One or more budget item cannot be inactivated. A budget item cannot be inactivated when there is at least one pending consumption items are attached to it.</value>
+  </data>
+  <data name="Budget_InvalidTotalAmount" xml:space="preserve">
+    <value>Please enter a valid value for Total amount.</value>
+  </data>
+  <data name="Budget_ReferInactiveBudgetItem" xml:space="preserve">
+    <value>Duplicated budget category item found in the same budget. If you are trying to create a new budget item that have the same budget category   to an inactive budget item, activate this item instead of creating new item. Otherwise, please select another budget category</value>
+  </data>
+  <data name="BudgetAllocation_SameSourceDestination" xml:space="preserve">
+    <value>Source and destination cannot be the same item.</value>
+  </data>
+  <data name="BudgetCategory_ParentInvalid" xml:space="preserve">
+    <value>Budget Category of type category cannot be under a budget category of type line item.</value>
+  </data>
+  <data name="Calendar_NoWorkDays" xml:space="preserve">
+    <value>Please select at least one work day.</value>
+  </data>
+  <data name="CheckOut_DuplicateItem" xml:space="preserve">
+    <value>A duplicate item with the same catalog and bin already exists in this check-out. Please select a different catalog or bin.</value>
+  </data>
+  <data name="CheckOut_InsufficientItems" xml:space="preserve">
+    <value>The following items in the store are insufficient for the check-out. {0}</value>
+  </data>
+  <data name="CheckOut_InsufficientQuantity" xml:space="preserve">
+    <value>The check-out cannot be committed because one or more items do not have sufficient quantitiy available in the store.</value>
+  </data>
+  <data name="CheckOut_ItemInsufficientQuantity" xml:space="preserve">
+    <value>The store does not have sufficient quantity for this item.</value>
+  </data>
+  <data name="Code_CyclicalReference" xml:space="preserve">
+    <value>This parent code results in a circular chain. Please select another parent code so that this is not below itself.</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDateTime" xml:space="preserve">
+    <value>Please enter Range Max in date time format (yyyy-mm-dd hh:mm:ss)</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDecimal" xml:space="preserve">
+    <value>Please enter Range max in decimal format</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDouble" xml:space="preserve">
+    <value>Please enter Range max in double format</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxInteger" xml:space="preserve">
+    <value>Please enter Range Max in integer format</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDateTime" xml:space="preserve">
+    <value>Please enter Range Min in date time format (yyyy-mm-dd hh:mm:ss)</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDecimal" xml:space="preserve">
+    <value>Please enter Range Min in decimal format</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDouble" xml:space="preserve">
+    <value>Please enter Range min in double format</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinInteger" xml:space="preserve">
+    <value>Please enter Range min in integer format</value>
+  </data>
+  <data name="CustomizedObject_NoRangeSpecify" xml:space="preserve">
+    <value>Please specify at least one value for the range (min/max)</value>
+  </data>
+  <data name="DocumentTemplate_SpecifyDocument" xml:space="preserve">
+    <value>Please specify a document template.</value>
+  </data>
+  <data name="Equipment_ParentIDInvalid" xml:space="preserve">
+    <value>This folder must not belong under a physical equipment. Please select another parent.</value>
+  </data>
+  <data name="EquipmentTypeSpares_DuplicateItem" xml:space="preserve">
+    <value>A duplicate spare with the same catalog already exists. Please specify a different catalog.</value>
+  </data>
+  <data name="General_CommaSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="General_NameDuplicate" xml:space="preserve">
+    <value>This name already exists. Please specify another name.</value>
+  </data>
+  <data name="General_RequiredField" xml:space="preserve">
+    <value>This field could not be left empty. Please key in a value.</value>
+  </data>
+  <data name="General_TwoDecimalPlaces" xml:space="preserve">
+    <value>This field can only at most 2 decimal places.</value>
+  </data>
+  <data name="Location_ParentIDInvalid" xml:space="preserve">
+    <value>This folder must not belong under a physical location. Please select another parent.</value>
+  </data>
+  <data name="Property_DuplicateChargeType" xml:space="preserve">
+    <value>This charge type already exists. Please specify another charge type.</value>
+  </data>
+  <data name="PurchaseOrder_AmountNotEqual" xml:space="preserve">
+    <value>Total amount of all purchase budget items ({0:n}) must be equal to total amount of all purchase line items ({1:n})</value>
+  </data>
+  <data name="PurchaseOrder_AtleastOneFinancialYear" xml:space="preserve">
+    <value>Please enter budget amount for at least one financial year for each budget item record</value>
+  </data>
+  <data name="PurchaseOrder_BudgetInvalidForSelect" xml:space="preserve">
+    <value>This budget item is invalid for selection. A budget item cannot be added if the purchase order start and end date are not within its valid range.</value>
+  </data>
+  <data name="PurchaseOrder_InactiveBudgetItemToConsume" xml:space="preserve">
+    <value>Unable to consume the budget item. The budget item has become inactive.</value>
+  </data>
+  <data name="PurchaseOrder_InsufficientBudgetitemForConsume" xml:space="preserve">
+    <value>Insufficient available budget amount ({0:n}) to consume for the budget item</value>
+  </data>
+  <data name="PurchaseOrder_InvalidPeriod" xml:space="preserve">
+    <value>Purchase Order period must not be more than 18 years</value>
+  </data>
+  <data name="PurchaseOrder_InvalidStartEndDate" xml:space="preserve">
+    <value>Start date cannot be later than end date. Please specify new value</value>
+  </data>
+  <data name="Purchaseorder_IsDuplicatedBudgetItem" xml:space="preserve">
+    <value>Same budget item exists in the Purchase Order’s budget items list. Please select a new item</value>
+  </data>
+  <data name="PurchaseOrder_PaymentAmountGreaterTotalInvoice" xml:space="preserve">
+    <value>Total Payment amount ({0:#,##0.0}) cannot be greater than total invoice amount ({1:#,##0.00})</value>
+  </data>
+  <data name="PurchaseOrder_PaymentBudgetInvalid" xml:space="preserve">
+    <value>Payment budget amount cannot be greater than Invoice budget amount</value>
+  </data>
+  <data name="PurchaseOrder_TaxCodesNotSelected" xml:space="preserve">
+    <value>At least one purchase order item does not have a tax code selected. Please select a tax code for all items.</value>
+  </data>
+  <data name="PurchaseOrder_TotalBudgetAmountNotEqual" xml:space="preserve">
+    <value>Total budget amount ({0:n}) must be equal to total invoice amount({1:n})</value>
+  </data>
+  <data name="PurchaseOrder_TotalBudgetPaymentNotEqual" xml:space="preserve">
+    <value>Total payment budget amount {0:#,##0.00} must be smaller or equal to payment amount {1:#,##0.00}</value>
+  </data>
+  <data name="PurchaseOrder_TotalInvoiceBudgetExceedOriginalBudget" xml:space="preserve">
+    <value>Total Invoice Budget for this budget item ({0:#,##0.00}) has exceeded original budget amount allocated for the budget item ({1:#,##0.00})</value>
+  </data>
+  <data name="PurchaseOrder_UnableToGenerate" xml:space="preserve">
+    <value>Unable to generate a Purchase Order. This may be due to the fact that there are no line items to create the Purchase Order, or the line items in the selected Purchase Requests or Work Justifications have already been generated into another Purchase Order.</value>
+  </data>
+  <data name="PurchaseOrder_UnitPriceNotEntered" xml:space="preserve">
+    <value>At least one purchase order item does not have a unit price specified. Please specify a unit price for all items.</value>
+  </data>
+  <data name="PurchaseRequest_NoItemsSelected" xml:space="preserve">
+    <value>No purchase request items have been selected. Please select at least one line item.</value>
+  </data>
+  <data name="QuantityOrdered_Invalid" xml:space="preserve">
+    <value>Total value for this line item ({0:#,##0.00}) must not be lower than its total goods receipt value ({1:#,##0.00})</value>
+  </data>
+  <data name="Report_CascadeControlLoop" xml:space="preserve">
+    <value>The selected cascade dropdown results in a infinite loop. Please select another dropdown list.</value>
+  </data>
+  <data name="Report_FieldNotFound" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_IdentifierHasComma" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_IdentifierHasSpaces" xml:space="preserve">
+    <value>The specified identifier has a white space, which is not allowed. Please remove all whitespaces.</value>
+  </data>
+  <data name="Report_InvalidReportFile" xml:space="preserve">
+    <value>Invalid report file</value>
+  </data>
+  <data name="Report_PopulateQueryError" xml:space="preserve">
+    <value>Unable to populate content of the list field because the query has failed with the following message: {0}</value>
+  </data>
+  <data name="Report_QueryFailedWithMessage" xml:space="preserve">
+    <value>The report query has failed with the following message: {0}</value>
+  </data>
+  <data name="Report_ReportFileNotFound" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_SelectTemplate" xml:space="preserve">
+    <value>Please specify a report template.</value>
+  </data>
+  <data name="ReportTemplate_EditDenied" xml:space="preserve">
+    <value>Unable to modify the template report. Only template creator can have access to it.</value>
+  </data>
+  <data name="RequestForQuotation_DuplicateVendor" xml:space="preserve">
+    <value>The vendor cannot be added because it already exists in the list of vendors in this Work Justification.</value>
+  </data>
+  <data name="RequestForQuotation_NoRFQItemsSelected" xml:space="preserve">
+    <value>No quotation items have been selected. Please select at least one quotation item.</value>
+  </data>
+  <data name="RequestForQuotation_NoVendor" xml:space="preserve">
+    <value>Please select a vendor.</value>
+  </data>
+  <data name="RequestForQuotation_UnableToGenerate" xml:space="preserve">
+    <value>Unable to generate a Work Justification. This may be due to the fact that there are no line items to create the Work Justification, or the line items in the selected Purchase Request have already been generated into another Work Justification.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateAdhocRate" xml:space="preserve">
+    <value>The same adhoc rate already exists in the scheduled work. Please select a different adhoc rate.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateFixedRate" xml:space="preserve">
+    <value>The same fixed rate already exists in the scheduled work. Please select a different fixed rate.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateMaterial" xml:space="preserve">
+    <value>The same catalog already exists in the scheduled work. Please select another catalogue.</value>
+  </data>
+  <data name="ScheduledWork_StaggeredEquipmentNotSpecified" xml:space="preserve">
+    <value>There are no staggered equipment specified for the scheduled work. Please specify at least one staggered equipment by setting the Stagger.</value>
+  </data>
+  <data name="ScheduledWork_StaggeredLocationNotSpecified" xml:space="preserve">
+    <value>There are no staggered locations specified for the scheduled work. Please specify at least one staggered location by setting the Stagger.</value>
+  </data>
+  <data name="ServiceLevel_DuplicateServiceLevelDetail" xml:space="preserve">
+    <value>A duplicate serivce level detail with the same step number, type of service and priority already exists in this service level. Please select a different step number, or type of service or priority.</value>
+  </data>
+  <data name="ServiceLevel_LocationDuplicate" xml:space="preserve">
+    <value>Another service level has already been defined at the same location. Please specify another location.</value>
+  </data>
+  <data name="Store_DuplicateBin" xml:space="preserve">
+    <value>A duplicate bin with the same name already exists in the store</value>
+  </data>
+  <data name="Store_DuplicateItem" xml:space="preserve">
+    <value>A duplicate item with the same catalog already exists in this store. Please select another catalog.</value>
+  </data>
+  <data name="Store_NoLowInventoryItems" xml:space="preserve">
+    <value>There are no stocked items that have fallen below the reorder threshold. A Work Justification will not be generated.</value>
+  </data>
+  <data name="Transfer_DuplicateItem" xml:space="preserve">
+    <value>A duplicate item with the same catalog and bin already exists in this transfer. Please select a different catalog or bin.</value>
+  </data>
+  <data name="Transfer_FromBinSameAsToBin" xml:space="preserve">
+    <value>The specified bins are the same. Please specify different bins for the transfer.</value>
+  </data>
+  <data name="Transfer_InsufficientItems" xml:space="preserve">
+    <value>The following items in the store are insufficient for the transfer. {0}</value>
+  </data>
+  <data name="UnitConversion_FromUnitDuplicate" xml:space="preserve">
+    <value>The specified Unit of Measure has already been defined. Please select another Unit of Measure.</value>
+  </data>
+  <data name="UnitConversion_ToUnitOfMeasureInvalid" xml:space="preserve">
+    <value>Please select a 'To Unit' different from the 'From Unit'.</value>
+  </data>
+  <data name="User_DuplicateUser" xml:space="preserve">
+    <value>A user with the same login name or user name already exists. Please specify a different login name or user name.</value>
+  </data>
+  <data name="User_PasswordDifferent" xml:space="preserve">
+    <value>Please enter the same password in 'Confirm Password'.</value>
+  </data>
+  <data name="User_PasswordWrong" xml:space="preserve">
+    <value>Password wrong.</value>
+  </data>
+  <data name="UserSignOn_MoreSignOnCannotAdd" xml:space="preserve">
+    <value>One or more sign on cannot be added to the sign on list. The user has already signed on to the location or the location’s parents.</value>
+  </data>
+  <data name="Utility_DatetimeInvalid" xml:space="preserve">
+    <value>End Date must be later and equal to start date</value>
+  </data>
+  <data name="Utility_UtilityValueInvalid" xml:space="preserve">
+    <value>Please enter at least one utility value</value>
+  </data>
+  <data name="ViewProject_DoNotHaveAccessRight" xml:space="preserve">
+    <value>Sorry, system unable to process your request. You do not have access right to create a project object. Please contact your system administrator</value>
+  </data>
+  <data name="ViewScheduleWork_DoNotHaveAccessRight" xml:space="preserve">
+    <value>Sorry, system unable to process your request. You do not have access right to create a project object. Please contact your system administrator</value>
+  </data>
+  <data name="Work_AlreadyAcknowledged" xml:space="preserve">
+    <value>Work {0} already acknowledged.</value>
+  </data>
+  <data name="Work_AlreadyArrived" xml:space="preserve">
+    <value>Work {0} already arrived.</value>
+  </data>
+  <data name="Work_AlreadyCompleted" xml:space="preserve">
+    <value>Work {0} already completed.</value>
+  </data>
+  <data name="Work_ArrivedBeforeAck" xml:space="preserve">
+    <value>Error in work {0}.</value>
+  </data>
+  <data name="Work_CannotCompleteAtThisStage" xml:space="preserve">
+    <value>Work {0} cannot be completed at this time because no technicians were assigned to this work yet.</value>
+  </data>
+  <data name="Work_DuplicateAdhocRate" xml:space="preserve">
+    <value>The same adhoc rate already exists in the work order. Please select a different adhoc rate.</value>
+  </data>
+  <data name="Work_DuplicateFixedRate" xml:space="preserve">
+    <value>The same fixed rate already exists in the work order. Please select a different fixed rate.</value>
+  </data>
+  <data name="Work_DuplicateMaterial" xml:space="preserve">
+    <value>The same store material from the same bin already exists in the work order. Please select a different store material, or a different bin.</value>
+  </data>
+  <data name="Work_DuplicateTechnician" xml:space="preserve">
+    <value>The same technician already exists in the work order. Please select a different technician.</value>
+  </data>
+  <data name="Work_InsufficientStoreItems" xml:space="preserve">
+    <value>The following items in the store are insufficient for the check-out. {0}</value>
+  </data>
+  <data name="Work_LocationEquipmentNotSelected" xml:space="preserve">
+    <value>'Location/Equipment' is a required field and cannot be left empty. Please select or fill up this field.</value>
+  </data>
+  <data name="Work_StoreBinsNotSpecified" xml:space="preserve">
+    <value>Some material cost items do not have a store and bin specified. Please specify them.</value>
+  </data>
+  <data name="Work_TechnicianNotAssigned" xml:space="preserve">
+    <value>There are no technicians assigned to this work. Please assign at least one technician.</value>
+  </data>
+  <data name="Work_TechnicianNotSpecified" xml:space="preserve">
+    <value>Some technician cost items do not have a technician specified. Please specify them.</value>
+  </data>
+  <data name="Workflow_NoUsersToAssign" xml:space="preserve">
+    <value>The workflow engine is unable to assign any users or roles to this item.</value>
+  </data>
+  <data name="Workflow_TransitionInvalid" xml:space="preserve">
+    <value>The workflow engine is unable to move this item to the specified state.</value>
+  </data>
+  <data name="YearlyBudget_InactivateBudgetItemFailed" xml:space="preserve">
+    <value>This budget item cannot be deleted. There are one or more budget consumption transactions or budget variation transactions attached to it.</value>
+  </data>
+  <data name="YearlyBudget_InactivateMulBudgetItemFailed" xml:space="preserve">
+    <value>One or more budget item cannot be deleted. There are one or more budget consumption transactions or budget variation transactions attached to it.</value>
+  </data>
+  <data name="PurchaseOrder_NoReceipt" xml:space="preserve">
+    <value>Unable to create receipt. All line items have been received.</value>
+  </data>
+  <data name="Work_ReassignFailedDueToTechnician" xml:space="preserve">
+    <value>{0} jobs cannot be reassigned because of duplicate technicians.</value>
+  </data>
+  <data name="Work_ReassignSelectWork" xml:space="preserve">
+    <value>Please select at least one job before proceeding. (Please note that jobs that are Closed, Rejected, Pending Acceptance (internal) cannot be reassigned.)</value>
+  </data>
+  <data name="Work_ReassignSuccess" xml:space="preserve">
+    <value>{0} job(s) reassigned successfully.</value>
+  </data>
+  <data name="General_ObjectModified" xml:space="preserve">
+    <value>The current item was modified by another user and the latest copy has been reloaded from the database. </value>
+  </data>
+  <data name="Budget_CashAccountingNoBudget" xml:space="preserve">
+    <value>Determine at point of payment</value>
+  </data>
+  <data name="Attachment_DocumentType" xml:space="preserve">
+    <value>Please specify a document type</value>
+  </data>
+  <data name="Workflow_TransitionErrorRecordLocked" xml:space="preserve">
+    <value>The record has been locked because the workflow engine has encountered the following error while trying to save: 
+
+{0}</value>
+  </data>
+  <data name="Workflow_ValidationFailed" xml:space="preserve">
+    <value>Unable to load workflow due to the following validation errors:</value>
+  </data>
+  <data name="ApprovalHierarchy_UsersRolesNotSpecified" xml:space="preserve">
+    <value>Every approval hierarchy level must be assigned to at least one user, position or role.</value>
+  </data>
+  <data name="Function_DuplicateObjectType" xml:space="preserve">
+    <value>A Function with the same Object Type already exist. Please specify a different Object Type.</value>
+  </data>
+  <data name="Role_DuplicateRoleCode" xml:space="preserve">
+    <value>A role with the same role code already exists. Please specify a different role code</value>
+  </data>
+  <data name="Adjust_DuplicateItem" xml:space="preserve">
+    <value>A duplicate item with the same catalog, bin, batch already exists in this check-out. Please select a different catalog, bin or batch.</value>
+  </data>
+  <data name="User_EmailWrong" xml:space="preserve">
+    <value>Email verification failed.</value>
+  </data>
+  <data name="User_UserNameNotExist" xml:space="preserve">
+    <value>User Name does not exists.</value>
+  </data>
+  <data name="User_ExceedMaxLogins" xml:space="preserve">
+    <value>You have exceeded maximum number of login attempts.</value>
+  </data>
+  <data name="User_PasswordCannotChange" xml:space="preserve">
+    <value>You must wait for {0} day(s) before password can be changed again.</value>
+  </data>
+  <data name="User_PasswordReset" xml:space="preserve">
+    <value>Your password has been reset. An email will be sent to your e-mail account with your new password. Please try to log on again with your new password.</value>
+  </data>
+  <data name="Currency_ExchangeRateDateOverlaps" xml:space="preserve">
+    <value>The effective dates of this exchange rate overlaps with an existing rate in the system. Please correct the dates.</value>
+  </data>
+  <data name="User_PasswordHistoryExists" xml:space="preserve">
+    <value>Please enter a new password that is different from the previous {0} passwords.</value>
+  </data>
+  <data name="User_PasswordMustContainAlphaNumericCharacters" xml:space="preserve">
+    <value>Password must contain at least one alphabet and one numeric character.</value>
+  </data>
+  <data name="User_PasswordMinimumLength" xml:space="preserve">
+    <value>Password has to be at least {0} characters.</value>
+  </data>
+  <data name="General_SelectOneOrMoreItemsToAdd" xml:space="preserve">
+    <value>You did not select any items. Please select at least one item to add.</value>
+  </data>
+  <data name="StoreCheckIn_DuplicateEquipmentName" xml:space="preserve">
+    <value>A duplicate equipment with the same name and belongs under the same parent already exists in the check-in. Please enter a different name.</value>
+  </data>
+  <data name="WorkflowRepository_DuplicateObjectType" xml:space="preserve">
+    <value>This object type is already defined in another workflow. Please specify another type.</value>
+  </data>
+  <data name="WorkflowRepository_ExtensionInvalid" xml:space="preserve">
+    <value>The uploaded file is not of the correct extension. The system expects a {0} file.</value>
+  </data>
+  <data name="WorkflowRepository_UnableToValidateWorkflow" xml:space="preserve">
+    <value>Unable to validate workflows because the Windows Workflow Engine is not the current workflow engine running in this application instance.</value>
+  </data>
+  <data name="WorkflowRepositry_WorkflowValidationError" xml:space="preserve">
+    <value>The workflow cannot be uploaded due to the following validation error: {0}</value>
+  </data>
+  <data name="User_AccountBanned" xml:space="preserve">
+    <value>Your user account has been banned.</value>
+  </data>
+  <data name="User_PasswordMustContainAlphaNumericSpecialCharacters" xml:space="preserve">
+    <value>Password must contain at least one alphabet, one numeric and one special character (eg., ~ ! @ # $ % etc)</value>
+  </data>
+  <data name="Dashboard_CannotConvertToDateTime" xml:space="preserve">
+    <value>The value '{0}' in the column '{1}' of the data could not be converted into a DateTime.</value>
+  </data>
+  <data name="Dashboard_CannotConvertToDouble" xml:space="preserve">
+    <value>The value '{0}' in the column '{1}' of the data could not be converted into a double.</value>
+  </data>
+  <data name="DocumentTemplate_UnableToGenerate" xml:space="preserve">
+    <value>Unable to generate the document from the template because of the following error:</value>
+  </data>
+  <data name="Role_FunctionAlreadyGranted" xml:space="preserve">
+    <value>One or more of the selected functions have already been granted.</value>
+  </data>
+  <data name="Function_RoleAlreadyGranted" xml:space="preserve">
+    <value>One or more of the selected roles have already been granted.</value>
+  </data>
+  <data name="Point_DuplicateEquipmentTypeParameter" xml:space="preserve">
+    <value>A point with the same equipment and parameter already exists. Please select another equipment or parameter.</value>
+  </data>
+  <data name="Point_DuplicateLocationTypeParameter" xml:space="preserve">
+    <value>A point with the same location and parameter already exists. Please select another location or parameter.</value>
+  </data>
+  <data name="Point_DuplicateName" xml:space="preserve">
+    <value>A point with the same name already exists. Please enter another name.</value>
+  </data>
+  <data name="BudgetPeriod_UnableToAddDuplicateAccount" xml:space="preserve">
+    <value>The selected account already exists in this budget period. Please select another account.</value>
+  </data>
+  <data name="BudgetPeriod_OpeningBalanceTotalNotEqualsToIndividualIntervals" xml:space="preserve">
+    <value>The balance entered in the total does not equal to the sum of all balances in the individual intervals.</value>
+  </data>
+  <data name="BudgetAdjustment_InsufficientAmount" xml:space="preserve">
+    <value>There is insufficient amount in the budget for adjustment of the following accounts: {0}</value>
+  </data>
+  <data name="RunningNumberGenerator_DuplicateObjectTypeName" xml:space="preserve">
+    <value>The object type name already exists in another running number generator. Please select another object type name.</value>
+  </data>
+  <data name="RunningNumberGenerator_FormatStringInvalid" xml:space="preserve">
+    <value>The format string is invalid.</value>
+  </data>
+  <data name="BudgetReallocation_CheckTotalAmountItemsFromEqualTotalAmountItemsTo" xml:space="preserve">
+    <value>Total amount of all budget items to be reallocated from ({0:c}) must be equal to the total amount of all reallocated-to budget items ({1:c})</value>
+  </data>
+  <data name="BudgetReallocation_InsufficientAmount" xml:space="preserve">
+    <value>There is insufficient amount in the source budget for adjustment of the following accounts: {0}</value>
+  </data>
+  <data name="PurchaseRequest_InsufficientBudget" xml:space="preserve">
+    <value>The purchase request cannot be submitted because the following budget periods and accounts do not have sufficient funds available: {0}</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>The total amount for the line items does not equal to the total amount for the budgets for {0}.</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount_EntirePR" xml:space="preserve">
+    <value>the entire purchase request.</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>item number {0}.</value>
+  </data>
+  <data name="RequestForQuotation_DuplicateVendors" xml:space="preserve">
+    <value>The following vendors cannot be added because they already exist in the Work Justification: {0}.</value>
+  </data>
+  <data name="PurchaseOrder_InsufficientBudget" xml:space="preserve">
+    <value>The purchase order cannot be submitted because the following budget periods and accounts do not have sufficient funds available: {0}</value>
+  </data>
+  <data name="RequestForQuotation_InsufficientBudget" xml:space="preserve">
+    <value>The Work Justification cannot be submitted because the following budget periods and accounts do not have sufficient funds available: {0}</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>The total amount for the line items does not equal to the total amount for the budgets for {0} </value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount_EntirePO" xml:space="preserve">
+    <value>the entire purchase order.</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>item number {0}.</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>The total amount for the awarded line items does not equal to the total amount for the budgets for {0}. Please ensure that you have awarded the items before submitting this for approval.</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount_EntireRFQ" xml:space="preserve">
+    <value>the entire Work Justification</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>item number {0}</value>
+  </data>
+  <data name="PurchaseSettings_DuplicateLocation" xml:space="preserve">
+    <value>The same location has already been specified in another set of purchase settings. Please select another location.</value>
+  </data>
+  <data name="RequestForQuotation_InsufficientQuotations" xml:space="preserve">
+    <value>There is insufficient submitted quotations for this Work Justification to proceed. Please enter at least {0} quotations.</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountLessThanBudgetAmount" xml:space="preserve">
+    <value>The total amount for the line items is less than the total amount for the budgets for {0} </value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountLessThanBudgetAmount" xml:space="preserve">
+    <value>The total amount for the awarded line items is less than the total amount for the budgets for {0}. Please ensure that you have awarded the items before submitting this for approval.</value>
+  </data>
+  <data name="PurchaseSettings_NoLocationsSelected" xml:space="preserve">
+    <value>There are no locations selected. Please select at least one location.</value>
+  </data>
+  <data name="PurchaseSettings_NoBudgetGroupSelected" xml:space="preserve">
+    <value>There are no budget group selected. Please select at least one budget group.</value>
+  </data>
+  <data name="PurchaseSettings_NoPurchaseTypesSelected" xml:space="preserve">
+    <value>There are no purchase types selected. Please select at least one purchase type.</value>
+  </data>
+  <data name="PurchaseOrder_NoRFQBeforePO" xml:space="preserve">
+    <value>Unable to submit this PO for approval. You must generate an WJ for a PO of this amount.</value>
+  </data>
+  <data name="PurchaseRequest_LineItemsAlreadyGeneratedIntoRFQOrPOs" xml:space="preserve">
+    <value>The following line items have already been generated into PRs or POs:&lt;br/&gt;{0}</value>
+  </data>
+  <data name="ApplicationSettings_LoginLogoIcorrectFormat" xml:space="preserve">
+    <value>The login logo is not of a correct format. Please upload only JPEGs, PNGs, or GIFs.</value>
+  </data>
+  <data name="ApplicationSettings_ResolutionIncorrect" xml:space="preserve">
+    <value>The resolution of the logo must be 600 pixels in width by 400 pixels in height.</value>
+  </data>
+  <data name="EAMservice_LogonFailure" xml:space="preserve">
+    <value>Failed to logon as administrator. Service cannnot be started/stopped</value>
+  </data>
+  <data name="EAMservice_ViewError" xml:space="preserve">
+    <value>Unable to view services due to following error: </value>
+  </data>
+  <data name="Report_InvalidTemplateFile" xml:space="preserve">
+    <value>Please specify a valid file for the template</value>
+  </data>
+  <data name="Report_TemplateNameEmpty" xml:space="preserve">
+    <value>Please specify a template name before proceed</value>
+  </data>
+  <data name="Report_EmptyFile" xml:space="preserve">
+    <value>Please specify a report template file to upload</value>
+  </data>
+  <data name="Report_InvalidRdlTemplateFile" xml:space="preserve">
+    <value>Wrong input file format. Please specify a rdl report template to upload</value>
+  </data>
+  <data name="Report_InvalidRptTemplateFile" xml:space="preserve">
+    <value>Wrong input file format. Please specify a crystal report template to upload</value>
+  </data>
+  <data name="Report_TemplateNameDuplicate" xml:space="preserve">
+    <value>The input template name exists. Please specify different name for this report template.</value>
+  </data>
+  <data name="SurveyPlanner_RespondentRequire" xml:space="preserve">
+    <value>Please make sure that each survey has at least one respondent.</value>
+  </data>
+  <data name="SurveyPlanner_UnableLoadForm" xml:space="preserve">
+    <value>Unable to load the survey. Please contact MA to make sure that your email address is updated in the system.</value>
+  </data>
+  <data name="Case_RelatedDocumentsNotClosedOrCancelled" xml:space="preserve">
+    <value>This case cannot be closed because not all related works, PRs and POs have been closed or cancelled.</value>
+  </data>
+  <data name="Case_CannotBeClosedOrCancelled" xml:space="preserve">
+    <value>The case selected has been closed or cancelled and cannot be associated with this work, Work Justification or purchase order. Please select another case.</value>
+  </data>
+  <data name="RequestForQuotation_RFQNotAwarded" xml:space="preserve">
+    <value>Unable to generate a PO from PRs {0} as the PRs are not in the Awarded state.</value>
+  </data>
+  <data name="RequestForQuotation_RFQNotAwardedToSingleVendor" xml:space="preserve">
+    <value>Unable to generate a PO from PRs {0} as the PRs are not awarded to a single vendor.</value>
+  </data>
+  <data name="General_CannotEditWorkBecauseNotAssignedToYou" xml:space="preserve">
+    <value>You are unable to edit the item because it is currently not assigned to you. This can happen if somebody has performed an action on the item and assigned the item to another person.</value>
+  </data>
+  <data name="NotificationHierarchy_UsersRolesNotSpecified" xml:space="preserve">
+    <value>Every notification hierarchy level must be assigned to at least one user or role.</value>
+  </data>
+  <data name="NotificationProcess_TimingsOutOfOrder" xml:space="preserve">
+    <value>The order of the timings for notification are not in order. Please ensure that timings increase with each increasing level.</value>
+  </data>
+  <data name="NotificationProcess_NoApplicablePrioritiesSet" xml:space="preserve">
+    <value>At least one priority must be set as applicable for this notification process.</value>
+  </data>
+  <data name="ApprovalProcess_LimitsOutOfOrder" xml:space="preserve">
+    <value>The order of the approval limits are not in order. Please ensure that approval limits increase with each increasing approval level.</value>
+  </data>
+  <data name="General_CannotPrintNewObject" xml:space="preserve">
+    <value>Cannot generate report for new item. Please save and try again.</value>
+  </data>
+  <data name="General_OdbcException" xml:space="preserve">
+    <value>System is busy, please try again.</value>
+  </data>
+  <data name="StockTake_NoItemsToAdjust" xml:space="preserve">
+    <value>No item need to be adjust.</value>
+  </data>
+  <data name="BudgetPeriod_BudgetPeriodOverlapsExistingBudgetPeriod" xml:space="preserve">
+    <value>This budget period overlaps with an existing budget period: {0} ({1:dd-MMM-yyy} to {2:dd-MMM-yyyy}).</value>
+  </data>
+  <data name="RequestForQuotation_BudgetAccountsNotActive" xml:space="preserve">
+    <value>The Work Justification cannot be submitted because the following budget accounts are not active in their respective budget periods:
+{0}</value>
+  </data>
+  <data name="PurchaseOrder_BudgetAccountsNotActive" xml:space="preserve">
+    <value>The purchase order cannot be submitted because the following budget accounts are not active in their respective budget periods:
+{0}</value>
+  </data>
+  <data name="Transfer_FromStoreBinToStoreBinDoNotMatchTransfer" xml:space="preserve">
+    <value>The bins selected in the items do not match the source and destination stores. Please remove all items and try again.</value>
+  </data>
+  <data name="Transfer_FromStoreToStoreChanged" xml:space="preserve">
+    <value>The source and destination store has changed in the transfer page since you last performed the search, so you cannot add these items into the Transfer. Please try to search again.</value>
+  </data>
+  <data name="StoreCheckIn_StoreChanged" xml:space="preserve">
+    <value>The store has been changed since the last search, so the selected items cannot be added. Please perform the search again.</value>
+  </data>
+  <data name="StoreCheckOut_StoreChanged" xml:space="preserve">
+    <value>The store has been changed since the last search, so the selected items cannot be added. Please perform the search again.</value>
+  </data>
+  <data name="StoreTransfer_StoreChanged" xml:space="preserve">
+    <value>The store has been changed since the last search, so the selected items cannot be added. Please perform the search again.</value>
+  </data>
+  <data name="StockTake_StoreBinsLocked" xml:space="preserve">
+    <value>The store bin(s) {0} are currently locked so you cannot proceed with the stock take.</value>
+  </data>
+  <data name="StoreCheckIn_StoreBinsLocked" xml:space="preserve">
+    <value>Unable to check in items because stock take is currently in progress on the following bins: {0}</value>
+  </data>
+  <data name="StoreCheckOut_StoreBinsLocked" xml:space="preserve">
+    <value>Unable to check out items because stock take is currently in progress on the following bins: {0}</value>
+  </data>
+  <data name="StoreTransfer_StoreBinsLocked" xml:space="preserve">
+    <value>Unable to transfer items because stock take is currently in progress on the following bins: {0}</value>
+  </data>
+  <data name="Position_DuplicateName" xml:space="preserve">
+    <value>The position name already exists. Please enter another position name.</value>
+  </data>
+  <data name="Reading_NonSelected" xml:space="preserve">
+    <value>Please Select At Least One Point To Update</value>
+  </data>
+  <data name="Reading_UpdateFailed" xml:space="preserve">
+    <value>Point({0}) Upload Failed due to '{1}'</value>
+  </data>
+  <data name="Reading_ValueExceedMax" xml:space="preserve">
+    <value>Reading Value Exceeds Maximum Value</value>
+  </data>
+  <data name="Reading_ValueFormatIncorrect" xml:space="preserve">
+    <value>Reading Value in Incorrect Format</value>
+  </data>
+  <data name="Reading_EmptyFile" xml:space="preserve">
+    <value>There is no record in this file</value>
+  </data>
+  <data name="Reading_InvalidFile" xml:space="preserve">
+    <value>The uploaded file not exists or format incorrect. Please upload Excel file only</value>
+  </data>
+  <data name="ApprovalProcess_Limits" xml:space="preserve">
+    <value>The approval limit enter is not within the range. Please enter approval limit which is greater than 0.</value>
+  </data>
+  <data name="BudgetAdjustment_Added" xml:space="preserve">
+    <value>{0} budget adjustment records have been created for this  budget period.</value>
+  </data>
+  <data name="BudgetAdjustment_NoAdjustment" xml:space="preserve">
+    <value>There is no adjustment for the following accounts: {0}</value>
+  </data>
+  <data name="General_ItemNotExist" xml:space="preserve">
+    <value>{0} does not exist.</value>
+  </data>
+  <data name="Budget_ExcelNotMatch" xml:space="preserve">
+    <value>You have indicated '{0}' in column {1} for the account '{2}'. But '{0}' is not a valid number. Please change the amount to a valid number.</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetPeriodsClosed" xml:space="preserve">
+    <value>The following budget periods are not active or are closed and no Purchase Invoices can be created against them: {0}</value>
+  </data>
+  <data name="PurchaseOrder_BudgetPeriodsClosed" xml:space="preserve">
+    <value>The following budget periods are not active or are closed and no Purchase Orders can be created against them: {0}</value>
+  </data>
+  <data name="RequestForQuotation_BudgetPeriodsClosed" xml:space="preserve">
+    <value>The following budget periods are not active or are closed and no Work Justifications can be created against them: {0}</value>
+  </data>
+  <data name="PurchaseRequest_CannotBeCancelledItemsGeneratedToRFQOrPO" xml:space="preserve">
+    <value>The Purchase Request cannot be cancelled because one of the line items have already been generated into a Work Justification or a Purchase Order.</value>
+  </data>
+  <data name="RequestForQuotation_CannotBeCancelledItemsGeneratedToRFQOrPO" xml:space="preserve">
+    <value>The Work Justification cannot be cancelled because one of the line items have already been generated into a Purchase Order.</value>
+  </data>
+  <data name="PurchaseOrder_CannotBeCancelledGoodsReceiptAndInvoiceGenerated" xml:space="preserve">
+    <value>The Purchase Order cannot be cancelled because a Goods Receipt or an Invoice has already been created against this Purchase Order.</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetAmountNotEqualsTotalAmount" xml:space="preserve">
+    <value>This invoice cannot be submitted for approval because the total budget amount is not equal to the total invoice amount. </value>
+  </data>
+  <data name="Utility_UtilityValueNegative" xml:space="preserve">
+    <value>Utility value should not negative value. Please enter utility value which is greater than 0.</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDateTime" xml:space="preserve">
+    <value>Range Max Date must be greater than Range Min Date.</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDecimal" xml:space="preserve">
+    <value>Range Max Decimal must be greater than Range Min Decimal.</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDouble" xml:space="preserve">
+    <value>Range Max Double must be greater than Range Min Double.</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinInteger" xml:space="preserve">
+    <value>Range Max Integer must be greater than Range Min Integer.</value>
+  </data>
+  <data name="StoreRequest_BinLocked" xml:space="preserve">
+    <value>Unable to check out or return items because the following store bins are locked: {0}</value>
+  </data>
+  <data name="StoreRequest_InsufficientItems1" xml:space="preserve">
+    <value>The following items in the store are insufficient for the request: {0}</value>
+  </data>
+  <data name="StoreRequest_InvalidReturn" xml:space="preserve">
+    <value>The followings item cannot be returned because the returned quantity is greater than the checked out quantity: {0}</value>
+  </data>
+  <data name="StoreRequest_DuplicateItemName" xml:space="preserve">
+    <value>A duplicate item '{0}' with the same catalog and bin already exists in this request. Please select a different catalog or bin. </value>
+  </data>
+  <data name="StoreRequest_ItemNotInStore" xml:space="preserve">
+    <value>The following items do not exist in current store: {0}</value>
+  </data>
+  <data name="RequestForQuotation_LineItemsAlreadyGeneratedIntoRFQOrPOs" xml:space="preserve">
+    <value>The following line items have already been generated into  POs:&lt;br/&gt;{0}</value>
+  </data>
+  <data name="RequestForQuotation_LineItemsNotAwardedToASingleVendor" xml:space="preserve">
+    <value>Unable to generate a Purchase Order from the selected line items because they are not awarded to the same vendor.</value>
+  </data>
+  <data name="BudgetReallocate_TotalNegative" xml:space="preserve">
+    <value>Total amount should not be negative value. Please enter a value greater or equal to 0.</value>
+  </data>
+  <data name="Task_ActionUnsuccessful" xml:space="preserve">
+    <value>{0} was not successful for the following tasks: {1}</value>
+  </data>
+  <data name="BudgetPeriod_TotalNegative" xml:space="preserve">
+    <value>Total amount should not be negative value. Please enter a value greater or equal to 0.</value>
+  </data>
+  <data name="Task_CannotPerformMassActionNoTasksSelected" xml:space="preserve">
+    <value>Unable to perform action because no tasks are selected. Please select at least one task before clicking the Confirm button.</value>
+  </data>
+  <data name="Reading_NothingChanged" xml:space="preserve">
+    <value>The selected readings are not changed.</value>
+  </data>
+  <data name="PurchaseOrder_StoreBinsLocked" xml:space="preserve">
+    <value>The Purchase Order cannot be saved because the selected store bin '{0}' is locked for stock taking.</value>
+  </data>
+  <data name="Work_StoreBinsLocked" xml:space="preserve">
+    <value>The work cannot be saved because the following store bins are currently locked for stock taking: {0}</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetAccountsNotActive" xml:space="preserve">
+    <value>The purchase invoice cannot be submitted because the following budget accounts are not active in their respective budget periods:
+{0}</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientBudget" xml:space="preserve">
+    <value>The purchase invoice cannot be submitted because the following budget periods and accounts do not have sufficient funds available: {0}</value>
+  </data>
+  <data name="Saudi_Resource_UploadImageFailed" xml:space="preserve">
+    <value>Unable to process the image file. Please choose image with size less than 1MB.</value>
+  </data>
+  <data name="Saudi_Booking_InvalidTimeRange" xml:space="preserve">
+    <value>'Booking Start' is invalid. Please specify a value that is less than or equals to 'Booking End'.</value>
+  </data>
+  <data name="Saudi_Booking_TimeRangeTooShort" xml:space="preserve">
+    <value>The booking period is minimal 1 hour.</value>
+  </data>
+  <data name="Saudi_Booking_EndTimePassed" xml:space="preserve">
+    <value>'Booking End' must be greater than the current datetime.</value>
+  </data>
+  <data name="Saudi_Booking_StartTimePassed" xml:space="preserve">
+    <value>'Booking Start' must be greater than the current datetime.</value>
+  </data>
+  <data name="Saudi_Booking_TimeRangeOverlap" xml:space="preserve">
+    <value>The booking period is overlap with the following booking(s):</value>
+  </data>
+  <data name="PurchaseInvoice_CreditDebitMeomoOnInvoiceNotSelected" xml:space="preserve">
+    <value>Unable to apply the invoice budgets as you have not selected the invoice to which this credit/debit memo will be matched</value>
+  </data>
+  <data name="OPCAEEvent_DuplicateEventSource" xml:space="preserve">
+    <value>The OPC Event Source already exists in another OPC AE Event for the same OPC DA Server. Please enter another OPC Event Source.</value>
+  </data>
+  <data name="OPCAEEvent_DuplicateName" xml:space="preserve">
+    <value>An OPC AE Event with the same name already exists. Please enter another name.</value>
+  </data>
+  <data name="Point_DuplicateOPCItemName" xml:space="preserve">
+    <value>The OPC Item Name already exists in another Point for the same OPC DA Server. Please enter another OPC Item Name.</value>
+  </data>
+  <data name="PurchaseInvoice_CannotCancelDueToExistingCreditDebitMemos" xml:space="preserve">
+    <value>This invoice cannot be cancelled because the following credit or debit memos are against this invoice: {0} Cancel those credit or debit memos first.</value>
+  </data>
+  <data name="PurchaseInvoice_CannotApplyBudgetsDueToUnknownAmount" xml:space="preserve">
+    <value>Unable to automatically apply budgets because the invoice amount in the base currency cannot be determined. Please ensure that you have entered the invoice amount, the currency, and the exchange rate.</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientBudgetForCancellation" xml:space="preserve">
+    <value>The credit/debit memo cannot be cancelled because the following budget periods and accounts do not have sufficient funds available: {0}</value>
+  </data>
+  <data name="PurchaseInvoice_TotalCreditAmountAndTaxMoreThanOriginalInvoice" xml:space="preserve">
+    <value>Unable to submit this credit/debit memo for approval because the total amount and tax for all credit/debit memos is greater than the original invoice.</value>
+  </data>
+  <data name="ExcelUpload_NoExcelUploaded" xml:space="preserve">
+    <value>No Excel file has been uploaded. Please upload a new Excel file first.</value>
+  </data>
+  <data name="ExcelUpload_UnableToUploadDueToErrors" xml:space="preserve">
+    <value>Unable to import the uploaded Excel file due to some errors. Please correct the errors and try again.</value>
+  </data>
+  <data name="ExcelUpload_UploadedDataCleared" xml:space="preserve">
+    <value>The uploaded data has been cleared.</value>
+  </data>
+  <data name="ExcelUpload_UploadedSuccessfully" xml:space="preserve">
+    <value>The data has been imported into the database successfully.</value>
+  </data>
+  <data name="Reading_DateOfReadingEmpty" xml:space="preserve">
+    <value>The Date of Reading field is required. </value>
+  </data>
+  <data name="Reading_DateOfReadingNotValid" xml:space="preserve">
+    <value>The Date of Reading field is entered incorrectly. Please ensure that the Date of Reading is a proper date.</value>
+  </data>
+  <data name="Reading_EquipmentDoesNotExist" xml:space="preserve">
+    <value>The Equipment path does not exist in the system.</value>
+  </data>
+  <data name="Reading_LocationDoesNotExist" xml:space="preserve">
+    <value>The Location path does not exist in the system. </value>
+  </data>
+  <data name="Reading_LocationEquipmentEntered" xml:space="preserve">
+    <value>Both Location and Equipment are filled up. Please ensure that only one of the fields are filled up.</value>
+  </data>
+  <data name="Reading_PointDoesNotExist" xml:space="preserve">
+    <value>The Point does not exist in the specified location or equipment.</value>
+  </data>
+  <data name="Reading_ReadingAlreadyExists" xml:space="preserve">
+    <value>The reading for the same location/equipment, the same point and date already exists in the system.</value>
+  </data>
+  <data name="Reading_ReadingEmpty" xml:space="preserve">
+    <value>The Reading field is required. Please enter all Reading fields.</value>
+  </data>
+  <data name="Reading_ReadingNotValid" xml:space="preserve">
+    <value>The Reading field is entered incorrectly. Please ensure that the Reading is a proper decimal number.</value>
+  </data>
+  <data name="UnitConversion_ConversionFactorMoreThanFourDecimalPlaces" xml:space="preserve">
+    <value>The conversion factor is invalid because either itself ({0}), or its reciprocal (1/{0}) is more than four decimal places.</value>
+  </data>
+  <data name="Work_NoTechnicianAssigned" xml:space="preserve">
+    <value>There are no technicians assigned to this work. Please assign at least one technician.</value>
+  </data>
+  <data name="Lms_Location_UploadImageFailed" xml:space="preserve">
+    <value>Unable to process the image file. Please choose image with size less than 1MB.</value>
+  </data>
+  <data name="LMS_Location_NoImage" xml:space="preserve">
+    <value>Image is compulsory. Please upload an image for the location.</value>
+  </data>
+  <data name="RequestForQuotation_RFQBudgetDistributionModeMustBeLineItem" xml:space="preserve">
+    <value>Unable to generate a PO from the selected PRs as the following PRs {0} Budgets are not distributed by Line Items. Please ensure that the Budget Distribution Mode for all selected PRs are Line Items</value>
+  </data>
+  <data name="RequestForQuotation_RFQHaveDifferentProperties" xml:space="preserve">
+    <value>Unable to generate a PO from the selected PRs as they have different Locations, Equipment, Types, Cases, Term Contracts, Budget Distribution Modes, Date Required and/or Date End. Please ensure that the properties of all selected PRs must be the same.</value>
+  </data>
+  <data name="LMS_Point_SameLocation" xml:space="preserve">
+    <value>A point with the same location already exists. Please select another location.</value>
+  </data>
+  <data name="RequestForQuotation_NoLineItemsAwarded" xml:space="preserve">
+    <value>No line items have been awarded to any vendor. Please ensure that at least one line item is awarded before submitting the Work Justification for approval.</value>
+  </data>
+  <data name="Equipment_EquipmentTypeNotSelected" xml:space="preserve">
+    <value>Please select an equipment type first.</value>
+  </data>
+  <data name="Equipment_UnableToCreatePointsNoPoints" xml:space="preserve">
+    <value>Unable to create points as there are no points set up under the selected equipment type.</value>
+  </data>
+  <data name="Location_LocationTypeNotSelected" xml:space="preserve">
+    <value>Please select a location type first.</value>
+  </data>
+  <data name="Location_UnableToCreatePointsNoPoints" xml:space="preserve">
+    <value>Unable to create points as there are no points set up under the selected location type.</value>
+  </data>
+  <data name="Dashboard_DuplicateIdentifier" xml:space="preserve">
+    <value>The identifier already exists in another field in this dashboard. Please specify another identifier.</value>
+  </data>
+  <data name="Report_DuplicateIdentifier" xml:space="preserve">
+    <value>The identifier already exists in another field in this report. Please specify another identifier.</value>
+  </data>
+  <data name="Keppel_Work_InvalidLocationCode" xml:space="preserve">
+    <value>The selected site has no running number code.</value>
+  </data>
+  <data name="PurchaseOrder_InvoicesNotClosedOrCancelled" xml:space="preserve">
+    <value>The Purchase Order cannot be closed because there are some invoices that are not closed or cancelled.</value>
+  </data>
+  <data name="ApprovalHierarchyLevel_NumberOfUsersLessThanNumberOfApprovalsRequired" xml:space="preserve">
+    <value>The number of users assigned is less than the number of approvals required at this level.
+
+Please either assign same number of or more users than there are required approvals, or assign a role to this approval level.</value>
+  </data>
+  <data name="Capitaland_ApplicationSetting_InvalidWJDate" xml:space="preserve">
+    <value>Date Required cannot be later than Date End.</value>
+  </data>
+  <data name="PurchaseRequest_BudgetAccountsNotActive" xml:space="preserve">
+    <value>The purchase request cannot be submitted because the following budget accounts are not active in their respective budget periods:
+{0}</value>
+  </data>
+  <data name="PurchaseRequest_BudgetPeriodsClosed" xml:space="preserve">
+    <value>The following budget periods are not active or are closed and no Purchase Request can be created against them: {0}</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountLessThanBudgetAmount" xml:space="preserve">
+    <value>The total amount for the line items is less than the total amount for the budgets for {0}.</value>
+  </data>
+  <data name="ApprovalHierarchyLevel_SecretaryRequiresExactlyOneApprover" xml:space="preserve">
+    <value>Exactly one approver user, and no approval roles must be specified because this approval level has a secretary.</value>
+  </data>
+  <data name="RequestForQuotation_CheckReallocationItemBalanceSufficient" xml:space="preserve">
+    <value>There is insufficient amount in the source budget for adjustment.</value>
+  </data>
+  <data name="PurchaseOrder_BudgetNoPeriod" xml:space="preserve">
+    <value>The Purchase Order cannot be submitted for approval because the following budgets(s) do not have an active budget period covering the accrual date: {0}</value>
+  </data>
+  <data name="PurchaseRequest_BudgetNoPeriod" xml:space="preserve">
+    <value>The Purchase Request cannot be submitted for approval because the following budget(s) do not have an active budget period covering the accrual date: {0}</value>
+  </data>
+  <data name="RequestForQuotation_BudgetNoPeriod" xml:space="preserve">
+    <value>The Work Justification cannot be submitted for approval because the following budgets(s) do not have an active budget period covering the accrual date: {0}</value>
+  </data>
+  <data name="PurchaseOrder_POAmountNotEqualIRAmount" xml:space="preserve">
+    <value>The Purchase Order can not be closed because this Purchase Order amount is not equal to Invoice Receive amount</value>
+  </data>
+  <data name="PurchaseOrder_POAmountNotEqualPSAmount" xml:space="preserve">
+    <value>Total amount of all purchase order items must be equal to total amount of payment schedule</value>
+  </data>
+  <data name="RequestForQuotation_BudgetReallocationAcrossBudgetPeriod" xml:space="preserve">
+    <value>Across Budget reallocation is not allowed. The following is list of the budget period found only in the "Reallocation To" but not in the "Reallocation From" (or vice versa):{0}.</value>
+  </data>
+  <data name="RequestForQuotation_CheckTotalAmountItemsFromEqualTotalAmountItemsTo1" xml:space="preserve">
+    <value>A budget period's total reallocated-from amount must be equal to its total reallocated-to amount. The following is the list of budget periods whose total reallocated-from amount is not equal to its total reallocated-to amount: {0}.</value>
+  </data>
+  <data name="User_DuplicatedUserEmail" xml:space="preserve">
+    <value>A user with the same email already exists. Please specify a different user's email</value>
+  </data>
+  <data name="Point_LastReadingGreaterThanMaximumReading" xml:space="preserve">
+    <value>Last reading cannot be greater than the maximum reading.</value>
+  </data>
+  <data name="Reading_LocationEquipmentNotSelected" xml:space="preserve">
+    <value>The location or equipment for this reading is not selected. Please select either a location or an equipment.</value>
+  </data>
+  <data name="Reading_ReadingWithTenantAlreadyExists" xml:space="preserve">
+    <value>The reading for the point with tenant for that month already exists in the system.</value>
+  </data>
+  <data name="Equipment_MovingToLockedStoreBin" xml:space="preserve">
+    <value>Unable to move the equipment to the store/location is it has been locked for stock taking.</value>
+  </data>
+  <data name="BillToAmos_DataValidateNotSuccessful" xml:space="preserve">
+    <value>Not able to bill to AMOS as data required for posting is/are missing for the highlighted row(s).</value>
+  </data>
+  <data name="RequestForQuotation_VendorAttachment" xml:space="preserve">
+    <value>Awarded Vendor does not have any attachment. Please upload the attachment for awarded vendor</value>
+  </data>
+  <data name="TechnicianRoster_AssignedTechnicians" xml:space="preserve">
+    <value>Please select technician {0} before technician {1} can be selected.</value>
+  </data>
+  <data name="TechnicianRoster_DuplicatedAssignedTechnicians" xml:space="preserve">
+    <value>Technician {0} with same day and shift already exist</value>
+  </data>
+  <data name="TechnicianRoster_DuplicateTechnicianRosterITem" xml:space="preserve">
+    <value>Unable to save this roster item. Another one with the same day and shift already exists. Please select another day or shift</value>
+  </data>
+  <data name="TechnicianRoster_DuplicateTechnicianRoster" xml:space="preserve">
+    <value>Unable to save this roster. Another one with the same location,year and month already exists. Please select another location or year or month.</value>
+  </data>
+  <data name="Case_SelectOneSupervisorOrTechnician" xml:space="preserve">
+    <value>Please select either one supervisor or technician.</value>
+  </data>
+  <data name="Reading_ReadingBackDate" xml:space="preserve">
+    <value>Date of Reading must be greater than the last reading for this Point.</value>
+  </data>
+  <data name="Work_DuplicatePointInSameMonth" xml:space="preserve">
+    <value>The reading for the Point : {0} already exists in the system.</value>
+  </data>
+  <data name="Point_DuplicateBarcode" xml:space="preserve">
+    <value>Barcode already exist. Please check the Barcode again.</value>
+  </data>
+  <data name="Reading_ReadingDateChangeAfterPost" xml:space="preserve">
+    <value>Changing of date is not allow as reading has already posted to Amos.</value>
+  </data>
+  <data name="Point_SelectAtLeastOne" xml:space="preserve">
+    <value>Please select at least one point to be updated.</value>
+  </data>
+  <data name="PointTariff_DuplicateLocation" xml:space="preserve">
+    <value>A tariff has already been set up for Points for this Location. Please select another location.</value>
+  </data>
+  <data name="LocationStockTake_DuplicatedEquipmentInReconciliationItems" xml:space="preserve">
+    <value>This name already exists in the reconciliation items. Please specify another name.</value>
+  </data>
+  <data name="LocationStockTake_DuplicatedEquipmentInSystem" xml:space="preserve">
+    <value>This name already exists in the system. Please specify another name.</value>
+  </data>
+  <data name="LocationStockTake_EquipmentHasInvalidCatalogueID" xml:space="preserve">
+    <value>The selected equipment has no catalogue type.</value>
+  </data>
+  <data name="LocationStockTake_EquipmentQtyGreaterThanOne" xml:space="preserve">
+    <value>No equipment can be found in more than one places. The following equipments have a total observed quantity greater than 1: {0}.</value>
+  </data>
+  <data name="LocationStockTake_InvalidNewEquipment" xml:space="preserve">
+    <value>In order to create new equipment(s), the equipment details must be key in properly. Please key in equipment information for the following items: {0}.</value>
+  </data>
+  <data name="LocationStockTake_InvalidObservedQuantities" xml:space="preserve">
+    <value>Observed quantity cannot be 0 for manually added equipments. The following equipments have 0 observed quantities:{0}.</value>
+  </data>
+  <data name="LocationStockTake_InvalidObservedQuantity" xml:space="preserve">
+    <value>Observed quantity cannot be 0 for manually added equipment.</value>
+  </data>
+  <data name="LocationStockTake_InvalidTransferEquipment" xml:space="preserve">
+    <value>In order to transfer the equipment(s) to new locations, the equipment(s) must be specified. Please select the equipment(s) for the following items: {0}.</value>
+  </data>
+  <data name="LocationStockTake_InvalidTransferLocation" xml:space="preserve">
+    <value>The transfer location cannot be same as the equipment's current location.</value>
+  </data>
+  <data name="LocationStockTake_StoreBinsLocked" xml:space="preserve">
+    <value>The location(s) {0} are currently locked so you cannot proceed with the stock take.</value>
+  </data>
+  <data name="PurchaseOrder_LineItemNotWithinContractPriceVariation" xml:space="preserve">
+    <value>The unit price of this line item you have entered is not within the {0}% of the {1:n} purchase agreement for the selected contract.</value>
+  </data>
+  <data name="TechnicianRoster_EmptyLocation" xml:space="preserve">
+    <value>Please select Location before updating.</value>
+  </data>
+  <data name="TechnicianRoster_TechnicianNotExisting" xml:space="preserve">
+    <value>Technician {0} does not belong to the Location.</value>
+  </data>
+  <data name="PurchaseInvoice_ValidateInvoiceLessThanOrEqualsToPOAmountFailed" xml:space="preserve">
+    <value>The total invoice amount cannot be greater than PO Amount</value>
+  </data>
+  <data name="TechnicianRoster_NoTechnicianInLocation" xml:space="preserve">
+    <value>There isn't work technician or work supervisor in the Location</value>
+  </data>
+  <data name="CheckIn_WholeNumberQuantityFailed" xml:space="preserve">
+    <value>Catalog Quantity has to be a whole number.</value>
+  </data>
+  <data name="EquipmentWriteOff_EquipmentIsPendingWriteOff" xml:space="preserve">
+    <value>Equipment {0} is pending Write Off or already WriteOff</value>
+  </data>
+  <data name="EquipmentWriteOff_DuplicateEquipment" xml:space="preserve">
+    <value>This Equipment already exists in the Equipment Write-Off</value>
+  </data>
+  <data name="RequestForQuotation_QuantityRequired" xml:space="preserve">
+    <value>the required quantity should be equal to the amount of every location's quantity.</value>
+  </data>
+  <data name="RequestForQuotation_AccountIsNotMatch" xml:space="preserve">
+    <value>The budget account number is not match.please make sure you assign budget for each location.</value>
+  </data>
+  <data name="UserCreation_DuplicateUserName" xml:space="preserve">
+    <value>Sorry the following users {0} have duplicate UserName/LoginName. Please specify another.</value>
+  </data>
+  <data name="UserCreation_NoPositions" xml:space="preserve">
+    <value>Please insert at least one position.</value>
+  </data>
+  <data name="VendorPrequalification_DuplicateVendorName" xml:space="preserve">
+    <value>The following vendors {0} are duplicate. Please specify other vendor names.</value>
+  </data>
+  <data name="VendorPrequalification_AtLeastOneRecommendedFailed" xml:space="preserve">
+    <value>At least one of the vendors have to be recommended.</value>
+  </data>
+  <data name="Meter_DuplicateName" xml:space="preserve">
+    <value>A meter with the same name already exists. Please enter another name.</value>
+  </data>
+  <data name="PurchaseOrder_POSentToVendorFailed" xml:space="preserve">
+    <value>Unable to send the Purchase Order to the vendor because of the following error: {0}. Please try again in a few minutes.</value>
+  </data>
+  <data name="PurchaseOrder_POSentToVendorSuccessful" xml:space="preserve">
+    <value>The Purchase Order has been sent to the vendor via e-mail. It may take up to several minutes, depending on network conditions, before they will receive the e-mail.</value>
+  </data>
+  <data name="PurchaseOrder_VendorNoEmailAddress" xml:space="preserve">
+    <value>Unable to send the Purchase Order to the vendor because the vendor's e-mail address was not specified at the point the Purchase Order was created.</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientAutoCreditNoteNetAmount" xml:space="preserve">
+    <value>Credit Note Net Amount can not be greater than Invoice Net Amount.</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientAutoCreditNoteTaxAmount" xml:space="preserve">
+    <value>Credit Note Tax Amount can not be greater than Invoice Tax Amount.</value>
+  </data>
+  <data name="RequestForQuotation_AtLeastOneAttachmentRequired" xml:space="preserve">
+    <value>You must upload at least your scanned copy of the Approval Paper as proof of approval, because you have indicated that this WJ is delegated to HOD.</value>
+  </data>
+  <data name="Task_NotInPendingApprovalState" xml:space="preserve">
+    <value>Unable to approve, reject or cancel task because it is not in the Pending Approval state.</value>
+  </data>
+  <data name="PurchaseOrder_SubTotalOriginalLineItemAmount" xml:space="preserve">
+    <value>The line item total amount can not be greater than original line item total amount</value>
+  </data>
+  <data name="PurchaseOrder_TaxAmount" xml:space="preserve">
+    <value>Tax Amount can not be less than 0 or greater than total amount</value>
+  </data>
+  <data name="RequestForQuotation_SingleIptVendorAttachmentNoExist" xml:space="preserve">
+    <value>You have selected an IPT vendor to quote for this WJ but you did not upload any attachment as a supporting document. Please upload at least one supporting document.</value>
+  </data>
+  <data name="Multiple_SelectItem" xml:space="preserve">
+    <value>Please select at least one item before proceed</value>
+  </data>
+  <data name="Task_InPendingCancellationState" xml:space="preserve">
+    <value>Unable to cancel task because it is in the Pending Approval for Cancellation state.</value>
+  </data>
+  <data name="BudgetAdjustment_IntervalAmountNotEqualsTotal" xml:space="preserve">
+    <value>The monthly amounts is not equals to the total for the following accounts: {0}. Please ensure that the amounts in all individual months add up to the same as the total amount.</value>
+  </data>
+  <data name="PurchaseInvoice_MandatoryAttachment" xml:space="preserve">
+    <value>Attachment is compulsory.</value>
+  </data>
+  <data name="Work_LineItemsAlreadyGeneratedIntoRFQ" xml:space="preserve">
+    <value>The following line items have already been generated into Work Justification:&lt;br/&gt;{0}</value>
+  </data>
+  <data name="PurchaseInvoice_DuplicateInvoiceNumber" xml:space="preserve">
+    <value>This invoice number already existed. Please specify another invoice number.</value>
+  </data>
+  <data name="PurchaseInvoice_UnableToTransferAmountFromTransactionLog" xml:space="preserve">
+    <value>This happens when the total amount exceeded budget amount committed of previous purchase document.</value>
+  </data>
+  <data name="PurchaseOrder_UnableToTransferAmountFromTransactionLog" xml:space="preserve">
+    <value>This happens when the total amount exceeded budget amount committed of previous purchase document.</value>
+  </data>
+  <data name="BudgetReallocation_InvalidNumberOfSubCategory" xml:space="preserve">
+    <value>The budgets selected belongs to different Sub Category. Please try again by doing a single budget reallocation.</value>
+  </data>
+  <data name="BudgetReallocation_InvalidMainCategory" xml:space="preserve">
+    <value>The budget reallocation can ONLY be done within the accounts' main category (Capex or Non-Capex).</value>
+  </data>
+  <data name="StoreCheckIn_InvalidReturnStock" xml:space="preserve">
+    <value>The quantity of check-in items is more than the actually checked out items.</value>
+  </data>
+  <data name="StoreCheckIn_RequiredCheckOutFirst" xml:space="preserve">
+    <value>This line item has not checked out yet. Thus the check-in is not possible.</value>
+  </data>
+  <data name="RequestForQuotation_LineItemsQuantityNotFilled" xml:space="preserve">
+    <value>One or more line item still have unfilled quantity required.</value>
+  </data>
+  <data name="Work_InvalidTemplate" xml:space="preserve">
+    <value>None or more than 1 template found.</value>
+  </data>
+  <data name="Work_CannotCheckOut" xml:space="preserve">
+    <value>The selected items are not in valid type, must be Inventory Items to check out.</value>
+  </data>
+  <data name="Work_InvalidQuantity" xml:space="preserve">
+    <value>One or more of the selected items has a zero estimated quantity. Please input the quantity or deselect those items.</value>
+  </data>
+  <data name="BudgetReallocation_InvalidCapexToOpex" xml:space="preserve">
+    <value>Unable to reallocate budget from Capex to Opex or vice versa.</value>
+  </data>
+  <data name="RequestForQuotation_InvalidBudgetReallocationTo" xml:space="preserve">
+    <value>Reallocation to budgets have both Capex and Opex. Please do reallocation to either of them only.</value>
+  </data>
+  <data name="StoreCheckOut_InsufficientWOItems" xml:space="preserve">
+    <value>Insufficient amount of items left from WO. Please go back to WO and add more Inventory Items.</value>
+  </data>
+  <data name="Work_SaveBeforeCheckOut" xml:space="preserve">
+    <value>Please save the Work Order first before check out.</value>
+  </data>
+  <data name="PurchaseOrder_InvalidReceiptItems" xml:space="preserve">
+    <value>The Quantity Received should not exceed the Quantity Ordered.</value>
+  </data>
+  <data name="StoreTransfer_InvalidAmount" xml:space="preserve">
+    <value>Please revise the received quantity, the quantity must be equal or less than the requested quantity.</value>
+  </data>
+  <data name="StoreTransfer_ZeroAmount" xml:space="preserve">
+    <value>Zero amount is not acceptable.</value>
+  </data>
+  <data name="InvalidSystemCode_CannotSubscribeToCRV" xml:space="preserve">
+    <value>Invalid System Code can not subscribe to CRV.</value>
+  </data>
+  <data name="InvalidSystemCode_CannotUnsubscribeToCRV" xml:space="preserve">
+    <value>Invalid System Code can not unsubscribe to CRV.</value>
+  </data>
+  <data name="RequestForQuotation_AwardedVendorNotFound" xml:space="preserve">
+    <value>The awarded vendor has been removed in CAMPS or CRV.</value>
+  </data>
+  <data name="RequestForQuotation_AwardedDateMissing" xml:space="preserve">
+    <value>Awared date is required.</value>
+  </data>
+  <data name="CRVTenderService_ConnectionFail" xml:space="preserve">
+    <value>CRV tender service connection fail.</value>
+  </data>
+  <data name="CRVVendorService_CannotGetVendor" xml:space="preserve">
+    <value>Can not get vendor information from CRV.</value>
+  </data>
+  <data name="CRVTenderService_NumberOfContractsLimitationReached" xml:space="preserve">
+    <value>Number of contracts limitation reached.</value>
+  </data>
+  <data name="CRVTenderService_TenderNotFound" xml:space="preserve">
+    <value>CRV Tender not found.</value>
+  </data>
+  <data name="CRVTenderService_SystemCodeNotFound" xml:space="preserve">
+    <value>System Code not found for selected location.</value>
+  </data>
+  <data name="CRVVendorService_SystemCodeNotFound" xml:space="preserve">
+    <value>Your positions do not under any location which has access right to connect to CRV.</value>
+  </data>
+  <data name="CRVVendorService_ConnectionFail" xml:space="preserve">
+    <value>CRV vendor service connection fail.</value>
+  </data>
+  <data name="Vendor_CompanyRegistrationNumberDuplicated" xml:space="preserve">
+    <value>Company registration number duplicated.</value>
+  </data>
+  <data name="Vendor_VendorExistedInCRV" xml:space="preserve">
+    <value>Vendor existed in CRV.</value>
+  </data>
+  <data name="Vendor_CRVUpdatedFailed" xml:space="preserve">
+    <value>Vendor is unable to update.</value>
+  </data>
+</root>

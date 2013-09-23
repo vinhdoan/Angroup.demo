@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BudgetReadjustment_InsufficientItem" xml:space="preserve">
+    <value>Following budget items do not have enough available amount to be revised : </value>
+  </data>
+  <data name="BudgetReallocation_InsufficientItem" xml:space="preserve">
+    <value>Following budget items do not have enough available amount to be transferred: </value>
+  </data>
+  <data name="CheckItemType_Choice" xml:space="preserve">
+    <value>Choice</value>
+  </data>
+  <data name="CheckItemType_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="CheckItemType_Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="CostingType_Expiry" xml:space="preserve">
+    <value>Expiry</value>
+  </data>
+  <data name="CostingType_FIFO" xml:space="preserve">
+    <value>FIFO</value>
+  </data>
+  <data name="CostingType_LIFO" xml:space="preserve">
+    <value>LIFO</value>
+  </data>
+  <data name="CostType_AdhocRate" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="CostType_FixedRate" xml:space="preserve">
+    <value>Fixed Rate</value>
+  </data>
+  <data name="CostType_Material" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="CostType_Technician" xml:space="preserve">
+    <value>Technician</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="General_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="General_Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ItemType_NonStocked" xml:space="preserve">
+    <value>Non-Stocked</value>
+  </data>
+  <data name="ItemType_SpecialOrder" xml:space="preserve">
+    <value>Special Order</value>
+  </data>
+  <data name="ItemType_Stocked" xml:space="preserve">
+    <value>Stocked</value>
+  </data>
+  <data name="PurchaseItemType_Material" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="PurchaseItemType_Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="PurchaseItemType_Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="PurchaseOrder_InvoiceBudgetNotEqual" xml:space="preserve">
+    <value>Following invoice budget items have exceeded its original budget amount for the financial year:</value>
+  </data>
+  <data name="ReceiptMode_Dollar" xml:space="preserve">
+    <value>Dollar</value>
+  </data>
+  <data name="ReceiptMode_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="ReportFieldControlType_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ReportFieldControlType_DateTime" xml:space="preserve">
+    <value>Date Time</value>
+  </data>
+  <data name="ReportFieldControlType_DropdownList" xml:space="preserve">
+    <value>Dropdown List</value>
+  </data>
+  <data name="ReportFieldControlType_MultiSelectList" xml:space="preserve">
+    <value>MultiSelect List</value>
+  </data>
+  <data name="ReportFieldControlType_RadioButtonList" xml:space="preserve">
+    <value>Radio Button List</value>
+  </data>
+  <data name="ReportFieldControlType_TextBox" xml:space="preserve">
+    <value>Text Box</value>
+  </data>
+  <data name="StoreAdjustItem_Down" xml:space="preserve">
+    <value>Down</value>
+  </data>
+  <data name="StoreAdjustItem_Up" xml:space="preserve">
+    <value>Up</value>
+  </data>
+  <data name="TransactionType_Adjust" xml:space="preserve">
+    <value>Adjust</value>
+  </data>
+  <data name="TransactionType_CheckIn" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="TransactionType_CheckOut" xml:space="preserve">
+    <value>Check Out</value>
+  </data>
+  <data name="TransactionType_Receive" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="TransactionType_StoreTransfer" xml:space="preserve">
+    <value>Store-to-Store Transfer</value>
+  </data>
+  <data name="UnitOfMeasureText_Hour" xml:space="preserve">
+    <value>Hour</value>
+  </data>
+  <data name="StoreBinItem_UnableToAdjust" xml:space="preserve">
+    <value>Unable to adjust batch item as the resulting quantity is less than zero.</value>
+  </data>
+  <data name="StoreType_IssueLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="StoreType_Storeroom" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="CostingType_AverageCosting" xml:space="preserve">
+    <value>Average Costing</value>
+  </data>
+  <data name="CostingType_StandardCosting" xml:space="preserve">
+    <value>Standard Costing</value>
+  </data>
+  <data name="Equipment_UnitOfMeasureNotDefined" xml:space="preserve">
+    <value>Unable to save equipment as the default unit of measure is not defined in the application settings.</value>
+  </data>
+  <data name="TransactionType_Issue" xml:space="preserve">
+    <value>Issue</value>
+  </data>
+  <data name="TransactionType_Return" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="InventoryCatalogType_Consumable" xml:space="preserve">
+    <value>Consumable</value>
+  </data>
+  <data name="InventoryCatalogType_Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="InventoryCatalogType_NonConsumable" xml:space="preserve">
+    <value>Non-Consumable</value>
+  </data>
+  <data name="ModeOfForwarding_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="ModeOfForwarding_Direct" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="ModeOfForwarding_Hierarchical" xml:space="preserve">
+    <value>Hierarchical</value>
+  </data>
+  <data name="ModeOfForwarding_None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Account_Group" xml:space="preserve">
+    <value>Group</value>
+  </data>
+  <data name="Account_LineItem" xml:space="preserve">
+    <value>Line Item</value>
+  </data>
+  <data name="DashboardType_Basic" xml:space="preserve">
+    <value>Basic</value>
+  </data>
+  <data name="DashboardType_Bubble" xml:space="preserve">
+    <value>Bubble</value>
+  </data>
+  <data name="DashboardType_Gauge" xml:space="preserve">
+    <value>Gauge</value>
+  </data>
+  <data name="DashboardType_Grid" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+  <data name="DashboardType_Pie" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+  <data name="DashboardType_Polar" xml:space="preserve">
+    <value>Polar</value>
+  </data>
+  <data name="DashboardType_Radar" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+  <data name="DashboardType_Scatter" xml:space="preserve">
+    <value>Scatter</value>
+  </data>
+  <data name="WhereUsed_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="WhereUsed_NotifyAssignedWorkflowRecipients" xml:space="preserve">
+    <value>Notify Assigned Workflow Recipients</value>
+  </data>
+  <data name="RunningNumberGenerator_IncrementForever" xml:space="preserve">
+    <value>Increments Forever</value>
+  </data>
+  <data name="RunningNumberGenerator_ResetEveryMonth" xml:space="preserve">
+    <value>Resets Every Month</value>
+  </data>
+  <data name="RunningNumberGenerator_ResetEveryYear" xml:space="preserve">
+    <value>Resets Every Year</value>
+  </data>
+  <data name="MinimumNumberOfQuotations_NotRequired" xml:space="preserve">
+    <value>Not Required</value>
+  </data>
+  <data name="MinimumNumberOfQuotations_Preferred" xml:space="preserve">
+    <value>Preferred</value>
+  </data>
+  <data name="MinimumNumberOfQuotations_Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="BudgetValidationPolicy_BudgetConsumptionEqualsItems" xml:space="preserve">
+    <value>Budget = Line Items</value>
+  </data>
+  <data name="BudgetValidationPolicy_BudgetConsumptionLessThanItems" xml:space="preserve">
+    <value>Budget &lt;= Line Items</value>
+  </data>
+  <data name="BudgetValidationPolicy_NotRequired" xml:space="preserve">
+    <value>Budget Not Required</value>
+  </data>
+  <data name="InvoiceType_CreditMemo" xml:space="preserve">
+    <value>Credit Memo</value>
+  </data>
+  <data name="MatchType_DirectInvoice" xml:space="preserve">
+    <value>Direct Invoice</value>
+  </data>
+  <data name="MatchType_InvoiceMatchedToPO" xml:space="preserve">
+    <value>PO-Matched Invoice </value>
+  </data>
+  <data name="MatchType_InvoiceMatchedToPOReceipt" xml:space="preserve">
+    <value>PO-Receipt-Matched Invoice</value>
+  </data>
+  <data name="EAMservice_ContinuePending" xml:space="preserve">
+    <value>Continue Pending</value>
+  </data>
+  <data name="EAMservice_Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="EAMservice_PausePending" xml:space="preserve">
+    <value>Pause Pending</value>
+  </data>
+  <data name="EAMservice_Running" xml:space="preserve">
+    <value>Running</value>
+  </data>
+  <data name="EAMservice_StartPending" xml:space="preserve">
+    <value>Start Pending</value>
+  </data>
+  <data name="EAMservice_Stop" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="EAMservice_StopPending" xml:space="preserve">
+    <value>Stop Pending</value>
+  </data>
+  <data name="TemplateType_Rdl" xml:space="preserve">
+    <value>Report Definition Language</value>
+  </data>
+  <data name="TemplateType_Rpt" xml:space="preserve">
+    <value>Crystal Reports</value>
+  </data>
+  <data name="SurveyPortfolio_ContractedVendor" xml:space="preserve">
+    <value>Surveys for Services provided by Contracted Vendors</value>
+  </data>
+  <data name="SurveyPortfolio_ContractedVendorByMA" xml:space="preserve">
+    <value>Surveys for Services provided by Contracted Vendors evaluated by Managing Agents</value>
+  </data>
+  <data name="SurveyPortfolio_Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="SurveyPortfolio_OtherReasons" xml:space="preserve">
+    <value>Surveys for Other Reasons</value>
+  </data>
+  <data name="Survey_EvaluatedPartyError" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Survey_EvaluatedPartyNull" xml:space="preserve">
+    <value>N.A.</value>
+  </data>
+  <data name="SurveyPlanner_RemindRespondent_Body" xml:space="preserve">
+    <value>Dear User,
+
+Please be reminded to click on the following URL to complete the online evaluation form.
+
+{0}
+
+Please submit by end of {1}.
+
+Thank you.
+
+This is a computer-generated email, please do not reply to this email address. If you have any enquiries, please email to:
+
+moe_fdd_pdm_surveys@moe.gov.sg
+
+
+P.S.: Please copy the URL and paste it into your browser address bar if the online evaluation form can not be opened by clicking on the URL.</value>
+  </data>
+  <data name="SurveyPlanner_RemindRespondent_Subject" xml:space="preserve">
+    <value>{0} (Gentle Reminder - For {1})</value>
+  </data>
+  <data name="SurveyPlanner_SurveyClosed_Body" xml:space="preserve">
+    <value>Dear User,
+
+The survey has been closed.
+
+Thank you.
+
+This is a computer-generated email, please do not reply to this email address. If you have any enquiries, please email to:
+
+moe_fdd_pdm_surveys@moe.gov.sg</value>
+  </data>
+  <data name="SurveyPlanner_SurveyClosed_Subject" xml:space="preserve">
+    <value>{0} (Closed -  For {1})</value>
+  </data>
+  <data name="SurveyPlanner_SurveyExtended_Body" xml:space="preserve">
+    <value>Dear User,
+
+We have extended the Survey Submission date to {0}.
+
+Please click on the following URL to complete the online evaluation form.
+
+{1}
+
+Please submit by end of {2}.
+
+Thank you.
+
+This is a computer-generated email, please do not reply to this email address. If you have any enquiries, please email to:
+
+moe_fdd_pdm_surveys@moe.gov.sg
+
+
+P.S.: Please copy the URL and paste it into your browser address bar if the online evaluation form can not be opened by clicking on the URL.</value>
+  </data>
+  <data name="SurveyPlanner_SurveyExtended_Subject" xml:space="preserve">
+    <value>{0} (Survey Submission Date Extended - For {1})</value>
+  </data>
+  <data name="SurveyPlanner_SurveyStarted_Body" xml:space="preserve">
+    <value>Dear User,
+
+Please click on the following URL to complete the online evaluation form.
+
+{0}
+
+Please submit by end of {1}.
+
+Thank you.
+
+This is a computer-generated email, please do not reply to this email address. If you have any enquiries, please email to:
+
+moe_fdd_pdm_surveys@moe.gov.sg
+
+
+P.S.: Please copy the URL and paste it into your browser address bar if the online evaluation form can not be opened by clicking on the URL.</value>
+  </data>
+  <data name="SurveyPlanner_SurveyStarted_Subject" xml:space="preserve">
+    <value>{0} (For {1})</value>
+  </data>
+  <data name="PurchaseItemType_Contract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="TimeUnit_Days" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="TimeUnit_Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="TimeUnit_Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="TimeUnit_Months" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="TimeUnit_Weeks" xml:space="preserve">
+    <value>Weeks</value>
+  </data>
+  <data name="TimeUnit_Years" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="BudgetDistributionMode_Entire" xml:space="preserve">
+    <value>Entire</value>
+  </data>
+  <data name="BudgetDistributionMode_LineItems" xml:space="preserve">
+    <value>Line Items</value>
+  </data>
+  <data name="PurchaseOrder_ExchangeRate" xml:space="preserve">
+    <value>1 {0} is equal to {1} {2}.</value>
+  </data>
+  <data name="Point_AbsoluteMeter" xml:space="preserve">
+    <value>Absolute</value>
+  </data>
+  <data name="Point_IncreasingMeter" xml:space="preserve">
+    <value>Increasing</value>
+  </data>
+  <data name="StockTake_AutoGeneratedAdjustment" xml:space="preserve">
+    <value>Auto-generated adjustment for Stocktake #0000000</value>
+  </data>
+  <data name="Point_Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="Point_Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Priority_0" xml:space="preserve">
+    <value>0 (Low)</value>
+  </data>
+  <data name="Priority_1" xml:space="preserve">
+    <value>1 (Medium)</value>
+  </data>
+  <data name="Priority_2" xml:space="preserve">
+    <value>2 (High)</value>
+  </data>
+  <data name="Priority_3" xml:space="preserve">
+    <value>3 (Critical)</value>
+  </data>
+  <data name="InvoiceType_DebitMemo" xml:space="preserve">
+    <value>Debit Memo</value>
+  </data>
+  <data name="InvoiceType_StandardInvoice" xml:space="preserve">
+    <value>Standard Invoice</value>
+  </data>
+  <data name="ReportFieldControlType_ContextTree" xml:space="preserve">
+    <value>ContextTree</value>
+  </data>
+  <data name="Source_Direct" xml:space="preserve">
+    <value>Direct</value>
+  </data>
+  <data name="Source_OPCServer" xml:space="preserve">
+    <value>OPC</value>
+  </data>
+  <data name="Source_PDA" xml:space="preserve">
+    <value>PDA</value>
+  </data>
+  <data name="Source_Work" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="ModeOfForwarding_HierarchicalWithLastRejectedSkipping" xml:space="preserve">
+    <value>Hierarchical (with Last Rejected Skipping)</value>
+  </data>
+  <data name="General_NA" xml:space="preserve">
+    <value>N.A.</value>
+  </data>
+  <data name="Document_Excel" xml:space="preserve">
+    <value>Microsoft Excel</value>
+  </data>
+  <data name="Document_Static" xml:space="preserve">
+    <value>Static Page</value>
+  </data>
+  <data name="Document_Word" xml:space="preserve">
+    <value>Microsoft Word</value>
+  </data>
+  <data name="RequestForQuotation_Lowest" xml:space="preserve">
+    <value>Lowest</value>
+  </data>
+  <data name="LocationStockTakeItemType_Equipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="LocationStockTakeItemType_NonConsumable" xml:space="preserve">
+    <value>NonConsumable</value>
+  </data>
+  <data name="EquipmentStatus_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="EquipmentStatus_Confirmed" xml:space="preserve">
+    <value>Confirmed</value>
+  </data>
+  <data name="EquipmentStatus_Damaged" xml:space="preserve">
+    <value>Damaged</value>
+  </data>
+  <data name="EquipmentStatus_InRepair" xml:space="preserve">
+    <value>In Repair</value>
+  </data>
+  <data name="EquipmentStatus_PendingAcceptance" xml:space="preserve">
+    <value>Pending Acceptance</value>
+  </data>
+  <data name="EquipmentStatus_PendingWriteOff" xml:space="preserve">
+    <value>Pending Write Off</value>
+  </data>
+  <data name="EquipmentStatus_Retired" xml:space="preserve">
+    <value>Retired</value>
+  </data>
+  <data name="EquipmentStatus_WrittenOff" xml:space="preserve">
+    <value>Written Off</value>
+  </data>
+  <data name="Message_CarbonCopyBodyPrefix" xml:space="preserve">
+    <value>&lt;b&gt;THE FOLLOWING MESSAGE IS COPIED TO YOU FOR INFORMATION.&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;</value>
+  </data>
+  <data name="Message_CarbonCopySubjectPrefix" xml:space="preserve">
+    <value>Carbon-Copy: </value>
+  </data>
+  <data name="Position_NoOne" xml:space="preserve">
+    <value>No one</value>
+  </data>
+  <data name="RequestForQuotation_EntireNotMatch" xml:space="preserve">
+    <value>Budget {0}</value>
+  </data>
+  <data name="RequestForQuotation_LineNotMatch" xml:space="preserve">
+    <value>Line Item Number {0}</value>
+  </data>
+  <data name="BillToAMOSStatusText_PostedToAmosSuccessful" xml:space="preserve">
+    <value>Posted to AMOS (SUCCESSFUL)</value>
+  </data>
+  <data name="BillToAMOSStatusText_NotPostedCancelled" xml:space="preserve">
+    <value>Not Posted (Cancelled)</value>
+  </data>
+  <data name="BillToAMOSStatusText_NotPostedToAmos" xml:space="preserve">
+    <value>Not Posted to AMOS</value>
+  </data>
+  <data name="BillToAMOSStatusText_PostedToAmos" xml:space="preserve">
+    <value>Posted To AMOS (Waiting for AMOS to process)</value>
+  </data>
+  <data name="BillToAMOSStatusText_PendingPosting" xml:space="preserve">
+    <value>Pending Posting to AMOS</value>
+  </data>
+  <data name="BillToAMOSStatusText_PostedToAmosFailed" xml:space="preserve">
+    <value>Posted to AMOS (FAILED)</value>
+  </data>
+  <data name="BillToAMOSStatusText_UnableToPostDueToError" xml:space="preserve">
+    <value>Unable to post to AMOS due to error</value>
+  </data>
+  <data name="Work_Priority0" xml:space="preserve">
+    <value>0 (Lowest)</value>
+  </data>
+  <data name="Work_Priority1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Work_Priority2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Work_Priority3" xml:space="preserve">
+    <value>3 (Highest)</value>
+  </data>
+  <data name="RunningNumberGenerator_LocationEquipment0" xml:space="preserve">
+    <value>No Location/Equipment code added</value>
+  </data>
+  <data name="RunningNumberGenerator_LocationEquipment1" xml:space="preserve">
+    <value>Either Location/Equipment code added</value>
+  </data>
+  <data name="RunningNumberGenerator_LocationEquipment2" xml:space="preserve">
+    <value>Only Location code added</value>
+  </data>
+  <data name="RunningNumberGenerator_ResetEveryYearIncCurrentYearMonth" xml:space="preserve">
+    <value>Reset every year include current year/month</value>
+  </data>
+  <data name="RequestForQuotation_RFQ" xml:space="preserve">
+    <value>the WJ</value>
+  </data>
+  <data name="RequestForQuotation_AwardedIPTVendorMessageTitleIndication" xml:space="preserve">
+    <value>***IPT Vendor Selected***</value>
+  </data>
+  <data name="TriggeringEventName_Approve" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="TriggeringEventName_Reject" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="Document_Acrobat" xml:space="preserve">
+    <value>Acrobat PDF</value>
+  </data>
+  <data name="Document_Image" xml:space="preserve">
+    <value>Jpeg Image</value>
+  </data>
+  <data name="TimeUnit_Days1" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="TimeUnit_Hours1" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="TimeUnit_Minutes1" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
+  <data name="TimeUnit_Month" xml:space="preserve">
+    <value>Month</value>
+  </data>
+  <data name="TimeUnit_Months1" xml:space="preserve">
+    <value>Months</value>
+  </data>
+  <data name="TimeUnit_Quarter" xml:space="preserve">
+    <value>Quarter</value>
+  </data>
+  <data name="TimeUnit_Week" xml:space="preserve">
+    <value>Week</value>
+  </data>
+  <data name="TimeUnit_Weeks1" xml:space="preserve">
+    <value>Weeks</value>
+  </data>
+  <data name="TimeUnit_Year" xml:space="preserve">
+    <value>Year</value>
+  </data>
+  <data name="TimeUnit_Years1" xml:space="preserve">
+    <value>Years</value>
+  </data>
+  <data name="Time_DaysPlural" xml:space="preserve">
+    <value>{0} days </value>
+  </data>
+  <data name="Time_DaysSingular" xml:space="preserve">
+    <value>{0} day </value>
+  </data>
+  <data name="Time_Future" xml:space="preserve">
+    <value>{0} later</value>
+  </data>
+  <data name="Time_HoursPlural" xml:space="preserve">
+    <value>{0} hours </value>
+  </data>
+  <data name="Time_HoursSingular" xml:space="preserve">
+    <value>{0} hour </value>
+  </data>
+  <data name="Time_MinutesPlural" xml:space="preserve">
+    <value>{0} minutes </value>
+  </data>
+  <data name="Time_MinutesSingular" xml:space="preserve">
+    <value>{0} minute </value>
+  </data>
+  <data name="Time_MomentsAgo" xml:space="preserve">
+    <value>moments</value>
+  </data>
+  <data name="Time_MonthPlural" xml:space="preserve">
+    <value>about {0} months</value>
+  </data>
+  <data name="Time_Now" xml:space="preserve">
+    <value>now</value>
+  </data>
+  <data name="Time_Past" xml:space="preserve">
+    <value>{0} ago</value>
+  </data>
+  <data name="Time_SecondsPlural" xml:space="preserve">
+    <value>{0} seconds </value>
+  </data>
+  <data name="Time_SecondsSingular" xml:space="preserve">
+    <value>{0} second </value>
+  </data>
+  <data name="Time_YearPlural" xml:space="preserve">
+    <value>about {0} years</value>
+  </data>
+  <data name="Time_YearSingular" xml:space="preserve">
+    <value>about {0} year</value>
+  </data>
+  <data name="PurchaseOrder_RFQToPOPreferred" xml:space="preserve">
+    <value>A request for quotation should be raised before this PO.</value>
+  </data>
+  <data name="PurchaseOrder_RFQToPORequired" xml:space="preserve">
+    <value>A request for quotation must be raised before this PO. You cannot submit this PO for approval.</value>
+  </data>
+  <data name="RequestForQuotation_MinimumQuotationsPreferred" xml:space="preserve">
+    <value>&lt;font style='color:Red; font-weight:Bold'&gt;A minimum of {0} quotations is preferred for this request for quotation.&lt;/font&gt;</value>
+  </data>
+  <data name="RequestForQuotation_MinimumQuotationsRequired" xml:space="preserve">
+    <value>&lt;font style='color:Red; font-weight:Bold'&gt;A minimum of {0} quotations is required for this request for quotation. You cannot submit for approval until you satisfy this requirement.&lt;/font&gt;</value>
+  </data>
+  <data name="InvoiceType_DirectExpense" xml:space="preserve">
+    <value>Direct Expense</value>
+  </data>
+  <data name="PurchaseOrder_LetterOfAward" xml:space="preserve">
+    <value>Letter of Award</value>
+  </data>
+  <data name="PurchaseOrder_PurchaseOrder" xml:space="preserve">
+    <value>Purchase Order</value>
+  </data>
+  <data name="ReportFieldControlType_MonthYear" xml:space="preserve">
+    <value>Date Month Year</value>
+  </data>
+  <data name="ModeOfForwarding_HierarchicalWithLastRejectedAndNextRequiredApprovalSkipping" xml:space="preserve">
+    <value>Hierarchical (with Last Rejected and Next Required Approval Skipping)</value>
+  </data>
+  <data name="CostType_TaxCode" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="TriggeringEventName_Approve_Supporter" xml:space="preserve">
+    <value>Supported</value>
+  </data>
+  <data name="NO_SUBSCRIPTION_FOUND" xml:space="preserve">
+    <value>NO_SUBSCRIPTION_FOUND</value>
+  </data>
+</root>

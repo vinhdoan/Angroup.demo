@@ -1,0 +1,317 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Name="OWorkRequestWorkflow" Location="30, 30" Size="1172, 646" AutoSizeMargin="16, 24" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="PendingAcknowledgement" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="GoToHelpDesk" SourceStateName="Start" SourceConnectionEdge="Right" TargetActivity="PendingAcknowledgement" SourceActivity="Start" EventHandlerName="SubmitForAcknowledgementEvent">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="326" Y="232" />
+				<ns0:Point X="348" Y="232" />
+				<ns0:Point X="348" Y="315" />
+				<ns0:Point X="180" Y="315" />
+				<ns0:Point X="180" Y="327" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="PendingResolution" SourceConnectionIndex="1" TargetConnectionEdge="Top" SetStateName="GoToPendingExecution" SourceStateName="Start" SourceConnectionEdge="Right" TargetActivity="PendingResolution" SourceActivity="Start" EventHandlerName="SubmitForWorkOrderCreationEvent">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="332" Y="258" />
+				<ns0:Point X="683" Y="258" />
+				<ns0:Point X="683" Y="528" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="PendingWOCreation" SourceConnectionIndex="1" TargetConnectionEdge="Top" SetStateName="setStateActivity4" SourceStateName="PendingAcknowledgement" SourceConnectionEdge="Right" TargetActivity="PendingWOCreation" SourceActivity="PendingAcknowledgement" EventHandlerName="SubmitForWorkOrderEvent2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="244" Y="397" />
+				<ns0:Point X="326" Y="397" />
+				<ns0:Point X="326" Y="356" />
+				<ns0:Point X="469" Y="356" />
+				<ns0:Point X="469" Y="364" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="Cancelled" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GotoCancel2" SourceStateName="PendingAcknowledgement" SourceConnectionEdge="Right" TargetActivity="Cancelled" SourceActivity="PendingAcknowledgement" EventHandlerName="CancelEvent2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="163" Y="423" />
+				<ns0:Point X="326" Y="423" />
+				<ns0:Point X="326" Y="359" />
+				<ns0:Point X="971" Y="359" />
+				<ns0:Point X="971" Y="448" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="Close" SourceConnectionIndex="3" TargetConnectionEdge="Top" SetStateName="setStateActivity1" SourceStateName="PendingAcknowledgement" SourceConnectionEdge="Right" TargetActivity="Close" SourceActivity="PendingAcknowledgement" EventHandlerName="CloseEvent2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="157" Y="449" />
+				<ns0:Point X="326" Y="449" />
+				<ns0:Point X="326" Y="505" />
+				<ns0:Point X="609" Y="505" />
+				<ns0:Point X="609" Y="441" />
+				<ns0:Point X="1073" Y="441" />
+				<ns0:Point X="1073" Y="559" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="Close" SourceConnectionIndex="1" TargetConnectionEdge="Top" SetStateName="GoToClose" SourceStateName="PendingResolution" SourceConnectionEdge="Right" TargetActivity="Close" SourceActivity="PendingResolution" EventHandlerName="CloseEvent">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="706" Y="598" />
+				<ns0:Point X="777" Y="598" />
+				<ns0:Point X="777" Y="551" />
+				<ns0:Point X="1073" Y="551" />
+				<ns0:Point X="1073" Y="559" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="Cancelled" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GotaCancel3" SourceStateName="PendingResolution" SourceConnectionEdge="Right" TargetActivity="Cancelled" SourceActivity="PendingResolution" EventHandlerName="CancelEvent3">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="719" Y="624" />
+				<ns0:Point X="777" Y="624" />
+				<ns0:Point X="777" Y="440" />
+				<ns0:Point X="971" Y="440" />
+				<ns0:Point X="971" Y="448" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="Cancelled" SourceConnectionIndex="1" TargetConnectionEdge="Top" SetStateName="setStateActivity3" SourceStateName="PendingWOCreation" SourceConnectionEdge="Right" TargetActivity="Cancelled" SourceActivity="PendingWOCreation" EventHandlerName="CancelEventFromPendingWOCreation">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="593" Y="434" />
+				<ns0:Point X="971" Y="434" />
+				<ns0:Point X="971" Y="448" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="PendingResolution" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="setStateActivity5" SourceStateName="PendingWOCreation" SourceConnectionEdge="Right" TargetActivity="PendingResolution" SourceActivity="PendingWOCreation" EventHandlerName="GenerateWorkOrder">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="497" Y="460" />
+				<ns0:Point X="683" Y="460" />
+				<ns0:Point X="683" Y="528" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Name="Start" Location="94, 188" Size="242, 94" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="150, 191" Name="SubmitForAcknowledgementEvent" Location="102, 221">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="HandleHelpDeskEvent" Location="112, 286" />
+						<SetStateDesigner Size="130, 44" Name="GoToHelpDesk" Location="112, 349" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity1" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity1" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="ThrowExceptionToHostActivity" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 209" Name="SubmitForWorkOrderCreationEvent" Location="102, 247">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="HandlePlanEvent" Location="112, 312" />
+						<SetStateDesigner Size="130, 62" Name="GoToPendingExecution" Location="112, 375" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity2" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity2" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost1" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="PendingAcknowledgement" Location="46, 327" Size="268, 142" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 128" Name="InitializePendingAcknowledgementState" Location="54, 360">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 44" Name="SetStateToAcknowledgement" Location="64, 425" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity6" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity5" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost4" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Size="150, 209" Name="SubmitForWorkOrderEvent2" Location="54, 386">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="HandleExecuteEvent2" Location="64, 451" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity4" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity4" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost3" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity4" Location="64, 514" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 191" Name="CancelEvent2" Location="54, 412">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="handleExternalEventActivity2" Location="64, 477" />
+						<SetStateDesigner Size="130, 44" Name="GotoCancel2" Location="64, 540" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity10" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity10" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost9" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 209" Name="CloseEvent2" Location="54, 438">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="handleExternalEventActivity1" Location="64, 503" />
+						<SetStateDesigner Size="130, 62" Name="setStateActivity1" Location="64, 566" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity9" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity9" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost8" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="PendingResolution" Location="602, 528" Size="163, 118" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 191" Name="InitializeExecuteState" Location="610, 561">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 44" Name="SetStateToExecuted" Location="620, 626" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<ns1:SendMessageDesigner Size="130, 44" Name="NotifyCallerCaseCreated" Location="620, 689" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity3" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity3" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost2" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Size="150, 191" Name="CloseEvent" Location="610, 587">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="HandleCloseEvent" Location="620, 652" />
+						<SetStateDesigner Size="130, 44" Name="GoToClose" Location="620, 715" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity7" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity7" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost6" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 191" Name="CancelEvent3" Location="610, 613">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="handleExternalEventActivity3" Location="620, 678" />
+						<SetStateDesigner Size="130, 44" Name="GotaCancel3" Location="620, 741" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity11" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity11" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost10" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="Close" Location="993, 559" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 185" Name="InitializeCloseState" Location="1001, 592">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 41" Name="SetStateToClose" Location="1011, 657" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<ns1:SendMessageDesigner Size="130, 41" Name="NotifyCaller" Location="1011, 717" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<CancellationHandlerActivityDesigner Size="130, 41" Name="cancellationHandlerActivity1" Location="0, 0" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity5" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity6" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost5" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="Cancelled" Location="891, 448" Size="160, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 188" Name="InitializeCancelState" Location="899, 481">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 44" Name="SetStateToCancel" Location="909, 546" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<ns1:SendMessageDesigner Size="130, 41" Name="sendMessage1" Location="909, 609" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<CancellationHandlerActivityDesigner Size="130, 41" Name="cancellationHandlerActivity2" Location="0, 0" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity8" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity8" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost7" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="PendingWOCreation" Location="342, 364" Size="255, 136" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 128" Name="stateInitializationActivity1" Location="350, 397">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 44" Name="setStateAndAssign1" Location="360, 462" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity12" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity12" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost11" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Size="150, 209" Name="CancelEventFromPendingWOCreation" Location="350, 423">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="handleExternalEventActivity5" Location="360, 488" />
+						<SetStateDesigner Size="130, 62" Name="setStateActivity3" Location="360, 551" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity14" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity14" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost13" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 209" Name="GenerateWorkOrder" Location="350, 449">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 44" Name="handleExternalEventActivity6" Location="360, 514" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity15" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity15" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost14" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+						<SetStateDesigner Size="130, 62" Name="setStateActivity5" Location="360, 577" />
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

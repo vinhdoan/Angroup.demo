@@ -1,0 +1,185 @@
+﻿<StateMachineWorkflowDesigner xmlns:ns0="clr-namespace:System.Drawing;Assembly=System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Name="OBMSWorkflowWorkflow" Location="30, 30" Size="721, 573" AutoSize="False" AutoSizeMargin="16, 24" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<StateMachineWorkflowDesigner.DesignerConnectors>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="OnLight" SourceConnectionIndex="0" TargetConnectionEdge="Top" SetStateName="setStateActivity2" SourceStateName="Start" SourceConnectionEdge="Right" TargetActivity="OnLight" SourceActivity="Start" EventHandlerName="TurnOnAllLights2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="276" Y="128" />
+				<ns0:Point X="323" Y="128" />
+				<ns0:Point X="323" Y="236" />
+				<ns0:Point X="227" Y="236" />
+				<ns0:Point X="227" Y="248" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="OffLight" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GoToOffLights" SourceStateName="OnLight" SourceConnectionEdge="Right" TargetActivity="OffLight" SourceActivity="OnLight" EventHandlerName="OnLightsEvent">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="253" Y="313" />
+				<ns0:Point X="323" Y="313" />
+				<ns0:Point X="323" Y="443" />
+				<ns0:Point X="227" Y="443" />
+				<ns0:Point X="227" Y="455" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="StopProcess" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GoToStopProcess" SourceStateName="OnLight" SourceConnectionEdge="Right" TargetActivity="StopProcess" SourceActivity="OnLight" EventHandlerName="StopProcessActivity">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="278" Y="337" />
+				<ns0:Point X="633" Y="337" />
+				<ns0:Point X="633" Y="387" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="OnLight" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GoToOnLights" SourceStateName="OffLight" SourceConnectionEdge="Right" TargetActivity="OnLight" SourceActivity="OffLight" EventHandlerName="OffLightsEvent">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="257" Y="520" />
+				<ns0:Point X="323" Y="520" />
+				<ns0:Point X="323" Y="240" />
+				<ns0:Point X="227" Y="240" />
+				<ns0:Point X="227" Y="248" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+		<StateDesignerConnector TargetConnectionIndex="0" TargetStateName="StopProcess" SourceConnectionIndex="2" TargetConnectionEdge="Top" SetStateName="GoToStopProcess2" SourceStateName="OffLight" SourceConnectionEdge="Right" TargetActivity="StopProcess" SourceActivity="OffLight" EventHandlerName="StopProcessActivity2">
+			<StateDesignerConnector.Segments>
+				<ns0:Point X="287" Y="544" />
+				<ns0:Point X="327" Y="544" />
+				<ns0:Point X="327" Y="379" />
+				<ns0:Point X="633" Y="379" />
+				<ns0:Point X="633" Y="387" />
+			</StateDesignerConnector.Segments>
+		</StateDesignerConnector>
+	</StateMachineWorkflowDesigner.DesignerConnectors>
+	<StateMachineWorkflowDesigner.Designers>
+		<StateDesigner Name="Start" Location="146, 87" Size="171, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<EventDrivenDesigner Size="150, 182" Name="TurnOnAllLights2" Location="154, 118">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="handleExternalEventActivity1" Location="164, 180" />
+						<SetStateDesigner Size="130, 41" Name="setStateActivity2" Location="164, 240" />
+						<FaultHandlersActivityDesigner Size="220, 202" Name="faultHandlersActivity2" ShowPreview="False" Location="155, 206">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="204, 113" Name="faultHandlerActivity1" Location="163, 291">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost1" Location="200, 349" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="OnLight" Location="137, 248" Size="181, 126" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 122" Name="TurnOnAllLights" Location="145, 279">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 41" Name="setStateAndAssign1" Location="155, 341" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<FaultHandlersActivityDesigner Size="220, 202" Name="faultHandlersActivity5" ShowPreview="False" Location="238, 195">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="204, 113" Name="faultHandlerActivity5" Location="246, 280">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost5" Location="283, 338" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Size="150, 242" Name="OnLightsEvent" Location="145, 303">
+					<EventDrivenDesigner.Designers>
+						<DelayDesigner Size="130, 41" Name="delayActivity2" Location="155, 365" />
+						<PolicyDesigner Size="130, 41" Name="policyActivity3" Location="155, 425" />
+						<SetStateDesigner Size="130, 41" Name="GoToOffLights" Location="155, 485" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity7" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity7" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost7" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 194" Name="StopProcessActivity" Location="145, 327">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="handleExternalEventActivity3" Location="155, 389" />
+						<SetStateDesigner Size="130, 53" Name="GoToStopProcess" Location="155, 449" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity4" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity4" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost4" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="StopProcess" Location="546, 387" Size="175, 80" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 182" Name="TurnOffAllLightsAndStop" Location="554, 418">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 41" Name="setStateAndAssign2" Location="564, 480" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<PolicyDesigner Size="130, 41" Name="policyActivity2" Location="564, 540" />
+						<FaultHandlersActivityDesigner Size="220, 202" Name="faultHandlersActivity1" ShowPreview="False" Location="238, 195">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="204, 113" Name="faultHandlerActivity2" Location="246, 280">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost2" Location="283, 338" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+		<StateDesigner Name="OffLight" Location="140, 455" Size="175, 118" AutoSize="False" AutoSizeMargin="16, 24">
+			<StateDesigner.Designers>
+				<StateInitializationDesigner Size="150, 122" Name="TurnOffAllLights" Location="152, 135">
+					<StateInitializationDesigner.Designers>
+						<ns1:SetStateAndAssignDesigner Size="130, 41" Name="setStateAndAssign3" Location="162, 197" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity3" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity3" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost3" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</StateInitializationDesigner.Designers>
+				</StateInitializationDesigner>
+				<EventDrivenDesigner Size="150, 242" Name="OffLightsEvent" Location="160, 148">
+					<EventDrivenDesigner.Designers>
+						<DelayDesigner Size="130, 41" Name="delayActivity1" Location="170, 210" />
+						<PolicyDesigner Size="130, 41" Name="policyActivity1" Location="170, 270" />
+						<SetStateDesigner Size="130, 41" Name="GoToOnLights" Location="170, 330" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity8" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity8" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost8" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+				<EventDrivenDesigner Size="150, 194" Name="StopProcessActivity2" Location="152, 183">
+					<EventDrivenDesigner.Designers>
+						<HandleExternalEventActivityDesigner Size="130, 41" Name="handleExternalEventActivity2" Location="162, 245" />
+						<SetStateDesigner Size="130, 53" Name="GoToStopProcess2" Location="162, 305" />
+						<FaultHandlersActivityDesigner Size="130, 41" Name="faultHandlersActivity6" ShowPreview="False" Location="0, 0">
+							<FaultHandlersActivityDesigner.Designers>
+								<FaultHandlerActivityDesigner Size="130, 41" Name="faultHandlerActivity6" Location="0, 0">
+									<FaultHandlerActivityDesigner.Designers>
+										<ns1:ThrowExceptionToHostDesigner Size="130, 41" Name="throwExceptionToHost6" Location="0, 0" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" />
+									</FaultHandlerActivityDesigner.Designers>
+								</FaultHandlerActivityDesigner>
+							</FaultHandlersActivityDesigner.Designers>
+						</FaultHandlersActivityDesigner>
+					</EventDrivenDesigner.Designers>
+				</EventDrivenDesigner>
+			</StateDesigner.Designers>
+		</StateDesigner>
+	</StateMachineWorkflowDesigner.Designers>
+</StateMachineWorkflowDesigner>

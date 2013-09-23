@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="adjustedLabelResource1.Text" xml:space="preserve">
+    <value>MTD Adjusted as at </value>
+  </data>
+  <data name="adjustedLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="adjustedPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="adjustedPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="approveLabelResource1.Text" xml:space="preserve">
+    <value>MTD Approved as at </value>
+  </data>
+  <data name="approveLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="approvePanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="approvePanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="availableLabelResource1.Text" xml:space="preserve">
+    <value>MTD Available as at </value>
+  </data>
+  <data name="availableLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="availablePanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="availablePanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expenseLabelResource1.Text" xml:space="preserve">
+    <value>MTD Direct Invoices (Pending Approval) as at </value>
+  </data>
+  <data name="expenseLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expensePanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expensePanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expensePendingApprovalLabelResource1.Text" xml:space="preserve">
+    <value>MTD Direct Invoices (Pending Approval) as at </value>
+  </data>
+  <data name="expensePendingApprovalLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expensePendingApprovalPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="expensePendingApprovalPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAdjustedResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAdjustedResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridAdjustedResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridAdjustedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAdjustedResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAdjustedResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridAdjustedResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridAdjustedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridApprovedResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridApprovedResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridApprovedResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridApprovedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridApprovedResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridApprovedResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridApprovedResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridApprovedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAvailableResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAvailableResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridAvailableResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridAvailableResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAvailableResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAvailableResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridAvailableResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridAvailableResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedPendingApprovalResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedPendingApprovalResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridExpensedPendingApprovalResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridExpensedPendingApprovalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedPendingApprovalResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedPendingApprovalResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridExpensedPendingApprovalResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridExpensedPendingApprovalResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridExpensedResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridExpensedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridExpensedResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridExpensedResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridExpensedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridInvoicedResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridInvoicedResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridInvoicedResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridInvoicedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridInvoicedResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridInvoicedResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridInvoicedResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridInvoicedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridMonthViewResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridMonthViewResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridMonthViewResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridMonthViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridMonthViewResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridMonthViewResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridMonthViewResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridMonthViewResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPaymentResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPaymentResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridPaymentResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridPaymentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPaymentResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPaymentResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridPaymentResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridPaymentResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPendingApprovalResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPendingApprovalResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridPendingApprovalResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridPendingApprovalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPendingApprovalResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridPendingApprovalResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridPendingApprovalResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridPendingApprovalResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReallocatedResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReallocatedResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridReallocatedResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridReallocatedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReallocatedResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReallocatedResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridReallocatedResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridReallocatedResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridSummaryViewResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridSummaryViewResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridSummaryViewResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridSummaryViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridSummaryViewResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridSummaryViewResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridSummaryViewResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridSummaryViewResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridYearViewResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridYearViewResource1.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridYearViewResource1.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridYearViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridYearViewResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridYearViewResource2.PagerStyle.NextPageText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="gridYearViewResource2.PagerStyle.PrevPageText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="gridYearViewResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="invoicedLabelResource1.Text" xml:space="preserve">
+    <value>MTD PO Invoiced as at </value>
+  </data>
+  <data name="invoicedLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="invoicedPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="invoicedPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetNameCaptionResource1.Text" xml:space="preserve">
+    <value>Budget: </value>
+  </data>
+  <data name="labelBudgetNameCaptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetPeriodNameCaptionResource1.Text" xml:space="preserve">
+    <value>Budget Period: </value>
+  </data>
+  <data name="labelBudgetPeriodNameCaptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetPeriodNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelBudgetPeriodNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelEndDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelEndDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelLocationCaptionResource1.Text" xml:space="preserve">
+    <value>Location: </value>
+  </data>
+  <data name="labelLocationCaptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelLocationResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelLocationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelStartDateCaptionResource1.Text" xml:space="preserve">
+    <value>Date: </value>
+  </data>
+  <data name="labelStartDateCaptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelStartDateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelStartDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelToResource1.Text" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="labelToResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="monthLabelResource1.Text" xml:space="preserve">
+    <value>MTD budget as at </value>
+  </data>
+  <data name="monthLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="monthPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="monthPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paymentLabelResource1.Text" xml:space="preserve">
+    <value>MTD Payment as at </value>
+  </data>
+  <data name="paymentLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paymentPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paymentPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pendingLabelResource1.Text" xml:space="preserve">
+    <value>MTD Pending Approval as at </value>
+  </data>
+  <data name="pendingLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pendingPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pendingPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reallocateLabelResource1.Text" xml:space="preserve">
+    <value>MTD Reallocated as at </value>
+  </data>
+  <data name="reallocateLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reallocatePanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="reallocatePanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="summaryLabelResource1.Text" xml:space="preserve">
+    <value>Summary Budget as at </value>
+  </data>
+  <data name="summaryLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="summaryPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="summaryPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAdjustedResource1.Caption" xml:space="preserve">
+    <value>Adjusted</value>
+  </data>
+  <data name="tabAdjustedResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAdjustedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabApproveResource1.Caption" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="tabApproveResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabApproveResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAvailableResource1.Caption" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="tabAvailableResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAvailableResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabExpensedPendingApprovalResource1.Caption" xml:space="preserve">
+    <value>D.Invoice Approved</value>
+  </data>
+  <data name="tabExpensedPendingApprovalResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabExpensedPendingApprovalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabExpensedResource1.Caption" xml:space="preserve">
+    <value>D.Invoice Pending</value>
+  </data>
+  <data name="tabExpensedResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabExpensedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabInvoicedResource1.Caption" xml:space="preserve">
+    <value>PO Invoiced</value>
+  </data>
+  <data name="tabInvoicedResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabInvoicedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMonthViewResource1.Caption" xml:space="preserve">
+    <value>Opening</value>
+  </data>
+  <data name="tabMonthViewResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMonthViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPendingApprovalResource1.Caption" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="tabPendingApprovalResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPendingApprovalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabReallocatedResource1.Caption" xml:space="preserve">
+    <value>Reallocated</value>
+  </data>
+  <data name="tabReallocatedResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabReallocatedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabStripResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabStripResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabSummaryViewResource1.Caption" xml:space="preserve">
+    <value>Summary</value>
+  </data>
+  <data name="tabSummaryViewResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabSummaryViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabYearViewResource1.Caption" xml:space="preserve">
+    <value>YTD</value>
+  </data>
+  <data name="tabYearViewResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabYearViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="yearLabelResource1.Text" xml:space="preserve">
+    <value>YTD Budget as at </value>
+  </data>
+  <data name="yearLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="yearPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="yearPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BoundColumnAccountCodeResource1.HeaderText" xml:space="preserve">
+    <value>Account Code</value>
+  </data>
+  <data name="BoundColumnAccountNameResource1.HeaderText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="BoundColumnPercentageVarianceYTDResource1.HeaderText" xml:space="preserve">
+    <value>(9) % YTD Variance&lt;br/&gt;((5)-(6))/(5) * 100%</value>
+  </data>
+  <data name="BoundColumnTotalAdjustedAmountResource1.HeaderText" xml:space="preserve">
+    <value>(2) Adjusted Amount</value>
+  </data>
+  <data name="BoundColumnTotalAmountResource1.HeaderText" xml:space="preserve">
+    <value>Total Available</value>
+  </data>
+  <data name="BoundColumnTotalApprovedResource1.HeaderText" xml:space="preserve">
+    <value>(6) Total Approved</value>
+  </data>
+  <data name="BoundColumnTotalAvailableBalanceExcludingPendingApprovalsResource1.HeaderText" xml:space="preserve">
+    <value>(10) Total Available&lt;br/&gt;(4)-(6)-(7)</value>
+  </data>
+  <data name="BoundColumnTotalAvailableBalanceResource1.HeaderText" xml:space="preserve">
+    <value>(10) Total Available&lt;br/&gt;(4)-(5)-(6)-(8)-(9)</value>
+  </data>
+  <data name="BoundColumnTotalAvailableBalanceResource2.HeaderText" xml:space="preserve">
+    <value>(12) Total Available After Deducting Pending Approval&lt;br/&gt;(10)-(11)</value>
+  </data>
+  <data name="BoundColumnTotalBalanceAfterVariationResource1.HeaderText" xml:space="preserve">
+    <value>(4) Total After Adjustments&lt;br/&gt;(1)+(2)+(3)</value>
+  </data>
+  <data name="BoundColumnTotalBalanceAfterVariationYTDResource1.HeaderText" xml:space="preserve">
+    <value>(5) Total After Adjustments YTD&lt;br/&gt;</value>
+  </data>
+  <data name="BoundColumnTotalCommittedAfterCurrentBudgetPeriodResource1.HeaderText" xml:space="preserve">
+    <value>(8) Committed for Future Years&lt;br/&gt;</value>
+  </data>
+  <data name="BoundColumnTotalCommittedRestOfBudgetPeriodResource1.HeaderText" xml:space="preserve">
+    <value>(7) Committed Rest of Budget Period&lt;br/&gt;</value>
+  </data>
+  <data name="BoundColumnTotalCommittedYTDResource1.HeaderText" xml:space="preserve">
+    <value>(6) Committed YTD&lt;br/&gt;</value>
+  </data>
+  <data name="BoundColumnTotalDirectInvoiceApprovedResource1.HeaderText" xml:space="preserve">
+    <value>(9) Total Direct Invoice Approved</value>
+  </data>
+  <data name="BoundColumnTotalDirectInvoicePendingApprovalResource1.HeaderText" xml:space="preserve">
+    <value>(8) Total Direct Invoice Pending Approval</value>
+  </data>
+  <data name="BoundColumnTotalInvoiceApprovedResource1.HeaderText" xml:space="preserve">
+    <value>(7) Total Invoiced</value>
+  </data>
+  <data name="BoundColumnTotalOpeningBalanceResource1.HeaderText" xml:space="preserve">
+    <value>(1) Opening Balance</value>
+  </data>
+  <data name="BoundColumnTotalPendingApprovalResource1.HeaderText" xml:space="preserve">
+    <value>(5) Total Pending Approval</value>
+  </data>
+  <data name="BoundColumnTotalPendingApprovalResource2.HeaderText" xml:space="preserve">
+    <value>(11) Total Pending Approval</value>
+  </data>
+  <data name="BoundColumnTotalPendingApprovalYTDResource1.HeaderText" xml:space="preserve">
+    <value>(13) Current Pending Approval</value>
+  </data>
+  <data name="BoundColumnTotalReallocatedAmountResource1.HeaderText" xml:space="preserve">
+    <value>(3) Reallocated Amount</value>
+  </data>
+</root>

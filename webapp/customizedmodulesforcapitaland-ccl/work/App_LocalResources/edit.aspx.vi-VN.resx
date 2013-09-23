@@ -1,0 +1,1111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActualEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>Kết thúc (thực tế)</value>
+  </data>
+  <data name="ActualEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>Bắt đầu (thực tế)</value>
+  </data>
+  <data name="ActualStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.Text" xml:space="preserve">
+    <value>Sử dụng thông số</value>
+  </data>
+  <data name="buttonApplyParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.Text" xml:space="preserve">
+    <value>Sửa việc gốc</value>
+  </data>
+  <data name="buttonEditParentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.Caption" xml:space="preserve">
+    <value>Điện thoại di động</value>
+  </data>
+  <data name="CallerCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="CallerEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="CallerFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.Caption" xml:space="preserve">
+    <value>Người gọi</value>
+  </data>
+  <data name="CallerIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.Caption" xml:space="preserve">
+    <value>Tên</value>
+  </data>
+  <data name="CallerNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.Caption" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="CallerPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.Caption" xml:space="preserve">
+    <value>Loại người gọi</value>
+  </data>
+  <data name="CallerTypeIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>Nguyên nhân</value>
+  </data>
+  <data name="CauseOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.Caption" xml:space="preserve">
+    <value>Chọn lựa</value>
+  </data>
+  <data name="ChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.Caption" xml:space="preserve">
+    <value>Những việc liên quan</value>
+  </data>
+  <data name="ChildrenResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>Điện thoại di động</value>
+  </data>
+  <data name="ContactCellphoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ContactEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="ContactFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.Caption" xml:space="preserve">
+    <value>Người liên lạc</value>
+  </data>
+  <data name="ContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.Caption" xml:space="preserve">
+    <value>Điện thoại</value>
+  </data>
+  <data name="ContactPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.Caption" xml:space="preserve">
+    <value>Ngày hết hạn hợp đồng</value>
+  </data>
+  <data name="ContractEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.Caption" xml:space="preserve">
+    <value>Hợp đồng</value>
+  </data>
+  <data name="ContractIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.Caption" xml:space="preserve">
+    <value>Tên hợp đồng</value>
+  </data>
+  <data name="ContractNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.Caption" xml:space="preserve">
+    <value>Ngày bắt đầu</value>
+  </data>
+  <data name="ContractStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.Caption" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="dropParameterTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.Caption" xml:space="preserve">
+    <value>Vị trí của thiêt bị</value>
+  </data>
+  <data name="EquipmentLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.Caption" xml:space="preserve">
+    <value>Lựa chọn</value>
+  </data>
+  <data name="EquipmentResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.Caption" xml:space="preserve">
+    <value>Bản kiểm tra</value>
+  </data>
+  <data name="gridChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.Caption" xml:space="preserve">
+    <value>Tính tiền</value>
+  </data>
+  <data name="IsChargedToCallerResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Lao động/Kỹ thuật viên</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Giá cố định</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Giá không cố định</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Có</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Theo loại địa điểm</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Theo loại thiết bị</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="listParametersResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.Caption" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="LocationLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.Caption" xml:space="preserve">
+    <value>Lựa chọn</value>
+  </data>
+  <data name="LocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Untitled Page</value>
+  </data>
+  <data name="panelParametersResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.Caption" xml:space="preserve">
+    <value>Diễn giải cách xử lý</value>
+  </data>
+  <data name="ResolutionDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.Caption" xml:space="preserve">
+    <value>Cách xử lý</value>
+  </data>
+  <data name="ResolutionIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>Ngày kết thúc lịch trình</value>
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>Ngày bắt đầu lịch trình</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>Loại vấn đề</value>
+  </data>
+  <data name="TypeOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.Caption" xml:space="preserve">
+    <value>Loại dịch vụ</value>
+  </data>
+  <data name="TypeOfServiceIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.Caption" xml:space="preserve">
+    <value>Loại công việc</value>
+  </data>
+  <data name="TypeOfWorkIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.Caption" xml:space="preserve">
+    <value>Địa điểm</value>
+  </data>
+  <data name="UIFieldLabel1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.Caption" xml:space="preserve">
+    <value>Địa điểm của thiết bị</value>
+  </data>
+  <data name="UIFieldLabel2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.Caption" xml:space="preserve">
+    <value>Số của công việc</value>
+  </data>
+  <data name="UIFieldLabel3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.Caption" xml:space="preserve">
+    <value>Diễn giải công việc</value>
+  </data>
+  <data name="UIFieldLabel4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.Caption" xml:space="preserve">
+    <value>Loại công việc</value>
+  </data>
+  <data name="UIFieldLabel5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.Caption" xml:space="preserve">
+    <value>Loại dịch vụ</value>
+  </data>
+  <data name="UIFieldLabel6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="UIGridViewColumnResource1.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>Yếu tố thực tế</value>
+  </data>
+  <data name="UIGridViewColumnResource11.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>Số lượng thực tế</value>
+  </data>
+  <data name="UIGridViewColumnResource12.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>Tổng số phụ</value>
+  </data>
+  <data name="UIGridViewColumnResource13.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>Số tiền ($)</value>
+  </data>
+  <data name="UIGridViewColumnResource14.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>Thông số</value>
+  </data>
+  <data name="UIGridViewColumnResource16.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>Đơn vị tính</value>
+  </data>
+  <data name="UIGridViewColumnResource17.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>Bước</value>
+  </data>
+  <data name="UIGridViewColumnResource19.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="UIGridViewColumnResource2.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.HeaderText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="UIGridViewColumnResource23.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>Loại công việc</value>
+  </data>
+  <data name="UIGridViewColumnResource24.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>Loại dịch vụ</value>
+  </data>
+  <data name="UIGridViewColumnResource25.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.HeaderText" xml:space="preserve">
+    <value>Ngày bắt đầu lịch trình</value>
+  </data>
+  <data name="UIGridViewColumnResource26.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.HeaderText" xml:space="preserve">
+    <value>Ngày kết thúc lịch trình</value>
+  </data>
+  <data name="UIGridViewColumnResource27.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.HeaderText" xml:space="preserve">
+    <value>Ngày bắt đầu (thực tế)</value>
+  </data>
+  <data name="UIGridViewColumnResource28.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.HeaderText" xml:space="preserve">
+    <value>Ngày kết thúc (thực tế)</value>
+  </data>
+  <data name="UIGridViewColumnResource3.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="UIGridViewColumnResource4.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="UIGridViewColumnResource5.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Giá thành (ước lượng) </value>
+  </data>
+  <data name="UIGridViewColumnResource6.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Yếu tố (ước lượng)</value>
+  </data>
+  <data name="UIGridViewColumnResource7.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Số lượng ước lượng</value>
+  </data>
+  <data name="UIGridViewColumnResource8.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>Tổng số phụ</value>
+  </data>
+  <data name="UIGridViewColumnResource9.CommandText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>Giá thành thực tế</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Xóa bỏ</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Bạn có chắc chắn quyết định xóa những gì đã chọn không?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Tạo ra</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Xóa bỏ</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>Bạn có chắc chắn quyết định xóa những gì đã chọn không?</value>
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>Tạo ra</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.Caption" xml:space="preserve">
+    <value>Nhà  cung cấp</value>
+  </data>
+  <data name="VendorNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.Caption" xml:space="preserve">
+    <value>Yếu tố giá cả</value>
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.Caption" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.Caption" xml:space="preserve">
+    <value>Thực tế</value>
+  </data>
+  <data name="WorkCost_ActualResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.Caption" xml:space="preserve">
+    <value>Giá thành</value>
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ChargeOutResource1.Caption" xml:space="preserve">
+    <value>Số tiền </value>
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.Caption" xml:space="preserve">
+    <value>Loại</value>
+  </data>
+  <data name="WorkCost_CostTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.Caption" xml:space="preserve">
+    <value>Hạng lao động</value>
+  </data>
+  <data name="WorkCost_CraftIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.Caption" xml:space="preserve">
+    <value>Yếu tố giá cả</value>
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.Caption" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.Caption" xml:space="preserve">
+    <value>Ước lượng</value>
+  </data>
+  <data name="WorkCost_EstimatedResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.Caption" xml:space="preserve">
+    <value>Giá thành</value>
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.Caption" xml:space="preserve">
+    <value>Giá cố định</value>
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.Caption" xml:space="preserve">
+    <value>Việc ngoài giờ?</value>
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.Caption" xml:space="preserve">
+    <value>Diễn giải</value>
+  </data>
+  <data name="WorkCost_NameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.Caption" xml:space="preserve">
+    <value>Kỹ thuật viên</value>
+  </data>
+  <data name="WorkCost_UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.Caption" xml:space="preserve">
+    <value>Giá thành công việc</value>
+  </data>
+  <data name="WorkCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.Caption" xml:space="preserve">
+    <value>Diễn giải công việc</value>
+  </data>
+  <data name="WorkDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.Caption" xml:space="preserve">
+    <value>Kết quả của thông số</value>
+  </data>
+  <data name="WorkParameterReadingsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

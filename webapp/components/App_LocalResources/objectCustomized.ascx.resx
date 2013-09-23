@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buttonPreviewResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonPreviewResource1.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="buttonPreviewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+  <data name="DisplayOrderResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+    <value>The order of display of the search field. Lower appears first.</value>
+  </data>
+  <data name="DisplayOrderResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CheckBoxCaptionResource1.Caption" xml:space="preserve">
+    <value>Checkbox Caption</value>
+  </data>
+  <data name="field_CheckBoxCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CheckBoxCaptionResource1.ToolTip" xml:space="preserve">
+    <value>The caption of the check box</value>
+  </data>
+  <data name="field_CheckBoxCaptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CodeTypeIDResource1.Caption" xml:space="preserve">
+    <value>Code Type</value>
+  </data>
+  <data name="field_CodeTypeIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CodeTypeIDResource1.ToolTip" xml:space="preserve">
+    <value>Specify the code type whose codes make a list to populate this field.</value>
+  </data>
+  <data name="field_CodeTypeIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlCaptionResource1.Caption" xml:space="preserve">
+    <value>Column Caption</value>
+  </data>
+  <data name="field_ControlCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value>The field's caption to be displayed on edit page</value>
+  </data>
+  <data name="field_ControlCaptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlSpanResource1.Caption" xml:space="preserve">
+    <value>Control Span</value>
+  </data>
+  <data name="field_ControlSpanResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlSpanResource1.ToolTip" xml:space="preserve">
+    <value>Set display of the field, either occupied half or entire row</value>
+  </data>
+  <data name="field_ControlSpanResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlTypeResource1.Caption" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+  <data name="field_ControlTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlTypeResource1.ToolTip" xml:space="preserve">
+    <value>Set the control type for user to input value</value>
+  </data>
+  <data name="field_ControlTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_DataTypeResource1.Caption" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="field_DataTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_DataTypeResource1.ToolTip" xml:space="preserve">
+    <value>The data type of the search field.</value>
+  </data>
+  <data name="field_DataTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_isActiveResource1.Caption" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="field_isActiveResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_isActiveResource1.ToolTip" xml:space="preserve">
+    <value>Indicate whether the field is editable by user</value>
+  </data>
+  <data name="field_isActiveResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.Caption" xml:space="preserve">
+    <value>Populate by Code?</value>
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.ToolTip" xml:space="preserve">
+    <value>Indicate whether to populate the drop down list with a list of codes</value>
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MaxLengthResource1.Caption" xml:space="preserve">
+    <value>Maximum Length</value>
+  </data>
+  <data name="field_MaxLengthResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MaxLengthResource1.ToolTip" xml:space="preserve">
+    <value>Specify maximum number of characters to be entered in the field</value>
+  </data>
+  <data name="field_MaxLengthResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MultiLineTextBoxResource1.Caption" xml:space="preserve">
+    <value>Multi-line</value>
+  </data>
+  <data name="field_MultiLineTextBoxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MultiLineTextBoxResource1.Text" xml:space="preserve">
+    <value>Yes, This is a multi-line text box.</value>
+  </data>
+  <data name="field_MultiLineTextBoxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MultiLineTextBoxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_TextListResource1.Caption" xml:space="preserve">
+    <value>Text List</value>
+  </data>
+  <data name="field_TextListResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_TextListResource1.ToolTip" xml:space="preserve">
+    <value>A comma separated list of text that will appear to the user for selection</value>
+  </data>
+  <data name="field_TextListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ToolTipResource1.Caption" xml:space="preserve">
+    <value>ToolTip</value>
+  </data>
+  <data name="field_ToolTipResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ToolTipResource1.ToolTip" xml:space="preserve">
+    <value>More description about the control that will be displayed when user mouse over the information icon</value>
+  </data>
+  <data name="field_ToolTipResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeFieldResource1.Caption" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeFieldResource1.Text" xml:space="preserve">
+    <value>Yes, this field must be within a fixed range</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.ToolTip" xml:space="preserve">
+    <value>Indicate whether the field's value must be within a specific range</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMaxResource1.Caption" xml:space="preserve">
+    <value>Range Max</value>
+  </data>
+  <data name="field_ValidateRangeMaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMaxResource1.ToolTip" xml:space="preserve">
+    <value>The maximum value of the range that this field could accept. Acceptable format depends on the data type of the control. For date range, using format yyyy/mm/dd. For date time range, using format yyyy/mm/dd hh:mm:ss</value>
+  </data>
+  <data name="field_ValidateRangeMaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMinResource1.Caption" xml:space="preserve">
+    <value>Range Min</value>
+  </data>
+  <data name="field_ValidateRangeMinResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMinResource1.ToolTip" xml:space="preserve">
+    <value>The minimum value of the range that this field could accept. Acceptable format depends on the data type of the control. For date range, using format yyyy/mm/dd. For date time range, using format yyyy/mm/dd hh:mm:ss</value>
+  </data>
+  <data name="field_ValidateRangeMinResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.Caption" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.Text" xml:space="preserve">
+    <value>Yes, this field is required</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.ToolTip" xml:space="preserve">
+    <value>Indicate whether the field is a compulsory field.</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValueListResource1.Caption" xml:space="preserve">
+    <value>Value List</value>
+  </data>
+  <data name="field_ValueListResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValueListResource1.ToolTip" xml:space="preserve">
+    <value>The comma separated list of values that corresponds to the text list.</value>
+  </data>
+  <data name="field_ValueListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFieldsResource1.Caption" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="gridFieldsResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFieldsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFieldsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFieldsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Yes, this field is still active.</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Yes, populate this dropdown list with a list of codes having the following code type</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>No, populate this dropdown list with the following list</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>No, this field is no longer active and user should not be allowed to enter any value</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ObjectFields_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ObjectFields_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListCodeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListCodeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListFieldResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListFieldResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListValueResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListValueResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelSeparatorResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelSeparatorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTextBoxFieldResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTextBoxFieldResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelValidateRageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelValidateRageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+  <data name="UIGridViewColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+  <data name="UIGridViewColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Control Span</value>
+  </data>
+  <data name="UIGridViewColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete Selected</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete selected item?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+</root>

@@ -1,0 +1,32 @@
+﻿
+.workpreview-tooltip-body
+{
+	width: 500px;
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	padding: 2px 4px 2px 4px;
+}
+
+.workpreview-tooltip-header
+{
+	width: 500px;
+	background-color: #66CCFF;
+	border: solid 1px #bbbbff;
+	padding: 2px 4px 2px 4px;
+}
+
+.workpreview-holiday-tooltip-body
+{
+	width: 80px;
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	padding: 2px 4px 2px 4px;
+}
+
+.workpreview-holiday-tooltip-header
+{
+	width: 80px;
+	background-color: #ff0000;
+	border: solid 1px #bbbbff;
+	padding: 2px 4px 2px 4px;
+}

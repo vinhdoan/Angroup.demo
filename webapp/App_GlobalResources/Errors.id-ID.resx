@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adjust_DuplicateItem" xml:space="preserve">
+    <value>Barang serupa dalam satu kelompok sudah terdapat dalam perubahan ini. Mohon pilih kelompok lain,</value>
+  </data>
+  <data name="Adjust_InsufficientItems" xml:space="preserve">
+    <value>Jumlah hal yang terdapat dalam simpanan tidak cukup untuk perubahan ini, {0}</value>
+  </data>
+  <data name="BudgetAllocation_SameSourceDestination" xml:space="preserve">
+    <value>Sumber dan tujuan tidak boleh menyebut hal yang sama.</value>
+  </data>
+  <data name="Calendar_NoWorkDays" xml:space="preserve">
+    <value>Mohon pilih paling sedikit satu hari kerja.</value>
+  </data>
+  <data name="CheckOut_DuplicateItem" xml:space="preserve">
+    <value>Barang serupa dalam katalog dan wadah yang sama sudah terdapat disini. Mohon pilih katalog dan wadah lain.</value>
+  </data>
+  <data name="CheckOut_InsufficientItems" xml:space="preserve">
+    <value>Jumlah hal yang terdapat dalam persediaan tidak cukup untuk proses ini, {0}</value>
+  </data>
+  <data name="CheckOut_InsufficientQuantity" xml:space="preserve">
+    <value>Proses ini tidak bisa dilakukan karena ada satu barang (atau lebih) yang jumlahnya tidak cukup dalam persediaan.</value>
+  </data>
+  <data name="CheckOut_ItemInsufficientQuantity" xml:space="preserve">
+    <value>Jumlah barang tidak cukup jumlahnya dalam persediaan.</value>
+  </data>
+  <data name="Code_CyclicalReference" xml:space="preserve">
+    <value>Kode induk berada dalam rantai melingkar. Mohon pilih kode induk lainnya agar tidak berada dibawah kode itu sendiri.</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDateTime" xml:space="preserve">
+    <value>Mohon ketik Range Max dalam bentuk (yyyy-mm-dd HH:mm:ss)</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDecimal" xml:space="preserve">
+    <value>Mohon ketik Range Max dalam bentuk desimal</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDouble" xml:space="preserve">
+    <value>Mohon ketik Range Max dalam bentuk ganda</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxInteger" xml:space="preserve">
+    <value>Mohon ketik Range Max dalam bentuk integer</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDateTime" xml:space="preserve">
+    <value>Mohon ketik Range Min dalam bentuk (yyyy-mm-dd HH:mm:ss)</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDecimal" xml:space="preserve">
+    <value>Mohon ketik Range Min dalam bentuk desimal</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDouble" xml:space="preserve">
+    <value>Mohon ketik Range Min dalam bentuk ganda</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinInteger" xml:space="preserve">
+    <value>Mohon ketik Range Min dalam bentuk integer</value>
+  </data>
+  <data name="CustomizedObject_NoRangeSpecify" xml:space="preserve">
+    <value>Mohon pilih paling sedikit satu nilai untuk range (min/max)</value>
+  </data>
+  <data name="Equipment_ParentIDInvalid" xml:space="preserve">
+    <value>Folder ini tidak boleh berada dibawah alat nyata. Mohon pilih kepala lainnya.</value>
+  </data>
+  <data name="EquipmentTypeSpares_DuplicateItem" xml:space="preserve">
+    <value>Cadangan serupa dengan katalog yang sama sudah ada. Mohon pilih katalog lainnya.</value>
+  </data>
+  <data name="General_CommaSeparator" xml:space="preserve">
+    <value>, </value>
+  </data>
+  <data name="General_NameDuplicate" xml:space="preserve">
+    <value>Nama ini sudah ada. Mohon tulis nama lain.</value>
+  </data>
+  <data name="Location_ParentIDInvalid" xml:space="preserve">
+    <value>Folder ini tidak boleh berada dibawah lokasi nyata. Mohon pilih kepala lainnya.</value>
+  </data>
+  <data name="PurchaseOrder_TaxCodesNotSelected" xml:space="preserve">
+    <value>Paling sedikit satu Perintah Pembelian tidak mempunyai kode pajak terpilih. Mohon pilih kode pajak untuk semua barang,</value>
+  </data>
+  <data name="PurchaseOrder_UnableToGenerate" xml:space="preserve">
+    <value>Tidak dapat mengeluarkan Perintah Pembelian. Mungkin disebabkan karena tidak ada kolom untuk membuat Perintah Pembelian.</value>
+  </data>
+  <data name="PurchaseOrder_UnitPriceNotEntered" xml:space="preserve">
+    <value>Paling sedikit satu barang dalam Perintah Pembelian tidak mempunyai harga satuan yang terterai. Mohon masukkan harga satuan untuk semua barang.</value>
+  </data>
+  <data name="PurchaseRequest_NoItemsSelected" xml:space="preserve">
+    <value>Tidak ada Permintaan Pembelian yang terpilih. Mohon pilih paling sedikit satu barang.</value>
+  </data>
+  <data name="Report_CascadeControlLoop" xml:space="preserve">
+    <value>Mohon pilih pilihan turunan lain karena proses logika tidak bisa dihentikan.</value>
+  </data>
+  <data name="Report_FieldNotFound" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_IdentifierHasComma" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_IdentifierHasSpaces" xml:space="preserve">
+    <value>The specified identifier has a white space, which is not allowed. Please remove all whitespaces.</value>
+  </data>
+  <data name="Report_InvalidReportFile" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_PopulateQueryError" xml:space="preserve">
+    <value>Tidak bisa mengisi daftar karena sistem pencarian mengalami kegagalan dengan pesan sebagai berikut: {0}</value>
+  </data>
+  <data name="Report_QueryFailedWithMessage" xml:space="preserve">
+    <value>Sistem pencarian mengalami kegagalan dengan pesan sebagai berikut: {0}</value>
+  </data>
+  <data name="Report_ReportFileNotFound" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Report_SelectTemplate" xml:space="preserve">
+    <value>Mohon pilih bentuk laporan yang diinginkan.</value>
+  </data>
+  <data name="ReportTemplate_EditDenied" xml:space="preserve">
+    <value>Tidak sanggup untuk merubah bentuk laporan yang diinginkan. Mohon hubungi pengelola perancang sistem.</value>
+  </data>
+  <data name="RequestForQuotation_DuplicateVendor" xml:space="preserve">
+    <value>Nama penjual/supplier sudah ada dalam daftar RFQ. Mohon pilih penjual/supplier lainnya.</value>
+  </data>
+  <data name="RequestForQuotation_NoRFQItemsSelected" xml:space="preserve">
+    <value>Belum ada Harga Penawaran yang terpilih. Mohon pilih paling sedikit satu penawaran.</value>
+  </data>
+  <data name="RequestForQuotation_NoVendor" xml:space="preserve">
+    <value>Mohon pilih satu penjual/supplier.</value>
+  </data>
+  <data name="RequestForQuotation_UnableToGenerate" xml:space="preserve">
+    <value>Tidak dapat mengeluarkan Permintaan Harga Penawaran. Mungkin disebabkan karena tidak ada kolom untuk membuat Permintaan Harga Penawaran.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateAdhocRate" xml:space="preserve">
+    <value>Tarif non-tetap sudah terdapat dalam daftar pekerjaan yang direncanakan. Mohon pilih tarif non-tetap lainnya.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateFixedRate" xml:space="preserve">
+    <value>Tarif tetap sudah ada dalam daftar pekerjaan rutin yang direncanakan. Mohon pilih tarif tetap lainnya.</value>
+  </data>
+  <data name="ScheduledWork_DuplicateMaterial" xml:space="preserve">
+    <value>Katalog yang sama sudah ada dalam daftar pekerjaan yang direncanakan. Mohon pilih katalog lainnya.  The same catalog already exists in the scheduled work. Please select another catalogue.</value>
+  </data>
+  <data name="ScheduledWork_StaggeredEquipmentNotSpecified" xml:space="preserve">
+    <value>Tidak ada alat sejajar yang terpilih untuk daftar pekerjaan yang direncanakan. Mohon pilih paling sedikit satu alat sejajar dengan mengatur Stagger.</value>
+  </data>
+  <data name="ScheduledWork_StaggeredLocationNotSpecified" xml:space="preserve">
+    <value>Tidak ada lokasi sejajar yang terpilih untuk daftar pekerjaan yang direncanakan. Mohon pilih paling sedikit satu lokasi sejajar dengan mengatur Stagger.</value>
+  </data>
+  <data name="ServiceLevel_DuplicateServiceLevelDetail" xml:space="preserve">
+    <value>Ada informasi yang sama untuk tingkat pelayanan dan nomor langkat disini. Mohon pilih langkah, tingkat dan prioritas yang berbeda.</value>
+  </data>
+  <data name="ServiceLevel_LocationDuplicate" xml:space="preserve">
+    <value>Ada informasi yang sama untuk tingkat pelayanan dan nomor langkat di lokasi yang sama. Moho pilih lokasi lain.</value>
+  </data>
+  <data name="Store_DuplicateBin" xml:space="preserve">
+    <value>Wadah serupa sudah ada di simpanan.</value>
+  </data>
+  <data name="Store_DuplicateItem" xml:space="preserve">
+    <value>Barang serupa dengan nama katalog yang sama sudah ada di simpanan. Mohon pilih katalog lain.</value>
+  </data>
+  <data name="Store_NoLowInventoryItems" xml:space="preserve">
+    <value>Tidak ada barang simpanan yang berada dibawah ambang batas rendah. Permohonan Pembelian tidak akan dikeluarkan.</value>
+  </data>
+  <data name="Transfer_DuplicateItem" xml:space="preserve">
+    <value>Barang serupa dengan katalog dan wadah yang sama sudah ada dalam pemindahan.  Mohon pilih katalog dan wadah lain.</value>
+  </data>
+  <data name="Transfer_FromBinSameAsToBin" xml:space="preserve">
+    <value>Wadah yang terpilih adalah serupa. Mohon pilih wadah lain untuk dipindah.</value>
+  </data>
+  <data name="Transfer_InsufficientItems" xml:space="preserve">
+    <value>Barang-barang berikut di simpanan ini tidak cukup untuk dipindah. {0}</value>
+  </data>
+  <data name="UnitConversion_FromUnitDuplicate" xml:space="preserve">
+    <value>Satuan ukur sudah ditentukan. Mohon pilih satuan ukur lainnya.</value>
+  </data>
+  <data name="UnitConversion_ToUnitOfMeasureInvalid" xml:space="preserve">
+    <value>Mohon pastikan bahwa 'Ke Unit' berbeda dari 'Dari Unit'.</value>
+  </data>
+  <data name="User_DuplicateUser" xml:space="preserve">
+    <value>Pemakai dengan nama yang sama sudah ada dalam sistem. Mohon gunakan nama pemakai yang lain.</value>
+  </data>
+  <data name="User_PasswordDifferent" xml:space="preserve">
+    <value>Mohon masukkan kata sandi yang sama di bagian 'Pastikan Kata Sandi'.</value>
+  </data>
+  <data name="User_PasswordWrong" xml:space="preserve">
+    <value>Kata sandi salah.</value>
+  </data>
+  <data name="Work_AlreadyAcknowledged" xml:space="preserve">
+    <value>Pekerjaan {0} sudah disetujui.</value>
+  </data>
+  <data name="Work_AlreadyArrived" xml:space="preserve">
+    <value>Pekerjaan {0} sudah datang.</value>
+  </data>
+  <data name="Work_AlreadyCompleted" xml:space="preserve">
+    <value>Pekerjaan {0} sudah selesai.</value>
+  </data>
+  <data name="Work_ArrivedBeforeAck" xml:space="preserve">
+    <value>Kesalahan dalam pekerjaan {0}.</value>
+  </data>
+  <data name="Work_CannotCompleteAtThisStage" xml:space="preserve">
+    <value>Pekerjaan {0} tidak dapat diselesaikan pada saat ini karena belum ada teknisi yang ditugaskan.</value>
+  </data>
+  <data name="Work_DuplicateAdhocRate" xml:space="preserve">
+    <value>Tarif non-tetap sudah terdapat dalam daftar pekerjaan yang direncanakan. Mohon pilih tarif non-tetap lainnya.</value>
+  </data>
+  <data name="Work_DuplicateFixedRate" xml:space="preserve">
+    <value>Tarif tetap sudah terdapat dalam daftar pekerjaan yang direncanakan. Mohon pilih tarif tetap lainnya.</value>
+  </data>
+  <data name="Work_DuplicateMaterial" xml:space="preserve">
+    <value>Barang serupa dalam wadah yang sama sudah terdapat disini. Mohon pilih barang atau wadah lain.</value>
+  </data>
+  <data name="Work_DuplicateTechnician" xml:space="preserve">
+    <value>Teknisi yang sama sudah terdapat Perintah Pekerjaan. Mohon pilih teknisi lain.</value>
+  </data>
+  <data name="Work_InsufficientStoreItems" xml:space="preserve">
+    <value>Barang-barang berikut tidak cukup jumlahnya untuk digunakan di proses ini. {0}</value>
+  </data>
+  <data name="Work_LocationEquipmentNotSelected" xml:space="preserve">
+    <value>'Lokasi/Alat' harus diisi dan tidak boleh kosong. Mohon pilih atau isi yang sesuai.</value>
+  </data>
+  <data name="Work_StoreBinsNotSpecified" xml:space="preserve">
+    <value>Beberapa harga barang tidak memiliki simpanan dan wadah terpilih. Mohon pilih simpanan dan wadah yang sesuai.</value>
+  </data>
+  <data name="Work_TechnicianNotAssigned" xml:space="preserve">
+    <value>Tidak ada teknisi atau kontraktor yang ditugaskan untuk pekerjaan ini. Mohon pilih paling sedikit satu teknisi atau kontraktor.</value>
+  </data>
+  <data name="Work_TechnicianNotSpecified" xml:space="preserve">
+    <value>Beberapa harga teknisi tidak memiliki teknisi terpilih. Mohon pilih yang sesuai.</value>
+  </data>
+  <data name="Workflow_NoUsersToAssign" xml:space="preserve">
+    <value>Sismtem alur kerja tidak bisa menugaskan pemakai atau peran kepada hal ini.</value>
+  </data>
+  <data name="Workflow_TransitionInvalid" xml:space="preserve">
+    <value>Sistem alur kerja tidak bisa memindahkan hal ini kepada bentuk yang diinginkan.</value>
+  </data>
+</root>

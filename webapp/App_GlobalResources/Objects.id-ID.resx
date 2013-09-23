@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BUDGET_ALLOCATION" xml:space="preserve">
+    <value>Alokasi</value>
+  </data>
+  <data name="BUDGET_CATEGORIES" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="BUDGET_ITEM" xml:space="preserve">
+    <value>Anggaran</value>
+  </data>
+  <data name="BUDGET_LOG" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="CALENDAR" xml:space="preserve">
+    <value>Kalender</value>
+  </data>
+  <data name="CATALOGUE" xml:space="preserve">
+    <value>Katalog</value>
+  </data>
+  <data name="CENTRE_ADMIN" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="CENTRE_ANALYSIS" xml:space="preserve">
+    <value>Analisa</value>
+  </data>
+  <data name="CENTRE_ASSET" xml:space="preserve">
+    <value>Aset</value>
+  </data>
+  <data name="CENTRE_BUDGET" xml:space="preserve">
+    <value>Anggaran</value>
+  </data>
+  <data name="CENTRE_BUILDER" xml:space="preserve">
+    <value>Pembuat Laporan</value>
+  </data>
+  <data name="CENTRE_INVENTORY" xml:space="preserve">
+    <value>Bahan-bahan</value>
+  </data>
+  <data name="CENTRE_PROCUREMENT" xml:space="preserve">
+    <value>Pembelian</value>
+  </data>
+  <data name="CENTRE_SERVICE" xml:space="preserve">
+    <value>Pelayanan</value>
+  </data>
+  <data name="CENTRE_VENDOR" xml:space="preserve">
+    <value>Penjual</value>
+  </data>
+  <data name="CENTRE_WORK" xml:space="preserve">
+    <value>Pekerjaan</value>
+  </data>
+  <data name="CHECKLIST" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="CHECKLISTRESPONSE" xml:space="preserve">
+    <value>Tanggapan Checklist</value>
+  </data>
+  <data name="CODE" xml:space="preserve">
+    <value>Kode</value>
+  </data>
+  <data name="CODETYPE" xml:space="preserve">
+    <value>Jenis Kode</value>
+  </data>
+  <data name="CONTRACT" xml:space="preserve">
+    <value>Kontrak</value>
+  </data>
+  <data name="CONTRACT_CLOSED" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="CONTRACT_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Tutup Kontrak</value>
+  </data>
+  <data name="CONTRACT_INPROGRESS" xml:space="preserve">
+    <value>Kontrak Berjalan</value>
+  </data>
+  <data name="CONTRACT_INPROGRESS_ACTIONNAME" xml:space="preserve">
+    <value>Serah Kontrak dan Mulai</value>
+  </data>
+  <data name="CONTRACT_MODIFYDATE" xml:space="preserve">
+    <value>Tanggal Diubah</value>
+  </data>
+  <data name="CONTRACT_MODIFYDATE_ACTIONNAME" xml:space="preserve">
+    <value>Ubah Tanggal Kontrak</value>
+  </data>
+  <data name="CONTRACT_PENDINGRENEWAL" xml:space="preserve">
+    <value>Menunggu Pembaruan</value>
+  </data>
+  <data name="CONTRACT_PENDINGRENEWAL_ACTIONNAME" xml:space="preserve">
+    <value>Serah Kontrak untuk Pembaruan</value>
+  </data>
+  <data name="CRAFT" xml:space="preserve">
+    <value>Keahlian</value>
+  </data>
+  <data name="CURRENCY" xml:space="preserve">
+    <value>Mata Uang</value>
+  </data>
+  <data name="CURRENCYEXCHANGE" xml:space="preserve">
+    <value>Nilai Tukar Mata Uang</value>
+  </data>
+  <data name="DASHBOARD" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="DATABASE" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="EQUIPMENT" xml:space="preserve">
+    <value>Alat</value>
+  </data>
+  <data name="EQUIPMENTTYPE" xml:space="preserve">
+    <value>Jenis Alat</value>
+  </data>
+  <data name="FIXEDRATE" xml:space="preserve">
+    <value>Tarip Tetap</value>
+  </data>
+  <data name="LOCATION" xml:space="preserve">
+    <value>Lokasi</value>
+  </data>
+  <data name="LOCATIONTYPE" xml:space="preserve">
+    <value>Jenis Lokasi</value>
+  </data>
+  <data name="MYWORK" xml:space="preserve">
+    <value>Pekerjaan-pekerjaan yang Saya Siapkan</value>
+  </data>
+  <data name="OBJECTRECORD" xml:space="preserve">
+    <value>Obyek Buatan Khusus</value>
+  </data>
+  <data name="OBJECTRECORD_TABVIEW" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="PURCHASE" xml:space="preserve">
+    <value>Pembelian</value>
+  </data>
+  <data name="PURCHASE_CLOSED" xml:space="preserve">
+    <value>Ditutup</value>
+  </data>
+  <data name="PURCHASE_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="PURCHASE_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Menunggu Persetujuan</value>
+  </data>
+  <data name="PURCHASE_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Persetujuan</value>
+  </data>
+  <data name="PURCHASE_PENDINGINVOICE" xml:space="preserve">
+    <value>Menunggu Tagihan</value>
+  </data>
+  <data name="PURCHASE_PENDINGINVOICE_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Tagihan</value>
+  </data>
+  <data name="PURCHASE_PENDINGQUOTATION" xml:space="preserve">
+    <value>Menunggu Penawaran</value>
+  </data>
+  <data name="PURCHASE_PENDINGQUOTATION_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Penawaran</value>
+  </data>
+  <data name="PURCHASE_REJECTED" xml:space="preserve">
+    <value>Ditolak</value>
+  </data>
+  <data name="PURCHASE_REJECTED_ACTIONNAME" xml:space="preserve">
+    <value>Pembelian Ditolak</value>
+  </data>
+  <data name="PURCHASEORDER" xml:space="preserve">
+    <value>Perintah Pembelian</value>
+  </data>
+  <data name="PURCHASEORDER_CANCELLED" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="PURCHASEORDER_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="PURCHASEORDER_CLOSED" xml:space="preserve">
+    <value>Ditutup</value>
+  </data>
+  <data name="PURCHASEORDER_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="PURCHASEORDER_PENDINGRECEIPT" xml:space="preserve">
+    <value>Menunggu Tanda Terima</value>
+  </data>
+  <data name="PURCHASEORDER_PENDINGRECEIPT_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Tanda Terima</value>
+  </data>
+  <data name="PURCHASEORDER_PENDINGUPDATE" xml:space="preserve">
+    <value>Menunggu Update</value>
+  </data>
+  <data name="PURCHASEORDER_PENDINGUPDATE_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Update</value>
+  </data>
+  <data name="PURCHASEREQUEST" xml:space="preserve">
+    <value>Permintaan Pembelian</value>
+  </data>
+  <data name="PURCHASEREQUEST_CANCELLED" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="PURCHASEREQUEST_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="PURCHASEREQUEST_CLOSED" xml:space="preserve">
+    <value>Tertutup</value>
+  </data>
+  <data name="PURCHASEREQUEST_GENERATED" xml:space="preserve">
+    <value>Permintaan Penawaran dan Perintah Pembelian sudah dikeluarkan</value>
+  </data>
+  <data name="PURCHASEREQUEST_GENERATED_ACTIONNAME" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="PURCHASEREQUEST_SAVED" xml:space="preserve">
+    <value>Tersimpan</value>
+  </data>
+  <data name="PURCHASEREQUEST_SAVED_ACTIONNAME" xml:space="preserve">
+    <value>Simpan tanpa Serahkan</value>
+  </data>
+  <data name="PURCHASEREQUEST_SUBMITTED" xml:space="preserve">
+    <value>Sudah diserahkan/dikirim</value>
+  </data>
+  <data name="PURCHASEREQUEST_SUBMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan ke Manager Pembelian</value>
+  </data>
+  <data name="REPORT" xml:space="preserve">
+    <value>Laporan</value>
+  </data>
+  <data name="REQUESTFORQUOTATION" xml:space="preserve">
+    <value>Permintaan Penawaran</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_AWARDED" xml:space="preserve">
+    <value>Diberikan</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_AWARDED_ACTIONNAME" xml:space="preserve">
+    <value>Pemberian</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_CANCELLED" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_CLOSED" xml:space="preserve">
+    <value>Tertutup</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Menunggu Persetujuan</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Persetujuan</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGEVALUATION" xml:space="preserve">
+    <value>Menunggu Evaluasi</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGEVALUATION_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Evaluasi</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGQUOTATION" xml:space="preserve">
+    <value>Menunggu Penawaran</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGQUOTATION_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Penawaran</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGREEVALUATION" xml:space="preserve">
+    <value>Menunggu Evaluasi Ulang</value>
+  </data>
+  <data name="REQUESTFORQUOTATION_PENDINGREEVALUATION_ACTIONNAME" xml:space="preserve">
+    <value>Kembalikan untuk Evaluasi Ulang</value>
+  </data>
+  <data name="SCHEDULEDWORK" xml:space="preserve">
+    <value>Pekerjaan Terencana</value>
+  </data>
+  <data name="SCHEDULEDWORK_CANCELLED" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="SCHEDULEDWORK_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Batalkan Pekerjaan</value>
+  </data>
+  <data name="SCHEDULEDWORK_WORKSCREATED" xml:space="preserve">
+    <value>Pekerjaan Dibuat</value>
+  </data>
+  <data name="SCHEDULEDWORK_WORKSCREATED_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan dan Buat Pekerjaan</value>
+  </data>
+  <data name="SERVICELEVEL" xml:space="preserve">
+    <value>Tingkat Pelayanan</value>
+  </data>
+  <data name="SQL" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="START" xml:space="preserve">
+    <value />
+  </data>
+  <data name="STORE" xml:space="preserve">
+    <value>Simpanan</value>
+  </data>
+  <data name="STOREADJUST" xml:space="preserve">
+    <value>Pengaturan</value>
+  </data>
+  <data name="STOREADJUST_COMMITTED" xml:space="preserve">
+    <value>Terikat</value>
+  </data>
+  <data name="STOREADJUST_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Terikat untuk Simpan</value>
+  </data>
+  <data name="STOREADJUST_PENDINGCOMMIT" xml:space="preserve">
+    <value>Menunggu Pengikatan</value>
+  </data>
+  <data name="STOREADJUST_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Simpan dan Ikat Nanti</value>
+  </data>
+  <data name="STORECHECKIN" xml:space="preserve">
+    <value>Check-In</value>
+  </data>
+  <data name="STORECHECKIN_COMMITTED" xml:space="preserve">
+    <value>Terikat</value>
+  </data>
+  <data name="STORECHECKIN_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Terikat untuk Simpan</value>
+  </data>
+  <data name="STORECHECKIN_PENDINGCOMMIT" xml:space="preserve">
+    <value>Menunggu Pengikatan</value>
+  </data>
+  <data name="STORECHECKIN_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Simpan dan Ikat Nanti</value>
+  </data>
+  <data name="STORECHECKOUT" xml:space="preserve">
+    <value>Check-Out</value>
+  </data>
+  <data name="STORECHECKOUT_COMMITTED" xml:space="preserve">
+    <value>Terikat</value>
+  </data>
+  <data name="STORECHECKOUT_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Terikat untuk Simpan</value>
+  </data>
+  <data name="STORECHECKOUT_PENDINGCOMMIT" xml:space="preserve">
+    <value>Menunggu Pengikatan</value>
+  </data>
+  <data name="STORECHECKOUT_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Simpan dan Ikat Nanti</value>
+  </data>
+  <data name="STORESTOCK" xml:space="preserve">
+    <value>Melihat Isi Stok</value>
+  </data>
+  <data name="STORETRANSFER" xml:space="preserve">
+    <value>Pemindahan</value>
+  </data>
+  <data name="STORETRANSFER_COMMITTED" xml:space="preserve">
+    <value>Terikat</value>
+  </data>
+  <data name="STORETRANSFER_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Terikat untuk Simpan</value>
+  </data>
+  <data name="STORETRANSFER_PENDINGCOMMIT" xml:space="preserve">
+    <value>Menunggu Pengikatan</value>
+  </data>
+  <data name="STORETRANSFER_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Simpan dan Ikat Nanti</value>
+  </data>
+  <data name="TAXCODE" xml:space="preserve">
+    <value>Kode Pajak</value>
+  </data>
+  <data name="UNITCONVERSION" xml:space="preserve">
+    <value>Ganti Satuan</value>
+  </data>
+  <data name="USER" xml:space="preserve">
+    <value>Pemakai</value>
+  </data>
+  <data name="VENDOR" xml:space="preserve">
+    <value>Penjual</value>
+  </data>
+  <data name="WORK" xml:space="preserve">
+    <value>Pekerjaan</value>
+  </data>
+  <data name="WORK_CLOSED" xml:space="preserve">
+    <value>Tertutup</value>
+  </data>
+  <data name="WORK_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Tutup Pekerjaan</value>
+  </data>
+  <data name="WORK_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Menunggu Persetujuan</value>
+  </data>
+  <data name="WORK_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Persetujuan</value>
+  </data>
+  <data name="WORK_PENDINGASSIGNMENT" xml:space="preserve">
+    <value>Menunggu Penugasan</value>
+  </data>
+  <data name="WORK_PENDINGASSIGNMENT_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Penugasan</value>
+  </data>
+  <data name="WORK_PENDINGCLOSURE" xml:space="preserve">
+    <value>Menunggu Penutupan</value>
+  </data>
+  <data name="WORK_PENDINGCLOSURE_ACTIONNAME" xml:space="preserve">
+    <value>Selesaikan Pekerjaan dan Serahkan Penutupan</value>
+  </data>
+  <data name="WORK_PENDINGCONTRACTOR" xml:space="preserve">
+    <value>Menunggu Kontraktor</value>
+  </data>
+  <data name="WORK_PENDINGCONTRACTOR_ACTIONNAME" xml:space="preserve">
+    <value>Menunggu Kontraktor Datang</value>
+  </data>
+  <data name="WORK_PENDINGEXECUTION" xml:space="preserve">
+    <value>Menunggu Pelaksanaan</value>
+  </data>
+  <data name="WORK_PENDINGEXECUTION_ACTIONNAME" xml:space="preserve">
+    <value>Mulai Pekerjaan</value>
+  </data>
+  <data name="WORK_PENDINGHELPDESK" xml:space="preserve">
+    <value>Menunggu Penyerahan dari Helpdesk</value>
+  </data>
+  <data name="WORK_PENDINGHELPDESK_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan ke Helpdesk</value>
+  </data>
+  <data name="WORK_PENDINGMATERIAL" xml:space="preserve">
+    <value>Menunggu Bahan-bahan</value>
+  </data>
+  <data name="WORK_PENDINGMATERIAL_ACTIONNAME" xml:space="preserve">
+    <value>Menunggu Bahan-bahan datang</value>
+  </data>
+  <data name="WORK_PENDINGOTHERS" xml:space="preserve">
+    <value>Menunggu Lainnya</value>
+  </data>
+  <data name="WORK_PENDINGOTHERS_ACTIONNAME" xml:space="preserve">
+    <value>Menunggu (alasan lain)</value>
+  </data>
+  <data name="WORK_PENDINGPLANNING" xml:space="preserve">
+    <value>Menunggu Perencanaan</value>
+  </data>
+  <data name="WORK_PENDINGPLANNING_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Perencanaan</value>
+  </data>
+  <data name="WORK_REJECTED" xml:space="preserve">
+    <value>Ditolak</value>
+  </data>
+  <data name="WORK_REJECTED_ACTIONNAME" xml:space="preserve">
+    <value>Pekerjaan Ditolak</value>
+  </data>
+  <data name="WORKREQUEST" xml:space="preserve">
+    <value>Permintaan Pekerjaan</value>
+  </data>
+  <data name="WORKREQUEST_CANCELLED" xml:space="preserve">
+    <value>Dibatalkan</value>
+  </data>
+  <data name="WORKREQUEST_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Batal</value>
+  </data>
+  <data name="WORKREQUEST_CLOSED" xml:space="preserve">
+    <value>Tertutup</value>
+  </data>
+  <data name="WORKREQUEST_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Tutup</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGEXECUTION" xml:space="preserve">
+    <value>Menunggu Pelaksanaan</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGEXECUTION_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Pelaksanaan</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGHELPDESK" xml:space="preserve">
+    <value>Menunggu Helpdesk</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGHELPDESK_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Helpdesk</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGPLANNING" xml:space="preserve">
+    <value>Menunggu Perencanaan</value>
+  </data>
+  <data name="WORKREQUEST_PENDINGPLANNING_ACTIONNAME" xml:space="preserve">
+    <value>Serahkan untuk Perencanaan</value>
+  </data>
+</root>

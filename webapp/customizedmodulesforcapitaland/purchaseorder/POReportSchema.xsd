@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="POReportSchema" targetNamespace="http://tempuri.org/POReportSchema.xsd" xmlns:mstns="http://tempuri.org/POReportSchema.xsd" xmlns="http://tempuri.org/POReportSchema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="POReportSchema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PODetailsReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyName" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyCountry" type="xs:string" />
+              <xs:element name="CompanyPostalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyTelNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyFaxNo" type="xs:string" />
+              <xs:element name="CompanyRegNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CompanyID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverPostalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverTelNo" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverFaxNo" type="xs:string" minOccurs="0" />
+              <xs:element name="PoDeliverContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorTelNo" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorFaxNo" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoBillName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoBillAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="PoBillCountry" type="xs:string" minOccurs="0" />
+              <xs:element name="PoBillPostalCode" type="xs:string" minOccurs="0" />
+              <xs:element name="PoNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="PoPaymentTerms" type="xs:string" minOccurs="0" />
+              <xs:element name="PoId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+              <xs:element name="PoSubject" type="xs:string" minOccurs="0" />
+              <xs:element name="WJNo" type="xs:string" minOccurs="0" />
+              <xs:element name="GST" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WJCreatedDateTime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PoDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RFQBackground" type="xs:string" minOccurs="0" />
+              <xs:element name="QuotationNo" type="xs:string" minOccurs="0" />
+              <xs:element name="BillToContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="DeliverToContactName" type="xs:string" minOccurs="0" />
+              <xs:element name="PoVendorPostalCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="POItemsReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ItemDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="ItemQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ItemUnitPrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PoId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+              <xs:element name="unitprice" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxAmount" type="xs:string" minOccurs="0" />
+              <xs:element name="AdditionalDescription" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="POMgmtCompany">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PurchaseBudget">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BudgetCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="POID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

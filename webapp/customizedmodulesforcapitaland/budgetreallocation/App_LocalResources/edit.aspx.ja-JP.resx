@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuthorizedPersonResource1.Caption" xml:space="preserve">
+    <value>委任された代表人</value>
+  </data>
+  <data name="AuthorizedPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AuthorizedPersonResource1.ToolTip" xml:space="preserve">
+    <value>こ配当を認可された人</value>
+  </data>
+  <data name="BudgetItemResource1.Caption" xml:space="preserve">
+    <value>予算項目</value>
+  </data>
+  <data name="BudgetItemResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BudgetItemResource1.ToolTip" xml:space="preserve">
+    <value>再配当がどの予算に照会するかを示します。</value>
+  </data>
+  <data name="BudgetItemToResource1.Caption" xml:space="preserve">
+    <value>予算項目</value>
+  </data>
+  <data name="BudgetItemToResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BudgetItemToResource1.ToolTip" xml:space="preserve">
+    <value>どれ予算が再調整されるかに照会を示します。</value>
+  </data>
+  <data name="BudgetReallocationFroms_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BudgetReallocationFroms_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BudgetReallocationTos_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BudgetReallocationTos_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DivideResource2.ConfirmText" xml:space="preserve">
+    <value>全体の数字を12ヶ月で分割しますか？</value>
+  </data>
+  <data name="DivideResource2.Text" xml:space="preserve">
+    <value>12ヶ月で分割します</value>
+  </data>
+  <data name="DivideResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FromBudgetResource1.Caption" xml:space="preserve">
+    <value>予算から</value>
+  </data>
+  <data name="FromBudgetResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FromBudgetResource1.ToolTip" xml:space="preserve">
+    <value>再配当されるべき予算</value>
+  </data>
+  <data name="gridReallocateFromResource1.Caption" xml:space="preserve">
+    <value>予算項目から</value>
+  </data>
+  <data name="gridReallocateFromResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReallocateFromResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridviewReallocateToResource1.Caption" xml:space="preserve">
+    <value>予算項目に</value>
+  </data>
+  <data name="gridviewReallocateToResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridviewReallocateToResource1.ToolTip" xml:space="preserve">
+    <value>再配当される予算を示します。</value>
+  </data>
+  <data name="LocationResource1.Caption" xml:space="preserve">
+    <value>ロケーション</value>
+  </data>
+  <data name="LocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value>ロケーションに再配当される予算。</value>
+  </data>
+  <data name="Month10Resource1.Caption" xml:space="preserve">
+    <value>月 10</value>
+  </data>
+  <data name="Month10Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month10Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の10ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month11Resource1.Caption" xml:space="preserve">
+    <value>月11</value>
+  </data>
+  <data name="Month11Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month11Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の11ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month12Resource1.Caption" xml:space="preserve">
+    <value>月 12</value>
+  </data>
+  <data name="Month12Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month12Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の12ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month1Resource1.Caption" xml:space="preserve">
+    <value>月 1</value>
+  </data>
+  <data name="Month1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month1Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の1ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month2Resource1.Caption" xml:space="preserve">
+    <value>月 2</value>
+  </data>
+  <data name="Month2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month2Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の2ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month3Resource1.Caption" xml:space="preserve">
+    <value>月 3</value>
+  </data>
+  <data name="Month3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month3Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の3ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month4Resource1.Caption" xml:space="preserve">
+    <value>月 4</value>
+  </data>
+  <data name="Month4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month4Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の4ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month5Resource1.Caption" xml:space="preserve">
+    <value>月 5</value>
+  </data>
+  <data name="Month5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month5Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の5ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month6Resource1.Caption" xml:space="preserve">
+    <value>月 6</value>
+  </data>
+  <data name="Month6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month6Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の6ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month7Resource1.Caption" xml:space="preserve">
+    <value>月 7</value>
+  </data>
+  <data name="Month7Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month7Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の7ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month8Resource1.Caption" xml:space="preserve">
+    <value>月 8</value>
+  </data>
+  <data name="Month8Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month8Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の8ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="Month9Resource1.Caption" xml:space="preserve">
+    <value>月 9</value>
+  </data>
+  <data name="Month9Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Month9Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の9ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+  <data name="ReallocateToLocationResource1.Caption" xml:space="preserve">
+    <value>ロケーション</value>
+  </data>
+  <data name="ReallocateToLocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReallocateToLocationResource1.ToolTip" xml:space="preserve">
+    <value>ロケーションに再配当される予算。</value>
+  </data>
+  <data name="ReallocationDescriptionResource1.Caption" xml:space="preserve">
+    <value>再配当における記述</value>
+  </data>
+  <data name="ReallocationDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReallocationDescriptionResource1.ToolTip" xml:space="preserve">
+    <value>再配当における記述</value>
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ToBudgetResource1.Caption" xml:space="preserve">
+    <value>予算に</value>
+  </data>
+  <data name="ToBudgetResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ToBudgetResource1.ToolTip" xml:space="preserve">
+    <value>再配当される予算</value>
+  </data>
+  <data name="TotalResource1.Caption" xml:space="preserve">
+    <value>合計</value>
+  </data>
+  <data name="TotalResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TotalResource1.ToolTip" xml:space="preserve">
+    <value>12ヶ月で分割するための合計金額を入力して下さい。</value>
+  </data>
+  <data name="txtMonth10Resource1.Caption" xml:space="preserve">
+    <value>月 10</value>
+  </data>
+  <data name="txtMonth10Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth10Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の10ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth11Resource1.Caption" xml:space="preserve">
+    <value>月 11</value>
+  </data>
+  <data name="txtMonth11Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth11Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の11ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth12Resource1.Caption" xml:space="preserve">
+    <value>月 12</value>
+  </data>
+  <data name="txtMonth12Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth12Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の12ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth1Resource1.Caption" xml:space="preserve">
+    <value>月 1</value>
+  </data>
+  <data name="txtMonth1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth1Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の1ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth2Resource1.Caption" xml:space="preserve">
+    <value>月 2</value>
+  </data>
+  <data name="txtMonth2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth2Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の2ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth3Resource1.Caption" xml:space="preserve">
+    <value>月 3</value>
+  </data>
+  <data name="txtMonth3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth3Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の3ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth4Resource1.Caption" xml:space="preserve">
+    <value>月 4</value>
+  </data>
+  <data name="txtMonth4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth4Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の4ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth5Resource1.Caption" xml:space="preserve">
+    <value>月 5</value>
+  </data>
+  <data name="txtMonth5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth5Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の5ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth6Resource1.Caption" xml:space="preserve">
+    <value>月 6</value>
+  </data>
+  <data name="txtMonth6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth6Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の6ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth7Resource1.Caption" xml:space="preserve">
+    <value>月 7</value>
+  </data>
+  <data name="txtMonth7Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth7Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の7ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth8Resource1.Caption" xml:space="preserve">
+    <value>月 8</value>
+  </data>
+  <data name="txtMonth8Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth8Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の8ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtMonth9Resource1.Caption" xml:space="preserve">
+    <value>月 9</value>
+  </data>
+  <data name="txtMonth9Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth9Resource1.ToolTip" xml:space="preserve">
+    <value>会計年度の9ヶ月目から再配当 される金額。</value>
+  </data>
+  <data name="txtTotalResource1.Caption" xml:space="preserve">
+    <value>合計</value>
+  </data>
+  <data name="txtTotalResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalResource1.ToolTip" xml:space="preserve">
+    <value>12ヶ月で分割するための合計金額を入力して下さい。</value>
+  </data>
+  <data name="UIButtonDivideResource1.ConfirmText" xml:space="preserve">
+    <value>全体の数字を12ヶ月で分割しますか？</value>
+  </data>
+  <data name="UIButtonDivideResource1.Text" xml:space="preserve">
+    <value>12ヶ月で分割します</value>
+  </data>
+  <data name="UIButtonDivideResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>月 7</value>
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>月 8</value>
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>月 9</value>
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>月 10</value>
+  </data>
+  <data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value>月 11</value>
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>月 12</value>
+  </data>
+  <data name="UIGridViewColumnResource17.ConfirmText" xml:space="preserve">
+    <value>この項目を削除しても宜しいですか?</value>
+  </data>
+  <data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>予算項目</value>
+  </data>
+  <data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>月 1</value>
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>この項目を削除しても宜しいですか?</value>
+  </data>
+  <data name="UIGridViewColumnResource20.HeaderText" xml:space="preserve">
+    <value>月 2</value>
+  </data>
+  <data name="UIGridViewColumnResource21.HeaderText" xml:space="preserve">
+    <value>月 3</value>
+  </data>
+  <data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>月 4</value>
+  </data>
+  <data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>月 5</value>
+  </data>
+  <data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>月 6</value>
+  </data>
+  <data name="UIGridViewColumnResource25.HeaderText" xml:space="preserve">
+    <value>月 7</value>
+  </data>
+  <data name="UIGridViewColumnResource26.HeaderText" xml:space="preserve">
+    <value>月 8</value>
+  </data>
+  <data name="UIGridViewColumnResource27.HeaderText" xml:space="preserve">
+    <value>月 9</value>
+  </data>
+  <data name="UIGridViewColumnResource28.HeaderText" xml:space="preserve">
+    <value>月 10</value>
+  </data>
+  <data name="UIGridViewColumnResource29.HeaderText" xml:space="preserve">
+    <value>月 11</value>
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>予算項目</value>
+  </data>
+  <data name="UIGridViewColumnResource30.HeaderText" xml:space="preserve">
+    <value>月 12</value>
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>月 1</value>
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>月 2</value>
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>月 3</value>
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>月 4</value>
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>月 5</value>
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>月 6</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>選択された物を削除しても宜しいですか？</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>選択された物を削除しても宜しいですか？</value>
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabviewReallocateFromResource1.Caption" xml:space="preserve">
+    <value>最配当から</value>
+  </data>
+  <data name="uitabviewReallocateFromResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabviewReallocateToResource1.Caption" xml:space="preserve">
+    <value>最配当に</value>
+  </data>
+  <data name="uitabviewReallocateToResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

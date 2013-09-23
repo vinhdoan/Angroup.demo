@@ -1,0 +1,203 @@
+﻿<ns1:AnacleStateMachineWorkflow x:Class="WorkflowLayer.OBMSSecurityArmingWorkflow" InitialStateName="Start" x:Name="OBMSSecurityArmingWorkflow" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns:ns0="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="Start">
+		<EventDrivenActivity x:Name="StartProcessEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity1" EventName="Start" InterfaceType="{x:Type p9:IAnacleEvents}" xmlns:p9="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.16793, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToStartProcess" TargetStateName="ArmedProcessOn" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost4" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="ArmedProcessOn">
+		<StateInitializationActivity x:Name="StartProcessActivity">
+			<ns0:SetStateAndAssign x:Name="setStateAndAssign2" RoleCodes="ASSETADMIN" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity2">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ArmingStep1Activity">
+			<ns0:DelayDynamic TimeoutDuration="(new DateTime(2009, 12, 30, 02,50, 00)) - DateTime.Now" x:Name="delayDynamic1" />
+			<PolicyActivity x:Name="PABoardcast1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="PABoardCast1" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="setStateActivity1" TargetStateName="ArmedProcessOn" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity3">
+				<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="StopProcessActivity">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity3" EventName="ShutdownAll" InterfaceType="{x:Type p9:IAnacleEvents}" xmlns:p9="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.16793, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToStopProcess" TargetStateName="ArmProcessOff" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity5">
+				<FaultHandlerActivity x:Name="faultHandlerActivity5" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost5" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CheckPhoneExtension1">
+			<DelayActivity TimeoutDuration="00:00:05" x:Name="delayActivity1" />
+			<IfElseActivity x:Name="ifElseActivity1">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity1">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension1" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity4" TargetStateName="ArmProcessOff" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity2">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension0" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity5" TargetStateName="PABoardCast2" />
+				</IfElseBranchActivity>
+				<FaultHandlersActivity x:Name="faultHandlersActivity15">
+					<FaultHandlerActivity x:Name="faultHandlerActivity15" FaultType="{x:Type p13:Exception}" xmlns:p13="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost15" />
+					</FaultHandlerActivity>
+				</FaultHandlersActivity>
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity6">
+				<FaultHandlerActivity x:Name="faultHandlerActivity6" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost6" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="ArmProcessOff">
+		<EventDrivenActivity x:Name="StartArmProcess">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity2" EventName="ShutdownAll" InterfaceType="{x:Type p9:IAnacleEvents}" xmlns:p9="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.16793, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity2" TargetStateName="ArmedProcessOn" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity4">
+				<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PABoardCast2">
+		<StateInitializationActivity x:Name="StartPABoardcast2">
+			<ns0:SetStateAndAssign x:Name="setStateAndAssign1" RoleCodes="ASSETADMIN" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity7">
+				<FaultHandlerActivity x:Name="faultHandlerActivity7" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost7" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ArmingStep2Activity">
+			<ns0:DelayDynamic TimeoutDuration="(new DateTime(2009, 12, 30, 02, 52, 00)) - DateTime.Now" x:Name="delayDynamic2" />
+			<PolicyActivity x:Name="policyActivity1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="PABoardcast2" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="setStateActivity3" TargetStateName="PABoardCast3" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity8">
+				<FaultHandlerActivity x:Name="faultHandlerActivity8" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost8" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="StopProcessActivity2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity4" EventName="ShutdownAll" InterfaceType="{x:Type p9:IAnacleEvents}" xmlns:p9="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.16793, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity6" TargetStateName="ArmProcessOff" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity9">
+				<FaultHandlerActivity x:Name="faultHandlerActivity9" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost9" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CheckPhoneExtension2">
+			<DelayActivity TimeoutDuration="00:00:05" x:Name="delayActivity2" />
+			<IfElseActivity x:Name="ifElseActivity2">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity3">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension1" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity7" TargetStateName="ArmProcessOff" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity4">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension0" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity8" TargetStateName="PABoardCast2" />
+				</IfElseBranchActivity>
+				<FaultHandlersActivity x:Name="faultHandlersActivity16">
+					<FaultHandlerActivity x:Name="faultHandlerActivity16" FaultType="{x:Type p13:Exception}" xmlns:p13="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost16" />
+					</FaultHandlerActivity>
+				</FaultHandlersActivity>
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity10">
+				<FaultHandlerActivity x:Name="faultHandlerActivity10" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost10" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PABoardCast3">
+		<StateInitializationActivity x:Name="StartPABoardcast3">
+			<ns0:SetStateAndAssign x:Name="setStateAndAssign3" RoleCodes="ASSETADMIN" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity11">
+				<FaultHandlerActivity x:Name="faultHandlerActivity11" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost11" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ArmingStep3Activity">
+			<ns0:DelayDynamic TimeoutDuration="(new DateTime(2009, 12, 30, 02, 54, 00)) - DateTime.Now" x:Name="delayDynamic3" />
+			<PolicyActivity x:Name="policyActivity2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="PABoardcast3" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity12">
+				<FaultHandlerActivity x:Name="faultHandlerActivity12" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost12" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="StopProcessActivity3">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity5" EventName="ShutdownAll" InterfaceType="{x:Type p9:IAnacleEvents}" xmlns:p9="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.16793, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity10" TargetStateName="ArmProcessOff" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity13">
+				<FaultHandlerActivity x:Name="faultHandlerActivity13" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost13" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CheckPhoneExtension3">
+			<DelayActivity TimeoutDuration="00:00:05" x:Name="delayActivity3" />
+			<IfElseActivity x:Name="ifElseActivity3">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity5">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension1" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity11" TargetStateName="ArmProcessOff" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity6">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="PhoneExtension0" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity12" TargetStateName="ArmedProcessOn" />
+				</IfElseBranchActivity>
+				<FaultHandlersActivity x:Name="faultHandlersActivity17">
+					<FaultHandlerActivity x:Name="faultHandlerActivity17" FaultType="{x:Type p13:Exception}" xmlns:p13="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost17" />
+					</FaultHandlerActivity>
+				</FaultHandlersActivity>
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity14">
+				<FaultHandlerActivity x:Name="faultHandlerActivity14" FaultType="{x:Type p11:Exception}" xmlns:p11="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:ThrowExceptionToHost x:Name="throwExceptionToHost14" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+</ns1:AnacleStateMachineWorkflow>

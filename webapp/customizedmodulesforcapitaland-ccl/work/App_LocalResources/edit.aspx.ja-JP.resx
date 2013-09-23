@@ -1,0 +1,1803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcknowledgementDateTimeResource1.Caption" xml:space="preserve">
+    <value>承認</value>
+    <comment>Refers to a person acknowledging a work order/instruction.</comment>
+  </data>
+  <data name="AcknowledgementDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AcknowledgementDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>この作業承認日付/時間です。'承認'をクリックすることで自動的に日付/時間をセットします。注意：承認時間の保存更新を忘れないで下さい。</value>
+  </data>
+  <data name="ActualEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>実質終了</value>
+  </data>
+  <data name="ActualEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>作業が実際完成日付/時間</value>
+  </data>
+  <data name="ActualStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>実質スタート</value>
+  </data>
+  <data name="ActualStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>作業が実際スタート日付/時間</value>
+  </data>
+  <data name="Approver_CellPhoneResource1.Caption" xml:space="preserve">
+    <value>携帯電話</value>
+  </data>
+  <data name="Approver_CellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_CellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_EmailResource1.Caption" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="Approver_EmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_EmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_FaxResource1.Caption" xml:space="preserve">
+    <value>ファックス</value>
+  </data>
+  <data name="Approver_FaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_FaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_NameResource1.Caption" xml:space="preserve">
+    <value>承認者名</value>
+  </data>
+  <data name="Approver_NameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_NameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_PhoneResource1.Caption" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="Approver_PhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_PhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_WorkCostLimitResource1.Caption" xml:space="preserve">
+    <value>作業コスト限度 ($)</value>
+    <comment>The approval limit of an approver.</comment>
+  </data>
+  <data name="Approver_WorkCostLimitResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_WorkCostLimitResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ApproverIDResource1.Caption" xml:space="preserve">
+    <value>承認者</value>
+  </data>
+  <data name="ApproverIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ApproverIDResource1.ToolTip" xml:space="preserve">
+    <value>この人がこの作業の承認に責任を負います。</value>
+  </data>
+  <data name="ArrivalDateTimeResource1.Caption" xml:space="preserve">
+    <value>到着</value>
+  </data>
+  <data name="ArrivalDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ArrivalDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>この作業の応答日付/時間です。'到着'をクリックすることで自動的にセットします。注意：到着時間の保存更新を忘れない下さい。</value>
+  </data>
+  <data name="buttonAcknowledgeResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAcknowledgeResource1.Text" xml:space="preserve">
+    <value>承認</value>
+    <comment>A verb</comment>
+  </data>
+  <data name="buttonAcknowledgeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.Text" xml:space="preserve">
+    <value>パラメーター適用</value>
+    <comment>A verb. Parameters refer to parameter readings.</comment>
+  </data>
+  <data name="buttonApplyParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonArrivalResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonArrivalResource1.Text" xml:space="preserve">
+    <value>オンサイト到着</value>
+    <comment>A verb</comment>
+  </data>
+  <data name="buttonArrivalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.Text" xml:space="preserve">
+    <value>親作業修正</value>
+  </data>
+  <data name="buttonEditParentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.Caption" xml:space="preserve">
+    <value>携帯電話</value>
+  </data>
+  <data name="CallerCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource2.Caption" xml:space="preserve">
+    <value>携帯電話</value>
+  </data>
+  <data name="CallerCellPhoneResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.Caption" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="CallerEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource2.Caption" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="CallerEmailResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.Caption" xml:space="preserve">
+    <value>ファックス</value>
+  </data>
+  <data name="CallerFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource2.Caption" xml:space="preserve">
+    <value>ファックス</value>
+  </data>
+  <data name="CallerFaxResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.Caption" xml:space="preserve">
+    <value>発信者</value>
+  </data>
+  <data name="CallerIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource2.Caption" xml:space="preserve">
+    <value>発信者</value>
+  </data>
+  <data name="CallerIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource2.ToolTip" xml:space="preserve">
+    <value>この作業が発信者が要求され、作成されました。空にしてもし発信者がリストに存在していません。あなたが発信者の名前を'名前'フィールドに入力できます。</value>
+  </data>
+  <data name="CallerNameResource1.Caption" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="CallerNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource2.Caption" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="CallerNameResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource2.ToolTip" xml:space="preserve">
+    <value>発信者名が照会されます。</value>
+  </data>
+  <data name="CallerPhoneResource1.Caption" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="CallerPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource2.Caption" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="CallerPhoneResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.Caption" xml:space="preserve">
+    <value>発信者タイプ</value>
+  </data>
+  <data name="CallerTypeIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource2.Caption" xml:space="preserve">
+    <value>発信者タイプ</value>
+  </data>
+  <data name="CallerTypeIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource2.ToolTip" xml:space="preserve">
+    <value>発信者タイプ</value>
+  </data>
+  <data name="CauseOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>問題の原因</value>
+  </data>
+  <data name="CauseOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.Caption" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="ChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.Caption" xml:space="preserve">
+    <value>作業関連</value>
+    <comment>'Related Works' means all works related to this.</comment>
+  </data>
+  <data name="ChildrenResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>携帯電話</value>
+  </data>
+  <data name="ContactCellphoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.Caption" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="ContactEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.Caption" xml:space="preserve">
+    <value>ファックス</value>
+  </data>
+  <data name="ContactFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.Caption" xml:space="preserve">
+    <value>連絡人</value>
+  </data>
+  <data name="ContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.Caption" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="ContactPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.Caption" xml:space="preserve">
+    <value>契約終了</value>
+  </data>
+  <data name="ContractEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.Caption" xml:space="preserve">
+    <value>契約</value>
+  </data>
+  <data name="ContractIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.ToolTip" xml:space="preserve">
+    <value>この作業に責任負われる契約/ベンダーです。</value>
+  </data>
+  <data name="ContractNameResource1.Caption" xml:space="preserve">
+    <value>契約名</value>
+  </data>
+  <data name="ContractNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.Caption" xml:space="preserve">
+    <value>契約スタート</value>
+  </data>
+  <data name="ContractStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.Caption" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="dropParameterTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.ToolTip" xml:space="preserve">
+    <value>読みためのパラメータータイプを示されます。</value>
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>故障時間終了</value>
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>故障時間スタート</value>
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.Caption" xml:space="preserve">
+    <value>設備パス</value>
+  </data>
+  <data name="EquipmentLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.Caption" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="EquipmentResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.ToolTip" xml:space="preserve">
+    <value>これで選択された設備をこの作業に適用されます。</value>
+  </data>
+  <data name="gridChecklistResource1.Caption" xml:space="preserve">
+    <value>チェックリスト</value>
+  </data>
+  <data name="gridChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.Caption" xml:space="preserve">
+    <value>課金</value>
+  </data>
+  <data name="IsChargedToCallerResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource2.Caption" xml:space="preserve">
+    <value>課金</value>
+  </data>
+  <data name="IsChargedToCallerResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource2.Text" xml:space="preserve">
+    <value>はい、この作業は発信者に課金されるべきです。</value>
+  </data>
+  <data name="IsChargedToCallerResource2.ToolTip" xml:space="preserve">
+    <value>もしこの作業が最後完成すれば発信者に課金されるべきを示します。</value>
+  </data>
+  <data name="IsEquipmentDownResource1.Caption" xml:space="preserve">
+    <value>装置故障?</value>
+  </data>
+  <data name="IsEquipmentDownResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsEquipmentDownResource1.Text" xml:space="preserve">
+    <value>はい、この設備が故障されています。</value>
+  </data>
+  <data name="IsEquipmentDownResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>職/技術者</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>3 (最高)</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource13.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource13.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource14.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource14.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource15.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource15.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource16.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ListItemResource16.Value" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ListItemResource17.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource17.Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource18.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource18.Value" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource19.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource19.Value" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>固定レート</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource20.Text" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="ListItemResource20.Value" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="ListItemResource21.Text" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="ListItemResource21.Value" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="ListItemResource22.Text" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="ListItemResource22.Value" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="ListItemResource23.Text" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ListItemResource23.Value" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ListItemResource24.Text" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ListItemResource24.Value" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ListItemResource25.Text" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="ListItemResource25.Value" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="ListItemResource26.Text" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="ListItemResource26.Value" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="ListItemResource27.Text" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="ListItemResource27.Value" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="ListItemResource28.Text" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="ListItemResource28.Value" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="ListItemResource29.Text" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="ListItemResource29.Value" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>他</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource30.Text" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="ListItemResource30.Value" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="ListItemResource31.Text" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="ListItemResource31.Value" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="ListItemResource32.Text" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="ListItemResource32.Value" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="ListItemResource33.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="ListItemResource33.Value" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>ロケーションタイプで</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>設備タイプで</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>0 (最低)</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="listParametersResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ToolTip" xml:space="preserve">
+    <value>パラメーターリストが読み機能します。Ctrl-Clickで複数パラメーターを選択</value>
+    <comment>'Ctrl-Click' refers to an action performed using the keyboard's Ctrl and the mouse's click.</comment>
+  </data>
+  <data name="LocationLabelResource1.Caption" xml:space="preserve">
+    <value>ロケーションパス</value>
+  </data>
+  <data name="LocationLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.Caption" xml:space="preserve">
+    <value>選択</value>
+    <comment>A noun to mean selection</comment>
+  </data>
+  <data name="LocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value>これを使用してこの作業に適用されるロケーションを選択します。</value>
+  </data>
+  <data name="objectBaseResource1.ObjectNumberCaption" xml:space="preserve">
+    <value>作業番号</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAckArrTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAckArrTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelActualCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelActualCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelApproverResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelApproverResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerDetailsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelContractResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelContractResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownDateTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEstimatedCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEstimatedCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelParametersResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResolutionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResolutionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>作業</value>
+  </data>
+  <data name="panelScheduledStartResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelScheduledStartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelVendorResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelVendorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkClassificationResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkClassificationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkDetailsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PercentageCompleteResource1.Caption" xml:space="preserve">
+    <value>完成 (%)</value>
+  </data>
+  <data name="PercentageCompleteResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PercentageCompleteResource1.ToolTip" xml:space="preserve">
+    <value>この作業が何パーセントの完成。</value>
+  </data>
+  <data name="PriorityResource1.Caption" xml:space="preserve">
+    <value>優先</value>
+  </data>
+  <data name="PriorityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PriorityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.Caption" xml:space="preserve">
+    <value>読み</value>
+  </data>
+  <data name="ReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.Caption" xml:space="preserve">
+    <value>解答記述</value>
+    <comment>'Resolution' = a noun: a method to resolve an issue or a problem.</comment>
+  </data>
+  <data name="ResolutionDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.ToolTip" xml:space="preserve">
+    <value>問題の解答詳細です。</value>
+    <comment>'Resolution' = a noun: a method to resolve an issue or a problem.</comment>
+  </data>
+  <data name="ResolutionIDResource1.Caption" xml:space="preserve">
+    <value>解答</value>
+    <comment>'Resolution' = a noun: a method to resolve an issue or a problem.</comment>
+  </data>
+  <data name="ResolutionIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>スケジュール終了</value>
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource2.Caption" xml:space="preserve">
+    <value>スケジュール終了</value>
+  </data>
+  <data name="ScheduledEndDateTimeResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource2.ToolTip" xml:space="preserve">
+    <value>作業の計画完成日付/時間です。</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>スケジュールスタート</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource2.Caption" xml:space="preserve">
+    <value>スケジュールスタート</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource2.ToolTip" xml:space="preserve">
+    <value>作業の計画スタート日付/時間です。</value>
+  </data>
+  <data name="SelectedResponseIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>発信者</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep2Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource1.Caption" xml:space="preserve">
+    <value>問題</value>
+  </data>
+  <data name="Separator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator2Resource1.Caption" xml:space="preserve">
+    <value>解答</value>
+  </data>
+  <data name="Separator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator4Resource1.Caption" xml:space="preserve">
+    <value>契約/ベンダー</value>
+  </data>
+  <data name="Separator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator5Resource1.Caption" xml:space="preserve">
+    <value>親作業</value>
+  </data>
+  <data name="Separator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator6Resource1.Caption" xml:space="preserve">
+    <value>承認者</value>
+  </data>
+  <data name="Separator6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupervisorIDResource1.Caption" xml:space="preserve">
+    <value>監督者</value>
+  </data>
+  <data name="SupervisorIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupervisorIDResource1.ToolTip" xml:space="preserve">
+    <value>この作業の責任負われる監督者です。</value>
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>メモ</value>
+  </data>
+  <data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>問題タイプ</value>
+  </data>
+  <data name="TypeOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource2.Caption" xml:space="preserve">
+    <value>問題タイプ</value>
+  </data>
+  <data name="TypeOfProblemIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.Caption" xml:space="preserve">
+    <value>サービスタイプ</value>
+  </data>
+  <data name="TypeOfServiceIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource2.Caption" xml:space="preserve">
+    <value>サービスタイプ</value>
+  </data>
+  <data name="TypeOfServiceIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.Caption" xml:space="preserve">
+    <value>作業タイプ</value>
+  </data>
+  <data name="TypeOfWorkIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource2.Caption" xml:space="preserve">
+    <value>作業タイプ</value>
+  </data>
+  <data name="TypeOfWorkIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.Caption" xml:space="preserve">
+    <value>ロケーションパス</value>
+  </data>
+  <data name="UIFieldLabel1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.Caption" xml:space="preserve">
+    <value>設備パス</value>
+  </data>
+  <data name="UIFieldLabel2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.Caption" xml:space="preserve">
+    <value>作業番号</value>
+  </data>
+  <data name="UIFieldLabel3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.Caption" xml:space="preserve">
+    <value>作業記述</value>
+  </data>
+  <data name="UIFieldLabel4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.Caption" xml:space="preserve">
+    <value>作業タイプ</value>
+  </data>
+  <data name="UIFieldLabel5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.Caption" xml:space="preserve">
+    <value>サービスタイプ</value>
+  </data>
+  <data name="UIFieldLabel6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>実質要素</value>
+    <comment>'Act' = Actual. </comment>
+  </data>
+  <data name="UIGridViewColumnResource11.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>実質数量</value>
+    <comment>'Act' = Actual</comment>
+  </data>
+  <data name="UIGridViewColumnResource12.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>小計</value>
+  </data>
+  <data name="UIGridViewColumnResource13.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>課金 </value>
+    <comment>'Charge' = amount to bill to a customer.</comment>
+  </data>
+  <data name="UIGridViewColumnResource14.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>パラメーター</value>
+    <comment>'Parameter' = parameter reading.</comment>
+  </data>
+  <data name="UIGridViewColumnResource16.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>単位</value>
+  </data>
+  <data name="UIGridViewColumnResource17.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value>読み</value>
+    <comment>An actual reading value. For example, 'Temperature' is a parameter, 37.1deg is a reading.</comment>
+  </data>
+  <data name="UIGridViewColumnResource18.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>ステップ</value>
+  </data>
+  <data name="UIGridViewColumnResource19.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>記述</value>
+  </data>
+  <data name="UIGridViewColumnResource2.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>記述</value>
+  </data>
+  <data name="UIGridViewColumnResource23.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>作業タイプ</value>
+  </data>
+  <data name="UIGridViewColumnResource24.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>サービスタイプ</value>
+  </data>
+  <data name="UIGridViewColumnResource25.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.HeaderText" xml:space="preserve">
+    <value>スケジュールスタート</value>
+  </data>
+  <data name="UIGridViewColumnResource26.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.HeaderText" xml:space="preserve">
+    <value>スケジュール終了</value>
+  </data>
+  <data name="UIGridViewColumnResource27.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.HeaderText" xml:space="preserve">
+    <value>実質スタート</value>
+  </data>
+  <data name="UIGridViewColumnResource28.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.HeaderText" xml:space="preserve">
+    <value>実質終了</value>
+  </data>
+  <data name="UIGridViewColumnResource29.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource29.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource29.HeaderText" xml:space="preserve">
+    <value>職名</value>
+  </data>
+  <data name="UIGridViewColumnResource3.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="UIGridViewColumnResource30.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource30.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource30.HeaderText" xml:space="preserve">
+    <value>作業番号</value>
+  </data>
+  <data name="UIGridViewColumnResource4.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>記述</value>
+  </data>
+  <data name="UIGridViewColumnResource5.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>予想スケジュールスタートコスト ($)</value>
+    <comment>Est. = Estimated</comment>
+  </data>
+  <data name="UIGridViewColumnResource6.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>予想要素</value>
+    <comment>Est. = Estimated</comment>
+  </data>
+  <data name="UIGridViewColumnResource7.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>予想数量</value>
+    <comment>Est Qty. = Estimated Quantity</comment>
+  </data>
+  <data name="UIGridViewColumnResource8.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>小計</value>
+  </data>
+  <data name="UIGridViewColumnResource9.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>実質単位コスト ($)</value>
+    <comment>Act = Actual</comment>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>選択項目を削除しても宜しいですか?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>選択項目を削除しても宜しいですか?</value>
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>追加</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>パラメーター</value>
+  </data>
+  <data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview1Resource2.Caption" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="uitabview1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>添付書類</value>
+  </data>
+  <data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource2.Caption" xml:space="preserve">
+    <value>ロケーションで</value>
+  </data>
+  <data name="uitabview3Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource2.Caption" xml:space="preserve">
+    <value>設備で</value>
+  </data>
+  <data name="uitabview4Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview5Resource1.Caption" xml:space="preserve">
+    <value>作業</value>
+  </data>
+  <data name="uitabview5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview6Resource1.Caption" xml:space="preserve">
+    <value>コスト</value>
+  </data>
+  <data name="uitabview6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview7Resource1.Caption" xml:space="preserve">
+    <value>チェックリスト</value>
+  </data>
+  <data name="uitabview7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview8Resource1.Caption" xml:space="preserve">
+    <value>関連</value>
+  </data>
+  <data name="uitabview8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.Caption" xml:space="preserve">
+    <value>ベンダー</value>
+  </data>
+  <data name="VendorNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.Caption" xml:space="preserve">
+    <value>価額要因</value>
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ToolTip" xml:space="preserve">
+    <value>このコストが使用されるとき実質この価額要因が適用されます。</value>
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.Caption" xml:space="preserve">
+    <value>残業?</value>
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ToolTip" xml:space="preserve">
+    <value>実質の数量または資源がこの作業に使用されます。</value>
+  </data>
+  <data name="WorkCost_ActualResource1.Caption" xml:space="preserve">
+    <value>実質</value>
+  </data>
+  <data name="WorkCost_ActualResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.Caption" xml:space="preserve">
+    <value>単価</value>
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ToolTip" xml:space="preserve">
+    <value>このコストが使用するとき実質この単価が適用されます。</value>
+  </data>
+  <data name="WorkCost_ChargeOutResource1.Caption" xml:space="preserve">
+    <value>課金 ($)</value>
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ToolTip" xml:space="preserve">
+    <value>発信者にドルで課金されます。</value>
+  </data>
+  <data name="WorkCost_CostTypeResource1.Caption" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="WorkCost_CostTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.Caption" xml:space="preserve">
+    <value>職</value>
+  </data>
+  <data name="WorkCost_CraftIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.ToolTip" xml:space="preserve">
+    <value>この職の技術者がこの作業にアサインされます。</value>
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.Caption" xml:space="preserve">
+    <value>価額要因</value>
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ToolTip" xml:space="preserve">
+    <value>このコストが使用するときこの予想の価額要因が適用されます。</value>
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.Caption" xml:space="preserve">
+    <value>残業?</value>
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ToolTip" xml:space="preserve">
+    <value>この作業に使用される予想の項目数量または資源です。</value>
+  </data>
+  <data name="WorkCost_EstimatedResource1.Caption" xml:space="preserve">
+    <value>予想</value>
+  </data>
+  <data name="WorkCost_EstimatedResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.Caption" xml:space="preserve">
+    <value>単価</value>
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ToolTip" xml:space="preserve">
+    <value>このコストが使用するときこの予想の単価が適用されます。</value>
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.Caption" xml:space="preserve">
+    <value>固定レート</value>
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.Caption" xml:space="preserve">
+    <value>残業?</value>
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.Caption" xml:space="preserve">
+    <value>記述 / 名前</value>
+  </data>
+  <data name="WorkCost_NameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.Caption" xml:space="preserve">
+    <value>技術者</value>
+  </data>
+  <data name="WorkCost_UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.ToolTip" xml:space="preserve">
+    <value>技術者がこの作業にアサインされます。</value>
+  </data>
+  <data name="WorkCostResource1.Caption" xml:space="preserve">
+    <value>作業コストと労働</value>
+    <comment>Work Cost = cost of work. Labor = manpower resources.</comment>
+  </data>
+  <data name="WorkCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.Caption" xml:space="preserve">
+    <value>作業記述</value>
+  </data>
+  <data name="WorkDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource2.Caption" xml:space="preserve">
+    <value>作業記述</value>
+  </data>
+  <data name="WorkDescriptionResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.Caption" xml:space="preserve">
+    <value>パラメーター読み</value>
+  </data>
+  <data name="WorkParameterReadingsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

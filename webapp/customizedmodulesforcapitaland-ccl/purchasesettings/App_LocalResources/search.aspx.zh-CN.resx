@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="buttonMassUpdateResource1.Text" xml:space="preserve">
+    <value>更新多项设置</value>
+  </data>
+	<data name="dropPurchaseTypeResource1.Caption" xml:space="preserve">
+    <value>请购类型</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>任何</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>预算 = 项目</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>预算 &lt;= 项目</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>不需要预算</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>不需要</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>优先</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>需要</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>任何</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>不需要</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>优先</value>
+  </data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>需要</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>任何</value>
+  </data>
+	<data name="LocationResource1.Caption" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value>Use this to select the location that this work applies to.</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+	<data name="radioBudgetValidationPolicyResource1.Caption" xml:space="preserve">
+    <value>预算验证政策</value>
+  </data>
+	<data name="radioMinimumNumberOfQuotationsPolicyResource1.Caption" xml:space="preserve">
+    <value>报价单政策</value>
+  </data>
+	<data name="radioRFQToPOPolicyResource1.Caption" xml:space="preserve">
+    <value>报价申请至采购单政策</value>
+  </data>
+	<data name="tabResultsResource1.Caption" xml:space="preserve">
+    <value>结果</value>
+  </data>
+	<data name="textMinimumApplicableRFQAmountResource1.Caption" xml:space="preserve">
+    <value>合适金额底线</value>
+  </data>
+	<data name="textMinimumNumberOfQuotationsResource1.Caption" xml:space="preserve">
+    <value>报价单数底线</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>请购类型</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>报价单数底线政策</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>报价单数底线</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>报价申请金额底线</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>报价申请至采购单政策</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>采购单金额底线</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>预算验证政策</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.ConfirmText" xml:space="preserve">
+    <value>确认删除选项?</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>删除选项</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>确认删除选项?</value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>搜寻</value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>采购设置</value>
+  </data>
+	<data name="BudgetGroupIDResource1.Caption" xml:space="preserve">
+		<value>预算组</value>
+	</data>
+	<data name="BudgetGroupIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="BudgetGroupIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="BudgetGroupIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonMassUpdateResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonMassUpdateResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropPurchaseTypeResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropPurchaseTypeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropPurchaseTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridResultsResource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridResultsResource1.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridResultsResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridResultsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridResultsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LocationResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LocationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="PageResource2.Title" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioBudgetValidationPolicyResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioBudgetValidationPolicyResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioBudgetValidationPolicyResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioMinimumNumberOfQuotationsPolicyResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioMinimumNumberOfQuotationsPolicyResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioMinimumNumberOfQuotationsPolicyResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRFQToPOPolicyResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRFQToPOPolicyResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRFQToPOPolicyResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabResultsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabResultsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabSearchResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabSearchResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumApplicableRFQAmountResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumApplicableRFQAmountResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumApplicableRFQAmountResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumNumberOfQuotationsResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumNumberOfQuotationsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textMinimumNumberOfQuotationsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource4.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource4.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource5.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource5.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource6.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource6.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource7.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource7.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+		<value>预算组</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.CommandText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.CommandText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="uitabview3Resource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+</root>

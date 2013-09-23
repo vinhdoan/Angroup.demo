@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OBudget" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="OBudgetAdjustment" xml:space="preserve">
+    <value>Budget Adjustment</value>
+  </data>
+  <data name="OBudgetReallocation" xml:space="preserve">
+    <value>Budget Reallocation</value>
+  </data>
+  <data name="OCalendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="OCatalogue" xml:space="preserve">
+    <value>Inventory Catalog</value>
+  </data>
+  <data name="CenterAdmin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="CenterAnalysis" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="CenterAsset" xml:space="preserve">
+    <value>Asset</value>
+  </data>
+  <data name="CenterBudget" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="CenterReportBuilder" xml:space="preserve">
+    <value>Report Builder</value>
+  </data>
+  <data name="CenterInventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="CenterProcurement" xml:space="preserve">
+    <value>Procurement</value>
+  </data>
+  <data name="CenterService" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="CenterVendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="CenterWork" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="OChecklist" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="OChecklistResponse" xml:space="preserve">
+    <value>Checklist Response</value>
+  </data>
+  <data name="OCode" xml:space="preserve">
+    <value>Code</value>
+  </data>
+  <data name="OCodeType" xml:space="preserve">
+    <value>Code Type</value>
+  </data>
+  <data name="OCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="OContract" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="OCraft" xml:space="preserve">
+    <value>Crafts</value>
+  </data>
+  <data name="OCurrency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="OCurrencyExchange" xml:space="preserve">
+    <value>Currency Exchange Rate</value>
+  </data>
+  <data name="ODashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="MiscDatabase" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="ODocumentTemplate" xml:space="preserve">
+    <value>Document Template</value>
+  </data>
+  <data name="ODocumentTemplateType" xml:space="preserve">
+    <value>Document Template Type</value>
+  </data>
+  <data name="OEquipment" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="OEquipmentType" xml:space="preserve">
+    <value>Equipment Type</value>
+  </data>
+  <data name="OFixedRate" xml:space="preserve">
+    <value>Service Catalog</value>
+  </data>
+  <data name="OLocation" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="OLocationType" xml:space="preserve">
+    <value>Location Type</value>
+  </data>
+  <data name="MiscMyWork" xml:space="preserve">
+    <value>My Created Cases</value>
+  </data>
+  <data name="OCustomizedObject" xml:space="preserve">
+    <value>Customized Object</value>
+  </data>
+  <data name="OPurchaseOrder" xml:space="preserve">
+    <value>PO / LOA</value>
+  </data>
+  <data name="OPurchaseRequest" xml:space="preserve">
+    <value>Purchase Request</value>
+  </data>
+  <data name="OReport" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="ORequestForQuotation" xml:space="preserve">
+    <value>Work Justification</value>
+  </data>
+  <data name="OScheduledWork" xml:space="preserve">
+    <value>Scheduled Work</value>
+  </data>
+  <data name="OServiceLevel" xml:space="preserve">
+    <value>Service Level</value>
+  </data>
+  <data name="OStore" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="OStoreAdjust" xml:space="preserve">
+    <value>Store Adjustment</value>
+  </data>
+  <data name="OStoreCheckIn" xml:space="preserve">
+    <value>Store Check-In</value>
+  </data>
+  <data name="OStoreCheckOut" xml:space="preserve">
+    <value>Store Check-Out</value>
+  </data>
+  <data name="OStoreStock" xml:space="preserve">
+    <value>Store Stock View</value>
+  </data>
+  <data name="OStoreTransfer" xml:space="preserve">
+    <value>Store Transfer</value>
+  </data>
+  <data name="OTaxCode" xml:space="preserve">
+    <value>Tax Code</value>
+  </data>
+  <data name="OUnitConversion" xml:space="preserve">
+    <value>Unit Conversion</value>
+  </data>
+  <data name="OUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="OVendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="OWork" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="MiscReportMigrate" xml:space="preserve">
+    <value>Migrate Report</value>
+  </data>
+  <data name="OLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="OFunction" xml:space="preserve">
+    <value>Function</value>
+  </data>
+  <data name="ORole" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="OAnnouncement" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
+  <data name="OCase" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="OCustomizedRecordObject" xml:space="preserve">
+    <value>Customized Object</value>
+  </data>
+  <data name="OMessageTemplate" xml:space="preserve">
+    <value>Message Template</value>
+  </data>
+  <data name="OPosition" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="OUtility" xml:space="preserve">
+    <value>Utility</value>
+  </data>
+  <data name="OWorkflowRepository" xml:space="preserve">
+    <value>Workflow Repository</value>
+  </data>
+  <data name="MiscReassignTasks" xml:space="preserve">
+    <value>Reassign Tasks</value>
+  </data>
+  <data name="OApplicationSetting" xml:space="preserve">
+    <value>Application Setting</value>
+  </data>
+  <data name="OApprovalHierarchy" xml:space="preserve">
+    <value>Approval Hierarchy</value>
+  </data>
+  <data name="OApprovalProcess" xml:space="preserve">
+    <value>Approval Process</value>
+  </data>
+  <data name="OMessage" xml:space="preserve">
+    <value>Message History</value>
+  </data>
+  <data name="OSessionAudit" xml:space="preserve">
+    <value>Login History</value>
+  </data>
+  <data name="OAttachmentType" xml:space="preserve">
+    <value>Attachment Type</value>
+  </data>
+  <data name="OOPCDAServer" xml:space="preserve">
+    <value>OPC DA Server</value>
+  </data>
+  <data name="OPoint" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="SubCategoryCodes" xml:space="preserve">
+    <value>Codes</value>
+  </data>
+  <data name="OAccount" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="OBudgetPeriod" xml:space="preserve">
+    <value>Budget Period</value>
+  </data>
+  <data name="ORunningNumberGenerator" xml:space="preserve">
+    <value>Running Number Generator</value>
+  </data>
+  <data name="OOPCAEServer" xml:space="preserve">
+    <value>OPC AE Server</value>
+  </data>
+  <data name="OOPCAEEvent" xml:space="preserve">
+    <value>OPC AE Event</value>
+  </data>
+  <data name="OPurchaseSettings" xml:space="preserve">
+    <value>Purchase Settings</value>
+  </data>
+  <data name="OPurchaseInvoice" xml:space="preserve">
+    <value>Purchase Invoice</value>
+  </data>
+  <data name="ServiceView" xml:space="preserve">
+    <value>EAM Services</value>
+  </data>
+  <data name="OSurveyGroup" xml:space="preserve">
+    <value>Survey Group</value>
+  </data>
+  <data name="OSurveyRespondentPortfolio" xml:space="preserve">
+    <value>Survey Address Book</value>
+  </data>
+  <data name="OSurveyPlanner" xml:space="preserve">
+    <value>Survey Planner</value>
+  </data>
+  <data name="ONotificationHierarchy" xml:space="preserve">
+    <value>Notification Hierarchy</value>
+  </data>
+  <data name="ONotificationMilestones" xml:space="preserve">
+    <value>Notification Milestones</value>
+  </data>
+  <data name="ONotificationProcess" xml:space="preserve">
+    <value>Notification Process</value>
+  </data>
+  <data name="OStoreStockTake" xml:space="preserve">
+    <value>Store Stock Take</value>
+  </data>
+  <data name="OReading_Multiple" xml:space="preserve">
+    <value>Reading (Multiple)</value>
+  </data>
+  <data name="OPointTrigger" xml:space="preserve">
+    <value>Trigger Template</value>
+  </data>
+  <data name="OStoreRequest" xml:space="preserve">
+    <value>Store Request</value>
+  </data>
+  <data name="OCapitalandCompany" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="OReading" xml:space="preserve">
+    <value>Reading</value>
+  </data>
+  <data name="MiscMyCreatedCases" xml:space="preserve">
+    <value>My Created Cases</value>
+  </data>
+  <data name="OBudgetGroup" xml:space="preserve">
+    <value>Budget Group</value>
+  </data>
+  <data name="OACGData" xml:space="preserve">
+    <value>ACG Data</value>
+  </data>
+  <data name="OReading_BillToAMOS" xml:space="preserve">
+    <value>Bill To AMOS</value>
+  </data>
+  <data name="OShift" xml:space="preserve">
+    <value>Shift</value>
+  </data>
+  <data name="OTechnicianRoster" xml:space="preserve">
+    <value>Technician Roster</value>
+  </data>
+  <data name="OTenant" xml:space="preserve">
+    <value>Tenant</value>
+  </data>
+  <data name="OTenantActivity" xml:space="preserve">
+    <value>Tenant Activity</value>
+  </data>
+  <data name="OTenantContact" xml:space="preserve">
+    <value>Tenant Contact</value>
+  </data>
+  <data name="OTenantLease" xml:space="preserve">
+    <value>Tenant Lease</value>
+  </data>
+  <data name="OVendorPrequalification" xml:space="preserve">
+    <value>Vendor Prequalification</value>
+  </data>
+  <data name="OPointTariff" xml:space="preserve">
+    <value>Point Tariffs and Discounts</value>
+  </data>
+  <data name="OAuditTrail" xml:space="preserve">
+    <value>Audit Trail</value>
+  </data>
+  <data name="OEquipmentWriteOff" xml:space="preserve">
+    <value>Equipment Write-Off</value>
+  </data>
+  <data name="OBMSTransmissionStatus" xml:space="preserve">
+    <value>BMS Transmission Status</value>
+  </data>
+  <data name="OAuditTrailField" xml:space="preserve">
+    <value>Audit Trail (Database Fields)</value>
+  </data>
+  <data name="OUserCreation" xml:space="preserve">
+    <value>User Creation</value>
+  </data>
+  <data name="OUserUpdate" xml:space="preserve">
+    <value>User Update</value>
+  </data>
+  <data name="OEmailLog" xml:space="preserve">
+    <value>Received Email History</value>
+  </data>
+  <data name="OCampaign" xml:space="preserve">
+    <value>Campaign</value>
+  </data>
+  <data name="OMeter" xml:space="preserve">
+    <value>Meter</value>
+  </data>
+  <data name="SubCategoryAuditTrail" xml:space="preserve">
+    <value>Audit Trails</value>
+  </data>
+  <data name="SubCategoryGeneralAdmin" xml:space="preserve">
+    <value>General Administration</value>
+  </data>
+  <data name="SubCategoryReportBuilder" xml:space="preserve">
+    <value>Dashboard/Report Builder</value>
+  </data>
+  <data name="SubCategorySystemAdmin" xml:space="preserve">
+    <value>System Administration</value>
+  </data>
+  <data name="OSafetyPrecaution" xml:space="preserve">
+    <value>Safety Precaution</value>
+  </data>
+  <data name="SubCategoryUserAdmin" xml:space="preserve">
+    <value>User Administration</value>
+  </data>
+  <data name="OVendorEvaluation" xml:space="preserve">
+    <value>Vendor Evaluation</value>
+  </data>
+  <data name="CenterTenantManagement" xml:space="preserve">
+    <value>Tenant Management</value>
+  </data>
+  <data name="OBackgroundServiceLog" xml:space="preserve">
+    <value>Background Service Log</value>
+  </data>
+  <data name="OWork_BillToAMOS" xml:space="preserve">
+    <value>Bill To AMOS</value>
+  </data>
+  <data name="SubCategoryMeterReading" xml:space="preserve">
+    <value>Meter Reading</value>
+  </data>
+  <data name="OSurveyServiceLevel" xml:space="preserve">
+    <value>Survey Service Level</value>
+  </data>
+  <data name="CenterSurvey" xml:space="preserve">
+    <value>Survey</value>
+  </data>
+  <data name="OBill" xml:space="preserve">
+    <value>Bill</value>
+  </data>
+  <data name="OSurveyRespondent" xml:space="preserve">
+    <value>Survey Address Book</value>
+  </data>
+  <data name="OCustomerAccountRegistration" xml:space="preserve">
+    <value>Đăng ký TK</value>
+  </data>
+</root>

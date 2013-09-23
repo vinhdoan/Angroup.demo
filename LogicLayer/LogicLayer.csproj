@@ -1,0 +1,920 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47211713-8A42-41DE-8BAB-73096B90DF3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LogicLayer</RootNamespace>
+    <AssemblyName>LogicLayer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\LogicLayer.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>bin\Debug\LogicLayer.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Anacle.DataFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.DataFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.UIFramework, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.UIFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.WorkflowFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ciloci.Flee, Version=0.9.26.0, Culture=neutral, PublicKeyToken=c8526a021ef298ed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ciloci.Flee.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="dotnetCHARTING, Version=5.1.3169.27816, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dotnetCHARTING.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=14.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Workflow.Runtime, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomizedEvents\AnacleEvents.cs" />
+    <Compile Include="CustomizedEvents\IAnacleEvents.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTransactionHistory.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCustomerAccountRegistration.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCustomerAccount.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCustomer.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OCRVVendorService.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OCRVTenderService.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSupporter.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OAccount.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OActivity.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OApprovalHierarchyLevel.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OApprovalProcess.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OApprovalProcessLimit.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OBudgetPeriod.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyServiceLevel.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyPlannerNotification.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyPlannerAccess.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OApplicationSetting.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OBill.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OBillItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OCalendar.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OCalendarHoliday.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OCode.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OEquipment.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OPointTariff.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OPosition.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OPurchaseInvoice.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OPurchaseOrder.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OPurchaseOrderItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\ORequestForQuotation.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\ORequestForQuotationItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\ORequestForQuotationVendor.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\ORequestForQuotationVendorItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurvey.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyChecklistItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyGroup.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyPlanner.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyPlannerServiceLevel.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyPlannerRespondent.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyReminder.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyRespondent.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyRespondentPorfolio.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OSurveyResponseFrom.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OTenantContact.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OUser.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OVendor.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OVendorEvaluation.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OVendorEvaluationChecklistItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OWork.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OWorkCost.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\Reports.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\TablesLogic.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-MY\OPurchaseInvoice.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-MY\OPurchaseInvoiceVendorItem.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-MY\TablesLogic.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreCheckInItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OApprovalHierarchy.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OApprovalProcessLimit.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OContractServiceLevelSurvey.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCurrency.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCurrencyExchangeRate.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OInboxReminder.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OInboxReminderItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OInboxReminderItemState.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORole.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OScheduledWork.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreBinItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ExchangeHelper.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCampaign.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OContractReminder.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OMeter.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseOrderReceiptItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreCheckOutItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserUpdate.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserUpdateUser.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserCreationUser.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserCreation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OMessageTemplate.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseBudget.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORequestForQuotationItemLocation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreCheckOut.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreCheckIn.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBMSTransmissionStatus.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBMSTransmissionStatusItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OOPCDAServer.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserPermanentPosition.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OContract.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OContractPriceMaterials.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OContractPriceServices.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreTransfer.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreBinReservation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OEquipment.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OEquipmentReminder.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OEquipmentWriteOff.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OEquipmentWriteOffItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OLocationStockTake.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OLocationStockTakeItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OLocationStockTakeReconciliationItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPointTariff.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\LogicLayerPersistentObjectBase.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OAccessibleDevice.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBillItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBill.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetAdjustment.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetAdjustmentDetail.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetReallocation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetReallocationFrom.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetReallocationTo.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OChargeType.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCode.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPoint.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseInvoice.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OACGDataRevenueItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OACGDataRevenue.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OACGDataCarPark.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OACGData.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OAccountType.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OApprovalProcess.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\LogicLayerPersistentObject.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OActivityHistory.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OApprovalHierarchyLevel.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetVariationLog.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCatalogue.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCraft.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OFixedRate.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseBudgetSummary.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseOrderPaymentSchedule.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseSettings.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OReading.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORequestForQuotationPaymentSchedule.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORequestForQuotationVendor.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORFQBudgetReallocationFromPeriod.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORFQBudgetReallocationToPeriod.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseOrderItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OActivity.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OEmailLog.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\Email.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OAccount.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OApplicationSetting.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudget.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetGroup.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OBudgetPeriod.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OLocation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPosition.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseRequestItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORFQBudgetReallocationFrom.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORFQBudgetReallocationTo.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OShift.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStore.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreTransferItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTaxCode.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTechnicianRoster.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTechnicianRosterItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTenantContact.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTenantActivity.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OCapitalandCompany.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseOrder.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OPurchaseRequest.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORequestForQuotation.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\ORequestForQuotationItem.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OTenantLease.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUser.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OUserDelegatedPosition.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OVendor.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OVendorContact.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OVendorPrequalification.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OVendorPrequalificationVendor.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OWork.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OWorkCost.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Client.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Component.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3ConnectException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Credential.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3LoginException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Message.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3MessageComponents.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3MessageException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3MissingBoundaryException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Parse.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3ReceiveException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3SendException.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3StateObject.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\POP3\Pop3Statics.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\TablesLogic.cs" />
+    <Compile Include="CustomizedObjectsForRMIT\OCase.cs" />
+    <Compile Include="DefaultObjects\DocumentGenerator.cs" />
+    <Compile Include="DefaultObjects\ExcelReader.cs" />
+    <Compile Include="DefaultObjects\MhtProcessor.cs" />
+    <Compile Include="DefaultObjects\OBackgroundServiceLog.cs" />
+    <Compile Include="DefaultObjects\OBackgroundServiceRun.cs" />
+    <Compile Include="DefaultObjects\OMessageAttachment.cs" />
+    <Compile Include="DefaultObjects\ExcelWriter.cs" />
+    <Compile Include="DefaultObjects\LogicLayerPersistentObjectBase.cs" />
+    <Compile Include="DefaultObjects\OLocationTypeUtility.cs" />
+    <Compile Include="DefaultObjects\OOperatingUnit.cs" />
+    <Compile Include="DefaultObjects\INotificationEnabled.cs" />
+    <Compile Include="DefaultObjects\ONotification.cs" />
+    <Compile Include="DefaultObjects\IWorkflowEnabled.cs" />
+    <Compile Include="DefaultObjects\LinearAlgebra.cs" />
+    <Compile Include="DefaultObjects\OApprovalProcessLimit.cs" />
+    <Compile Include="DefaultObjects\OEquipmentTypePoint.cs" />
+    <Compile Include="DefaultObjects\OLocationTypePoint.cs" />
+    <Compile Include="DefaultObjects\ONotificationProcessTiming.cs" />
+    <Compile Include="DefaultObjects\ONotificationMilestones.cs" />
+    <Compile Include="DefaultObjects\ONotificationProcess.cs" />
+    <Compile Include="DefaultObjects\ONotificationHierarchyLevel.cs" />
+    <Compile Include="DefaultObjects\ONotificationHierarchy.cs" />
+    <Compile Include="DefaultObjects\OApplicationSettingService.cs" />
+    <Compile Include="DefaultObjects\ODashboardField.cs" />
+    <Compile Include="DefaultObjects\OPointTrigger.cs" />
+    <Compile Include="DefaultObjects\OPurchaseBudgetSummary.cs" />
+    <Compile Include="DefaultObjects\OOPCAEEventHistory.cs" />
+    <Compile Include="DefaultObjects\OPurchaseSettings.cs" />
+    <Compile Include="DefaultObjects\OOPCAEEvent.cs" />
+    <Compile Include="DefaultObjects\OOPCAEServer.cs" />
+    <Compile Include="DefaultObjects\OPurchaseBudget.cs" />
+    <Compile Include="DefaultObjects\IAutoGenerateRunningNumber.cs" />
+    <Compile Include="DefaultObjects\OBudgetTransactionLog.cs" />
+    <Compile Include="DefaultObjects\OBudgetPeriodOpeningBalance.cs" />
+    <Compile Include="DefaultObjects\OBudgetPeriod.cs" />
+    <Compile Include="DefaultObjects\OApplicationSettingSmsKeywordHandler.cs" />
+    <Compile Include="DefaultObjects\OAccount.cs" />
+    <Compile Include="DefaultObjects\OBudgetVariationLog.cs" />
+    <Compile Include="DefaultObjects\OReading.cs" />
+    <Compile Include="DefaultObjects\OPoint.cs" />
+    <Compile Include="DefaultObjects\OOPCDAServer.cs" />
+    <Compile Include="DefaultObjects\OAttachmentType.cs" />
+    <Compile Include="DefaultObjects\OAnnouncement.cs" />
+    <Compile Include="DefaultObjects\ORunningNumberGenerator.cs" />
+    <Compile Include="DefaultObjects\OStoreRequest.cs" />
+    <Compile Include="DefaultObjects\OStoreRequestItem.cs" />
+    <Compile Include="DefaultObjects\OStoreStockTake.cs" />
+    <Compile Include="DefaultObjects\OStoreStockTakeBinItem.cs" />
+    <Compile Include="DefaultObjects\OSurvey.cs" />
+    <Compile Include="DefaultObjects\OSurveyChecklistItem.cs" />
+    <Compile Include="DefaultObjects\OSurveyGroup.cs" />
+    <Compile Include="DefaultObjects\OSurveyPlanner.cs" />
+    <Compile Include="DefaultObjects\OSurveyPlannerUpdate.cs" />
+    <Compile Include="DefaultObjects\OSurveyReminder.cs" />
+    <Compile Include="DefaultObjects\OSurveyRespondent.cs" />
+    <Compile Include="DefaultObjects\OSurveyRespondentPorfolio.cs" />
+    <Compile Include="DefaultObjects\OSurveyResponseFrom.cs" />
+    <Compile Include="DefaultObjects\OSurveyResponseTo.cs" />
+    <Compile Include="DefaultObjects\OSurveyTrade.cs" />
+    <Compile Include="DefaultObjects\OUserWebPartPersonalization.cs" />
+    <Compile Include="DefaultObjects\LogicLayerPersistentObject.cs" />
+    <Compile Include="DefaultObjects\LogicLayerSchema.cs" />
+    <Compile Include="DefaultObjects\OActivity.cs" />
+    <Compile Include="DefaultObjects\OActivityHistory.cs" />
+    <Compile Include="DefaultObjects\OApplicationSetting.cs" />
+    <Compile Include="DefaultObjects\OApprovalHierarchyLevel.cs" />
+    <Compile Include="DefaultObjects\OApprovalProcess.cs" />
+    <Compile Include="DefaultObjects\OAttachment.cs" />
+    <Compile Include="DefaultObjects\OCase.cs" />
+    <Compile Include="DefaultObjects\OCustomizedAttributeField.cs" />
+    <Compile Include="DefaultObjects\OMemo.cs" />
+    <Compile Include="DefaultObjects\OMessage.cs" />
+    <Compile Include="DefaultObjects\OMessageTemplate.cs" />
+    <Compile Include="DefaultObjects\OUserPasswordHistory.cs" />
+    <Compile Include="DefaultObjects\ServiceView.cs" />
+    <Compile Include="DefaultObjects\SurveyQuestion.cs" />
+    <Compile Include="DefaultObjects\SurveyResponseMatrix.cs" />
+    <Compile Include="DefaultObjects\WebPartPersonalizationProvider.cs" />
+    <Compile Include="DefaultObjects\ReportParameters.cs" />
+    <Compile Include="DefaultObjects\Workflow.cs" />
+    <Compile Include="DefaultObjects\WorkflowAssignmentException.cs" />
+    <Compile Include="DefaultObjects\WorkflowTransitionException.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Math\ap.cs" />
+    <Compile Include="Math\bdsvd.cs" />
+    <Compile Include="Math\bidiagonal.cs" />
+    <Compile Include="Math\blas.cs" />
+    <Compile Include="Math\cholesky.cs" />
+    <Compile Include="Math\lq.cs" />
+    <Compile Include="Math\lu.cs" />
+    <Compile Include="Math\qr.cs" />
+    <Compile Include="Math\rcond.cs" />
+    <Compile Include="Math\reflections.cs" />
+    <Compile Include="Math\rotations.cs" />
+    <Compile Include="Math\svd.cs" />
+    <Compile Include="Math\trlinsolve.cs" />
+    <Compile Include="DefaultObjects\OStoreRequestItemCheckOut.cs" />
+    <Compile Include="CustomizedObjectsForANgroup\OStoreItemTransaction.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OChargeType.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OLocation.cs" />
+    <Compile Include="CustomizedObjectsForCapitaland-CCL\OTenantLease.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Errors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Errors.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultEvents\AnacleEvents.cs" />
+    <Compile Include="DefaultEvents\IAnacleEvents.cs" />
+    <Compile Include="Global\Global.cs" />
+    <Compile Include="DefaultObjects\ORole.cs" />
+    <Compile Include="DefaultObjects\OFunction.cs" />
+    <Compile Include="Migration\ReportDataSetMigrate.cs" />
+    <Compile Include="Migration\ReportFieldMigrate.cs" />
+    <Compile Include="Migration\ReportMigrate.cs" />
+    <Compile Include="Migration\ReportTemplateMigrate.cs" />
+    <Compile Include="Migration\RoleMigrate.cs" />
+    <Compile Include="DefaultObjects\OApprovalHierarchy.cs" />
+    <Compile Include="DefaultObjects\OBudget.cs" />
+    <Compile Include="DefaultObjects\OBudgetAdjustment.cs" />
+    <Compile Include="DefaultObjects\OBudgetAdjustmentDetail.cs" />
+    <Compile Include="DefaultObjects\OBudgetReallocation.cs" />
+    <Compile Include="DefaultObjects\OBudgetReallocationFrom.cs" />
+    <Compile Include="DefaultObjects\OBudgetReallocationTo.cs" />
+    <Compile Include="DefaultObjects\OCalendar.cs" />
+    <Compile Include="DefaultObjects\OCalendarHoliday.cs" />
+    <Compile Include="DefaultObjects\OCatalogue.cs" />
+    <Compile Include="DefaultObjects\OChecklist.cs" />
+    <Compile Include="DefaultObjects\OChecklistItem.cs" />
+    <Compile Include="DefaultObjects\OChecklistResponse.cs" />
+    <Compile Include="DefaultObjects\OChecklistResponseSet.cs" />
+    <Compile Include="DefaultObjects\OCode.cs" />
+    <Compile Include="DefaultObjects\OCodeType.cs" />
+    <Compile Include="DefaultObjects\OContract.cs" />
+    <Compile Include="DefaultObjects\OContractPriceMaterials.cs" />
+    <Compile Include="DefaultObjects\OContractPriceServices.cs" />
+    <Compile Include="DefaultObjects\OCraft.cs" />
+    <Compile Include="DefaultObjects\OCurrency.cs" />
+    <Compile Include="DefaultObjects\OCurrencyExchangeRate.cs" />
+    <Compile Include="DefaultObjects\OCustomizedAttributeFieldValue.cs" />
+    <Compile Include="DefaultObjects\OCustomizedObjectConsumer.cs" />
+    <Compile Include="DefaultObjects\OCustomizedRecordField.cs" />
+    <Compile Include="DefaultObjects\OCustomizedRecordFieldValue.cs" />
+    <Compile Include="DefaultObjects\OCustomizedRecordObject.cs" />
+    <Compile Include="DefaultObjects\ODashboard.cs" />
+    <Compile Include="DefaultObjects\ODocumentTemplate.cs" />
+    <Compile Include="DefaultObjects\OEquipment.cs" />
+    <Compile Include="DefaultObjects\OEquipmentType.cs" />
+    <Compile Include="DefaultObjects\OEquipmentTypeParameter.cs" />
+    <Compile Include="DefaultObjects\OEquipmentTypeSpare.cs" />
+    <Compile Include="DefaultObjects\OFixedRate.cs" />
+    <Compile Include="DefaultObjects\OLanguage.cs" />
+    <Compile Include="DefaultObjects\OLocation.cs" />
+    <Compile Include="DefaultObjects\OLocationType.cs" />
+    <Compile Include="DefaultObjects\OLocationTypeParameter.cs" />
+    <Compile Include="DefaultObjects\OPurchaseInvoice.cs" />
+    <Compile Include="DefaultObjects\OPurchaseOrder.cs" />
+    <Compile Include="DefaultObjects\OPurchaseOrderItem.cs" />
+    <Compile Include="DefaultObjects\OPurchaseOrderReceipt.cs" />
+    <Compile Include="DefaultObjects\OPurchaseOrderReceiptItem.cs" />
+    <Compile Include="DefaultObjects\OPurchaseRequest.cs" />
+    <Compile Include="DefaultObjects\OPurchaseRequestItem.cs" />
+    <Compile Include="DefaultObjects\OReport.cs" />
+    <Compile Include="DefaultObjects\OReportColumnMapping.cs" />
+    <Compile Include="DefaultObjects\OReportDataSet.cs" />
+    <Compile Include="DefaultObjects\OReportField.cs" />
+    <Compile Include="DefaultObjects\OReportTemplate.cs" />
+    <Compile Include="DefaultObjects\ORequestForQuotation.cs" />
+    <Compile Include="DefaultObjects\ORequestForQuotationItem.cs" />
+    <Compile Include="DefaultObjects\ORequestForQuotationVendor.cs" />
+    <Compile Include="DefaultObjects\ORequestForQuotationVendorItem.cs" />
+    <Compile Include="DefaultObjects\ORoleFunction.cs" />
+    <Compile Include="DefaultObjects\ORunningNumber.cs" />
+    <Compile Include="DefaultObjects\OScheduledWork.cs" />
+    <Compile Include="DefaultObjects\OScheduledWorkChecklist.cs" />
+    <Compile Include="DefaultObjects\OScheduledWorkCost.cs" />
+    <Compile Include="DefaultObjects\OScheduledWorkStaggeredEquipment.cs" />
+    <Compile Include="DefaultObjects\OScheduledWorkStaggeredLocation.cs" />
+    <Compile Include="DefaultObjects\OServiceLevel.cs" />
+    <Compile Include="DefaultObjects\OServiceLevelDetail.cs" />
+    <Compile Include="DefaultObjects\OStore.cs" />
+    <Compile Include="DefaultObjects\OStoreAdjust.cs" />
+    <Compile Include="DefaultObjects\OStoreAdjustItem.cs" />
+    <Compile Include="DefaultObjects\OStoreBin.cs" />
+    <Compile Include="DefaultObjects\OStoreBinItem.cs" />
+    <Compile Include="DefaultObjects\OStoreCheckIn.cs" />
+    <Compile Include="DefaultObjects\OStoreCheckInItem.cs" />
+    <Compile Include="DefaultObjects\OStoreCheckOut.cs" />
+    <Compile Include="DefaultObjects\OStoreCheckOutItem.cs" />
+    <Compile Include="DefaultObjects\OStoreItem.cs" />
+    <Compile Include="DefaultObjects\OStoreItemReservation.cs" />
+    <Compile Include="DefaultObjects\OStoreItemTransaction.cs" />
+    <Compile Include="DefaultObjects\OStoreReservation.cs" />
+    <Compile Include="DefaultObjects\OStoreTransfer.cs" />
+    <Compile Include="DefaultObjects\OStoreTransferItem.cs" />
+    <Compile Include="DefaultObjects\OTaxCode.cs" />
+    <Compile Include="DefaultObjects\OUnitConversion.cs" />
+    <Compile Include="DefaultObjects\OUnitConversionTo.cs" />
+    <Compile Include="DefaultObjects\OUser.cs" />
+    <Compile Include="DefaultObjects\OUtility.cs" />
+    <Compile Include="DefaultObjects\OUtilityValue.cs" />
+    <Compile Include="DefaultObjects\OVendor.cs" />
+    <Compile Include="DefaultObjects\OWork.cs" />
+    <Compile Include="DefaultObjects\OWorkChecklistItem.cs" />
+    <Compile Include="DefaultObjects\OWorkChecklistItemResponse.cs" />
+    <Compile Include="DefaultObjects\OWorkCost.cs" />
+    <Compile Include="DefaultObjects\OWorkCostCheckOutItem.cs" />
+    <Compile Include="DefaultObjects\OWorkParameterReading.cs" />
+    <Compile Include="DefaultObjects\Reports.cs" />
+    <Compile Include="DefaultObjects\OPosition.cs" />
+    <Compile Include="Resources\Notifications.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Notifications.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultObjects\OCustomizedBase.cs" />
+    <Compile Include="Resources\Objects.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Objects.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Strings.zh-CN.Designer.cs">
+      <DependentUpon>Strings.zh-CN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultObjects\TablesLogic.cs" />
+    <Compile Include="Resources\WorkflowStates.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkflowStates.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CRVTenderService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CRVVendorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ExcelWebServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ExchangeWebServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Errors.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Errors.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Errors.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Notifications.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Notifications.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Notifications.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Objects.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Objects.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.zh-CN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.zh-CN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WorkflowStates.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorkflowStates.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ExchangeWebServices\AddDelegateResponseMessageType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\ConvertIdResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CopyFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CopyItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CreateAttachmentResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CreateFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CreateItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\CreateManagedFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\DeleteAttachmentResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\DeleteFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\DeleteItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\ExpandDLResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\FindFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\FindItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetAttachmentResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetDelegateResponseMessageType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetEventsResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetUserAvailabilityResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\GetUserOofSettingsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\messages.xsd" />
+    <None Include="Web References\ExchangeWebServices\MoveFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\MoveItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ExchangeWebServices\RemoveDelegateResponseMessageType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\ResolveNamesResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\SendItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\Services.wsdl" />
+    <None Include="Web References\ExchangeWebServices\SetUserOofSettingsResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\SubscribeResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\SyncFolderHierarchyResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\SyncFolderItemsResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\types.xsd" />
+    <None Include="Web References\ExchangeWebServices\UnsubscribeResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\UpdateDelegateResponseMessageType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\UpdateFolderResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ExchangeWebServices\UpdateItemResponseType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://belle/crvservice/vendorservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CRVVendorService\</RelPath>
+      <UpdateFromURL>http://belle/crvservice/vendorservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicLayer_CRVservice_VendorService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://demo.anacle.com/crvservice/tenderservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CRVTenderService\</RelPath>
+      <UpdateFromURL>http://demo.anacle.com/crvservice/tenderservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicLayer_CRVTenderService_TenderService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/excelreader/excelreaderwebservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ExcelWebServices\</RelPath>
+      <UpdateFromURL>http://localhost/excelreader/excelreaderwebservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>LogicLayer_ExcelWebServices_ExcelReaderWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://cello/ews/Services.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ExchangeWebServices\</RelPath>
+      <UpdateFromURL>https://cello/ews/Services.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ExcelWebServices\excelreaderwebservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ExcelWebServices\excelreaderwebservice.disco" />
+    <None Include="Web References\ExcelWebServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CRVVendorService\Code.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRVVendorService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CRVVendorService\Vendor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRVVendorService\vendorservice.disco" />
+    <None Include="Web References\CRVVendorService\vendorservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CRVTenderService\CRVTender.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRVTenderService\GroupProcurementInformation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRVTenderService\GroupProjectInformation.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\CRVTenderService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CRVTenderService\tenderservice.disco" />
+    <None Include="Web References\CRVTenderService\tenderservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClassDiagrams\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>del "$(SolutionDir)webapp\temp\charts\*.*" /q</PostBuildEvent>
+  </PropertyGroup>
+</Project>

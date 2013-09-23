@@ -1,0 +1,187 @@
+<%@ Page Language="C#" %>
+
+<%@ Register Assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Web" %>
+<%@ Import Namespace="System.Web.UI" %>
+<%@ Import Namespace="System.Web.UI.WebControls" %>
+<%@ Import Namespace="System.ComponentModel" %>
+<%@ Import Namespace="Anacle.DataFramework" %>
+<%@ Import Namespace="LogicLayer" %>
+<%@ Import Namespace="Anacle.UIFramework" %>
+<%@ Import Namespace="CrystalDecisions.CrystalReports.Engine" %>
+<%@ Import Namespace="CrystalDecisions.Shared" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.Common" %>
+<script runat="server">
+
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+
+        if (!IsPostBack)
+        {
+            if (Session[Request["session"]] != null)
+            {
+                ReportDocument doc = null;
+                String CrystalReportPath = "POReport.rpt";
+                if (OApplicationSetting.Current.POReportRPTFileName != null &&
+                    OApplicationSetting.Current.POReportRPTFileName.Trim() != "")
+                    CrystalReportPath = OApplicationSetting.Current.POReportRPTFileName;
+                OPurchaseOrder po = Session[Request["session"]] as OPurchaseOrder;
+
+                doc = new ReportDocument();
+                doc.Load(Server.MapPath(CrystalReportPath));
+                doc.SetDataSource(OPurchaseOrder.GetPurchaseOrderDataSetForCrystalReports(po));
+                this.crystalReportViewer.ReportSource = doc;
+
+                string tempFileName = System.IO.Path.GetTempFileName();
+                ExportOptions exportOpts = doc.ExportOptions;
+                exportOpts.ExportFormatType = ExportFormatType.PortableDocFormat;
+                exportOpts.ExportDestinationType = ExportDestinationType.DiskFile;
+                exportOpts.DestinationOptions = new DiskFileDestinationOptions();
+                DiskFileDestinationOptions diskOpts = new DiskFileDestinationOptions();
+                ((DiskFileDestinationOptions)doc.ExportOptions.DestinationOptions).DiskFileName = tempFileName;
+                doc.Export();
+
+                Response.ClearContent();
+                Response.ClearHeaders();
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-disposition", "attachment; filename=report.pdf");
+                Response.WriteFile(tempFileName);
+                Response.End();
+            }
+        }
+    }
+    
+    /*
+    protected DataTable dtPODetails()
+    {
+        DataTable dt = new DataTable();
+        dt.Columns.Add("CompanyName");
+        dt.Columns.Add("CompanyAddress");
+        dt.Columns.Add("CompanyCountry");
+        dt.Columns.Add("CompanyPostalCode");
+        dt.Columns.Add("CompanyTelNo");
+        dt.Columns.Add("CompanyFaxNo");
+        dt.Columns.Add("CompanyRegNo");
+        dt.Columns.Add("CompanyID",typeof(Guid));
+        dt.Columns.Add("PoDeliverName");
+        dt.Columns.Add("PoDeliverAddress");
+        dt.Columns.Add("PoDeliverCountry");
+        dt.Columns.Add("PoDeliverPostalCode");
+        dt.Columns.Add("PoDeliverTelNo");
+        dt.Columns.Add("PoDeliverFaxNo");
+        dt.Columns.Add("PoDeliverContactName");
+        dt.Columns.Add("PoVendorName");
+        dt.Columns.Add("PoVendorAddress");
+        dt.Columns.Add("PoVendorCountry");
+        dt.Columns.Add("PoVendorTelNo");
+        dt.Columns.Add("PoVendorFaxNo");
+        dt.Columns.Add("PoVendorContactName");
+        dt.Columns.Add("PoBillName");
+        dt.Columns.Add("PoBillAddress");
+        dt.Columns.Add("PoBillCountry");
+        dt.Columns.Add("PoBillPostalCode");
+        dt.Columns.Add("PoNumber");
+        dt.Columns.Add("PoPaymentTerms");
+        dt.Columns.Add("PoId",typeof(Guid));
+        dt.Columns.Add("PoSubject");
+        dt.Columns.Add("WJNo");
+        dt.Columns.Add("WJCreatedDateTime", typeof(DateTime));
+        
+        return dt;
+    }
+    protected DataTable PODetails(Guid? POID)
+    {
+        string sql = @"select maCompany.ObjectName as 'CompanyName',maCompany.Address as 'CompanyAddress',maCompany.Country as 'CompanyCountry',maCompany.PostalCode as 'CompanyPostalCode',maCompany.PhoneNo as 'CompanyTelNo',maCompany.FaxNo as 'CompanyFaxNo',maCompany.RegNo as 'CompanyRegNo',
+maCompany.ObjectID as 'CompanyID',
+delivery.ObjectName as 'PoDeliverName',delivery.Address as 'PoDeliverAddress',delivery.Country as 'PoDeliverCountry',delivery.PostalCode as 'PoDeliverPostalCode',delivery.PhoneNo as 'PoDeliverTelNo',delivery.FaxNo as 'PoDeliverFaxNo',
+rfq.CreatedUser as 'PoDeliverContactName', po.ContactAddress as 'PoVendorAddress',po.ContactAddressCountry as 'PoVendorCountry',
+Vendor.ObjectName as 'PoVendorName',po.ContactPerson as 'PoVendorContactName', po.ContactPhone as 'PoVendorTelNo', po.ContactFax as 'PoVendorFaxNo',
+rfq.ObjectNumber as 'WJNo',billTo.ObjectName as 'PoBillName', billTo.Address as 'PoBillAddress', billTo.Country as 'PoBillCountry', billTo.PostalCode as 'PoBillPostalCode', 
+po.ObjectNumber as 'PONumber',rfq.CreatedDateTime as 'WJCreatedDateTime', po.PaymentTerms as 'PoPaymentTerms',po.ObjectID as 'POID',po.Description as 'POSubject'
+from PurchaseOrder po
+left join CapitalandCompany maCompany on maCompany.ObjectID = po.ManagementCompanyID
+left join CapitalandCompany delivery on delivery.ObjectID = po.DeliveryToID
+left join PurchaseOrderItem poItem on poItem.PurchaseOrderID = po.ObjectID
+left join RequestForQuotationItem rfqItem on rfqItem.ObjectID = poItem.RequestForQuotationItemID
+left join RequestForQuotation rfq on rfq.ObjectID = rfqItem.RequestForQuotationID
+left join Vendor on Vendor.ObjectID = po.VendorID
+left join CapitalandCompany billTo on billTo.ObjectID = po.BillToID
+where po.ObjectID ='" + POID.ToString() + "'";
+        DataSet ds = Connection.ExecuteQuery("#database", sql);
+        return ds.Tables[0];
+    }
+    
+    protected DataTable POItems(Guid? POID)
+    {
+        DataTable dt = Query.Select(TablesLogic.tPurchaseOrderItem.ItemDescription,
+                                    TablesLogic.tPurchaseOrderItem.QuantityOrdered.As("ItemQuantity"),
+                                    TablesLogic.tPurchaseOrderItem.UnitPriceInSelectedCurrency.As("ItemUnitPrice"),
+                                    TablesLogic.tPurchaseOrderItem.PurchaseOrderID.As("POID"),
+                                    TablesLogic.tPurchaseOrderItem.AdditionalDescription.As("AdditionalDescription"))
+                            .Where(TablesLogic.tPurchaseOrderItem.PurchaseOrderID == POID & TablesLogic.tPurchaseOrderItem.IsDeleted==0);
+        return dt;
+    }
+    protected DataTable POMgmtCompanyReport(Guid? ManagementCompanyID)
+    {
+        DataTable dt = Query.Select(TablesLogic.tCapitalandCompany.LogoFile.As("Logo"),
+                                    TablesLogic.tCapitalandCompany.ObjectID.As("CompanyID"))
+                            .Where(TablesLogic.tCapitalandCompany.ObjectID == ManagementCompanyID);
+        return dt;
+                            
+    }
+    protected DataTable PurchaseBudetTable()
+    {
+        DataTable dt = new DataTable();
+        dt.Columns.Add("BudgetCategory");
+        dt.Columns.Add("POID");
+        return dt;
+    }
+    protected DataTable PurchaseBudgetTable(OPurchaseOrder po)
+    {
+        DataTable dt = new DataTable();
+        dt.TableName = "PurchaseBudget";
+        dt.Columns.Add("BudgetCategory");
+        dt.Columns.Add("POID");
+        foreach (OPurchaseBudget pb in po.PurchaseBudgets)
+        {
+            DataRow row = dt.NewRow();
+            row["BudgetCategory"] = pb.Account.Path;
+            row["POID"] = pb.PurchaseOrderID;
+            dt.Rows.Add(row);
+        }
+        return dt;
+    }
+      */  
+        
+    protected override void OnPreRender(EventArgs e)
+    {
+        base.OnPreRender(e);
+        this.messageDiv.Visible = labelCaption.Text != "";
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:panel runat="server" CssClass='object-message' ID="messageDiv" Style="width: 100%">
+                <asp:Label runat='server' ID='labelCaption' EnableViewState="false" ForeColor="Red"
+                    Font-Bold="True"></asp:Label>
+                <div>
+                    <CR:CrystalReportViewer ID="crystalReportViewer" runat="server" AutoDataBind="true" />
+                </div>
+            </asp:panel>
+        </div>
+    </form>
+</body>
+</html>

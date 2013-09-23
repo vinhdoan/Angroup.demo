@@ -1,0 +1,302 @@
+﻿<ns0:AnacleStateMachineWorkflow x:Class="OWorkWorkflow" InitialStateName="Start" x:Name="OWorkWorkflow" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="Start">
+		<EventDrivenActivity x:Name="SaveAsDraft">
+			<HandleExternalEventActivity x:Name="HandlePlanEvent" EventName="SaveAsDraft" InterfaceType="{x:Type LogicLayer.Events.IAnacleEvents}" />
+			<SetStateActivity x:Name="GoToPlanned" TargetStateName="Draft" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="ThrowExceptionToHostActivity" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForAssignmentEvent">
+			<HandleExternalEventActivity Description="SUBMIT_ASSIGNMENT" x:Name="HandleAssignEvent" EventName="SubmitForAssignment" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToAssigned" TargetStateName="PendingAssignment" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity4">
+				<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForExecution">
+			<HandleExternalEventActivity Description="SUBMIT_ASSIGNMENT" x:Name="handleExternalEventActivity1" EventName="SubmitForExecution" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ExecuteDynamicCode x:Name="executeDynamicCode1" CodeToExecute="if( ((OWork)CurrentObject).WorkChecklistItems.Count==0 )&#xD;&#xA;          ((OWork)CurrentObject).UpdateChecklist();" />
+			<SetStateActivity x:Name="setStateActivity1" TargetStateName="PendingExecution" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity3">
+				<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Draft">
+		<StateInitializationActivity x:Name="InitializeDraftState">
+			<ns1:SetStateAndAssign x:Name="SetStateToPlanned" ScheduledStartDateTime="DateTime.Now " RoleCodes="WORKSUPERVISOR" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="DateTime.Now.AddDays(1)" />
+			<PolicyActivity x:Name="SetLimit">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SetLimits" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity29">
+				<FaultHandlerActivity x:Name="faultHandlerActivity29" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost27" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForAssignmentEvent2">
+			<HandleExternalEventActivity Description="SUBMIT_ASSIGNMENT" x:Name="handleExternalEventActivity5" EventName="SubmitForAssignment" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity2" TargetStateName="PendingAssignment" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity5">
+				<FaultHandlerActivity x:Name="faultHandlerActivity5" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost4" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForExecutionEvent3">
+			<HandleExternalEventActivity Description="SUBMIT_ASSIGNMENT" x:Name="handleExternalEventActivity6" EventName="SubmitForExecution" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ExecuteDynamicCode x:Name="executeDynamicCode2" CodeToExecute="if( ((OWork)CurrentObject).WorkChecklistItems.Count==0 )&#xD;&#xA;          ((OWork)CurrentObject).UpdateChecklist();" />
+			<SetStateActivity x:Name="setStateActivity3" TargetStateName="PendingExecution" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity6">
+				<FaultHandlerActivity x:Name="faultHandlerActivity6" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost5" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity2" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity4" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity26">
+				<FaultHandlerActivity x:Name="faultHandlerActivity27" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost28" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingExecution">
+		<StateInitializationActivity x:Name="InitializeExecuteSate">
+			<ns1:SetStateAndAssign x:Name="SetStateToPendingExecution" ScheduledStartDateTime="((OWork)CurrentObject).ScheduledStartDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledStartDateTime :&#xD;&#xA;DateTime.Now" RoleCodes="WORKSUPERVISOR,WORKTECHNICIAN" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="((OWork)CurrentObject).ScheduledEndDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledEndDateTime :&#xD;&#xA;DateTime.Now.AddDays(3)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity31">
+				<FaultHandlerActivity x:Name="faultHandlerActivity31" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost29" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="WaitForMaterialEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity9" EventName="WaitForMaterial" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity10" TargetStateName="PendingMaterial" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity15">
+				<FaultHandlerActivity x:Name="faultHandlerActivity14" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost14" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="WaitForContractorEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity14" EventName="WaitForContractor" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity15" TargetStateName="PendingContractor" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity16">
+				<FaultHandlerActivity x:Name="faultHandlerActivity15" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost15" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForClosureEvent2">
+			<HandleExternalEventActivity Description="SUBMIT_CLOSE" x:Name="HandlePendingClosureEvent1" EventName="SubmitForClosure" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToPendingClosure" TargetStateName="PendingClosure" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity12">
+				<FaultHandlerActivity x:Name="faultHandlerActivity12" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost11" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent5">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity7" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity8" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity33">
+				<FaultHandlerActivity x:Name="faultHandlerActivity36" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost35" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingAssignment">
+		<EventDrivenActivity x:Name="ExecuteEvent3">
+			<HandleExternalEventActivity Description="SUBMIT_EXECUTION" x:Name="HandleExecuteEvent3" EventName="SubmitForExecution" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ExecuteDynamicCode x:Name="UpdateCheckList" CodeToExecute="if( ((OWork)CurrentObject).WorkChecklistItems.Count==0 )&#xD;&#xA;          ((OWork)CurrentObject).UpdateChecklist();" />
+			<SetStateActivity x:Name="GoToExecuted3" TargetStateName="PendingExecution" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity9">
+				<FaultHandlerActivity x:Name="faultHandlerActivity9" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost8" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<StateInitializationActivity x:Name="InitializeAssignState">
+			<ns1:SetStateAndAssign x:Name="SetStateToAssigned" ScheduledStartDateTime="((OWork)CurrentObject).ScheduledStartDateTime.Value.AddDays(-7)" RoleCodes="WORKSUPERVISOR" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="((OWork)CurrentObject).ScheduledStartDateTime.Value" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity38">
+				<FaultHandlerActivity x:Name="faultHandlerActivity23" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost24" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<PolicyActivity x:Name="SubmitForAssignmentPolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SubmitForAssignment" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="CancelEvent3">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity4" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity6" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity28">
+				<FaultHandlerActivity x:Name="faultHandlerActivity32" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost33" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingClosure">
+		<EventDrivenActivity x:Name="CloseEvent">
+			<HandleExternalEventActivity Description="CLOSE" x:Name="HandleCloseEvent" EventName="Close" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity24" TargetStateName="Close" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity24">
+				<FaultHandlerActivity x:Name="faultHandlerActivity24" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost23" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<StateInitializationActivity x:Name="InitializePendingClosureState">
+			<ns1:SetStateAndAssign x:Name="SetStateToPendingClosure" ScheduledStartDateTime="DateTime.Now" RoleCodes="WORKSUPERVISOR" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="DateTime.Now.AddDays(3)" />
+			<PolicyActivity x:Name="CompletionPlicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="UpdateWorkCompleteFields" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity36">
+				<FaultHandlerActivity x:Name="faultHandlerActivity33" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost31" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="Close">
+		<StateInitializationActivity x:Name="InitializeCloseState">
+			<ns1:SetStateAndAssign x:Name="SetStateToClose" RoleCodes="SYSTEMADMIN" />
+			<ns1:ExecuteDynamicCode x:Name="CloseWork" CodeToExecute="OWork work = (OWork)CurrentObject;&#xD;&#xA;work.CloseWork();" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity37">
+				<FaultHandlerActivity x:Name="faultHandlerActivity34" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost32" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="Cancelled">
+		<StateInitializationActivity x:Name="InitializeCancelledState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign2" RoleCodes="SYSTEMADMIN" Priority="(int)((OWork)CurrentObject).Priority" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity25">
+				<FaultHandlerActivity x:Name="faultHandlerActivity26" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost26" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingMaterial">
+		<StateInitializationActivity x:Name="InitializePendingMaterialState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign1" ScheduledStartDateTime="((OWork)CurrentObject).ScheduledStartDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledStartDateTime :&#xD;&#xA;DateTime.Now" RoleCodes="WORKSUPERVISOR" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="((OWork)CurrentObject).ScheduledEndDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledEndDateTime :&#xD;&#xA;DateTime.Now.AddDays(3)" Users="((OWork)CurrentObject).GetAssignedTechnicians()" />
+			<PolicyActivity x:Name="policyActivity1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SetLimits" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity7">
+				<FaultHandlerActivity x:Name="faultHandlerActivity7" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost6" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForExecutionEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity10" EventName="SubmitForExecution" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity11" TargetStateName="PendingExecution" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity14">
+				<FaultHandlerActivity x:Name="faultHandlerActivity16" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost16" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="WaitForContractEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity15" EventName="WaitForContractor" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity16" TargetStateName="PendingContractor" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity17">
+				<FaultHandlerActivity x:Name="faultHandlerActivity17" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost17" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForClosureEvent3">
+			<HandleExternalEventActivity Description="SUBMIT_CLOSE" x:Name="handleExternalEventActivity3" EventName="SubmitForClosure" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity5" TargetStateName="PendingClosure" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity2">
+				<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent6">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity8" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity9" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity8">
+				<FaultHandlerActivity x:Name="faultHandlerActivity8" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost7" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingContractor">
+		<StateInitializationActivity x:Name="InitializePendingContractorState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign3" ScheduledStartDateTime="((OWork)CurrentObject).ScheduledStartDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledStartDateTime :&#xD;&#xA;DateTime.Now" RoleCodes="WORKSUPERVISOR" Priority="(int)((OWork)CurrentObject).Priority" ScheduledEndDateTime="((OWork)CurrentObject).ScheduledEndDateTime!=null ?&#xD;&#xA;((OWork)CurrentObject).ScheduledEndDateTime :&#xD;&#xA;DateTime.Now.AddDays(3)" Users="((OWork)CurrentObject).GetAssignedTechnicians()" />
+			<PolicyActivity x:Name="policyActivity2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SetLimits" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity10">
+				<FaultHandlerActivity x:Name="faultHandlerActivity10" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost9" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForExecutionEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity11" EventName="SubmitForExecution" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity12" TargetStateName="PendingExecution" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity18">
+				<FaultHandlerActivity x:Name="faultHandlerActivity18" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost18" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="WaitForMaterialEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity16" EventName="WaitForMaterial" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity17" TargetStateName="PendingMaterial" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity19">
+				<FaultHandlerActivity x:Name="faultHandlerActivity19" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost19" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForClosureEvent4">
+			<HandleExternalEventActivity Description="SUBMIT_CLOSE" x:Name="handleExternalEventActivity12" EventName="SubmitForClosure" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity13" TargetStateName="PendingClosure" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity11">
+				<FaultHandlerActivity x:Name="faultHandlerActivity11" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost10" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent7">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity13" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.4611.29854, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity14" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity13">
+				<FaultHandlerActivity x:Name="faultHandlerActivity13" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost12" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+</ns0:AnacleStateMachineWorkflow>

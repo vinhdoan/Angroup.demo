@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BillingAddressCityResource1.Caption" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="BillingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="BillingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressResource1.Caption" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="BillingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressStateResource1.Caption" xml:space="preserve">
+    <value>省份</value>
+  </data>
+  <data name="BillingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+  <data name="BillingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingContactPersonResource1.Caption" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="BillingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+  <data name="BillingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+  <data name="BillingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="BillingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+  <data name="ContactCellphoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ToolTip" xml:space="preserve">
+    <value>联系人的手机号码</value>
+  </data>
+  <data name="ContactEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+  <data name="ContactEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ToolTip" xml:space="preserve">
+    <value>联系人的电子邮件地址</value>
+  </data>
+  <data name="ContactFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+  <data name="ContactFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ToolTip" xml:space="preserve">
+    <value>联系人的传真号码</value>
+  </data>
+  <data name="ContactPersonResource1.Caption" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="ContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ToolTip" xml:space="preserve">
+    <value>供应商联络人的姓名</value>
+  </data>
+  <data name="ContactPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="ContactPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ToolTip" xml:space="preserve">
+    <value>联络人电话</value>
+  </data>
+  <data name="ContractEndDateResource1.Caption" xml:space="preserve">
+    <value>终止日期</value>
+  </data>
+  <data name="ContractEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ToolTip" xml:space="preserve">
+    <value>合同到期日，在此日期与开始日期之间的合同有效期内，系统将会自动应用此合同。</value>
+  </data>
+  <data name="ContractManagerIDResource1.Caption" xml:space="preserve">
+    <value>合同经理</value>
+  </data>
+  <data name="ContractManagerIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractManagerIDResource1.ToolTip" xml:space="preserve">
+    <value>负责这个合约的经理</value>
+  </data>
+  <data name="ContractStartDateResource1.Caption" xml:space="preserve">
+    <value>开始日期</value>
+  </data>
+  <data name="ContractStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ToolTip" xml:space="preserve">
+    <value>合同开始日期，在此日期与终止日期之间的合同有效期内，系统将会自动应用此合同。</value>
+  </data>
+  <data name="ContractSumResource1.Caption" xml:space="preserve">
+    <value>合同金额</value>
+  </data>
+  <data name="ContractSumResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractSumResource1.ToolTip" xml:space="preserve">
+    <value>在合约上注明的付给供应商的款项总额。</value>
+  </data>
+  <data name="ContractTypeOfServiceResource1.Caption" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+  <data name="ContractTypeOfServiceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractTypeOfServiceResource1.ToolTip" xml:space="preserve">
+    <value>供应商提供的与系统相对应的服务类型</value>
+  </data>
+  <data name="DescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+  <data name="DescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DescriptionResource1.ToolTip" xml:space="preserve">
+    <value>合同的详细说明</value>
+  </data>
+  <data name="EndReminderDays1Resource1.Caption" xml:space="preserve">
+    <value>第一次</value>
+  </data>
+  <data name="EndReminderDays1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays1Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays2Resource1.Caption" xml:space="preserve">
+    <value>第二次</value>
+  </data>
+  <data name="EndReminderDays2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays2Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays3Resource1.Caption" xml:space="preserve">
+    <value>第三次</value>
+  </data>
+  <data name="EndReminderDays3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays3Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays4Resource1.Caption" xml:space="preserve">
+    <value>第四次</value>
+  </data>
+  <data name="EndReminderDays4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays4Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="FixedRateResource1.Caption" xml:space="preserve">
+    <value>定价</value>
+  </data>
+  <data name="FixedRateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FixedRateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFixedRatesResource1.Caption" xml:space="preserve">
+    <value>协议单价列表</value>
+  </data>
+  <data name="gridFixedRatesResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFixedRatesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationAccessResource1.Caption" xml:space="preserve">
+    <value>应用区域列表</value>
+  </data>
+  <data name="gridLocationAccessResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationAccessResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InsuranceResource1.Caption" xml:space="preserve">
+    <value>保险</value>
+  </data>
+  <data name="InsuranceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InsuranceResource1.ToolTip" xml:space="preserve">
+    <value>合约保险内容</value>
+  </data>
+  <data name="label1Resource1.Caption" xml:space="preserve">
+    <value>合同提醒（提前天数）</value>
+  </data>
+  <data name="label1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>合同名称</value>
+  </data>
+  <data name="OperatingAddressCityResource1.Caption" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="OperatingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>国家</value>
+  </data>
+  <data name="OperatingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressResource1.Caption" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="OperatingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressStateResource1.Caption" xml:space="preserve">
+    <value>省份</value>
+  </data>
+  <data name="OperatingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+  <data name="OperatingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingContactPersonResource1.Caption" xml:space="preserve">
+    <value>联络人</value>
+  </data>
+  <data name="OperatingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+  <data name="OperatingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+  <data name="OperatingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="OperatingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+  <data name="panelEndReminderResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEndReminderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPeopleToRemindResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPeopleToRemindResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>合同/证照</value>
+  </data>
+  <data name="Reminder1UserIDResource1.Caption" xml:space="preserve">
+    <value>第一人</value>
+  </data>
+  <data name="Reminder1UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder1UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder2UserIDResource1.Caption" xml:space="preserve">
+    <value>第二人</value>
+  </data>
+  <data name="Reminder2UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder2UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder3UserIDResource1.Caption" xml:space="preserve">
+    <value>第三人</value>
+  </data>
+  <data name="Reminder3UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder3UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder4UserIDResource1.Caption" xml:space="preserve">
+    <value>第四人</value>
+  </data>
+  <data name="Reminder4UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder4UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>提醒时间</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator2Resource1.Caption" xml:space="preserve">
+    <value>合同联系人</value>
+  </data>
+  <data name="Separator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.Caption" xml:space="preserve">
+    <value>营业地点</value>
+  </data>
+  <data name="Separator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator4Resource1.Caption" xml:space="preserve">
+    <value>账单地址</value>
+  </data>
+  <data name="Separator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabFixedRatesResource1.Caption" xml:space="preserve">
+    <value>购买协议</value>
+  </data>
+  <data name="tabFixedRatesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>备忘</value>
+  </data>
+  <data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabRemindersResource1.Caption" xml:space="preserve">
+    <value>提醒</value>
+  </data>
+  <data name="tabRemindersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabServiceResource1.Caption" xml:space="preserve">
+    <value>维修与采购</value>
+  </data>
+  <data name="tabServiceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabVendorResource1.Caption" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="tabVendorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TermsResource1.Caption" xml:space="preserve">
+    <value>条款</value>
+  </data>
+  <data name="TermsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TermsResource1.ToolTip" xml:space="preserve">
+    <value>The terms of this contract.</value>
+  </data>
+  <data name="treeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="treeLocationAccessResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeLocationAccessResource1.ToolTip" xml:space="preserve">
+    <value>The location under which the vendor provides his services.</value>
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value>位置路径</value>
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>协议单价</value>
+  </data>
+  <data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>提醒接收人</value>
+  </data>
+  <data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorResource1.Caption" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="VendorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorResource1.ToolTip" xml:space="preserve">
+    <value>The vendor responsible for carrying out the work as indicated by this contract.</value>
+  </data>
+  <data name="WarrantyResource1.Caption" xml:space="preserve">
+    <value>质保</value>
+  </data>
+  <data name="WarrantyResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WarrantyResource1.ToolTip" xml:space="preserve">
+    <value>质量保证说明</value>
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.Caption" xml:space="preserve">
+    <value>库存目录</value>
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.Caption" xml:space="preserve">
+    <value>价格乘数</value>
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterialsResource1.Caption" xml:space="preserve">
+    <value>库存项目购买协议</value>
+  </data>
+  <data name="ContractPriceMaterialsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterialsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.Caption" xml:space="preserve">
+    <value>定价</value>
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.Caption" xml:space="preserve">
+    <value>价格乘数</value>
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServicesResource1.Caption" xml:space="preserve">
+    <value>服务项目购买协议</value>
+  </data>
+  <data name="ContractPriceServicesResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServicesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMaintenanceResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMaintenanceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPricingAgreementResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPricingAgreementResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvideMaintenanceResource1.Caption" xml:space="preserve">
+    <value>维修</value>
+  </data>
+  <data name="ProvideMaintenanceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvideMaintenanceResource1.Text" xml:space="preserve">
+    <value>是,我公司与供应商签下预先支付维修协议(例如:保修,维修支持,等)</value>
+  </data>
+  <data name="ProvideMaintenanceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvidePricingAgreementResource1.Caption" xml:space="preserve">
+    <value>购买协议</value>
+  </data>
+  <data name="ProvidePricingAgreementResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvidePricingAgreementResource1.Text" xml:space="preserve">
+    <value>是,我公司与供应商签下购买协议</value>
+  </data>
+  <data name="ProvidePricingAgreementResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value>确定删除?</value>
+  </data>
+  <data name="UIGridViewColumnResource11.ConfirmText" xml:space="preserve">
+    <value>确定删除?</value>
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>库存项目</value>
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>价格乘数</value>
+  </data>
+  <data name="UIGridViewColumnResource3.ConfirmText" xml:space="preserve">
+    <value>确定删除?</value>
+  </data>
+  <data name="UIGridViewColumnResource5.ConfirmText" xml:space="preserve">
+    <value>确定删除?</value>
+  </data>
+  <data name="UIGridViewColumnResource7.ConfirmText" xml:space="preserve">
+    <value>确定删除?</value>
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>服务项目</value>
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>价格乘数</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>确定删除所选项目?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>确定删除所选项目?</value>
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>增加</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value>确定删除所选项目?</value>
+  </data>
+  <data name="UIGridViewCommandResource5.CommandText" xml:space="preserve">
+    <value>增加</value>
+  </data>
+  <data name="UIGridViewCommandResource5.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddScheduledWorkResource1.ConfirmText" xml:space="preserve">
+    <value>请在创建新的计划工作前先保存该合同。确定要继续吗？</value>
+  </data>
+  <data name="buttonAddScheduledWorkResource1.Text" xml:space="preserve">
+    <value>添加计划工作</value>
+  </data>
+  <data name="gridScheduledWorksResource1.Caption" xml:space="preserve">
+    <value>计划工作</value>
+  </data>
+  <data name="tabWorkStatusHistoryResource1.Caption" xml:space="preserve">
+    <value>状态历史</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>计划工作编号</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>问题类型</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="tabScheduledWorkResource1.Caption" xml:space="preserve">
+    <value>计划工作</value>
+  </data>
+  <data name="SurveyGroupIDResource1.Caption" xml:space="preserve">
+    <value>调查组</value>
+  </data>
+  <data name="UISeparator2Resource1.Caption" xml:space="preserve">
+    <value>维护信息</value>
+  </data>
+  <data name="tabServiceLevelSurveyResource1.Caption" xml:space="preserve">
+    <value>服务评分标准</value>
+  </data>
+  <data name="tabServiceLevelSurveyResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

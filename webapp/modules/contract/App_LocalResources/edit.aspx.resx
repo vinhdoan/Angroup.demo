@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BillingAddressCityResource1.Caption" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="BillingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="BillingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressResource1.Caption" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="BillingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressStateResource1.Caption" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="BillingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+  <data name="BillingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingContactPersonResource1.Caption" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="BillingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="BillingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="BillingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="BillingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BillingPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+  <data name="ContactCellphoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ToolTip" xml:space="preserve">
+    <value>The cellphone number of the contact person.</value>
+  </data>
+  <data name="ContactEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ContactEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ToolTip" xml:space="preserve">
+    <value>The e-mail address of the contact person.</value>
+  </data>
+  <data name="ContactFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="ContactFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ToolTip" xml:space="preserve">
+    <value>The fax number of the contact person.</value>
+  </data>
+  <data name="ContactPersonResource1.Caption" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ToolTip" xml:space="preserve">
+    <value>The name of the vendor's contact person.</value>
+  </data>
+  <data name="ContactPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ContactPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ToolTip" xml:space="preserve">
+    <value>The telephone number of the contact person.</value>
+  </data>
+  <data name="ContractEndDateResource1.Caption" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="ContractEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ToolTip" xml:space="preserve">
+    <value>The date in which the contract end. Works that begin within the start and end of this contract can be assigned to this contract's vendor.</value>
+  </data>
+  <data name="ContractManagerIDResource1.Caption" xml:space="preserve">
+    <value>Contract Manager</value>
+  </data>
+  <data name="ContractManagerIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractManagerIDResource1.ToolTip" xml:space="preserve">
+    <value>The contract manager responsible for this contract.</value>
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.Caption" xml:space="preserve">
+    <value>Catalog</value>
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_CatalogIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.Caption" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterials_PriceFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterialsResource1.Caption" xml:space="preserve">
+    <value>Purchase Agreement for Materials</value>
+  </data>
+  <data name="ContractPriceMaterialsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceMaterialsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.Caption" xml:space="preserve">
+    <value>Fixed Rate</value>
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.Caption" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServices_PriceFactorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServicesResource1.Caption" xml:space="preserve">
+    <value>Purchase Agreement for Services</value>
+  </data>
+  <data name="ContractPriceServicesResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractPriceServicesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.Caption" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="ContractStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ToolTip" xml:space="preserve">
+    <value>The date in which the contract starts. Works that begin within the start and end of this contract can be assigned to this contract's vendor.</value>
+  </data>
+  <data name="ContractSumResource1.Caption" xml:space="preserve">
+    <value>Contract Sum ($)</value>
+  </data>
+  <data name="ContractSumResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractSumResource1.ToolTip" xml:space="preserve">
+    <value>The contract sum paid or that will be paid to the vendor in dollars.</value>
+  </data>
+  <data name="ContractTypeOfServiceResource1.Caption" xml:space="preserve">
+    <value>Type of Service</value>
+  </data>
+  <data name="ContractTypeOfServiceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractTypeOfServiceResource1.ToolTip" xml:space="preserve">
+    <value>The type of services provided by the specified vendor.</value>
+  </data>
+  <data name="DescriptionResource1.Caption" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DescriptionResource1.ToolTip" xml:space="preserve">
+    <value>The description of the contract in detail.</value>
+  </data>
+  <data name="EndReminderDays1Resource1.Caption" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="EndReminderDays1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays1Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays2Resource1.Caption" xml:space="preserve">
+    <value>Second</value>
+  </data>
+  <data name="EndReminderDays2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays2Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays3Resource1.Caption" xml:space="preserve">
+    <value>Third</value>
+  </data>
+  <data name="EndReminderDays3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays3Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="EndReminderDays4Resource1.Caption" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+  <data name="EndReminderDays4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EndReminderDays4Resource1.ToolTip" xml:space="preserve">
+    <value>The number of days prior to the end date to send the reminder notification. You may specify up to four reminders.</value>
+  </data>
+  <data name="FixedRateResource1.Caption" xml:space="preserve">
+    <value>Fixed Rate</value>
+  </data>
+  <data name="FixedRateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FixedRateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFixedRatesResource1.Caption" xml:space="preserve">
+    <value>Pricing Agreement for Services</value>
+  </data>
+  <data name="gridFixedRatesResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFixedRatesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationAccessResource1.Caption" xml:space="preserve">
+    <value>List of Serviced Locations</value>
+  </data>
+  <data name="gridLocationAccessResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationAccessResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InsuranceResource1.Caption" xml:space="preserve">
+    <value>Insurance</value>
+  </data>
+  <data name="InsuranceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="InsuranceResource1.ToolTip" xml:space="preserve">
+    <value>The information on the insurance of this contract.</value>
+  </data>
+  <data name="label1Resource1.Caption" xml:space="preserve">
+    <value>Reminder before Contract End Date (Days)</value>
+  </data>
+  <data name="label1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Contract Name</value>
+  </data>
+  <data name="OperatingAddressCityResource1.Caption" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="OperatingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="OperatingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressResource1.Caption" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="OperatingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressStateResource1.Caption" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="OperatingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+  <data name="OperatingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingContactPersonResource1.Caption" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="OperatingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="OperatingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="OperatingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="OperatingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="OperatingPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+  <data name="panelEndReminderResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEndReminderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMaintenanceResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMaintenanceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPeopleToRemindResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPeopleToRemindResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPricingAgreementResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelPricingAgreementResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="ProvideMaintenanceResource1.Caption" xml:space="preserve">
+    <value>Maintenance</value>
+  </data>
+  <data name="ProvideMaintenanceResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvideMaintenanceResource1.Text" xml:space="preserve">
+    <value>Yes, to vendor of this contract provides fully-paid maintenance work (for eg., warranty, maintenance support)</value>
+  </data>
+  <data name="ProvideMaintenanceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvidePricingAgreementResource1.Caption" xml:space="preserve">
+    <value>Purchase Agreement</value>
+  </data>
+  <data name="ProvidePricingAgreementResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ProvidePricingAgreementResource1.Text" xml:space="preserve">
+    <value>Yes, the vendor of this contract agrees to a purchase agreement</value>
+  </data>
+  <data name="ProvidePricingAgreementResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder1UserIDResource1.Caption" xml:space="preserve">
+    <value>Person 1</value>
+  </data>
+  <data name="Reminder1UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder1UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder2UserIDResource1.Caption" xml:space="preserve">
+    <value>Person 2</value>
+  </data>
+  <data name="Reminder2UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder2UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder3UserIDResource1.Caption" xml:space="preserve">
+    <value>Person 3</value>
+  </data>
+  <data name="Reminder3UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder3UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="Reminder4UserIDResource1.Caption" xml:space="preserve">
+    <value>Person 4</value>
+  </data>
+  <data name="Reminder4UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Reminder4UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The person to send a notification (via e-mail) when the contract nears its end date. Note: All persons specified in this list will be notified.</value>
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>Reminder Time</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator2Resource1.Caption" xml:space="preserve">
+    <value>Contact Person for this Contract</value>
+  </data>
+  <data name="Separator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.Caption" xml:space="preserve">
+    <value>Operating Location</value>
+  </data>
+  <data name="Separator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator4Resource1.Caption" xml:space="preserve">
+    <value>Billing Location</value>
+  </data>
+  <data name="Separator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabFixedRatesResource1.Caption" xml:space="preserve">
+    <value>Purchase Agreement</value>
+  </data>
+  <data name="tabFixedRatesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabRemindersResource1.Caption" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="tabRemindersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabServiceResource1.Caption" xml:space="preserve">
+    <value>Maintenance and Purchase</value>
+  </data>
+  <data name="tabServiceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabVendorResource1.Caption" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="tabVendorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TermsResource1.Caption" xml:space="preserve">
+    <value>Terms</value>
+  </data>
+  <data name="TermsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TermsResource1.ToolTip" xml:space="preserve">
+    <value>The terms of this contract.</value>
+  </data>
+  <data name="treeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="treeLocationAccessResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeLocationAccessResource1.ToolTip" xml:space="preserve">
+    <value>The location under which the vendor provides his services.</value>
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource11.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>Material(s)</value>
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="UIGridViewColumnResource3.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Pricing Agreement for Services</value>
+  </data>
+  <data name="UIGridViewColumnResource5.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource7.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>Service(s)</value>
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource5.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource5.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>People to Remind</value>
+  </data>
+  <data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorResource1.Caption" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="VendorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorResource1.ToolTip" xml:space="preserve">
+    <value>The vendor responsible for carrying out the work as indicated by this contract.</value>
+  </data>
+  <data name="WarrantyResource1.Caption" xml:space="preserve">
+    <value>Warranty</value>
+  </data>
+  <data name="WarrantyResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WarrantyResource1.ToolTip" xml:space="preserve">
+    <value>The warranty information pertaining to this contract.</value>
+  </data>
+  <data name="buttonAddScheduledWorkResource1.ConfirmText" xml:space="preserve">
+    <value>Please remember to save this Contract before creating a new Scheduled Work.\n\nAre you sure you want to continue?</value>
+  </data>
+  <data name="buttonAddScheduledWorkResource1.Text" xml:space="preserve">
+    <value>Add Scheduled Work</value>
+  </data>
+  <data name="gridScheduledWorksResource1.Caption" xml:space="preserve">
+    <value>Scheduled Works</value>
+  </data>
+  <data name="tabWorkStatusHistoryResource1.Caption" xml:space="preserve">
+    <value>Status History</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Scheduled Work Number</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Type of Work</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>Type of Service</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>Type of Problem</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="tabScheduledWorkResource1.Caption" xml:space="preserve">
+    <value>Scheduled Works</value>
+  </data>
+  <data name="SurveyGroupIDResource1.Caption" xml:space="preserve">
+    <value>Survey Group</value>
+  </data>
+  <data name="UISeparator2Resource1.Caption" xml:space="preserve">
+    <value>Maintenance Information</value>
+  </data>
+</root>

@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCloneBudgetResource1.ConfirmText" xml:space="preserve">
+    <value>This action will bring you to a new page. All unsaved changes that made to the current page will be lost. Are you sure you wish to continue?</value>
+  </data>
+  <data name="btnCloneBudgetResource1.Text" xml:space="preserve">
+    <value>Clone Budget for a different location</value>
+  </data>
+  <data name="btnCloneBudgetResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCloneBudgetYearResource1.ConfirmText" xml:space="preserve">
+    <value>This action will bring you to a new page. All unsaved changes that made to the current page will be lost. Are you sure you wish to continue?</value>
+  </data>
+  <data name="btnCloneBudgetYearResource1.Text" xml:space="preserve">
+    <value>Clone budget for year</value>
+  </data>
+  <data name="btnCloneBudgetYearResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDivideAcrossResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDivideAcrossResource1.Text" xml:space="preserve">
+    <value>Divide Across 12 Months</value>
+  </data>
+  <data name="btnDivideAcrossResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboCloneBudgetYearResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboCloneBudgetYearResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboCloneBudgetYearResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboFinancialMonthResource1.Caption" xml:space="preserve">
+    <value>Start Financial Month</value>
+  </data>
+  <data name="cboFinancialMonthResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboFinancialMonthResource1.ToolTip" xml:space="preserve">
+    <value>The first financial month in the financial year (only applicable for yearly budgets that will be cloned from this budget)</value>
+  </data>
+  <data name="cboFinancialYearResource1.Caption" xml:space="preserve">
+    <value>Start Financial Year:</value>
+  </data>
+  <data name="cboFinancialYearResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cboFinancialYearResource1.ToolTip" xml:space="preserve">
+    <value>Indicate the earliest financial year could be cloned from this budget</value>
+  </data>
+  <data name="chkDisplayActiveItemResource1.Text" xml:space="preserve">
+    <value>Display Active Items only</value>
+  </data>
+  <data name="chkDisplayActiveItemResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdBudgetItem_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdBudgetItem_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdBudgetItemResource1.Caption" xml:space="preserve">
+    <value>Budget Items</value>
+  </data>
+  <data name="grdBudgetItemResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="grdBudgetItemResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationsResource1.Caption" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="gridLocationsResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridLocationsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>No, this item is no longer active</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Yes, this item is active</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="NotifyUser1Resource1.Caption" xml:space="preserve">
+    <value>Notify User 1</value>
+  </data>
+  <data name="NotifyUser1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser1Resource1.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser1Resource2.Caption" xml:space="preserve">
+    <value>Notify User 1</value>
+  </data>
+  <data name="NotifyUser1Resource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser1Resource2.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser1Resource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser2Resource1.Caption" xml:space="preserve">
+    <value>Notify User 2</value>
+  </data>
+  <data name="NotifyUser2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser2Resource1.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser2Resource2.Caption" xml:space="preserve">
+    <value>Notify User 2</value>
+  </data>
+  <data name="NotifyUser2Resource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser2Resource2.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser2Resource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser3Resource1.Caption" xml:space="preserve">
+    <value>Notify User 3</value>
+  </data>
+  <data name="NotifyUser3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser3Resource1.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser3Resource2.Caption" xml:space="preserve">
+    <value>Notify User 3</value>
+  </data>
+  <data name="NotifyUser3Resource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser3Resource2.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser3Resource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser4Resource1.Caption" xml:space="preserve">
+    <value>Notify User 4</value>
+  </data>
+  <data name="NotifyUser4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser4Resource1.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser4Resource2.Caption" xml:space="preserve">
+    <value>Notify User 4</value>
+  </data>
+  <data name="NotifyUser4Resource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyUser4Resource2.ToolTip" xml:space="preserve">
+    <value>User who the system will notify when available amount of a budget item reaches the threshold</value>
+  </data>
+  <data name="NotifyUser4Resource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBudgetItemResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBudgetItemResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelLocationsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelLocationsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PanelMonthAmountResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PanelMonthAmountResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ParentIDResource1.Caption" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ParentIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ParentIDResource1.ToolTip" xml:space="preserve">
+    <value>Indicate location where the budget should be applied to.</value>
+  </data>
+  <data name="rdIsActiveResource1.Caption" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="rdIsActiveResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdIsActiveResource1.ToolTip" xml:space="preserve">
+    <value>If an item is inactive it will not be copied over to a new budget while system clones the budget</value>
+  </data>
+  <data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="tabAttachmentsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabBudgetITemResource1.Caption" xml:space="preserve">
+    <value>Budget Items</value>
+  </data>
+  <data name="tabBudgetITemResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabDetailsResource2.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="tabDetailsResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabDetailsResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="tabMemoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabRemindersResource1.Caption" xml:space="preserve">
+    <value>Reminders</value>
+  </data>
+  <data name="tabRemindersResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabRemindersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerBudgetPeriodResource1.Caption" xml:space="preserve">
+    <value>Number of Months per Period</value>
+  </data>
+  <data name="textDefaultNumberOfMonthsPerBudgetPeriodResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerBudgetPeriodResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerBudgetPeriodResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerIntervalResource1.Caption" xml:space="preserve">
+    <value>Number of Months per Interval</value>
+  </data>
+  <data name="textDefaultNumberOfMonthsPerIntervalResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerIntervalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textDefaultNumberOfMonthsPerIntervalResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TreeBudgetCategoryResource1.Caption" xml:space="preserve">
+    <value>Budget Item</value>
+  </data>
+  <data name="TreeBudgetCategoryResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TreeBudgetCategoryResource1.ToolTip" xml:space="preserve">
+    <value>Budget category that this item refer to</value>
+  </data>
+  <data name="treeLocationResource1.Caption" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="treeLocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeLocationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeLocationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBudgetThresholdResource1.Caption" xml:space="preserve">
+    <value>Budget Threshold (%)</value>
+  </data>
+  <data name="txtBudgetThresholdResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBudgetThresholdResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the percentage that the available budget amount for this item is allowed to fall to. (expressed as a percentage of the original budget for each month). Enter -1 if there is no threshold</value>
+  </data>
+  <data name="txtMonth10Resource1.Caption" xml:space="preserve">
+    <value>Month 10</value>
+  </data>
+  <data name="txtMonth10Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth10Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the ninth month of the financial year </value>
+  </data>
+  <data name="txtMonth11Resource1.Caption" xml:space="preserve">
+    <value>Month 11</value>
+  </data>
+  <data name="txtMonth11Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth11Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the tenth month of the financial year </value>
+  </data>
+  <data name="txtMonth12Resource1.Caption" xml:space="preserve">
+    <value>Month 12</value>
+  </data>
+  <data name="txtMonth12Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth12Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the eleventh month of the financial year </value>
+  </data>
+  <data name="txtMonth1Resource1.Caption" xml:space="preserve">
+    <value>Month 1</value>
+  </data>
+  <data name="txtMonth1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth1Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the first month (second month….twelveth month) of the financial year </value>
+  </data>
+  <data name="txtMonth2Resource1.Caption" xml:space="preserve">
+    <value>Month 2</value>
+  </data>
+  <data name="txtMonth2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth2Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the first month of the financial year </value>
+  </data>
+  <data name="txtMonth3Resource1.Caption" xml:space="preserve">
+    <value>Month 3</value>
+  </data>
+  <data name="txtMonth3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth3Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the second month of the financial year </value>
+  </data>
+  <data name="txtMonth4Resource1.Caption" xml:space="preserve">
+    <value>Month 4</value>
+  </data>
+  <data name="txtMonth4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth4Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the third month of the financial year </value>
+  </data>
+  <data name="txtMonth5Resource1.Caption" xml:space="preserve">
+    <value>Month 5</value>
+  </data>
+  <data name="txtMonth5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth5Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the fourth month of the financial year </value>
+  </data>
+  <data name="txtMonth6Resource1.Caption" xml:space="preserve">
+    <value>Month 6</value>
+  </data>
+  <data name="txtMonth6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth6Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the fifth month of the financial year </value>
+  </data>
+  <data name="txtMonth7Resource1.Caption" xml:space="preserve">
+    <value>Month 7</value>
+  </data>
+  <data name="txtMonth7Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth7Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the sixth month of the financial year </value>
+  </data>
+  <data name="txtMonth8Resource1.Caption" xml:space="preserve">
+    <value>Month 8</value>
+  </data>
+  <data name="txtMonth8Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth8Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the seventh month of the financial year </value>
+  </data>
+  <data name="txtMonth9Resource1.Caption" xml:space="preserve">
+    <value>Month 9</value>
+  </data>
+  <data name="txtMonth9Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMonth9Resource1.ToolTip" xml:space="preserve">
+    <value>The budgeted original amount for the eighth month of the financial year </value>
+  </data>
+  <data name="txtTotalResource1.Caption" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="txtTotalResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalResource1.ToolTip" xml:space="preserve">
+    <value>Enter the total amount to be divided across 12 months</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>Month 7</value>
+  </data>
+  <data name="UIGridViewColumnResource11.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>Month 8</value>
+  </data>
+  <data name="UIGridViewColumnResource12.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>Month 9</value>
+  </data>
+  <data name="UIGridViewColumnResource13.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>Month 10</value>
+  </data>
+  <data name="UIGridViewColumnResource14.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value>Month 11</value>
+  </data>
+  <data name="UIGridViewColumnResource15.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>Month 12</value>
+  </data>
+  <data name="UIGridViewColumnResource16.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>Total($)</value>
+  </data>
+  <data name="UIGridViewColumnResource17.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="UIGridViewColumnResource2.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Budget Items</value>
+  </data>
+  <data name="UIGridViewColumnResource4.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Month 1</value>
+  </data>
+  <data name="UIGridViewColumnResource5.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Month 2</value>
+  </data>
+  <data name="UIGridViewColumnResource6.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Month 3</value>
+  </data>
+  <data name="UIGridViewColumnResource7.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Month 4</value>
+  </data>
+  <data name="UIGridViewColumnResource8.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>Month 5</value>
+  </data>
+  <data name="UIGridViewColumnResource9.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>Month 6</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Inactivate</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to inactivate the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove the selected items?</value>
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Budget Name</value>
+  </data>
+</root>

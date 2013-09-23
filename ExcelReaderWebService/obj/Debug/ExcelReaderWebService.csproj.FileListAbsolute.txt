@@ -1,0 +1,10 @@
+D:\Projects\ccl\abell\ExcelReaderWebService\bin\ExcelReaderWebService.dll
+D:\Projects\ccl\abell\ExcelReaderWebService\bin\ExcelReaderWebService.pdb
+D:\Projects\ccl\abell\ExcelReaderWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ccl\abell\ExcelReaderWebService\obj\Debug\ExcelReaderWebService.dll
+D:\Projects\ccl\abell\ExcelReaderWebService\obj\Debug\ExcelReaderWebService.pdb
+D:\Projects\ANGroup\abell\ExcelReaderWebService\bin\ExcelReaderWebService.dll
+D:\Projects\ANGroup\abell\ExcelReaderWebService\bin\ExcelReaderWebService.pdb
+D:\Projects\ANGroup\abell\ExcelReaderWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\ANGroup\abell\ExcelReaderWebService\obj\Debug\ExcelReaderWebService.dll
+D:\Projects\ANGroup\abell\ExcelReaderWebService\obj\Debug\ExcelReaderWebService.pdb

@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buttonApplyDashboardResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyDashboardResource1.Text" xml:space="preserve">
+    <value>Apply Dashboard</value>
+  </data>
+  <data name="buttonApplyDashboardResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonMassActionResource1.ConfirmText" xml:space="preserve">
+    <value>Are you wish to wish to act on the selected items?</value>
+  </data>
+  <data name="buttonMassActionResource1.Text" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="buttonMassActionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonRefreshResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonRefreshResource1.Text" xml:space="preserve">
+    <value>Refresh Inbox</value>
+  </data>
+  <data name="buttonRefreshResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonSearchResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonSearchResource1.Text" xml:space="preserve">
+    <value>Search Tasks</value>
+  </data>
+  <data name="buttonSearchResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calendarTasksResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calendarTasksResource1.NextMonthText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource1.PrevMonthText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="calendarTasksResource1.SelectMonthText" xml:space="preserve">
+    <value>&amp;gt;&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource1.SelectWeekText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calendarTasksResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="calendarTasksResource2.NextMonthText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource2.PrevMonthText" xml:space="preserve">
+    <value>&amp;lt;</value>
+  </data>
+  <data name="calendarTasksResource2.SelectMonthText" xml:space="preserve">
+    <value>&amp;gt;&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource2.SelectWeekText" xml:space="preserve">
+    <value>&amp;gt;</value>
+  </data>
+  <data name="calendarTasksResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DashboardsResource2.Caption" xml:space="preserve">
+    <value>Dashboards</value>
+  </data>
+  <data name="DashboardsResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DashboardsResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropMassActionResource1.Caption" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="dropMassActionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropMassActionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropMassActionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAnnouncementsResource1.Caption" xml:space="preserve">
+    <value>Announcements</value>
+  </data>
+  <data name="gridAnnouncementsResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAnnouncementsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAnnouncementsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridAnnouncementsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridTasksResource1.Caption" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="gridTasksResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridTasksResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridTasksResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridTasksResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="headerTextResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="headerTextResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageClockResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageClockResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageNewResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageNewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageSubmenuResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageSubmenuResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelDashboardResource1.Text" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="labelDashboardResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelDateTimeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelMessageResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelMessageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelMonthViewResource1.Text" xml:space="preserve">
+    <value>Month View</value>
+  </data>
+  <data name="labelMonthViewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelNewResource1.Text" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="labelNewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelQuickCreateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelQuickCreateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelSelectDashboardsResource1.Text" xml:space="preserve">
+    <value>
+                            Click here to select dashboards&lt;br /&gt;&lt;br /&gt;
+                        </value>
+  </data>
+  <data name="labelSelectDashboardsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelTodayIsResource1.Text" xml:space="preserve">
+    <value>Today is</value>
+  </data>
+  <data name="labelTodayIsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelTodayResource1.Text" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="labelTodayResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="linkCloseResource1.Text" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="linkCloseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listDashboardsResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listDashboardsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+  <data name="panelAnnouncementsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAnnouncementsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBarResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBarResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMassActionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMassActionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMessageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMessageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelNewObjectsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelNewObjectsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelNewResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelNewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTasksResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTasksResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>At A Glance</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep2Resource1.Caption" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="sep2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep3Resource1.Caption" xml:space="preserve">
+    <value>Mass Action</value>
+  </data>
+  <data name="sep3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabstrip1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabstrip1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textCommentsResource1.Caption" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="textCommentsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textCommentsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textCommentsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textSearchResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="textSearchResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="treeGlanceResource1.CollapseImageToolTip" xml:space="preserve">
+    <value>Collapse {0}</value>
+  </data>
+  <data name="treeGlanceResource1.ExpandImageToolTip" xml:space="preserve">
+    <value>Expand {0}</value>
+  </data>
+  <data name="treeGlanceResource1.SkipLinkText" xml:space="preserve">
+    <value>Skip Navigation Links.</value>
+  </data>
+  <data name="treeGlanceResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Date/Time</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>Announcement</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource5.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Task Type</value>
+  </data>
+  <data name="UIGridViewColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Task Number</value>
+  </data>
+  <data name="UIGridViewColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Task Name</value>
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="UIGridViewColumnResource8.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="UIGridViewColumnResource9.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>Month View</value>
+  </data>
+  <data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserDashboardsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UserDashboardsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

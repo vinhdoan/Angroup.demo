@@ -1,0 +1,724 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0DD8A24F-5888-4BCD-A976-2D253B9A40A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WorkflowLayer</RootNamespace>
+    <AssemblyName>WorkflowLayer</AssemblyName>
+    <ProjectTypeGuids>{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Anacle.DataFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.DataFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.WorkflowActivityLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Anacle.WorkflowFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.WorkflowServices">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomizedWorkflowForCapitaland\OBudgetReallocationWorkflow.xoml.cs">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OCaseWorkflow.xoml.cs">
+      <DependentUpon>OCaseWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OEquipmentWriteOffWorkflow.xoml.cs">
+      <DependentUpon>OEquipmentWriteOffWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OLocationStockTakeWorkflow.xoml.cs">
+      <DependentUpon>OLocationStockTakeWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OPurchaseOrderWorkflow.xoml.cs">
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OpurchaseorderworkflowForMarcom.xoml.cs">
+      <DependentUpon>OpurchaseorderworkflowForMarcom.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OPurchaseRequestWorkflow.xoml.cs">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\ORequestForQuotationWorkflow.xoml.cs">
+      <DependentUpon>orequestforquotationworkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OStoreAdjustWorkflow.xoml.cs">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OStoreCheckInWorkflow.xoml.cs">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OStoreCheckOutWorkflow.xoml.cs">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OStoreTransferWorkflow2.xoml.cs">
+      <DependentUpon>OStoreTransferWorkflow2.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OSurveyPlannerWorkflow.xoml.cs">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OUserCreationWorkflow.xoml.cs">
+      <DependentUpon>OUserCreationWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OUserUpdateWorkflow.xoml.cs">
+      <DependentUpon>OUserUpdateWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland\OWorkWorkflow.xoml.cs">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomizedWorkflowForCapitaland-CCL\OWorkWorkflow.xoml.cs">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OBMSAirconLightingWorkflow.xoml.cs">
+      <DependentUpon>OBMSAirconLightingWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OBMSSecurityArmingWorkflow.xoml.cs">
+      <DependentUpon>OBMSSecurityArmingWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OBMSWorkflowWorkflow.xoml.cs">
+      <DependentUpon>OBMSWorkflowWorkflow.xoml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OBudgetReallocationWorkflow.xoml.cs">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OCaseWorkflow.xoml.cs">
+      <DependentUpon>OCaseWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OContractWorkflow.xoml.cs">
+      <DependentUpon>OContractWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\opurchaseinvoiceworkflow.xoml.cs">
+      <DependentUpon>OPurchaseInvoiceWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OPurchaseOrderWorkflow.xoml.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OPurchaseRequestWorkflow.xoml.cs">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\ORequestForQuotationWorkflow.xoml.cs">
+      <DependentUpon>ORequestForQuotationWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OScheduledWorkWorkflow.xoml.cs">
+      <DependentUpon>OScheduledWorkWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreAdjustWorkflow.xoml.cs">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreCheckInWorkflow.xoml.cs">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreCheckOutWorkflow.xoml.cs">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreRequestWorkflow.xoml.cs">
+      <DependentUpon>ostorerequestworkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreStockTakeWorkflow.xoml.cs">
+      <DependentUpon>OStoreStockTakeWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OStoreTransferWorkflow.xoml.cs">
+      <DependentUpon>OStoreTransferWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OSurveyPlannerWorkflow.xoml.cs">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DefaultWorkflow\OWorkWorkflow.xoml.cs">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DefaultWorkflow\TestWorkflow.xoml.cs">
+      <DependentUpon>TestWorkflow.xoml</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomizedWorkflowForANGroup\OCustomerAccountRegistrationWorkflow.layout">
+      <DependentUpon>OCustomerAccountRegistrationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForANGroup\OCustomerAccountRegistrationWorkflow.rules">
+      <DependentUpon>OCustomerAccountRegistrationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OBudgetAdjustmentWorkflow.layout">
+      <DependentUpon>OBudgetAdjustmentWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OBudgetAdjustmentWorkflow.rules">
+      <DependentUpon>OBudgetAdjustmentWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OBudgetPeriodWorkflow.layout">
+      <DependentUpon>OBudgetPeriodWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OBudgetPeriodWorkflow.rules">
+      <DependentUpon>OBudgetPeriodWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OBudgetReallocationWorkflow.layout">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\obudgetreallocationworkflow.rules">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\ocaseworkflow.layout">
+      <DependentUpon>OCaseWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OEquipmentWriteOffWorkflow.layout">
+      <DependentUpon>OEquipmentWriteOffWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OEquipmentWriteOffWorkflow.rules">
+      <DependentUpon>OEquipmentWriteOffWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OLocationStockTakeWorkflow.layout">
+      <DependentUpon>OLocationStockTakeWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OLocationStockTakeWorkflow.rules">
+      <DependentUpon>OLocationStockTakeWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OPurchaseInvoice.layout">
+      <DependentUpon>OPurchaseInvoice.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OPurchaseInvoice.rules">
+      <DependentUpon>OPurchaseInvoice.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\opurchaseorderworkflow.layout">
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\opurchaseorderworkflow.rules">
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OpurchaseorderworkflowForMarcom.layout">
+      <DependentUpon>OpurchaseorderworkflowForMarcom.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OpurchaseorderworkflowForMarcom.rules">
+      <DependentUpon>OpurchaseorderworkflowForMarcom.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OPurchaseRequestWorkflow.layout">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\opurchaserequestworkflow.rules">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\orequestforquotationworkflow.layout">
+      <DependentUpon>orequestforquotationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\ORequestForQuotationWorkflow.rules">
+      <DependentUpon>orequestforquotationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreAdjustWorkflow.layout">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreAdjustWorkflow.rules">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreCheckInWorkflow.layout">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreCheckInWorkflow.rules">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreCheckOutWorkflow.layout">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreCheckOutWorkflow.rules">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreTransferWorkflow2.layout">
+      <DependentUpon>OStoreTransferWorkflow2.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OStoreTransferWorkflow2.rules">
+      <DependentUpon>OStoreTransferWorkflow2.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OSurveyPlannerWorkflow.layout">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OSurveyPlannerWorkflow.rules">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OUserCreationWorkflow.layout">
+      <DependentUpon>OUserCreationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OUserCreationWorkflow.rules">
+      <DependentUpon>OUserCreationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OUserUpdateWorkflow.layout">
+      <DependentUpon>OUserUpdateWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OUserUpdateWorkflow.rules">
+      <DependentUpon>OUserUpdateWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\ovendorprequalificationworkflow.layout">
+      <DependentUpon>ovendorprequalificationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\ovendorprequalificationworkflow.rules">
+      <DependentUpon>ovendorprequalificationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OWorkWorkflow.layout">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland\OWorkWorkflow.rules">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\OVendorEvaluationWorkflow.layout">
+      <DependentUpon>OVendorEvaluationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\OVendorEvaluationWorkflow.rules">
+      <DependentUpon>OVendorEvaluationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\ovendorprequalificationworkflow.layout">
+      <DependentUpon>ovendorprequalificationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\ovendorprequalificationworkflow.rules">
+      <DependentUpon>ovendorprequalificationworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\OWorkWorkflow.layout">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomizedWorkflowForCapitaland-CCL\OWorkWorkflow.rules">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSAirconLightingWorkflow.layout">
+      <DependentUpon>OBMSAirconLightingWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSAirconLightingWorkflow.rules">
+      <DependentUpon>OBMSAirconLightingWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSSecurityArmingWorkflow.layout">
+      <DependentUpon>OBMSSecurityArmingWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSSecurityArmingWorkflow.rules">
+      <DependentUpon>OBMSSecurityArmingWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSWorkflowWorkflow.layout">
+      <DependentUpon>OBMSWorkflowWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBMSWorkflowWorkflow.rules">
+      <DependentUpon>OBMSWorkflowWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBudgetAdjustmentWorkflow.layout">
+      <DependentUpon>OBudgetAdjustmentWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBudgetAdjustmentWorkflow.rules">
+      <DependentUpon>OBudgetAdjustmentWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBudgetPeriodWorkflow.layout">
+      <DependentUpon>OBudgetPeriodWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBudgetPeriodWorkflow.rules">
+      <DependentUpon>OBudgetPeriodWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OBudgetReallocationWorkflow.layout">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\obudgetreallocationworkflow.rules">
+      <DependentUpon>OBudgetReallocationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OCaseWorkflow.layout">
+      <DependentUpon>OCaseWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OContractWorkflow.layout">
+      <DependentUpon>OContractWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OContractWorkflow.rules">
+      <DependentUpon>OContractWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OPurchaseInvoiceWorkflow.layout">
+      <DependentUpon>OPurchaseInvoiceWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OPurchaseInvoiceWorkflow.rules">
+      <DependentUpon>OPurchaseInvoiceWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\opurchaseorderworkflow.layout">
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\opurchaseorderworkflow.rules">
+      <DependentUpon>opurchaseorderworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OPurchaseRequestWorkflow.layout">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\opurchaserequestworkflow.rules">
+      <DependentUpon>OPurchaseRequestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\ORequestForQuotationWorkflow.layout">
+      <DependentUpon>ORequestForQuotationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\ORequestForQuotationWorkflow.rules">
+      <DependentUpon>ORequestForQuotationWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OScheduledWorkWorkflow.layout">
+      <DependentUpon>OScheduledWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OScheduledWorkWorkflow.rules">
+      <DependentUpon>OScheduledWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreAdjustWorkflow.layout">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreAdjustWorkflow.rules">
+      <DependentUpon>OStoreAdjustWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreCheckInWorkflow.layout">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreCheckInWorkflow.rules">
+      <DependentUpon>OStoreCheckInWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreCheckOutWorkflow.layout">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreCheckOutWorkflow.rules">
+      <DependentUpon>OStoreCheckOutWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\ostorerequestworkflow.layout">
+      <DependentUpon>ostorerequestworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\ostorerequestworkflow.rules">
+      <DependentUpon>ostorerequestworkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreStockTakeWorkflow.layout">
+      <DependentUpon>OStoreStockTakeWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreStockTakeWorkflow.rules">
+      <DependentUpon>OStoreStockTakeWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreTransferWorkflow.layout">
+      <DependentUpon>OStoreTransferWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OStoreTransferWorkflow.rules">
+      <DependentUpon>OStoreTransferWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OSurveyPlannerWorkflow.layout">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OSurveyPlannerWorkflow.rules">
+      <DependentUpon>OSurveyPlannerWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OWorkWorkflow.layout">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\OWorkWorkflow.rules">
+      <DependentUpon>OWorkWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\TestWorkflow.layout">
+      <DependentUpon>TestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefaultWorkflow\TestWorkflow.rules">
+      <DependentUpon>TestWorkflow.xoml</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomizedWorkflowForANGroup\OCustomerAccountRegistrationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OBudgetAdjustmentWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OBudgetPeriodWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OBudgetReallocationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OCaseWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OEquipmentWriteOffWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OLocationStockTakeWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OPurchaseInvoice.xoml" />
+    <Content Include="CustomizedWorkflowForCapitaland\opurchaseorderworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OpurchaseorderworkflowForMarcom.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OPurchaseRequestWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\orequestforquotationworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OStoreAdjustWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OStoreCheckInWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OStoreCheckOutWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OStoreTransferWorkflow2.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OSurveyPlannerWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OUserCreationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OUserUpdateWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\ovendorprequalificationworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland\OWorkWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland-CCL\OVendorEvaluationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland-CCL\ovendorprequalificationworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="CustomizedWorkflowForCapitaland-CCL\OWorkWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBMSAirconLightingWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBMSSecurityArmingWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBMSWorkflowWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBudgetPeriodWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OPurchaseInvoiceWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OCaseWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBudgetAdjustmentWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OBudgetReallocationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OContractWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\opurchaseorderworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OPurchaseRequestWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\ORequestForQuotationWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OScheduledWorkWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OStoreAdjustWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OStoreCheckInWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OStoreCheckOutWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\ostorerequestworkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OStoreStockTakeWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OStoreTransferWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OSurveyPlannerWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\OWorkWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+    <Content Include="DefaultWorkflow\TestWorkflow.xoml">
+      <SubType>Component</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{47211713-8A42-41DE-8BAB-73096B90DF3D}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Windows Workflow Foundation\v3.5\Workflow.Targets" />
+</Project>

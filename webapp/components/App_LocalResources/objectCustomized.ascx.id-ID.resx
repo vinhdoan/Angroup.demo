@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buttonPreviewResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonPreviewResource1.Text" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="buttonPreviewResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+  <data name="DisplayOrderResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+    <value>Urutan tampil kolom pencarian. Terendah tampil terdahulu.</value>
+  </data>
+  <data name="field_CheckBoxCaptionResource1.Caption" xml:space="preserve">
+    <value>CheckBox Caption</value>
+  </data>
+  <data name="field_CheckBoxCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CheckBoxCaptionResource1.ToolTip" xml:space="preserve">
+    <value>Teks untuk Kotak Pilih</value>
+  </data>
+  <data name="field_CodeTypeIDResource1.Caption" xml:space="preserve">
+    <value>CodeType</value>
+  </data>
+  <data name="field_CodeTypeIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_CodeTypeIDResource1.ToolTip" xml:space="preserve">
+    <value>Pilih jenis kode yang bisa membuat daftar di kolom ini.</value>
+  </data>
+  <data name="field_ControlCaptionResource1.Caption" xml:space="preserve">
+    <value>Column Caption</value>
+  </data>
+  <data name="field_ControlCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value>Teks untuk setiap kolom yang tampil di halaman pengubah.</value>
+  </data>
+  <data name="field_ControlSpanResource1.Caption" xml:space="preserve">
+    <value>Control Span</value>
+  </data>
+  <data name="field_ControlSpanResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlSpanResource1.ToolTip" xml:space="preserve">
+    <value>Atur tampilan kolom untuk setengah atau seluruh baris.</value>
+  </data>
+  <data name="field_ControlTypeResource1.Caption" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+  <data name="field_ControlTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ControlTypeResource1.ToolTip" xml:space="preserve">
+    <value>Atur jenis kendali untuk pemakai pada saat memasukkan data.</value>
+  </data>
+  <data name="field_DataTypeResource1.Caption" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="field_DataTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_DataTypeResource1.ToolTip" xml:space="preserve">
+    <value>Jenis data di kotak pencarian.</value>
+  </data>
+  <data name="field_isActiveResource1.Caption" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="field_isActiveResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_isActiveResource1.ToolTip" xml:space="preserve">
+    <value>Untuk memberitahukan apakah pemakai bisa merubah kolom.</value>
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.Caption" xml:space="preserve">
+    <value>Populate by Code?</value>
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_IsPopulatedByCodeResource1.ToolTip" xml:space="preserve">
+    <value>Untuk memberitahukan apakah harus mengisi daftar turunan dengan aneka kode.</value>
+  </data>
+  <data name="field_MaxLengthResource1.Caption" xml:space="preserve">
+    <value>Maximum Length</value>
+  </data>
+  <data name="field_MaxLengthResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MaxLengthResource1.ToolTip" xml:space="preserve">
+    <value>Tentukan jumlah huruf maksimal yang bisa dimasukkan dalam kolom.</value>
+  </data>
+  <data name="field_MultiLineTextBoxResource1.Caption" xml:space="preserve">
+    <value>Multi-line</value>
+  </data>
+  <data name="field_MultiLineTextBoxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_MultiLineTextBoxResource1.Text" xml:space="preserve">
+    <value>Ya, ini adalah kotak teks dengan banyak baris.</value>
+  </data>
+  <data name="field_MultiLineTextBoxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_TextListResource1.Caption" xml:space="preserve">
+    <value>Text List</value>
+  </data>
+  <data name="field_TextListResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_TextListResource1.ToolTip" xml:space="preserve">
+    <value>Daftar yang bisa dipilih pemakai berdasarkan teks yang dipisah oleh koma.</value>
+  </data>
+  <data name="field_ToolTipResource1.Caption" xml:space="preserve">
+    <value>ToolTip</value>
+  </data>
+  <data name="field_ToolTipResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ToolTipResource1.ToolTip" xml:space="preserve">
+    <value>Penjelasan tambahan yang muncul ketika pemakai menggerakan cursor ke atas icon.</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.Caption" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeFieldResource1.Text" xml:space="preserve">
+    <value>Yes, kolom ini harus berada dalam jangkauan tetap.</value>
+  </data>
+  <data name="field_ValidateRangeFieldResource1.ToolTip" xml:space="preserve">
+    <value>Tentukan apakah nilai dalam kolom harus berada dalam jangkauan khusus.</value>
+  </data>
+  <data name="field_ValidateRangeMaxResource1.Caption" xml:space="preserve">
+    <value>Range Max</value>
+  </data>
+  <data name="field_ValidateRangeMaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMaxResource1.ToolTip" xml:space="preserve">
+    <value>The maximum value of the range that this field could accept. Acceptable format depends on the data type of the control. For date range, using format yyyy/mm/dd. For date time range, using format yyyy/mm/dd hh:mm:ss</value>
+  </data>
+  <data name="field_ValidateRangeMinResource1.Caption" xml:space="preserve">
+    <value>Range Min</value>
+  </data>
+  <data name="field_ValidateRangeMinResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRangeMinResource1.ToolTip" xml:space="preserve">
+    <value>The minimum value of the range that this field could accept. Acceptable format depends on the data type of the control. For date range, using format yyyy/mm/dd. For date time range, using format yyyy/mm/dd hh:mm:ss</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.Caption" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.Text" xml:space="preserve">
+    <value>Ya, kolom ini dibutuhkan.</value>
+  </data>
+  <data name="field_ValidateRequiredFieldResource1.ToolTip" xml:space="preserve">
+    <value>Tentukan apakah kolom ini wajib diisi.</value>
+  </data>
+  <data name="field_ValueListResource1.Caption" xml:space="preserve">
+    <value>Value List</value>
+  </data>
+  <data name="field_ValueListResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="field_ValueListResource1.ToolTip" xml:space="preserve">
+    <value>Daftar nilai dengan pembatas koma yang sesuai dengan daftar teks.</value>
+  </data>
+  <data name="gridFieldsResource1.Caption" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="gridFieldsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridFieldsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Yes, kolom-kolom ini aktif.</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Ya, isi daftar turunan dengan daftar kode-kode yang mempunya jenis kode seperti ini.</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Tidak, isi daftar turunan dengan daftar dibawah ini.</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Tidak, kolom ini sudah tidak aktif dan pemakai tidak boleh memasukan data sama sekali.</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ObjectFields_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ObjectFields_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListCodeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListCodeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListFieldResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListFieldResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListValueResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelListValueResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelSeparatorResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelSeparatorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTextBoxFieldResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTextBoxFieldResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelValidateRageResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelValidateRageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Control Span</value>
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete selected item?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+</root>

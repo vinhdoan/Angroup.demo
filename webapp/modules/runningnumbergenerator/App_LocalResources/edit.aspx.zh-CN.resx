@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="dropObjectTypeNameResource1.Caption" xml:space="preserve">
+    <value>对象类型名称</value>
+  </data>
+	<data name="hintFormatStringResource1.Text" xml:space="preserve">
+    <value>
+                            &amp;nbsp;使用以下占位符来生产序号。
+                            &lt;br /&gt;
+                            &lt;br /&gt;
+                            &lt;b&gt;{0}&lt;/b&gt;
+                            &lt;br /&gt;
+                            实际序号。若要序号以六位数呈现，请填写{0：000000}。‘：’以后的0数量代表序号的呈现位数。
+                            &lt;hr style="height: 1px" /&gt;
+                            &lt;b&gt;{1}&lt;/b&gt;
+                            &lt;br /&gt;
+                            序号生成日期。若要生成四位数年份，请填写{1：yyyy}，二位数年份则是{1：yy}。若要生成四位数年份和二位数月份，请填写{1：yyyyMM}。若您要序号永远增加并不打算添加日期至序号中，请将占位符{1}自格式化字串符删除。&lt;br /&gt;
+                            &lt;br /&gt;
+                            注意：‘yyyy’ 需为小写字母， ‘MM’需为大写字母。
+                            &lt;hr style="height: 1px" /&gt;
+                            &lt;b&gt;{2}&lt;/b&gt;
+                            &lt;br /&gt;
+                            对象类型代码。通常为对象类型的缩写。
+                            &lt;br /&gt;
+                            &lt;br /&gt;
+                            与前标签视图的对象类型代码一样。
+                            &lt;hr style="height: 1px" /&gt;
+                            &lt;b&gt;{3}&lt;/b&gt;
+                            &lt;br /&gt;
+                            区域/设备代码。唯有当“区域/设备代码”被选用时，代码才会从该工作区域/设备中取出。
+                            &lt;br /&gt;
+                            &lt;br /&gt;
+                            &lt;br /&gt;
+                        </value>
+  </data>
+	<data name="labelExampleOutputResource1.Caption" xml:space="preserve">
+    <value>例子</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>序号永远增加。</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>PO/2009/000001（对象代码， 四位数年份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>{2}/{1:yyyy}/{0:000000}</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>LOC/PO/2009/000001（区域代码，对象代码，四位数年份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>{3}/{2}/{1:yyyy}/{0:000000}</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>PO/LOC/09/000001（对象代码， 区域代码，四位数年份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>{3}/{2}/{1:yyyy}/{0:000000}</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>PO/200907/0001（对象代码， 四位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+    <value>{2}/{1:yyyyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+    <value>LOC/PO/200907/0001（区域代码，对象代码，四位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource14.Value" xml:space="preserve">
+    <value>{3}/{2}/{1:yyyyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>PO/LOC/200907/0001（对象代码，区域代码，四位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+    <value>{2}/{3}/{1:yyyyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>PO/0907/0001（对象代码， 二位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+    <value>{2}/{1:yyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource17.Text" xml:space="preserve">
+    <value>LOC/PO/0907/0001（区域代码，对象代码，二位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource17.Value" xml:space="preserve">
+    <value>{3}/{2}/{1:yyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource18.Text" xml:space="preserve">
+    <value>PO/LOC/0907/0001（对象代码， 区域代码，二位数年份，二位数月份，四位数序号）</value>
+  </data>
+	<data name="ListItemResource18.Value" xml:space="preserve">
+    <value>{2}/{3}/{1:yyMM}/{0:0000}</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>序号增加，每月归零。</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>序号增加，每年归零。</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>不添加区域代码或设备代码至序号中</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>只添加区域代码至序号中</value>
+  </data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>添加区域代码或设备代码至序号中</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>PO/2009/000001（对象代码， 四位数年份，六位数序号）</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>{2}/{1:yyyy}/{0:000000}</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>PO/09/000001（对象代码， 二位数年份，六位数序号）</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>{2}/{1:yy}/{0:000000}</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+	<data name="radioFormatStringResource1.Caption" xml:space="preserve">
+    <value>格式样品</value>
+  </data>
+	<data name="radioIsLocationOrEquipmentCodeAddedResource1.Caption" xml:space="preserve">
+    <value>区域/设备代码</value>
+  </data>
+	<data name="radioRunningNumberBehaviorResource1.Caption" xml:space="preserve">
+    <value>序号特性</value>
+  </data>
+	<data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+	<data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+	<data name="tabFormattingResource1.Caption" xml:space="preserve">
+    <value>格式化</value>
+  </data>
+	<data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>备忘录</value>
+  </data>
+	<data name="textFormatStringResource1.Caption" xml:space="preserve">
+    <value>格式化字符串</value>
+  </data>
+	<data name="textObjectTypePrefixResource1.Caption" xml:space="preserve">
+    <value>对象类型代码</value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>序号生成器</value>
+  </data>
+	<data name="dropObjectTypeNameResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropObjectTypeNameResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropObjectTypeNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="hintFormatStringResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelExampleOutputResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelExampleOutputResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelExampleOutputResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioFormatStringResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioFormatStringResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioFormatStringResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioIsLocationOrEquipmentCodeAddedResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioIsLocationOrEquipmentCodeAddedResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioIsLocationOrEquipmentCodeAddedResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRunningNumberBehaviorResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRunningNumberBehaviorResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="radioRunningNumberBehaviorResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabAttachmentsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabDetailsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabFormattingResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabFormattingResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabMemoResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabMemoResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFleeConditionResource1.Caption" xml:space="preserve">
+		<value>适用条件</value>
+	</data>
+	<data name="textFleeConditionResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFleeConditionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFleeConditionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFormatStringResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFormatStringResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFormatStringResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textObjectTypePrefixResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textObjectTypePrefixResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textObjectTypePrefixResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkUsesAdditionalCodeResource1.Caption" xml:space="preserve">
+		<value>添加代码</value>
+	</data>
+	<data name="checkUsesAdditionalCodeResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkUsesAdditionalCodeResource1.Text" xml:space="preserve">
+		<value>是的，在序号里添加另一个代码</value>
+	</data>
+	<data name="checkUsesAdditionalCodeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkUsesAdditionalCodeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFLEEAdditionalCodeExpressionResource1.Caption" xml:space="preserve">
+		<value>FLEE表达式</value>
+	</data>
+	<data name="textFLEEAdditionalCodeExpressionResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFLEEAdditionalCodeExpressionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textFLEEAdditionalCodeExpressionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+</root>

@@ -1,0 +1,168 @@
+<%@ Register Assembly="schedulecalendar" Namespace="schedulecalendar.rw" TagPrefix="cc1" %>
+
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+
+<cc1:ScheduleGeneral runat="server"  
+    BorderStyle="Solid" BorderColor="silver" GridLines="both" BorderWidth="1px" Layout="Horizontal" CellPadding="0" CellSpacing="0" >
+    <RangeHeaderStyle  CssClass='gantt-rangeheader'/>
+    <TodayStyle cssclass='gantt-today'/>
+    <WeekendStyle cssclass='gantt-weekend' />
+    <TitleStyle cssclass='gantt-title' />
+    <BackgroundStyle CssClass='gantt-background'/>
+</cc1:ScheduleGeneral>
+
+
+<asp:Calendar runat="server" Font-Names="Tahoma" Font-Size="8pt" CellPadding="0" ShowGridLines="True" Width="100%" SkinID="BigCalendar">
+    <TodayDayStyle CssClass="grid-day-big" HorizontalAlign="Left" Font-Bold="True"/>
+    <DayStyle CssClass="grid-day-big" HorizontalAlign="Left" VerticalAlign="Top" BackColor="White" Height="30px" />
+    <WeekendDayStyle CssClass="grid-day-big" HorizontalAlign="Left" BackColor="#eeeeee" VerticalAlign="Top" />
+    <OtherMonthDayStyle CssClass="grid-day-big" HorizontalAlign="Left" ForeColor="LightGray" VerticalAlign="Top" />
+    <DayHeaderStyle CssClass="grid-dayheader" />
+    <TitleStyle CssClass="grid-header" />
+</asp:Calendar>
+
+
+<asp:Calendar runat="server" Font-Names="Tahoma" Font-Size="8pt" CellPadding="0" ShowGridLines="False" BorderStyle="None" Width="100%" SkinID="SmallCalendar">
+    <TodayDayStyle CssClass="grid-day" HorizontalAlign="Center" Font-Bold="True"/>
+    <DayStyle CssClass="grid-day" HorizontalAlign="Center" VerticalAlign="Top" BackColor="White" />
+    <WeekendDayStyle CssClass="grid-day" HorizontalAlign="Center" BackColor="#eeeeee" VerticalAlign="Top" />
+    <OtherMonthDayStyle CssClass="grid-day" HorizontalAlign="Center" ForeColor="LightGray" VerticalAlign="Top" />
+    <DayHeaderStyle CssClass="grid-dayheader" />
+    <TitleStyle CssClass="grid-header" />
+</asp:Calendar>
+
+<ui:uihint runat="server" CssClass="hint"></ui:uihint>
+
+<ui:uigridview runat="server" 
+    GridLines = "None"
+    ErrorCssClass="grid-caption-error"
+    RowErrorColor="#ffcccc"
+    MouseOverColor="#caf8c5"
+    ImageRowErrorUrl="~/images/error.gif" 
+    ImageHintUrl="~/images/information.gif" 
+    ImageErrorUrl="~/images/error.gif">
+    <PagerSettings Mode="NumericFirstLast" PageButtonCount="20" FirstPageImageUrl="~/images/resultset_first.gif" LastPageImageUrl="~/images/resultset_last.gif" />
+    <RowStyle CssClass="grid-row" BackColor="White" />
+    <PagerStyle CssClass="grid-pager" />
+    <CommandBarStyle CssClass="grid-command" />
+    <HeaderStyle CssClass="grid-header" />
+    <FooterStyle CssClass="grid-footer" />
+    <CaptionBarStyle CssClass="grid-caption" VerticalAlign="top" />
+</ui:uigridview>
+
+<ui:uitabstrip runat="server" 
+    Font-Names="Tahoma" 
+    Font-Size="8pt" >
+</ui:uitabstrip>
+
+<ui:UITabView runat="server" CssClass="div-form" > 
+</ui:uitabview>
+
+<ui:UITabView runat="server" CssClass="div-subform"  SkinID="tabviewSubForm"> 
+</ui:uitabview>
+
+<ui:UITabView runat="server" CssClass="div-tree"  SkinID="tabviewTree"> 
+</ui:uitabview>
+
+<ui:UIFieldInputFile runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldInputFile>
+<ui:UIFieldTextBox runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldTextBox>
+
+<ui:UIFieldCheckBox runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldCheckBox>
+
+<ui:UIFieldListBox runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldListBox>
+
+<ui:UIFieldlabel runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldlabel>
+
+<ui:UIFieldradiolist runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldradiolist>
+
+<ui:UIFieldcheckboxlist runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:UIFieldcheckboxlist>
+
+<ui:uifielddropdownlist runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:uifielddropdownlist>
+
+<ui:uifieldsearchabledropdownlist runat="server" 
+    CssClass="searchabledropdown"
+    InputCssClass="sddnormal"
+    InputHoverCssClass="sddhover"
+    InputSearchCssClass="sddsearch"
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif">
+</ui:uifieldsearchabledropdownlist>
+
+<ui:uifieldpopupselection runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif"
+    ImageUrl="~/images/objects-small.gif"
+    ImageClearUrl="~/images/cross.gif">
+</ui:uifieldpopupselection>
+
+<ui:uifieldtreelist runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif"
+    ImageUrl="~/images/objects-small.gif"
+    ImageClearUrl="~/images/cross.gif"
+    ImageSearchUrl="~/images/view.gif"
+    ImageRefreshUrl="~/images/refresh.gif"
+    >
+    <NodeStyle Font-Names="Tahoma" Font-Size="8pt" CssClass="treenode" />
+    <SelectedNodeStyle BackColor="#FFFFFF" BorderColor="#00007F" BorderWidth="1" />
+</ui:uifieldtreelist>
+
+<ui:UIFieldDateTime runat="server" 
+    ImageHintUrl="~/images/information.png" 
+    ImageErrorUrl="~/images/error.gif"
+    ImageUrl="~/images/calendar.gif"
+    ImageClearUrl="~/images/cross.gif">
+</ui:UIFieldDateTime>
+
+<asp:textbox runat="server" font-names="Tahoma" Font-Size="8pt" />
+
+<asp:listbox runat="server" font-names="Tahoma" Font-Size="8pt" />
+
+<asp:dropdownlist runat="server" font-names="Tahoma" Font-Size="8pt" />
+
+<asp:treeview runat="server" ShowLines="false">
+    <NodeStyle Font-Names="Tahoma" Font-Size="8pt" />
+    <SelectedNodeStyle BackColor="#FFFFFF" BorderColor="#00007F" BorderWidth="1" />
+</asp:treeview>
+
+<ui:uiseparator runat="server" Width="100%" CssClass="separator">
+</ui:uiseparator>

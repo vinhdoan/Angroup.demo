@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Contract_EndReminderBody" xml:space="preserve">
+    <value>Dear {0}, 
+
+The contract {ObjectNumber} is expiring soon. The details of the contract are as follows:
+
+Contract Number:   {ObjectNumber}
+Contract Title:    
+  {ObjectName}
+Description:
+  {Description}
+
+Contract Start:    {ContractStartDate:dd-MMM-yyyy}
+Contract End:      {ContractEndDate:dd-MMM-yyyy}
+
+Contact Person:    {ContactPerson}
+Contact Fax:       {ContactFax}
+Contact Email:     {ContactEmail}
+Contact Cellphone: {ContactCellphone}
+
+Contract Manager : {ContractManager.ObjectName}
+
+Terms:
+{Terms}
+
+Warranty:
+{Warranty}
+
+Insurance:
+{Insurance}
+</value>
+  </data>
+  <data name="Contract_EndReminderSubject" xml:space="preserve">
+    <value>Contract expiring {0}, {1}</value>
+  </data>
+  <data name="Work_EscalationAckBody" xml:space="preserve">
+    <value>Dear {0},
+
+The job {ObjectNumber} is still pending acknowledgement. The details of the job are as follows:
+
+Location Path     : {Location.Path}
+Equipment Path  : {Equipment.Path}
+Job Description: {WorkDescription}
+
+Type of Job   : {TypeOfWork.ObjectName}
+Type of Service : {TypeOfService.ObjectName}
+Type of Problem : {TypeOfProblem.ObjectName}
+Priority        : {Priority}
+
+Scheduled Start : {ScheduledStartDateTime}
+Scheduled End   : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+Assigned To     : 
+Contractor      : {Contract.Vendor.ObjectName}
+Technicians     : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+THIS IS FOR YOUR REFERENCE.
+</value>
+  </data>
+  <data name="Work_EscalationAckSubject" xml:space="preserve">
+    <value>Job {0} - Escalation, still pending acknowledgement</value>
+  </data>
+  <data name="Work_EscalationArrBody" xml:space="preserve">
+    <value>Dear {0},
+
+The job {ObjectNumber} is still pending arrival on-site. The details of the job are as follows:
+
+Location Path   : {Location.Path}
+Equipment Path  : {Equipment.Path}
+Job Description: {WorkDescription}
+
+Type of Job    : {TypeOfWork.ObjectName}
+Type of Service : {TypeOfService.ObjectName}
+Type of Problem : {TypeOfProblem.ObjectName}
+Priority        : {Priority}
+
+Scheduled Start : {ScheduledStartDateTime}
+Scheduled End   : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+Assigned To     : 
+Contractor      : {Contract.Vendor.ObjectName}
+Technicians     : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+THIS IS FOR YOUR REFERENCE.</value>
+  </data>
+  <data name="Work_EscalationArrSubject" xml:space="preserve">
+    <value>Job {0} - Escalation, still pending arrived on-site</value>
+  </data>
+  <data name="Work_EscalationComBody" xml:space="preserve">
+    <value>Dear {0},
+
+The job {ObjectNumber} is still pending completion. The details of the job are as follows:
+
+Location Path   : {Location.Path}
+Equipment Path  : {Equipment.Path}
+Job Description: {WorkDescription}
+
+Type of Job       : {TypeOfWork.ObjectName}
+Type of Service : {TypeOfService.ObjectName}
+Type of Problem : {TypeOfProblem.ObjectName}
+Priority        : {Priority}
+
+Scheduled Start : {ScheduledStartDateTime}
+Scheduled End   : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+Assigned To     : 
+Contractor      : {Contract.Vendor.ObjectName}
+Technicians     : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+THIS IS FOR YOUR REFERENCE.</value>
+  </data>
+  <data name="Work_EscalationComSubject" xml:space="preserve">
+    <value>Job {0} - Escalation, still pending completion</value>
+  </data>
+  <data name="Work_SmsNotifyExecution" xml:space="preserve">
+    <value>Dear {0},Job {1} - Pending your execution. Priority: {2} Descr: {3}</value>
+  </data>
+  <data name="Work_SmsNotifyPendingPlanning" xml:space="preserve">
+    <value>Dear {0}, Job {1} - Pending your planning. Priority: {2} Descr: {3}</value>
+  </data>
+  <data name="Store_InventorySubject" xml:space="preserve">
+    <value>Low Inventory Notification for Store - {0}</value>
+  </data>
+  <data name="Store_InventoryBody1" xml:space="preserve">
+    <value>Dear Store Administrator, \n The following inventory items have fallen below their threshold. Please replenish these items. \n\n Store Name: {0} \n Store Location: {1}\n\n Inventory Items Fallen Below Threshold: \n {2:50}{3:40}{4:40}{5:40}{6:40}{7:40}
+</value>
+  </data>
+  <data name="Store_InventoryBody2" xml:space="preserve">
+    <value>{Catalogue.ObjectName}{Catalogue.UnitOfMeasure:40}{TotalAvailableQuantity:40}{TotalPhysicalQuantity:40}{ReorderThreshold:40}{ReorderDefault:40)</value>
+  </data>
+  <data name="Work_NotifyExecutionBody" xml:space="preserve">
+    <value>Job Number {0} -has been accepted and assigned.</value>
+  </data>
+  <data name="Work_NotifyExecutionSubject" xml:space="preserve">
+    <value>Job Number {0} -has been accepted and assigned.</value>
+  </data>
+  <data name="Insurance_EndReminderBody" xml:space="preserve">
+    <value>Dear {0},\n\nPlease be informed that the following insurance end date is approaching.\n\nInsurance Details:\nInsurance Name: {ObjectName}\nInsurance Start Date: {InsuranceStartDate:dd-MMM-yyyy}\nInsurance End Date: {InsuranceEndDate:dd-MMM-yyyy}\nInsured Amount: {InsuredAmount:#,##0.00}\nInsured Term: {InsuranceTerms}\nInsured Remarks: {InsuranceRemarks}\n\nInsurance Company Details:\nCompany Name: {CompanyName}\nContact Person: {CompanyContactPerson}\nContact Number: {CompanyContactNumber}\nPostal Address: {CompanyPostalAddress}
+</value>
+  </data>
+  <data name="Insurance_EndReminderSubject" xml:space="preserve">
+    <value>Insurance End Date Approaching - {0}</value>
+  </data>
+  <data name="Vendor_EndReminderBody" xml:space="preserve">
+    <value>Dear {0},\n\nPlease be informed that the following vendor’s debarment end date is approaching.\n\nVendor Details:\nVendor Name: {ObjectName}\nVendor Debarment Period: From {DebarmentStartDate:dd-MMM-yyyy} To {DebarmentEndDate:dd-MMM-yyyy}\n\nVendor Country: {OperatingAddressCountry}\nVendor City: {OperatingAddressCity}\nVendor State: {OperatingAddressState}
+Vendor Address: {OperatingAddress}\nVendor Cellphone: {OperatingCellPhone}\nVendor Email: {OperatingEmail}\nVendor Fax: {OperatingFax}\nVendor Phone: {OperatingPhone}\nVendor Contact Person: {OperatingContactPerson}</value>
+  </data>
+  <data name="Vendor_EndReminderSubject" xml:space="preserve">
+    <value>Vendor Debarment End Date Approaching - {0}</value>
+  </data>
+  <data name="Work_SmsSupervisorNotify" xml:space="preserve">
+    <value>Dear {0}, Job {1} has been assigned. Please update status</value>
+  </data>
+  <data name="VendorApplication_EndReminderBody" xml:space="preserve">
+    <value>To Finance:
+
+Please be informed that the Vendor Application has been closed, and billing to the vendor may proceed. The details of the Vendor Application are as follows:
+
+	Application No.: {ObjectNumber}
+	Company Name: {CompanyName}	
+	Company Address: {CompanyAddress}
+	Company Postal Code: {CompanyPostalCode}
+	Company Tel No.: {CompanyTelNo}
+	Company Fax No.: {CompanyFaxNo}
+	Contact Person: {CompanyContactPerson}
+	NRIC Number: {CompanyNRICNumber}
+	Contact Number: {CompanyContactPersonContactNo}
+	Address Applying For: {AddressApplyingFor}
+	Service: {Service.ObjectName}
+	Purpose: {Purpose}
+	From Date: {FromDate:dd-MMM-yyyy}
+	To Date: {ToDate:dd-MMM-yyyy}
+		
+	Charges($): {ChargeAmount:#,##0.00}
+	Remarks: {RemarksToFinance}
+
+	Approved By: {Approver.ObjectName}
+	Process Date: {ProcessDate:dd-MMM-yyyy}
+</value>
+  </data>
+  <data name="VendorApplication_EndReminderSubject" xml:space="preserve">
+    <value>Billing Notification to Finance for Vendor Application - {0}</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been submitted for approvals from the following user(s) (order by Approval Limit):
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPendingApproverSubject" xml:space="preserve">
+    <value>PO/WO number : {0} is submitted for your approval</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been submitted for approvals from the following user(s)  (order by Approval Limit):
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="200px"&gt;User&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsSubject" xml:space="preserve">
+    <value>PO/WO number : {0} is submitted for approval</value>
+  </data>
+  <data name="Purchaseorder_NotifyPOhasbeenApprovedBody" xml:space="preserve">
+    <value>PO/WO number {0} has been approved on {1}
+Please log into the system for more details
+</value>
+  </data>
+  <data name="Purchaseorder_NotifyPOhasbeenApprovedSubject" xml:space="preserve">
+    <value>PO/WO number {0} has been approved</value>
+  </data>
+  <data name="Purchaseorder_NotifyOriginalApproverBody" xml:space="preserve">
+    <value>PO/WO number: {ObjectNumber}
+Description: {Description}
+Total PO/WO Amount: {TotalPOAmount} 
+Has been approved by {0} on {1}
+</value>
+  </data>
+  <data name="Purchaseorder_NotifyOriginalApproverSubject" xml:space="preserve">
+    <value>PO/WO number: {0} has been approved by {1}</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody2" xml:space="preserve">
+    <value>&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody3" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;br&gt;
+Please log into Property System to approve/reject the PO/WO.
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody1" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been approved by {0} on {1}&lt;br&gt;
+&lt;br&gt;
+And is awaiting for action from following user(s) (order by Approval Limit) &lt;br&gt;
+&lt;br&gt;
+&lt;table border="0" cellspacing="0"&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody4" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody5" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingSubject" xml:space="preserve">
+    <value>PO/WO number : {0} has been approved by {1}</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been fully approved on {0}.
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedSubject" xml:space="preserve">
+    <value>PO/WO number : {0} has been fully approved</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedBody" xml:space="preserve">
+    <value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been rejected by {0} on {1}.
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedSubject" xml:space="preserve">
+    <value>PO/WO number : {0} has been rejected by {1}</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody2" xml:space="preserve">
+    <value>&lt;tr&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody3" xml:space="preserve">
+    <value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="PurchaseOrder_NotifyGoodReceiptBody" xml:space="preserve">
+    <value>
+Dear User, 
+
+The following job has been closed and a goods receipt has been created for the corresponding Purchase Order:
+	Job Number: {0}
+	Goods Receipt Amount: {1:#,##0.00}
+	Purchase Order: {2}</value>
+  </data>
+  <data name="PurchaseOrder_NotifyGoodReceiptHeader" xml:space="preserve">
+    <value>Job generated from the Term Contract of Purchase Order {0} is closed</value>
+  </data>
+  <data name="PurchaseOrder_SendToVendorBody" xml:space="preserve">
+    <value>Dear Sir/Mdm,&lt;br/&gt;&lt;br/&gt;We are pleased to inform you that Purchase Order {0} has been issued to your company. &lt;br/&gt;&lt;br/&gt;Please refer to the attachment for the scope of works and Terms and Conditions related to this Purchase Order.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;This e-mail is generated by a system automatically. Please do not reply.</value>
+  </data>
+  <data name="PurchaseOrder_SendToVendorSubject" xml:space="preserve">
+    <value>Purchase Order {0} from CapitalCommercial Trust</value>
+  </data>
+</root>

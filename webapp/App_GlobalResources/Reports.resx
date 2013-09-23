@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CenterAdmin" xml:space="preserve">
+    <value>Admin Reports</value>
+  </data>
+  <data name="CenterAsset" xml:space="preserve">
+    <value>Asset Reports</value>
+  </data>
+  <data name="CenterBudget" xml:space="preserve">
+    <value>Budget Reports</value>
+  </data>
+  <data name="CenterInventory" xml:space="preserve">
+    <value>Inventory Reports</value>
+  </data>
+  <data name="CenterProcurement" xml:space="preserve">
+    <value>Procurement Reports</value>
+  </data>
+  <data name="CenterSurvey" xml:space="preserve">
+    <value>Survey Reports</value>
+  </data>
+  <data name="CenterVendor" xml:space="preserve">
+    <value>Vendor Reports</value>
+  </data>
+  <data name="CenterWork" xml:space="preserve">
+    <value>Work Reports</value>
+  </data>
+  <data name="ReporAnalysisOfResponsesOfIndividualQuestions" xml:space="preserve">
+    <value>Analysis of Responses of Individual Questions</value>
+  </data>
+  <data name="ReportApprovalProcess" xml:space="preserve">
+    <value>Approval Process Report</value>
+  </data>
+  <data name="ReportAverageRating" xml:space="preserve">
+    <value>Average Rating Report</value>
+  </data>
+  <data name="ReportBudgetComparison" xml:space="preserve">
+    <value>Budget Comparison Report</value>
+  </data>
+  <data name="ReportBudgetPeriodSummary" xml:space="preserve">
+    <value>Budget Period Summary Report</value>
+  </data>
+  <data name="ReportBudgetPeriodSummarySpreadsheet" xml:space="preserve">
+    <value>Budget Period Summary (Spreadsheet)</value>
+  </data>
+  <data name="ReportBudgetTransactionLog" xml:space="preserve">
+    <value>Budget Transaction Log</value>
+  </data>
+  <data name="ReportBudgetUtilization" xml:space="preserve">
+    <value>Budget Utilization Report</value>
+  </data>
+  <data name="ReportBudgetVariationLog" xml:space="preserve">
+    <value>Budget Variation Log</value>
+  </data>
+  <data name="ReportBudgetVersions" xml:space="preserve">
+    <value>Budget Versions Report</value>
+  </data>
+  <data name="ReportCallerHistory" xml:space="preserve">
+    <value>Caller History Report</value>
+  </data>
+  <data name="ReportCancelledCases" xml:space="preserve">
+    <value>Cancelled Cases Report</value>
+  </data>
+  <data name="ReportCaseAging" xml:space="preserve">
+    <value>Case Aging Report</value>
+  </data>
+  <data name="ReportCaseHistory" xml:space="preserve">
+    <value>Case History Report</value>
+  </data>
+  <data name="ReportCatalogSupplierListing" xml:space="preserve">
+    <value>Catalog Supplier Listing Report</value>
+  </data>
+  <data name="ReportContract" xml:space="preserve">
+    <value>Contract Report</value>
+  </data>
+  <data name="ReportContractSumAwardedToVendors" xml:space="preserve">
+    <value>Contract Sum Awarded to Vendors</value>
+  </data>
+  <data name="ReportEquipment" xml:space="preserve">
+    <value>Equipment Report</value>
+  </data>
+  <data name="ReportEquipmentAvailabilityByYear" xml:space="preserve">
+    <value>Equipment Availability by Year</value>
+  </data>
+  <data name="ReportInventory" xml:space="preserve">
+    <value>Inventory Report</value>
+  </data>
+  <data name="ReportInventoryCatalogListing" xml:space="preserve">
+    <value>Inventory Catalog Listing</value>
+  </data>
+  <data name="ReportInventoryCatalogReport" xml:space="preserve">
+    <value>Inventory Catalog Report</value>
+  </data>
+  <data name="ReportLocation" xml:space="preserve">
+    <value>Location Report</value>
+  </data>
+  <data name="ReportLowInventoryReport" xml:space="preserve">
+    <value>Low Inventory Report</value>
+  </data>
+  <data name="ReportNumberOfWorksAndResponseTime" xml:space="preserve">
+    <value>Number of Works and Response Time Report</value>
+  </data>
+  <data name="ReportOPCAEEvent" xml:space="preserve">
+    <value>OPC AE Event Report</value>
+  </data>
+  <data name="ReportOPCAEEventHistory" xml:space="preserve">
+    <value>OPC AE Event History Report</value>
+  </data>
+  <data name="ReportOverallSatisfaction" xml:space="preserve">
+    <value>Overall Satisfaction Report</value>
+  </data>
+  <data name="ReportPoint" xml:space="preserve">
+    <value>Point Report</value>
+  </data>
+  <data name="ReportPointReading" xml:space="preserve">
+    <value>Point Reading Report</value>
+  </data>
+  <data name="ReportPosition" xml:space="preserve">
+    <value>Position Report</value>
+  </data>
+  <data name="ReportPurchaseInvoice" xml:space="preserve">
+    <value>Purchase Invoice Report</value>
+  </data>
+  <data name="ReportPurchaseOrderAwardedToVendors" xml:space="preserve">
+    <value>PO / LOA Awarded to Vendors</value>
+  </data>
+  <data name="ReportPurchaseOrderHistory" xml:space="preserve">
+    <value>PO / LOA History Report</value>
+  </data>
+  <data name="ReportPurchaseOrderLineItem" xml:space="preserve">
+    <value>PO / LOA Line Items Report</value>
+  </data>
+  <data name="ReportPurchaseRequestHistory" xml:space="preserve">
+    <value>Purchase Request History Report</value>
+  </data>
+  <data name="ReportPurchaseRequestLineItem" xml:space="preserve">
+    <value>Purchase Request Line Item Report</value>
+  </data>
+  <data name="ReportRequestForQuotationHistory" xml:space="preserve">
+    <value>Work Justification History Report</value>
+  </data>
+  <data name="ReportRequestForQuotationLineItem" xml:space="preserve">
+    <value>Work Justification Line Item Report</value>
+  </data>
+  <data name="ReportRequestorCaseHistory" xml:space="preserve">
+    <value>Requestor Case History Report</value>
+  </data>
+  <data name="ReportRFQPOInvoice" xml:space="preserve">
+    <value>WJ/PO/Invoice Report</value>
+  </data>
+  <data name="ReportRoleDashboardAccessControl" xml:space="preserve">
+    <value>Role-Dashboard Access Control Report</value>
+  </data>
+  <data name="ReportRoleFunctionAccess" xml:space="preserve">
+    <value>Role-Function Access Report</value>
+  </data>
+  <data name="ReportRoleReportAccessControl" xml:space="preserve">
+    <value>Role-Report Access Control Report</value>
+  </data>
+  <data name="ReportRunningNumberGenerator" xml:space="preserve">
+    <value>Running Number Generator Report</value>
+  </data>
+  <data name="ReportServiceCatalogue" xml:space="preserve">
+    <value>Service Catalog Report</value>
+  </data>
+  <data name="ReportStockTake" xml:space="preserve">
+    <value>Stock Take Report</value>
+  </data>
+  <data name="ReportStoreInventoryBalance" xml:space="preserve">
+    <value>Store Inventory Balance Report</value>
+  </data>
+  <data name="ReportStoreInventoryMovement" xml:space="preserve">
+    <value>Store Inventory Movement Report</value>
+  </data>
+  <data name="ReportStoreItemReservations" xml:space="preserve">
+    <value>Store Items Reservation Report</value>
+  </data>
+  <data name="ReportStoreItems" xml:space="preserve">
+    <value>Store Items Report</value>
+  </data>
+  <data name="ReportStorePhysicalItemCost" xml:space="preserve">
+    <value>Store Physical Items Cost Report</value>
+  </data>
+  <data name="ReportStorePhysicalItemsCost" xml:space="preserve">
+    <value>Store (Physical Items Cost) Report</value>
+  </data>
+  <data name="ReportSummaryOfCases" xml:space="preserve">
+    <value>Summary of Cases Report</value>
+  </data>
+  <data name="ReportSummaryStockReport" xml:space="preserve">
+    <value>Summary Stock Report</value>
+  </data>
+  <data name="ReportSurveyPlannerResultCount" xml:space="preserve">
+    <value>Survey Planner Result (Count)</value>
+  </data>
+  <data name="ReportSurveyPlannerResultPercentage" xml:space="preserve">
+    <value>Survey Planner Result (Percentage)</value>
+  </data>
+  <data name="ReportSurveyPlannerResultTotalScore" xml:space="preserve">
+    <value>Survey Planner Result (Total Score)</value>
+  </data>
+  <data name="ReportUser" xml:space="preserve">
+    <value>User Report</value>
+  </data>
+  <data name="ReportUserFunctionAccess" xml:space="preserve">
+    <value>User-Function Access Report</value>
+  </data>
+  <data name="ReportUserPositions" xml:space="preserve">
+    <value>User Positions Report</value>
+  </data>
+  <data name="ReportUtilitiesCaptured" xml:space="preserve">
+    <value>Utilities Captured Report</value>
+  </data>
+  <data name="ReportVendor" xml:space="preserve">
+    <value>Vendor Report</value>
+  </data>
+  <data name="ReportWorkAging" xml:space="preserve">
+    <value>Work Aging</value>
+  </data>
+  <data name="ReportWorkAgingByTypeOfServices" xml:space="preserve">
+    <value>Work Aging by Type of Services Report</value>
+  </data>
+  <data name="ReportWorkAgingReport" xml:space="preserve">
+    <value>Work Aging Report</value>
+  </data>
+  <data name="ReportWorkChecklistPerformance" xml:space="preserve">
+    <value>Work Checklist Performance Report</value>
+  </data>
+  <data name="ReportWorkCostBreakdown" xml:space="preserve">
+    <value>Work Cost Breakdown Report</value>
+  </data>
+  <data name="ReportWorkHistory" xml:space="preserve">
+    <value>Work History Report</value>
+  </data>
+  <data name="ReportWorkLaborHours" xml:space="preserve">
+    <value>Work Labor Hours</value>
+  </data>
+  <data name="CenterAuditTrail" xml:space="preserve">
+    <value>Audit Trail Reports</value>
+  </data>
+  <data name="ReportAuditTrail" xml:space="preserve">
+    <value>Audit Trail Report</value>
+  </data>
+  <data name="ReportBudgetPeriodDetailSummary" xml:space="preserve">
+    <value>Budget Period Detail Summary Report</value>
+  </data>
+  <data name="ReportRFQPOInvoiceByAccountedDate" xml:space="preserve">
+    <value>WJ/PO/Invoice Report (by Accrual month)</value>
+  </data>
+</root>

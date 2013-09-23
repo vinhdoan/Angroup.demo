@@ -1,0 +1,200 @@
+<%@ Page Language="C#" Theme="Corporate" Inherits="PageBase" Culture="auto" meta:resourcekey="PageResource1"
+    UICulture="auto" %>
+
+<%@ Register Src="~/components/menu.ascx" TagPrefix="web" TagName="menu" %>
+<%@ Register Src="~/components/objectsearchpanel.ascx" TagPrefix="web" TagName="search" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="Anacle.DataFramework" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="LogicLayer" %>
+
+<%@ Register assembly="Anacle.UIFramework" namespace="Anacle.UIFramework" tagprefix="cc1" %>
+
+<script runat="server">
+    protected void panel_Search(objectSearchPanel.SearchEventArgs e)
+    {
+    }
+
+    protected void gridResults_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        string strPos = "";
+        string strUser = "";
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            Guid objectId = (Guid)gridResults.DataKeys[e.Row.RowIndex][0];
+            OActivity act = TablesLogic.tActivity.Load(objectId);
+            foreach (OPosition position in act.Positions)
+                strPos = strPos == "" ? strPos + position.ObjectName : strPos + ", " + position.ObjectName;
+            foreach (OUser user in act.Users)
+                strUser = strUser == "" ? strUser + user.ObjectName : strUser + ", " + user.ObjectName;
+            e.Row.Cells[8].Text = strPos;
+            e.Row.Cells[7].Text = strUser;
+        }
+    }
+
+
+    //---------------------------------------------------------------
+    // event
+    //---------------------------------------------------------------
+    protected void btnReassign_Clicked(object sender, EventArgs e)
+    {
+        Session["TASK"] = gridResults.GetSelectedKeys();
+        Window.Open(Page.Request.ApplicationPath + "/" + "modules/taskreassignment/reassign.aspx?");
+    }
+
+
+    protected void dropTaskType_ControlChange(object sender, EventArgs e)
+    {
+        DataTable dt = TablesLogic.tActivity
+                        .SelectDistinct(TablesLogic.tActivity.ObjectName.As("Status"),
+                        TablesLogic.tActivity.ObjectName)
+                        .Where(
+                        (dropTaskType.SelectedItem.Text == "" ? Query.True :
+                        TablesLogic.tActivity.ObjectTypeName == dropTaskType.SelectedValue) &
+                        TablesLogic.tActivity.IsDeleted == 0);
+        listStatus.Bind(dt, "Status", "ObjectName");
+    }
+
+
+    protected void panel_PopulateForm(object sender, EventArgs e)
+    {
+        dropTaskType.Bind(OActivity.GetTaskTypeTable(), "TaskType", "ObjectTypeName");
+        foreach (ListItem item in dropTaskType.Items)
+        {
+            string translatedText = Resources.Objects.ResourceManager.GetString(item.Text);
+            if (translatedText != null && translatedText != "")
+                item.Text = translatedText;
+        }
+
+        ((UIGridViewBoundColumn)gridResults.Columns[3]).DataFormatString =
+            OApplicationSetting.Current.BaseCurrency.CurrencySymbol + "{0:n}";
+        
+        listStatus.Bind(OActivity.GetStatuses(""), "ObjectName", "ObjectName");
+        listPriority.Bind(OActivity.GetPriority(), "Priority", "Priority");
+        listPosition.Bind(OPosition.GetAllPositions(), "ObjectName", "ObjectID");
+    }
+
+   
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Simplism.EAM</title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <link href="../../App_Themes/Corporate/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ui:UIObjectPanel runat="server" ID="panelMain" BorderStyle="NotSet" 
+            meta:resourcekey="panelMainResource1">
+            <web:search runat="server" ID="panel" Caption="Re-assign Tasks" GridViewID="gridResults" EditButtonVisible="false"
+                BaseTable="tActivity" OnSearch="panel_Search" meta:resourcekey="panelResource1"
+                SearchType="ObjectQuery" OnPopulateForm="panel_PopulateForm"></web:search>
+            <div class="div-main">
+                <ui:UITabStrip runat="server" ID="tabSearch" 
+                    meta:resourcekey="tabSearchResource1" BorderStyle="NotSet">
+                    <ui:UITabView runat="server" ID="uitabview1" Caption="Search" 
+                        meta:resourcekey="uitabview1Resource1" BorderStyle="NotSet">
+                        <table style="width:100%">
+                            <tr>
+                                <td width="50%">
+                                    <ui:UIFieldTextBox ID="textTaskNumber" runat="server" PropertyName="TaskNumber" 
+                                        Caption="Task Number" MaxLength="255" InternalControlWidth="95%" 
+                                        meta:resourcekey="textTaskNumberResource1" />
+                                </td>
+                                <td width="50%">
+                                    <ui:UIFieldTextBox ID="textDescription" runat="server" PropertyName="Description"
+                                        Caption="Description" InternalControlWidth="95%" 
+                                        meta:resourcekey="textDescriptionResource1" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" width="100%">
+                                    <ui:UIFieldListBox ID="listPriority" runat="server" PropertyName="Priority" 
+                                        Caption="Priority" meta:resourcekey="listPriorityResource1"></ui:UIFieldListBox>
+                                    <ui:UIFieldDropDownList ID="dropTaskType" runat="server" PropertyName="ObjectTypeName"
+                                        Caption="Task Type" OnSelectedIndexChanged="dropTaskType_ControlChange"
+                                        SearchType="Like" meta:resourcekey="dropTaskTypeResource1">
+                                    </ui:UIFieldDropDownList>
+                                
+                                    <ui:UIFieldListBox ID="listStatus" runat="server" PropertyName="ObjectName" 
+                                        Caption="Status" meta:resourcekey="listStatusResource1"></ui:UIFieldListBox>
+                                    <ui:UIFieldTextBox ID="textUser" runat="server" PropertyName="Users.ObjectName" 
+                                        Caption="Assigned to Users" InternalControlWidth="95%" 
+                                        meta:resourcekey="textUserResource1"></ui:UIFieldTextBox>
+                                    <ui:UIFieldListBox ID="listPosition" runat="server" PropertyName="Positions.ObjectID"
+                                        Caption="Assigned to Positions" meta:resourcekey="listPositionResource1"></ui:UIFieldListBox>
+                                </td>
+                            </tr>
+                        </table>
+                    </ui:UITabView>
+                    <ui:UITabView runat="server" ID="uitabview2" Caption="Results" 
+                        meta:resourcekey="uitabview2Resource1" BorderStyle="NotSet">
+                        <ui:UIButton ID="buttonReassign" runat="server" Text="re-assign Tasks" ImageUrl="~/images/add.gif"
+                            OnClick="btnReassign_Clicked" meta:resourcekey="buttonReassignResource1" />
+                        <ui:UIGridView ID="gridResults" runat="server" BorderColor="Black" KeyName="ObjectID"
+                            meta:resourcekey="gridResultsResource1" Width="100%" 
+                            OnRowDataBound="gridResults_RowDataBound" DataKeyNames="ObjectID" 
+                            GridLines="Both" ImageRowErrorUrl="" RowErrorColor="" style="clear:both;">
+                            <PagerSettings Mode="NumericFirstLast" />
+                            <Columns>
+                                <cc1:UIGridViewBoundColumn DataField="ObjectTypeName" HeaderText="Task Type" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource1" PropertyName="ObjectTypeName" 
+                                    ResourceAssemblyName="" ResourceName="Resources.Objects" 
+                                    SortExpression="ObjectTypeName">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="TaskNumber" HeaderText="Task Number" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource2" PropertyName="TaskNumber" 
+                                    ResourceAssemblyName="" SortExpression="TaskNumber">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Description" HeaderText="Description" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource3" PropertyName="Description" 
+                                    ResourceAssemblyName="" SortExpression="Description">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="TaskAmount" HeaderText="Amount" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource4" PropertyName="TaskAmount" 
+                                    ResourceAssemblyName="" SortExpression="TaskAmount">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="ObjectName" HeaderText="Status" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource5" PropertyName="ObjectName" 
+                                    ResourceAssemblyName="" ResourceName="Resources.WorkflowStates" 
+                                    SortExpression="ObjectName">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Priority" HeaderText="Priority" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource6" PropertyName="Priority" 
+                                    ResourceAssemblyName="" SortExpression="Priority">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Users" HeaderText="Assigned Users" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource7" PropertyName="Users" 
+                                    ResourceAssemblyName="" SortExpression="Users">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                                <cc1:UIGridViewBoundColumn DataField="Positions" 
+                                    HeaderText="Assigned Positions" 
+                                    meta:resourcekey="UIGridViewBoundColumnResource8" PropertyName="Positions" 
+                                    ResourceAssemblyName="" SortExpression="Positions">
+                                    <HeaderStyle HorizontalAlign="Left" />
+                                    <ItemStyle HorizontalAlign="Left" />
+                                </cc1:UIGridViewBoundColumn>
+                            </Columns>
+                        </ui:UIGridView>
+                    </ui:UITabView>
+                </ui:UITabStrip>
+            </div>
+        </ui:UIObjectPanel>
+    </form>
+</body>
+</html>

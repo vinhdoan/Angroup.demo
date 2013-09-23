@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_ClearContractListResource1.Text" xml:space="preserve">
+    <value>Clear Contract List</value>
+  </data>
+  <data name="btn_ClearSurveyResource1.Text" xml:space="preserve">
+    <value>Clear Survey</value>
+  </data>
+  <data name="btn_GenerateContractListResource1.Text" xml:space="preserve">
+    <value>Generate Contract List</value>
+  </data>
+  <data name="btn_SetupSurveyResource1.Text" xml:space="preserve">
+    <value>Setup Survey</value>
+  </data>
+  <data name="ChecklistIDResource1.Caption" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="ContractIDResource1.Caption" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>DisplayOrder</value>
+  </data>
+  <data name="dt_ReminderDateResource1.Caption" xml:space="preserve">
+    <value>Reminder Date</value>
+  </data>
+  <data name="gridChecklistResource1.Caption" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="gridExcludeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>List Of Location To Be Excluded</value>
+  </data>
+  <data name="gridIncludeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>List Of Location To Be Included</value>
+  </data>
+  <data name="gridSurveyTradeResource1.Caption" xml:space="preserve">
+    <value>List Of Trade</value>
+  </data>
+  <data name="GV_ContractAccessResource1.Caption" xml:space="preserve">
+    <value>List Of Accessible Contract</value>
+  </data>
+  <data name="GV_HistoryResource1.Caption" xml:space="preserve">
+    <value>Survey Planner History</value>
+  </data>
+  <data name="GV_ProgressResource1.Caption" xml:space="preserve">
+    <value>Progress Status</value>
+  </data>
+  <data name="GV_SurveyContractResource1.Caption" xml:space="preserve">
+    <value>List Of Survey Contract</value>
+  </data>
+  <data name="GV_SurveyLocationResource1.Caption" xml:space="preserve">
+    <value>List Of Survey Location</value>
+  </data>
+  <data name="GV_SurveyReminderResource1.Caption" xml:space="preserve">
+    <value>List Of Reminder</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Surveys for Services provided by Contracted Vendors</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Surveys for Services provided by Contracted Vendors evaluated by Managing Agents</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Surveys for Other Reasons</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="NonContractedVendorResource.Caption" xml:space="preserve">
+    <value>Non Contracted Vendor</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>Survey Planner</value>
+  </data>
+  <data name="PerformancePeriodFromResource1.Caption" xml:space="preserve">
+    <value>Performance Period From</value>
+  </data>
+  <data name="PerformancePeriodToResource1.Caption" xml:space="preserve">
+    <value>Performance Period To</value>
+  </data>
+  <data name="RemarksResource1.Caption" xml:space="preserve">
+    <value>Update Remarks</value>
+  </data>
+  <data name="SurveyFormDescriptionResource1.Caption" xml:space="preserve">
+    <value>Survey Form Description</value>
+  </data>
+  <data name="SurveyFormTitle1Resource1.Caption" xml:space="preserve">
+    <value>Survey Form Title 1</value>
+  </data>
+  <data name="SurveyFormTitle2Resource1.Caption" xml:space="preserve">
+    <value>Survey Form Title 2</value>
+  </data>
+  <data name="SurveyGroupIDResource1.Caption" xml:space="preserve">
+    <value>Contract Group</value>
+  </data>
+  <data name="SurveyThresholdResource1.Caption" xml:space="preserve">
+    <value>Survey Threshold By Percentage</value>
+  </data>
+  <data name="SurveyTypeResource1.Caption" xml:space="preserve">
+    <value>Survey Type</value>
+  </data>
+  <data name="tab_AttachmentsResource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="tab_DetailsResource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="tab_HistoryResource1.Caption" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="tab_MemoResource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="tab_ProgressResource1.Caption" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="tab_ReminderResource1.Caption" xml:space="preserve">
+    <value>Reminder</value>
+  </data>
+  <data name="tab_SurveyResource1.Caption" xml:space="preserve">
+    <value>Survey</value>
+  </data>
+  <data name="tb_EmailListResource1.Caption" xml:space="preserve">
+    <value>List Of Recipient Email Address</value>
+  </data>
+  <data name="tb_EmailListResource1.ToolTip" xml:space="preserve">
+    <value>Please use ; as the separator.</value>
+  </data>
+  <data name="treeExcludeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>Location To Be Excluded</value>
+  </data>
+  <data name="treeIncludeLocationAccessResource1.Caption" xml:space="preserve">
+    <value>Location To Be Included</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+    <value>Contract Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource12.HeaderText" xml:space="preserve">
+    <value>Location Type</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource13.HeaderText" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource14.HeaderText" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource15.HeaderText" xml:space="preserve">
+    <value>Total No. Of Respondent</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource16.HeaderText" xml:space="preserve">
+    <value>Total No. Of Evaluated Party</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource17.HeaderText" xml:space="preserve">
+    <value>Portfolio Type</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource18.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource19.HeaderText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Survey Group</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource20.HeaderText" xml:space="preserve">
+    <value>SRPID</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource21.HeaderText" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource22.HeaderText" xml:space="preserve">
+    <value>Trade</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource23.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource24.HeaderText" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource25.HeaderText" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource26.HeaderText" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource27.HeaderText" xml:space="preserve">
+    <value>Survey Group</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource28.HeaderText" xml:space="preserve">
+    <value>Contract Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource29.HeaderText" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource30.HeaderText" xml:space="preserve">
+    <value>Total No. Of Respondent</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource31.HeaderText" xml:space="preserve">
+    <value>Portfolio Type</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource32.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource33.HeaderText" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource34.HeaderText" xml:space="preserve">
+    <value>Reminder Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource35.HeaderText" xml:space="preserve">
+    <value>List Of Recipient To Be Notified</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource36.HeaderText" xml:space="preserve">
+    <value>Email Sent On</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource37.HeaderText" xml:space="preserve">
+    <value>Trade</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource38.HeaderText" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource39.HeaderText" xml:space="preserve">
+    <value>Contract Start Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource40.HeaderText" xml:space="preserve">
+    <value>Contract End Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource41.HeaderText" xml:space="preserve">
+    <value>Evaluated Party</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource42.HeaderText" xml:space="preserve">
+    <value>Total No. Of Expected Reply</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource43.HeaderText" xml:space="preserve">
+    <value>Total No. Of Actual Reply</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource44.HeaderText" xml:space="preserve">
+    <value>Response Rate (%)</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource45.HeaderText" xml:space="preserve">
+    <value>Previous Survey Threshold By Percentage</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource46.HeaderText" xml:space="preserve">
+    <value>Updated Survey Threshold By Percentage</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource47.HeaderText" xml:space="preserve">
+    <value>Previous Validity End Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource48.HeaderText" xml:space="preserve">
+    <value>Extended Validity End Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource49.HeaderText" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource50.HeaderText" xml:space="preserve">
+    <value>Performed By</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource51.HeaderText" xml:space="preserve">
+    <value>Performed On</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>Response Expected</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>Response Set</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to exclude this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource3.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to exclude this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource4.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to exclude this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource7.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete this item?</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to exclude the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource1.HeaderText" xml:space="preserve">
+    <value>Actual Survey Form</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource2.HeaderText" xml:space="preserve">
+    <value>Survey Form</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource3.HeaderText" xml:space="preserve">
+    <value>Respondent Details</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource4.HeaderText" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource5.HeaderText" xml:space="preserve">
+    <value>Contract Details</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource6.HeaderText" xml:space="preserve">
+    <value>Actual Survey Form</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource7.HeaderText" xml:space="preserve">
+    <value>Survey Form</value>
+  </data>
+  <data name="UIGridViewTemplateColumnResource8.HeaderText" xml:space="preserve">
+    <value>Respondent Details</value>
+  </data>
+  <data name="ValidityEndResource1.Caption" xml:space="preserve">
+    <value>Validity End Date</value>
+  </data>
+  <data name="ValidityStartResource1.Caption" xml:space="preserve">
+    <value>Validity Start Date</value>
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Survey Planner Name</value>
+  </data>
+</root>

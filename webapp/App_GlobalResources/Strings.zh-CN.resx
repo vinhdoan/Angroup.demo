@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CostType_AdhocRate" xml:space="preserve">
+    <value>特殊价格</value>
+  </data>
+  <data name="CostType_FixedRate" xml:space="preserve">
+    <value>固定利率</value>
+  </data>
+  <data name="CostType_Technician" xml:space="preserve">
+    <value>技术人员</value>
+  </data>
+  <data name="Gantt_ChecklistName" xml:space="preserve">
+    <value>工作清单</value>
+  </data>
+  <data name="Gantt_Contract" xml:space="preserve">
+    <value>合同</value>
+  </data>
+  <data name="Gantt_Equipment" xml:space="preserve">
+    <value>设备</value>
+  </data>
+  <data name="Gantt_Location" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="Gantt_PercentageComplete" xml:space="preserve">
+    <value>完成率(%)</value>
+  </data>
+  <data name="Gantt_Priority" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+  <data name="Gantt_ScheduledEndDateTime" xml:space="preserve">
+    <value>计划完成日期</value>
+  </data>
+  <data name="Gantt_ScheduledStartDateTime" xml:space="preserve">
+    <value>计划开始日期</value>
+  </data>
+  <data name="Gantt_Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Gantt_TypeOfProblem" xml:space="preserve">
+    <value>故障类型</value>
+  </data>
+  <data name="Gantt_TypeOfService" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+  <data name="Gantt_TypeOfWork" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+  <data name="Gantt_Vendor" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="Gantt_WorkDescription" xml:space="preserve">
+    <value>工作内容</value>
+  </data>
+  <data name="Gantt_WorkNumber" xml:space="preserve">
+    <value>工作代号</value>
+  </data>
+  <data name="Task_ObjectName" xml:space="preserve">
+    <value>任务名</value>
+  </data>
+  <data name="Task_ObjectNumber" xml:space="preserve">
+    <value>任务编号</value>
+  </data>
+  <data name="Task_Priority" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+  <data name="Task_ScheduledEndDateTime" xml:space="preserve">
+    <value>计划完成日期</value>
+  </data>
+  <data name="Task_ScheduledStartDateTime" xml:space="preserve">
+    <value>计划开始日期</value>
+  </data>
+  <data name="Task_Status" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Text_Explorer" xml:space="preserve">
+    <value>菜单</value>
+  </data>
+  <data name="CustomizedObject_ControlSpan_Full" xml:space="preserve">
+    <value>整行</value>
+  </data>
+  <data name="CustomizedObject_ControlSpan_Half" xml:space="preserve">
+    <value>半行</value>
+  </data>
+  <data name="CustomizedObject_ControlType_CheckBox" xml:space="preserve">
+    <value>复选框</value>
+  </data>
+  <data name="CustomizedObject_ControlType_Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="CustomizedObject_ControlType_DateTime" xml:space="preserve">
+    <value>时间日期</value>
+  </data>
+  <data name="CustomizedObject_ControlType_DropDownList" xml:space="preserve">
+    <value>下拉列表</value>
+  </data>
+  <data name="CustomizedObject_ControlType_RadioList" xml:space="preserve">
+    <value>单选按钮列表</value>
+  </data>
+  <data name="CustomizedObject_ControlType_Separator" xml:space="preserve">
+    <value>分隔符</value>
+  </data>
+  <data name="CustomizedObject_ControlType_TextBox" xml:space="preserve">
+    <value>文本框</value>
+  </data>
+  <data name="CustomizedObject_DataType_DateTime" xml:space="preserve">
+    <value>时间日期</value>
+  </data>
+  <data name="CustomizedObject_DataType_Decimal" xml:space="preserve">
+    <value>小数</value>
+  </data>
+  <data name="CustomizedObject_DataType_Double" xml:space="preserve">
+    <value>双精度型小数</value>
+  </data>
+  <data name="CustomizedObject_DataType_Integer" xml:space="preserve">
+    <value>整数</value>
+  </data>
+  <data name="CustomizedObject_DataType_String" xml:space="preserve">
+    <value>字符串</value>
+  </data>
+  <data name="Memo_New" xml:space="preserve">
+    <value>创建</value>
+  </data>
+  <data name="Budget_No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Budget_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="BudgetCategory_TypeCategory" xml:space="preserve">
+    <value>种类</value>
+  </data>
+  <data name="BudgetCategory_TypeLineItem" xml:space="preserve">
+    <value>行式项目</value>
+  </data>
+  <data name="InventoryCatalogType_Consumables" xml:space="preserve">
+    <value>可消耗的（如：灯泡、灯管等）</value>
+  </data>
+  <data name="InventoryCatalogType_Equipment" xml:space="preserve">
+    <value>设备（如：抽水机、发电机等）</value>
+  </data>
+  <data name="InventoryCatalogType_NonConsumables" xml:space="preserve">
+    <value>不可消耗的（如：桌子、椅子等）</value>
+  </data>
+  <data name="PurchaseOrder_InvoiceSuccess" xml:space="preserve">
+    <value>发票已成功被创建。</value>
+  </data>
+  <data name="PurchaseOrder_InvoiceUnsuccess" xml:space="preserve">
+    <value>无法创建发票。所选收据已有相关发票。</value>
+  </data>
+  <data name="Workflow_NoAction" xml:space="preserve">
+    <value>原地保存项目</value>
+  </data>
+  <data name="Home_Announcements" xml:space="preserve">
+    <value>通告</value>
+  </data>
+  <data name="Home_Inbox" xml:space="preserve">
+    <value>信箱</value>
+  </data>
+  <data name="CustomizedObject_Fields" xml:space="preserve">
+    <value>栏位</value>
+  </data>
+  <data name="Priority_0" xml:space="preserve">
+    <value>0 （低）</value>
+  </data>
+  <data name="Priority_1" xml:space="preserve">
+    <value>1（中）</value>
+  </data>
+  <data name="Priority_2" xml:space="preserve">
+    <value>2（高）</value>
+  </data>
+  <data name="Priority_3" xml:space="preserve">
+    <value>3（紧急）</value>
+  </data>
+  <data name="EAMservice_Running" xml:space="preserve">
+    <value>运作中</value>
+  </data>
+  <data name="Report_RDLtemplate" xml:space="preserve">
+    <value>Report definition language</value>
+  </data>
+  <data name="Report_RPTtemplate" xml:space="preserve">
+    <value>Crystal报告</value>
+  </data>
+  <data name="Report_SelectTree" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="SurveyPlanner_SurveySaved" xml:space="preserve">
+    <value>问卷调查已成功被保存至数据库。</value>
+  </data>
+  <data name="SurveyPlanner_SurveySubmitted" xml:space="preserve">
+    <value>问卷调查提交成功。</value>
+  </data>
+  <data name="SurveyPlanner_NotEditable" xml:space="preserve">
+    <value>该问卷调查已被提交，无法进行编辑。</value>
+  </data>
+  <data name="SurveyPlanner_NotEditableDueToClose" xml:space="preserve">
+    <value>该问卷调查已被终结，无法进行编辑。</value>
+  </data>
+  <data name="Point_AbsoluteMeter" xml:space="preserve">
+    <value>绝对</value>
+  </data>
+  <data name="Point_IncreasingMeter" xml:space="preserve">
+    <value>增加</value>
+  </data>
+  <data name="Dashboard_Preview" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="Dashboard_Print" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="Results_AddSelected" xml:space="preserve">
+    <value>添加所选项目</value>
+  </data>
+  <data name="Work_Priority0" xml:space="preserve">
+    <value>0 - 不急</value>
+  </data>
+  <data name="Work_Priority1" xml:space="preserve">
+    <value>1 - 普通</value>
+  </data>
+  <data name="Work_Priority2" xml:space="preserve">
+    <value>2 - 急</value>
+  </data>
+  <data name="Work_Priority3" xml:space="preserve">
+    <value>3 - 特急</value>
+  </data>
+</root>

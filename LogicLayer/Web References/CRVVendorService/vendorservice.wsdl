@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://crv.dc.capitaland.com/crvservice/VendorService.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://crv.dc.capitaland.com/crvservice/VendorService.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://crv.dc.capitaland.com/crvservice/VendorService.asmx">
+      <s:element name="SubscribeVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubscribeVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubscribeVendorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnSubscribeVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UnSubscribeVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UnSubscribeVendorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsVendorSubscribed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsVendorSubscribedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsVendorSubscribedResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutdatedAndNewVendorList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutdatedAndNewVendorListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOutdatedAndNewVendorListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BRN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendorname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchVendorResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVendorResult" type="tns:Vendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Vendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyRegistrationNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SBU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IncCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressBlockHouseNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressStreetName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressUnitNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressBuildingname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegAddressPostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressBlockHouseNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressStreetName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressUnitNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressBuildingname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpsCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatingAddressPostalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorVersion" type="tns:VendorVersion" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VendorVersion">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorLocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorTradeTypes" type="tns:ArrayOfVendorTradeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRVVendorSpecs" type="tns:ArrayOfVendorSpecification" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorFinancialStatuses" type="tns:ArrayOfVendorFinancialStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVendorTradeType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VendorTradeType" nillable="true" type="tns:VendorTradeType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VendorTradeType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVendorSpecification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VendorSpecification" nillable="true" type="tns:VendorSpecification" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VendorSpecification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorClassID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVendorFinancialStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VendorFinancialStatus" nillable="true" type="tns:VendorFinancialStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VendorFinancialStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Year" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorisedCapital" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaidUpCapital" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="LatestShareholderFund" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentAssetOverLiabilities" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TurnOver" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="NetProfitOverLossAfterTax" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DebtRatio" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InventoryTurnover" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InterestCoverRatio" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConfirmVendorRetrieved">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CRVVendorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmVendorRetrievedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmVendorRetrievedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeTypeCodesByVendorType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorTypeID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTradeTypeCodesByVendorTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTradeTypeCodesByVendorTypeResult" type="tns:ArrayOfCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Code" nillable="true" type="tns:Code" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Code">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedDateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVendorClassificationCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVendorClassificationCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVendorClassificationCodesResult" type="tns:ArrayOfCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVendorTypeCodes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="systemcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVendorTypeCodesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVendorTypeCodesResult" type="tns:ArrayOfCode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SubscribeVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:SubscribeVendor" />
+  </wsdl:message>
+  <wsdl:message name="SubscribeVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:SubscribeVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnSubscribeVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:UnSubscribeVendor" />
+  </wsdl:message>
+  <wsdl:message name="UnSubscribeVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:UnSubscribeVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsVendorSubscribedSoapIn">
+    <wsdl:part name="parameters" element="tns:IsVendorSubscribed" />
+  </wsdl:message>
+  <wsdl:message name="IsVendorSubscribedSoapOut">
+    <wsdl:part name="parameters" element="tns:IsVendorSubscribedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOutdatedAndNewVendorListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOutdatedAndNewVendorList" />
+  </wsdl:message>
+  <wsdl:message name="GetOutdatedAndNewVendorListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOutdatedAndNewVendorListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchVendor" />
+  </wsdl:message>
+  <wsdl:message name="SearchVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVendor" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmVendorRetrievedSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmVendorRetrieved" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmVendorRetrievedSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmVendorRetrievedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeTypeCodesByVendorTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTradeTypeCodesByVendorType" />
+  </wsdl:message>
+  <wsdl:message name="GetTradeTypeCodesByVendorTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTradeTypeCodesByVendorTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorClassificationCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVendorClassificationCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorClassificationCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVendorClassificationCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorTypeCodesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVendorTypeCodes" />
+  </wsdl:message>
+  <wsdl:message name="GetVendorTypeCodesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVendorTypeCodesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VendorServiceSoap">
+    <wsdl:operation name="SubscribeVendor">
+      <wsdl:input message="tns:SubscribeVendorSoapIn" />
+      <wsdl:output message="tns:SubscribeVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeVendor">
+      <wsdl:input message="tns:UnSubscribeVendorSoapIn" />
+      <wsdl:output message="tns:UnSubscribeVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsVendorSubscribed">
+      <wsdl:input message="tns:IsVendorSubscribedSoapIn" />
+      <wsdl:output message="tns:IsVendorSubscribedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutdatedAndNewVendorList">
+      <wsdl:input message="tns:GetOutdatedAndNewVendorListSoapIn" />
+      <wsdl:output message="tns:GetOutdatedAndNewVendorListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchVendor">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">If BRN has value, the search will 
+        only perform 'Search Exact' based on BRN. Only when BRN is empty, the search will perform 'Search Exact' based on vendorname.</wsdl:documentation>
+      <wsdl:input message="tns:SearchVendorSoapIn" />
+      <wsdl:output message="tns:SearchVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendor">
+      <wsdl:input message="tns:GetVendorSoapIn" />
+      <wsdl:output message="tns:GetVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmVendorRetrieved">
+      <wsdl:input message="tns:ConfirmVendorRetrievedSoapIn" />
+      <wsdl:output message="tns:ConfirmVendorRetrievedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeTypeCodesByVendorType">
+      <wsdl:input message="tns:GetTradeTypeCodesByVendorTypeSoapIn" />
+      <wsdl:output message="tns:GetTradeTypeCodesByVendorTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorClassificationCodes">
+      <wsdl:input message="tns:GetVendorClassificationCodesSoapIn" />
+      <wsdl:output message="tns:GetVendorClassificationCodesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorTypeCodes">
+      <wsdl:input message="tns:GetVendorTypeCodesSoapIn" />
+      <wsdl:output message="tns:GetVendorTypeCodesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VendorServiceSoap" type="tns:VendorServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubscribeVendor">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/SubscribeVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeVendor">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/UnSubscribeVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsVendorSubscribed">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/IsVendorSubscribed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutdatedAndNewVendorList">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetOutdatedAndNewVendorList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVendor">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/SearchVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendor">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmVendorRetrieved">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/ConfirmVendorRetrieved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeTypeCodesByVendorType">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetTradeTypeCodesByVendorType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorClassificationCodes">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendorClassificationCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorTypeCodes">
+      <soap:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendorTypeCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VendorServiceSoap12" type="tns:VendorServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SubscribeVendor">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/SubscribeVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnSubscribeVendor">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/UnSubscribeVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsVendorSubscribed">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/IsVendorSubscribed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutdatedAndNewVendorList">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetOutdatedAndNewVendorList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchVendor">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/SearchVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendor">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmVendorRetrieved">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/ConfirmVendorRetrieved" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradeTypeCodesByVendorType">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetTradeTypeCodesByVendorType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorClassificationCodes">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendorClassificationCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorTypeCodes">
+      <soap12:operation soapAction="http://crv.dc.capitaland.com/crvservice/VendorService.asmx/GetVendorTypeCodes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VendorService">
+    <wsdl:port name="VendorServiceSoap" binding="tns:VendorServiceSoap">
+      <soap:address location="http://belle/crvservice/vendorservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VendorServiceSoap12" binding="tns:VendorServiceSoap12">
+      <soap12:address location="http://belle/crvservice/vendorservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

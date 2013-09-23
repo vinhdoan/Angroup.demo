@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Migrations>
+  <Migration name="Vendor" handler="DataMigration.Logic.VendorHandler">
+    <Fields>
+      <Field name="Vendor Name" type="nvarchar"></Field>
+      <Field name="Tax Code" type="nvarchar"></Field>
+      <Field name="Currency Code" type="nvarchar"></Field>
+      <Field name="Operating Country" type="nvarchar"></Field>
+      <Field name="Operating State" type="nvarchar"></Field>
+      <Field name="Operating City" type="nvarchar"></Field>
+      <Field name="Operating Address" type="nvarchar"></Field>
+      <Field name="Operating Cellphone" type="nvarchar"></Field>
+      <Field name="Operating Phone" type="nvarchar"></Field>
+      <Field name="Operating Fax" type="nvarchar"></Field>
+      <Field name="Operating Email" type="nvarchar"></Field>
+      <Field name="Operating Contact Person" type="nvarchar"></Field>
+      <Field name="Billing Country" type="nvarchar"></Field>
+      <Field name="Billing State" type="nvarchar"></Field>
+      <Field name="Billing City" type="nvarchar"></Field>
+      <Field name="Billing Address" type="nvarchar"></Field>
+      <Field name="Billing Cellphone" type="nvarchar"></Field>
+      <Field name="Billing Phone" type="nvarchar"></Field>
+      <Field name="Billing Fax" type="nvarchar"></Field>
+      <Field name="Billing Email" type="nvarchar"></Field>
+      <Field name="Billing Contact Person" type="nvarchar"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="StoreItem" handler="DataMigration.Logic.StoreItemHandlerForCapitaland">
+    <Fields>
+      <Field name="Store" type="nvarchar"></Field>
+      <Field name="Location" type="nvarchar"></Field>
+      <Field name="Stock Code" type="nvarchar"></Field>
+      <Field name="Description" type="nvarchar"></Field>
+      <Field name="UOM" type="nvarchar"></Field>
+      <Field name="Avg-Cost" type="nvarchar"></Field>
+      <Field name="Qty" type="nvarchar"></Field>
+      <Field name="On-Hand" type="nvarchar"></Field>
+      <Field name="Remarks" type="nvarchar"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="InventoryCatalogue" handler="DataMigration.Logic.InventoryCatalogueHandler">
+    <Fields>
+      <Field name="Store" type="nvarchar"></Field>
+      <Field name="Stock Code" type="nvarchar"></Field>
+      <Field name="UOM" type="nvarchar"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="StoreCatalog" handler="DataMigration.Logic.StoreCatalogueHandlerForCapitaland">
+    <Fields>
+      <Field name="Store" type="nvarchar"></Field>
+      <Field name="Catalog Name" type="nvarchar"></Field>
+      <Field name="Reorder Quantity" type="nvarchar"></Field>
+      <Field name="Threshold Quantity" type="nvarchar"></Field>
+      <Field name="Unit Price" type="nvarchar"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="CatalogueType" handler="DataMigration.Logic.CatalogTypeCCLHandler">
+    <Fields>
+      <Field type="nvarchar" name="CatalogType"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="Catalogue" handler="DataMigration.Logic.CatalogueCCLHandler">
+    <Fields>
+      <Field type="nvarchar" name="Catalog Type"></Field>
+      <Field type="nvarchar" name="Catalog Name"></Field>
+      <Field type="nvarchar" name="Unit of Measure"></Field>
+      <Field type="nvarchar" name="Premium Type"></Field>
+      <Field type="nvarchar" name="Unit Price"></Field>
+      <Field type="nvarchar" name="Stock Code"></Field>
+      <Field type="nvarchar" name="Type"></Field>
+      <Field type="nvarchar" name="Store Name"></Field>
+      <Field type="nvarchar" name="Manufacturer"></Field>
+      <Field type="nvarchar" name="Model"></Field>
+      <Field type="nvarchar" name="Input Tax"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="StoreItemOpeningBalance" handler="DataMigration.Logic.StoreItemOpeningBalanceHandler">
+    <Fields>
+      <Field type="nvarchar" name="Store Name"></Field>
+      <Field type="nvarchar" name="Catalog Path"></Field>
+      <Field type="nvarchar" name="Bin Name"></Field>
+      <Field type="nvarchar" name="Unit Price"></Field>
+      <Field type="nvarchar" name="Actual Quantity"></Field>
+      <Field type="nvarchar" name="Date of Delivery"></Field>
+      <Field type="nvarchar" name="Expiry Date"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="Stores" handler="DataMigration.Logic.StoreCCLHandler">
+    <Fields>
+      <Field type="nvarchar" name="Store Name"></Field>
+      <Field type="nvarchar" name="Location Name"></Field>
+      <Field type="nvarchar" name="Bins"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="BudgetAccount" handler="DataMigration.Logic.BudgetAccountHandler">
+    <Fields>
+      <Field type="nvarchar" name="BudgetAccount"></Field>
+      <Field type="nvarchar" name="AccountType"></Field>
+      <Field type="nvarchar" name="AccountCode"></Field>
+      <Field type="nvarchar" name="Description"></Field>
+    </Fields>    
+  </Migration>
+  <Migration name="WJ" handler="DataMigration.Logic.WJHandler">
+    <Fields>
+      <Field type="nvarchar" name="WJ Number"></Field>
+      <Field type="nvarchar" name="Description"></Field>
+      <Field type="nvarchar" name="Recoverable"></Field>
+      <Field type="nvarchar" name="Background Type"></Field>
+      <Field type="nvarchar" name="Budget Group"></Field>
+      <Field type="nvarchar" name="Transaction Type Group"></Field>
+      <Field type="nvarchar" name="Transaction Type"></Field>
+      <Field type="nvarchar" name="Term Contract"></Field>
+      <Field type="nvarchar" name="Requestor Name"></Field>
+      <Field type="nvarchar" name="Date Required"></Field>
+      <Field type="nvarchar" name="Date End"></Field>
+      <Field type="nvarchar" name="Background"></Field>
+      <Field type="nvarchar" name="Scope"></Field>
+      <Field type="nvarchar" name="Has Warranty"></Field>
+      <Field type="nvarchar" name="Line Item Receipt Mode"></Field>
+      <Field type="nvarchar" name="Line Item Description"></Field>
+      <Field type="nvarchar" name="Line Item Quantity"></Field>
+      <Field type="nvarchar" name="Line Item Unit Price"></Field>
+      <Field type="nvarchar" name="Vendor Name"></Field>
+      <Field type="nvarchar" name="Vendor Contact Person"></Field>
+      <Field type="nvarchar" name="Date of Quotation"></Field>
+      <Field type="nvarchar" name="Quotation Ref No"></Field>
+      <Field type="nvarchar" name="Vendor Price"></Field>
+      <Field type="nvarchar" name="Budget Account"></Field>
+      <Field type="nvarchar" name="Accrual Date"></Field>
+    </Fields>    
+  </Migration>    
+</Migrations>

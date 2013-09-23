@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="buttonCancelTemplateResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonCancelTemplateResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="buttonCancelTemplateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonDownloadResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonDownloadResource1.Text" xml:space="preserve">
+    <value>Download File</value>
+  </data>
+	<data name="buttonDownloadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonGetParamResource1.ConfirmText" xml:space="preserve">
+    <value>This action will delete all existing report filters and create a new set of filters based on the report parameters. Are you sure you wish to continue?</value>
+  </data>
+	<data name="buttonGetParamResource1.Text" xml:space="preserve">
+    <value>Generate report filters</value>
+  </data>
+	<data name="buttonGetParamResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonUpdateTemplateResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonUpdateTemplateResource1.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+	<data name="buttonUpdateTemplateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonUploadResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonUploadResource1.Text" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+	<data name="buttonUploadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CascadeControlIDResource1.Caption" xml:space="preserve">
+    <value>Cascading Control</value>
+  </data>
+	<data name="CascadeControlIDResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CascadeControlIDResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the dropdown list control that is updated if this dropdown list changes.</value>
+  </data>
+	<data name="CascadeControlIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CategoryNameResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CategoryNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsRequiredFieldResource1.Caption" xml:space="preserve">
+    <value>Is Required</value>
+  </data>
+	<data name="checkIsRequiredFieldResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsRequiredFieldResource1.Text" xml:space="preserve">
+    <value>Yes, the user must enter a value or select an item before performing the search.</value>
+  </data>
+	<data name="checkIsRequiredFieldResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsRequiredFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ColumnNameResource1.Caption" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+	<data name="ColumnNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ColumnNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ColumnNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContextFilterResource1.Caption" xml:space="preserve">
+    <value>Context Tree</value>
+  </data>
+	<data name="ContextFilterResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContextFilterResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContextFilterResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContextTreeResource1.Caption" xml:space="preserve">
+    <value>Top Context Tree</value>
+  </data>
+	<data name="ContextTreeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ContextTreeResource1.ToolTip" xml:space="preserve">
+    <value>The context tree that appears on the left frame for the report.</value>
+  </data>
+	<data name="ContextTreeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlCaptionResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlIdentifierResource1.Caption" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+	<data name="ControlIdentifierResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlIdentifierResource1.ToolTip" xml:space="preserve">
+    <value>The identifier that can be used in the SQL query to perform a filter.</value>
+  </data>
+	<data name="ControlIdentifierResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlSpanResource1.Caption" xml:space="preserve">
+    <value>Span</value>
+  </data>
+	<data name="ControlSpanResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlSpanResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the search field spans half the width of the form, or the full width.</value>
+  </data>
+	<data name="ControlSpanResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlTypeResource1.Caption" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+	<data name="ControlTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlTypeResource1.ToolTip" xml:space="preserve">
+    <value>The type of the control that the user inputs.</value>
+  </data>
+	<data name="ControlTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CSharpMethodNameResource1.Caption" xml:space="preserve">
+    <value>C# Method Name</value>
+  </data>
+	<data name="CSharpMethodNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CSharpMethodNameResource1.ToolTip" xml:space="preserve">
+    <value>Enter the C# method name in the LogicLayer.Reports class that is to be called to generate the report.</value>
+  </data>
+	<data name="CSharpMethodNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTextFieldResource1.Caption" xml:space="preserve">
+    <value>Data Text Field</value>
+  </data>
+	<data name="DataTextFieldResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTextFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used as a value in the dashboard query.</value>
+  </data>
+	<data name="DataTextFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTypeResource1.Caption" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+	<data name="DataTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTypeResource1.ToolTip" xml:space="preserve">
+    <value>The data type of the search field.</value>
+  </data>
+	<data name="DataTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataValueFieldResource1.Caption" xml:space="preserve">
+    <value>Data Value Field</value>
+  </data>
+	<data name="DataValueFieldResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataValueFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be displayed to the user.</value>
+  </data>
+	<data name="DataValueFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="DisplayOrderResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+    <value>The order of display of the search field. Lower appears first.</value>
+  </data>
+	<data name="DisplayOrderResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridRDLTemplateResource1.Caption" xml:space="preserve">
+    <value>Report Template</value>
+  </data>
+	<data name="gridRDLTemplateResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridRDLTemplateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridRDLTemplateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridRDLTemplateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gv_ColumnMappingResource1.Caption" xml:space="preserve">
+    <value>Report Column Mappings</value>
+  </data>
+	<data name="gv_ColumnMappingResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gv_ColumnMappingResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gv_ColumnMappingResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gv_ColumnMappingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="hintReportResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="hintReportResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsDynamicReportResource1.Caption" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+	<data name="IsDynamicReportResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsDynamicReportResource1.ToolTip" xml:space="preserve">
+    <value>Specify type of report, either dynamic (drag and drop report) or static (using report template rdl/rdlc file)</value>
+  </data>
+	<data name="IsDynamicReportResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Caption" xml:space="preserve">
+    <value>Populate with Query?</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the dropdown list should be populated with a query, or populated with a list of comma-separated values.</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="lblRdlFilenameResource1.Text" xml:space="preserve">
+    <value>Report Template File:</value>
+  </data>
+	<data name="lblRdlFilenameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Service Catalog</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>9</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Half</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Full</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+	<data name="ListItemResource14.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>DropDownList</value>
+  </data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>RadioButtonList</value>
+  </data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource17.Text" xml:space="preserve">
+    <value>String</value>
+  </data>
+	<data name="ListItemResource17.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource18.Text" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+	<data name="ListItemResource18.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource19.Text" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+	<data name="ListItemResource19.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource20.Text" xml:space="preserve">
+    <value>Double</value>
+  </data>
+	<data name="ListItemResource20.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource21.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+	<data name="ListItemResource21.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource22.Text" xml:space="preserve">
+    <value>Object Identifier</value>
+  </data>
+	<data name="ListItemResource22.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource23.Text" xml:space="preserve">
+    <value>Spreadsheet Report or Static Template Report</value>
+  </data>
+	<data name="ListItemResource23.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource24.Text" xml:space="preserve">
+    <value>Report Definition Language with Embedded Query</value>
+  </data>
+	<data name="ListItemResource24.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource25.Text" xml:space="preserve">
+    <value>@</value>
+  </data>
+	<data name="ListItemResource25.Value" xml:space="preserve">
+    <value>@</value>
+  </data>
+	<data name="ListItemResource26.Text" xml:space="preserve">
+    <value>:</value>
+  </data>
+	<data name="ListItemResource26.Value" xml:space="preserve">
+    <value>:</value>
+  </data>
+	<data name="ListItemResource27.Text" xml:space="preserve">
+    <value>Populate with a List of Comma-separated values</value>
+  </data>
+	<data name="ListItemResource27.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource28.Text" xml:space="preserve">
+    <value>Populate with a query</value>
+  </data>
+	<data name="ListItemResource28.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource29.Text" xml:space="preserve">
+    <value>Populate with a C# Method</value>
+  </data>
+	<data name="ListItemResource29.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Code</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource30.Text" xml:space="preserve">
+    <value>Report Definition Language</value>
+  </data>
+	<data name="ListItemResource30.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource31.Text" xml:space="preserve">
+    <value>Crystal Reports</value>
+  </data>
+	<data name="ListItemResource31.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource32.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+	<data name="ListItemResource32.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource33.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+	<data name="ListItemResource33.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource34.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+	<data name="ListItemResource34.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>CodeType</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>EquipmentType</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>LocationType</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Location and Equipment</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>8</value>
+  </data>
+	<data name="ListQueryResource2.Caption" xml:space="preserve">
+    <value>List SQL</value>
+  </data>
+	<data name="ListQueryResource2.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ListQueryResource2.ToolTip" xml:space="preserve">
+    <value>The query in SQL that is used to populate the dropdown list. The default {TreeviewID}, {TreeviewObject}, {UserID} are default fields available for the SQL query.</value>
+  </data>
+	<data name="ListQueryResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OdbcSyntaxResource1.Caption" xml:space="preserve">
+    <value>Using Odbc Syntax</value>
+  </data>
+	<data name="OdbcSyntaxResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OdbcSyntaxResource1.Text" xml:space="preserve">
+    <value>Yes, read queries in Odbc format</value>
+  </data>
+	<data name="OdbcSyntaxResource1.ToolTip" xml:space="preserve">
+    <value>If this is checked, all queries of the report will be converted into ODBC syntax format</value>
+  </data>
+	<data name="OdbcSyntaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+	<data name="panel_RDLTemplateResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panel_RDLTemplateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panel_RDLTEmplateSubResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panel_RDLTEmplateSubResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelCSharpResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelCSharpResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDynamicResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDynamicResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelListQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelListQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelNotPopulatedByQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelNotPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelODbcConvertResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelODbcConvertResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelPopulatedByQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelReportDataSetResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelReportDataSetResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>Report</value>
+  </data>
+	<data name="panelStaticResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelStaticResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="paramPrefixResource1.Caption" xml:space="preserve">
+    <value>Parameter Prefix</value>
+  </data>
+	<data name="paramPrefixResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="paramPrefixResource1.ToolTip" xml:space="preserve">
+    <value>Prefix that is used for parameters in the queries of the report</value>
+  </data>
+	<data name="paramPrefixResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="RdlFilenameResource2.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="RdlFilenameResource2.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="RdlInputFileResource1.Caption" xml:space="preserve">
+    <value>Upload Template</value>
+  </data>
+	<data name="RdlInputFileResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="RdlInputFileResource1.ToolTip" xml:space="preserve">
+    <value>The rdl template to be used for report display</value>
+  </data>
+	<data name="RdlInputFileResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReadingResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReadingResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReadingResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReadingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportColumnMappings_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportColumnMappings_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="reportDsSepResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="reportDsSepResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportField_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportField_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.Caption" xml:space="preserve">
+    <value>C# Method</value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldsResource1.Caption" xml:space="preserve">
+    <value>Filter Fields</value>
+  </data>
+	<data name="ReportFieldsResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldsResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrder_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrder_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrderResource1.Caption" xml:space="preserve">
+    <value>Report Field Order</value>
+  </data>
+	<data name="ReportParamOrderResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrderResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrderResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportParamOrderResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportQueryResource1.Caption" xml:space="preserve">
+    <value>Report SQL</value>
+  </data>
+	<data name="ReportQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportRolesResource1.Caption" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+	<data name="ReportRolesResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportRolesResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the roles that have access to view this report.</value>
+  </data>
+	<data name="ReportRolesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>List Query</value>
+  </data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Separator1Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Separator1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabPreviewResource1.Caption" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+	<data name="tabPreviewResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabPreviewResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabQueryResource1.Caption" xml:space="preserve">
+    <value>Query</value>
+  </data>
+	<data name="tabQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateFileNameResource1.Caption" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+	<data name="TemplateFileNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateFileNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateFileNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateNameResource1.Caption" xml:space="preserve">
+    <value>Template Name</value>
+  </data>
+	<data name="TemplateNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateTypeResource1.Caption" xml:space="preserve">
+    <value>Template Type</value>
+  </data>
+	<data name="TemplateTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUpdateModeResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUpdateModeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUpdateModeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUpdateModeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUploadResource1.Caption" xml:space="preserve">
+    <value>Upload Template</value>
+  </data>
+	<data name="TemplateUploadResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUploadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TemplateUploadResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textCategoryNameResource1.Caption" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+	<data name="textCategoryNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textCategoryNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textCategoryNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.Caption" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="textControlCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textHeaderTextResource1.Caption" xml:space="preserve">
+    <value>Header Text</value>
+  </data>
+	<data name="textHeaderTextResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textHeaderTextResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textHeaderTextResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TextListResource1.Caption" xml:space="preserve">
+    <value>Text List</value>
+  </data>
+	<data name="TextListResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TextListResource1.ToolTip" xml:space="preserve">
+    <value>A comma separated list of text that will appear to the user for selection</value>
+  </data>
+	<data name="TextListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textReportNameResource1.Caption" xml:space="preserve">
+    <value>Report Name</value>
+  </data>
+	<data name="textReportNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textReportNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textReportNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TreeCascadeControlIDResource1.Caption" xml:space="preserve">
+    <value>Cascade Control</value>
+  </data>
+	<data name="TreeCascadeControlIDResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TreeCascadeControlIDResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TreeCascadeControlIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.Caption" xml:space="preserve">
+    <value>Data Format String</value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox2Resource1.Caption" xml:space="preserve">
+    <value>Resource Name</value>
+  </data>
+	<data name="UIFieldTextBox2Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox3Resource1.Caption" xml:space="preserve">
+    <value>Resource Assembly Name</value>
+  </data>
+	<data name="UIFieldTextBox3Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox3Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIFieldTextBox3Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Template Name</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Template Type</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>Data Format String</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>Header Text</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>Resource Name</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource9.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource9.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+    <value>ResourceAssemblyName</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected item?</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource3.Text" xml:space="preserve">
+    <value>Download Template</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource2.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove this item?</value>
+  </data>
+	<data name="UIGridViewColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource2.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource3.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="UIGridViewColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource4.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="UIGridViewColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource5.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Control Identifier</value>
+  </data>
+	<data name="UIGridViewColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource6.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>DataSet</value>
+  </data>
+	<data name="UIGridViewColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource7.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Query</value>
+  </data>
+	<data name="UIGridViewColumnResource8.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource8.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>Field Order</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove the selected items?</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+	<data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewCommandResource5.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="UIGridViewCommandResource5.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+	<data name="UIGridViewCommandResource6.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="UIGridViewCommandResource6.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UiTabTemplateResource1.Caption" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+	<data name="UiTabTemplateResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UiTabTemplateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="uitabview1Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+	<data name="uitabview2Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+	<data name="uitabview3Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView4Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView5Resource1.Caption" xml:space="preserve">
+    <value>Access</value>
+  </data>
+	<data name="UITabView5Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView5Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView6Resource1.Caption" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+	<data name="UITabView6Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView6Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview7Resource1.Caption" xml:space="preserve">
+    <value>Results</value>
+  </data>
+	<data name="uitabview7Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview7Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.Caption" xml:space="preserve">
+    <value>Use C#</value>
+  </data>
+	<data name="UseCSharpQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ValueListResource1.Caption" xml:space="preserve">
+    <value>Value List</value>
+  </data>
+	<data name="ValueListResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ValueListResource1.ToolTip" xml:space="preserve">
+    <value>The comma separated list of values that corresponds to the text list.</value>
+  </data>
+	<data name="ValueListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VisibleColumnAtStartResource1.Caption" xml:space="preserve">
+    <value>No. of Visible Column</value>
+  </data>
+	<data name="VisibleColumnAtStartResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VisibleColumnAtStartResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VisibleColumnAtStartResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+</root>

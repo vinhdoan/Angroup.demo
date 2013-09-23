@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnCloneBudgetResource1.ConfirmText" xml:space="preserve">
+    <value>这一行动将会带您进入新的一页。未保存的任何更改将会丢失。您确定要继续吗？</value>
+  </data>
+  <data name="btnCloneBudgetResource1.Text" xml:space="preserve">
+    <value>为另外一个地点复制预算</value>
+  </data>
+  <data name="btnCloneBudgetYearResource1.ConfirmText" xml:space="preserve">
+    <value>这一行动将会带您进入新的一页。未保存的任何更改将会丢失。您确定要继续吗？</value>
+  </data>
+  <data name="btnCloneBudgetYearResource1.Text" xml:space="preserve">
+    <value>为新的一年复制预算</value>
+  </data>
+  <data name="btnDivideAcrossResource1.Text" xml:space="preserve">
+    <value>分配到十二个月</value>
+  </data>
+  <data name="cboFinancialMonthResource1.Caption" xml:space="preserve">
+    <value>开始财政月</value>
+  </data>
+  <data name="cboFinancialMonthResource1.ToolTip" xml:space="preserve">
+    <value>财政年的第一个财政月（只适用于从此预算复制出来的年度预算）</value>
+  </data>
+  <data name="cboFinancialYearResource1.Caption" xml:space="preserve">
+    <value>开始财政年</value>
+  </data>
+  <data name="cboFinancialYearResource1.ToolTip" xml:space="preserve">
+    <value>指示能从此预算复制出来最早的财政年</value>
+  </data>
+  <data name="chkDisplayActiveItemResource1.Text" xml:space="preserve">
+    <value>只显示有效项目</value>
+  </data>
+  <data name="grdBudgetItemResource1.Caption" xml:space="preserve">
+    <value>预算项目</value>
+  </data>
+  <data name="gridLocationsResource1.Caption" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>否，此项目已无效。</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>是，此项目有效。</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="NotifyUser1Resource1.Caption" xml:space="preserve">
+    <value>通知用户1</value>
+  </data>
+  <data name="NotifyUser1Resource1.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser1Resource2.Caption" xml:space="preserve">
+    <value>通知用户1</value>
+  </data>
+  <data name="NotifyUser1Resource2.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser2Resource1.Caption" xml:space="preserve">
+    <value>通知用户2</value>
+  </data>
+  <data name="NotifyUser2Resource1.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser2Resource2.Caption" xml:space="preserve">
+    <value>通知用户2</value>
+  </data>
+  <data name="NotifyUser2Resource2.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser3Resource1.Caption" xml:space="preserve">
+    <value>通知用户3</value>
+  </data>
+  <data name="NotifyUser3Resource1.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser3Resource2.Caption" xml:space="preserve">
+    <value>通知用户3</value>
+  </data>
+  <data name="NotifyUser3Resource2.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser4Resource1.Caption" xml:space="preserve">
+    <value>通知用户4</value>
+  </data>
+  <data name="NotifyUser4Resource1.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="NotifyUser4Resource2.Caption" xml:space="preserve">
+    <value>通知用户4</value>
+  </data>
+  <data name="NotifyUser4Resource2.ToolTip" xml:space="preserve">
+    <value>可用余额达到下限时该通知的用户</value>
+  </data>
+  <data name="ParentIDResource1.Caption" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="ParentIDResource1.ToolTip" xml:space="preserve">
+    <value>指出哪些地点会使用预算。</value>
+  </data>
+  <data name="rdIsActiveResource1.Caption" xml:space="preserve">
+    <value>是有效</value>
+  </data>
+  <data name="rdIsActiveResource1.ToolTip" xml:space="preserve">
+    <value>如果某项目无效，系统复制预算时，将不会抄到新预算那里。</value>
+  </data>
+  <data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="tabBudgetITemResource1.Caption" xml:space="preserve">
+    <value>预算项目</value>
+  </data>
+  <data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="tabDetailsResource2.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="tabRemindersResource1.Caption" xml:space="preserve">
+    <value>提醒</value>
+  </data>
+  <data name="textDefaultNumberOfMonthsPerBudgetPeriodResource1.Caption" xml:space="preserve">
+    <value>预算期月数</value>
+  </data>
+  <data name="textDefaultNumberOfMonthsPerIntervalResource1.Caption" xml:space="preserve">
+    <value>间隔月数</value>
+  </data>
+  <data name="TreeBudgetCategoryResource1.Caption" xml:space="preserve">
+    <value>预算项目</value>
+  </data>
+  <data name="TreeBudgetCategoryResource1.ToolTip" xml:space="preserve">
+    <value>此项目所属的预算类别</value>
+  </data>
+  <data name="treeLocationResource1.Caption" xml:space="preserve">
+    <value>地点</value>
+  </data>
+  <data name="txtBudgetThresholdResource1.Caption" xml:space="preserve">
+    <value>预算下限 (%)</value>
+  </data>
+  <data name="txtBudgetThresholdResource1.ToolTip" xml:space="preserve">
+    <value>指名预算可用余额可以下跌到的程度（百分点-原本的月度预算为100%）。如果没有下限，请您输入 -1。</value>
+  </data>
+  <data name="txtMonth10Resource1.Caption" xml:space="preserve">
+    <value>第10月</value>
+  </data>
+  <data name="txtMonth10Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第10月预算的金额。</value>
+  </data>
+  <data name="txtMonth11Resource1.Caption" xml:space="preserve">
+    <value>第11月</value>
+  </data>
+  <data name="txtMonth11Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第11月预算的金额。</value>
+  </data>
+  <data name="txtMonth12Resource1.Caption" xml:space="preserve">
+    <value>第12月</value>
+  </data>
+  <data name="txtMonth12Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第12月预算的金额。</value>
+  </data>
+  <data name="txtMonth1Resource1.Caption" xml:space="preserve">
+    <value>第1月</value>
+  </data>
+  <data name="txtMonth1Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第1月预算的金额。</value>
+  </data>
+  <data name="txtMonth2Resource1.Caption" xml:space="preserve">
+    <value>第2月</value>
+  </data>
+  <data name="txtMonth2Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第2月预算的金额。</value>
+  </data>
+  <data name="txtMonth3Resource1.Caption" xml:space="preserve">
+    <value>第3月</value>
+  </data>
+  <data name="txtMonth3Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第3月预算的金额。</value>
+  </data>
+  <data name="txtMonth4Resource1.Caption" xml:space="preserve">
+    <value>第4月</value>
+  </data>
+  <data name="txtMonth4Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第4月预算的金额。</value>
+  </data>
+  <data name="txtMonth5Resource1.Caption" xml:space="preserve">
+    <value>第5月</value>
+  </data>
+  <data name="txtMonth5Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第5月预算的金额。</value>
+  </data>
+  <data name="txtMonth6Resource1.Caption" xml:space="preserve">
+    <value>第6月</value>
+  </data>
+  <data name="txtMonth6Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第6月预算的金额。</value>
+  </data>
+  <data name="txtMonth7Resource1.Caption" xml:space="preserve">
+    <value>第7月</value>
+  </data>
+  <data name="txtMonth7Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第7月预算的金额。</value>
+  </data>
+  <data name="txtMonth8Resource1.Caption" xml:space="preserve">
+    <value>第8月</value>
+  </data>
+  <data name="txtMonth8Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第8月预算的金额。</value>
+  </data>
+  <data name="txtMonth9Resource1.Caption" xml:space="preserve">
+    <value>第9月</value>
+  </data>
+  <data name="txtMonth9Resource1.ToolTip" xml:space="preserve">
+    <value>原本为财政年第9月预算的金额。</value>
+  </data>
+  <data name="txtTotalResource1.Caption" xml:space="preserve">
+    <value>总数</value>
+  </data>
+  <data name="txtTotalResource1.ToolTip" xml:space="preserve">
+    <value>请输入要分配到12个月的总数</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>预算类别</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value>确定去除？</value>
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>第7月</value>
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>第8月</value>
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>第9月</value>
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>第10月</value>
+  </data>
+  <data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value>第11月</value>
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>第12月</value>
+  </data>
+  <data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>总数 (￥)</value>
+  </data>
+  <data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value>是有效</value>
+  </data>
+  <data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>确定删除？</value>
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>预算项目</value>
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>第1月</value>
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>第2月</value>
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>第3月</value>
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>第4月</value>
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>第5月</value>
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>第6月</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>确定删除？</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>变为无效</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>确定把指定项目变为无效？</value>
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>增加</value>
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>去除</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value>确定去除？</value>
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>预算</value>
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>预算名称</value>
+  </data>
+</root>

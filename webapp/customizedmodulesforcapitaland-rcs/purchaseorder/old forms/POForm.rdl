@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2003/10/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <PageHeader>
+    <ReportItems>
+      <Textbox Name="textbox7">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <rd:DefaultName>textbox7</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>0.5in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>= Globals!PageNumber</Value>
+        <Left>6in</Left>
+      </Textbox>
+      <Textbox Name="textbox6">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>0.75in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>Page No.:</Value>
+        <Left>5.125in</Left>
+      </Textbox>
+      <Textbox Name="textbox8">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <Height>0.25in</Height>
+        <Width>0.25in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>of</Value>
+        <Left>6.625in</Left>
+      </Textbox>
+      <Textbox Name="textbox9">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <Height>0.25in</Height>
+        <Width>0.5in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>= Globals!TotalPages</Value>
+        <Left>6.875in</Left>
+      </Textbox>
+    </ReportItems>
+    <PrintOnLastPage>true</PrintOnLastPage>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <Style />
+    <Height>0.375in</Height>
+  </PageHeader>
+  <RightMargin>0.25in</RightMargin>
+  <Body>
+    <ReportItems>
+      <Table Name="table1">
+        <Height>3.5in</Height>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <Height>0.375in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>21</ZIndex>
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>S/N</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>20</ZIndex>
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Item Code</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <rd:DefaultName>textbox23</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Item Description</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>18</ZIndex>
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Quantity</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>17</ZIndex>
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Unit of Measure</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>16</ZIndex>
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Unit Cost 
+S$</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BackgroundColor>Gainsboro</BackgroundColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>15</ZIndex>
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Total Amount 
+S$</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+        </Header>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <Height>0.375in</Height>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ItemNumber">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>6</ZIndex>
+                      <rd:DefaultName>ItemNumber</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ItemNumber.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ItemCode">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>5</ZIndex>
+                      <rd:DefaultName>ItemCode</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ItemCode.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ItemDescription">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>4</ZIndex>
+                      <rd:DefaultName>ItemDescription</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ItemDescription.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Quantity">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <Format>N</Format>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <rd:DefaultName>Quantity</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Quantity.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="UnitOfMeasure">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <rd:DefaultName>UnitOfMeasure</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!UnitOfMeasure.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="UnitCost">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <Format>N</Format>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <TextAlign>Right</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <rd:DefaultName>UnitCost</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!UnitCost.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <Format>N</Format>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Quantity.Value* Fields!UnitCost.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <DataSetName>anacle</DataSetName>
+        <Top>3.375in</Top>
+        <Width>7.36859in</Width>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <Height>0.375in</Height>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>9</ZIndex>
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox18">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>8</ZIndex>
+                      <rd:DefaultName>textbox18</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>All Amount Quoted Excluded GST</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <Format>N</Format>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>7</ZIndex>
+                      <rd:DefaultName>textbox22</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>=sum( Fields!Quantity.Value* Fields!UnitCost.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+            <TableRow>
+              <Height>0.875in</Height>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox21">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <rd:DefaultName>textbox21</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Delivery Instructions:
+     Cove Project
+     33 Allanbrooke Road
+     Sentosa
+     Singapore 099981</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>4</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <rd:DefaultName>textbox24</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+            <TableRow>
+              <Height>0.25in</Height>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>13</ZIndex>
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>4</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                          <Top>1pt</Top>
+                          <Left>1pt</Left>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                          <Top>Black</Top>
+                          <Left>Black</Left>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>Solid</Bottom>
+                          <Top>Solid</Top>
+                          <Left>Solid</Left>
+                        </BorderStyle>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                        <FontWeight>700</FontWeight>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <rd:DefaultName>textbox30</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value> for Sentosa Development Corporation</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+            <TableRow>
+              <Height>1.25in</Height>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>7</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <BorderWidth>
+                          <Top>1pt</Top>
+                          <Right>1pt</Right>
+                        </BorderWidth>
+                        <BorderColor>
+                          <Top>Black</Top>
+                          <Right>Black</Right>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Top>Solid</Top>
+                          <Right>Solid</Right>
+                        </BorderStyle>
+                        <FontSize>7pt</FontSize>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingRight>2pt</PaddingRight>
+                      </Style>
+                      <ZIndex>14</ZIndex>
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <CanGrow>true</CanGrow>
+                      <Value>Terms &amp; Conditions:
+   1. Our PO No. mentioned hereon must be quoted on all invoices/delivery orders.
+   2. Final inspection and acceptance of goods by SDC will be carried upon delivery. Any goods not accepted by SDC as a result of non compliance, 
+       deviations and/or defects will be returned to the Supplier at the Supplier's own expense without prejudice to any rights of SDC.
+   3. The Supplier upon acceptance of this Order, agrees to indemnify SDC from any loss, expenses, damages, liability, claims or demands for actual or 
+       alleged infrigement of any patent, invention, trademark, design or copyright arising from the purchase and use of the goods acquired by this Order.
+   4. Our Terms of Payment is 30 days from receipt of invoice.
+   5. Any additional or different terms &amp; conditions from the Supplier shall not be effective or binding unless specifically agreed to in writing by SDC
+   6. This Order must be produced when required.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.125in</Left>
+        <TableColumns>
+          <TableColumn>
+            <Width>0.49359in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.375in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.875in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75in</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.125in</Width>
+          </TableColumn>
+        </TableColumns>
+      </Table>
+      <Textbox Name="BuyerID">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <Top>2.875in</Top>
+        <rd:DefaultName>BuyerID</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>2.125in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>=First(Fields!BuyerID.Value)</Value>
+        <Left>1in</Left>
+      </Textbox>
+      <Textbox Name="textbox10">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <Top>2.875in</Top>
+        <rd:DefaultName>textbox10</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>0.75in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>Buyer ID: </Value>
+        <Left>0.125in</Left>
+      </Textbox>
+      <Textbox Name="PODate">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <Format>dd/MM/yyyy</Format>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <Top>1.875in</Top>
+        <rd:DefaultName>PODate</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>2in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>=First(Fields!PODate.Value)</Value>
+        <Left>5.5in</Left>
+      </Textbox>
+      <Textbox Name="PONumber">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <Top>1.5in</Top>
+        <rd:DefaultName>PONumber</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>2in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>=First(Fields!PONumber.Value)</Value>
+        <Left>5.5in</Left>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Top>1.5in</Top>
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>P.O. Number:</Value>
+        <Left>4.25in</Left>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <FontSize>12pt</FontSize>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+          <FontWeight>700</FontWeight>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Top>1.125in</Top>
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>3.25in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>PURCHASE ORDER</Value>
+        <Left>4.25in</Left>
+      </Textbox>
+      <Rectangle Name="rectangle1">
+        <ZIndex>4</ZIndex>
+        <Top>1.5in</Top>
+        <ReportItems>
+          <Textbox Name="VendorAddress">
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <Top>0.75in</Top>
+            <rd:DefaultName>VendorAddress</rd:DefaultName>
+            <Height>0.375in</Height>
+            <Width>3.5in</Width>
+            <CanGrow>true</CanGrow>
+            <Value>=First(Fields!VendorAddress.Value)</Value>
+            <Left>0.125in</Left>
+          </Textbox>
+          <Textbox Name="VendorName">
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <Top>0.375in</Top>
+            <rd:DefaultName>VendorName</rd:DefaultName>
+            <Height>0.25in</Height>
+            <Width>3.5in</Width>
+            <CanGrow>true</CanGrow>
+            <Value>=First(Fields!VendorName.Value)</Value>
+            <Left>0.125in</Left>
+          </Textbox>
+          <Textbox Name="VendorCode">
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingBottom>2pt</PaddingBottom>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingRight>2pt</PaddingRight>
+            </Style>
+            <Top>0.125in</Top>
+            <rd:DefaultName>VendorCode</rd:DefaultName>
+            <Height>0.25in</Height>
+            <Width>3.5in</Width>
+            <CanGrow>true</CanGrow>
+            <Value>=First(Fields!VendorCode.Value)</Value>
+            <Left>0.125in</Left>
+          </Textbox>
+        </ReportItems>
+        <Height>1.25in</Height>
+        <Width>3.75in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <Left>0.125in</Left>
+      </Rectangle>
+      <Textbox Name="textbox2">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <Top>1.125in</Top>
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>Vendor</Value>
+        <Left>0.125in</Left>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Height>0.875in</Height>
+        <Width>3.25in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>Cove Project 
+33 Allanbrooke Road
+Sentosa
+Singapore 099981
+(065)6275-0388 Ext 000</Value>
+        <Left>4.25in</Left>
+      </Textbox>
+      <Image Name="image1">
+        <ZIndex>1</ZIndex>
+        <Height>0.88542in</Height>
+        <Width>3.875in</Width>
+        <Source>Embedded</Source>
+        <Style />
+        <Value>sentosa_cove_logo</Value>
+        <Sizing>Fit</Sizing>
+      </Image>
+      <Textbox Name="textbox5">
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingBottom>2pt</PaddingBottom>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingRight>2pt</PaddingRight>
+        </Style>
+        <Top>1.875in</Top>
+        <Height>0.25in</Height>
+        <Width>1in</Width>
+        <CanGrow>true</CanGrow>
+        <Value>PO Date:</Value>
+        <Left>4.25in</Left>
+      </Textbox>
+    </ReportItems>
+    <Style />
+    <Height>11in</Height>
+  </Body>
+  <TopMargin>0.75in</TopMargin>
+  <DataSources>
+    <DataSource Name="anacle">
+      <rd:DataSourceID>8d8ccda2-5e9d-4777-9921-7833d9daa4d1</rd:DataSourceID>
+      <DataSourceReference>anacle</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <Width>7.625in</Width>
+  <DataSets>
+    <DataSet Name="anacle">
+      <Fields>
+        <Field Name="ItemCode">
+          <DataField>ItemCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemDescription">
+          <DataField>ItemDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="UnitOfMeasure">
+          <DataField>UnitOfMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitCost">
+          <DataField>UnitCost</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PONumber">
+          <DataField>PONumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PODate">
+          <DataField>PODate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BuyerID">
+          <DataField>BuyerID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorCode">
+          <DataField>VendorCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="VendorAddress">
+          <DataField>VendorAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemNumber">
+          <DataField>ItemNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>anacle</DataSourceName>
+        <CommandText>SELECT     'Item Code' AS ItemCode, 'Item Description' AS ItemDescription, 100 AS Quantity, 'Unit Of Measure' AS UnitOfMeasure, 34.23 AS UnitCost, 
+                      'Vendor Name' AS VendorName, 'PO-09933' AS PONumber, '2007-12-14' AS PODate, 'Mary' AS BuyerID, 'VEndor Code' AS VendorCode, 
+                      'Vendor Address' AS VendorAddress, 1 AS ItemNumber</CommandText>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="sentosa_cove_logo">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <LeftMargin>0.25in</LeftMargin>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <rd:ReportID>30b7d766-ce6f-4a25-819f-48268bbcfb77</rd:ReportID>
+  <BottomMargin>0.75in</BottomMargin>
+  <Language>en-US</Language>
+</Report>

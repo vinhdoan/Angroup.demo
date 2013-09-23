@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Contract_EndReminderBody" xml:space="preserve">
+		<value>{0}さん, 
+
+契約t {ObjectNumber} 間もなく期限が終了します。契約詳細は以下となります。
+
+契約番号:   {ObjectNumber}
+契約タイトル:    
+  {ObjectName}
+記述:
+  {Description}
+
+契約スタート:    {ContractStartDate:dd-MMM-yyyy}
+契約終了:      {ContractEndDate:dd-MMM-yyyy}
+
+連絡人:    {ContactPerson}
+連絡ファックス:       {ContactFax}
+連絡Eメールl:     {ContactEmail}
+連絡携帯電話: {ContactCellphone}
+
+契約Contract マネージャー : {ContractManager.ObjectName}
+
+期間:
+{Terms}
+
+保証:
+{Warranty}
+
+保険:
+{Insurance}
+</value>
+		<comment>IMPORTANT: Please leave all the curly braces {...} intact as it is. Those will be 'filled in' automatically by the application based on the data saved in the database record.</comment>
+	</data>
+  <data name="Contract_EndReminderSubject" xml:space="preserve">
+		<value>契約終了 {0}, {1}</value>
+	</data>
+  <data name="Work_EscalationAckBody" xml:space="preserve">
+		<value>{0}さん,
+
+作業 {ObjectNumber} 承認をペンディングしています。作業の詳細は以下となります。
+ロケーションパス   : {Location.Path}
+装備パス  : {Equipment.Path}
+作業記述: {WorkDescription}
+
+作業タイプ    : {TypeOfWork.ObjectName}
+サービスタイプ : {TypeOfService.ObjectName}
+問題タイプ : {TypeOfProblem.ObjectName}
+優先        : {Priority}
+
+スケジュール開始 : {ScheduledStartDateTime}
+スケジュール終了  : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+アサインされる     : 
+建築業者;      : {Contract.Vendor.ObjectName}
+技術者     : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+これはあなたの参照のためです。
+</value>
+		<comment>This is the 'Dear so-and-so' salutation at the beginning of a letter.</comment>
+	</data>
+  <data name="Work_EscalationAckSubject" xml:space="preserve">
+		<value>作業 {0} - エスカレーター式修正が承認をペンディングしています。</value>
+		<comment>'Work' refers to a work order/work instruction.</comment>
+	</data>
+  <data name="Work_EscalationArrBody" xml:space="preserve">
+		<value>{0}さん,
+
+作業{ObjectNumber} のオンサイト作業がペンディングしています。作業の詳細は以下となります。
+
+ロケーションパス   : {Location.Path}
+装備パス  : {Equipment.Path}
+作業記述: {WorkDescription}
+
+作業タイプ    : {TypeOfWork.ObjectName}
+サービスタイプ : {TypeOfService.ObjectName}
+問題タイプ : {TypeOfProblem.ObjectName}
+優先        : {Priority}
+
+スケジュール開始t : {ScheduledStartDateTime}
+スケジュール終了   : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+アサインされる     : 
+建築業者      : {Contract.Vendor.ObjectName}
+技術者     : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+これはあなたの参照のためです。</value>
+	</data>
+  <data name="Work_EscalationArrSubject" xml:space="preserve">
+		<value>Work {0} - エスカレーター式修正にオンサイト作業がペンディングしています</value>
+	</data>
+  <data name="Work_EscalationComBody" xml:space="preserve">
+		<value>{0}さん,
+
+作業 {ObjectNumber} が完成をペンディングしています。作業の詳細は以下となります。
+
+ロケーションパス   : {Location.Path}
+装備パス  : {Equipment.Path}
+作業記述: {WorkDescription}
+
+作業タイプ    : {TypeOfWork.ObjectName}
+サービスタイプ : {TypeOfService.ObjectName}
+問題タイプ : {TypeOfProblem.ObjectName}
+優先        : {Priority}
+
+スケジュール開始 : {ScheduledStartDateTime}
+スケジュール狩猟   : {ScheduledEndDateTime}
+
+-----------------------------------------------------------------------------
+アサインされる     : 
+建築業者      : {Contract.Vendor.ObjectName}
+技術者      : {AssignedTechniciansNames}
+-----------------------------------------------------------------------------
+これはあなたの参照のためです。</value>
+	</data>
+  <data name="Work_EscalationComSubject" xml:space="preserve">
+		<value>Work {0} - エスカレーター式修正が完成をペンディングしています。</value>
+	</data>
+  <data name="Work_SmsNotifyExecution" xml:space="preserve">
+		<value>{0}さん 作業 {1} - 実行をペンディングしています。優先: {2} 記述: {3}</value>
+	</data>
+  <data name="Work_SmsNotifyPendingPlanning" xml:space="preserve">
+		<value>{0}さん, 作業 {1} - 計画をペンディングしています。優先: {2} 記述: {3}</value>
+	</data>
+  <data name="Store_InventorySubject" xml:space="preserve">
+		<value>在庫低い通知をします。- {0}</value>
+	</data>
+  <data name="Store_InventoryBody1" xml:space="preserve">
+		<value>在庫管理者, \n 次の在庫項目がしきい値に達しました。これらの項目を補充して下さい。\n\n 倉庫名: {0} \n 倉庫ロケーション{1}\n\n 在庫項目がしきい値以下です。 \n {2:50}{3:40}{4:40}{5:40}{6:40}{7:40}
+</value>
+	</data>
+  <data name="Store_InventoryBody2" xml:space="preserve">
+		<value>{Catalogue.ObjectName}{Catalogue.UnitOfMeasure:40}{TotalAvailableQuantity:40}{TotalPhysicalQuantity:40}{ReorderThreshold:40}{ReorderDefault:40)</value>
+	</data>
+  <data name="Work_NotifyExecutionBody" xml:space="preserve">
+		<value>作業番号 {0} -既に受け入れ及びアサイン</value>
+	</data>
+  <data name="Work_NotifyExecutionSubject" xml:space="preserve">
+		<value>作業番号 {0} -既に受け入れ及びアサイン</value>
+	</data>
+  <data name="Insurance_EndReminderBody" xml:space="preserve">
+		<value>{0}さん,\n\n以下の保険期限日付が近づくことを連絡します。\n\n保険詳細:\n保険名: {ObjectName}\n保険開始日: {InsuranceStartDate:dd-MMM-yyyy}\n保険終了日: {InsuranceEndDate:dd-MMM-yyyy}\n保険金額: {InsuredAmount:#,##0.00}\n保険期間: {InsuranceTerms}\n保険備考: {InsuranceRemarks}\n\n保険会社詳細 \n会社名: {CompanyName}\n連絡人: {CompanyContactPerson}\n連絡番号: {CompanyContactNumber}\n郵送住所: {CompanyPostalAddress}
+</value>
+	</data>
+  <data name="Insurance_EndReminderSubject" xml:space="preserve">
+		<value>保険期限日付が近づきます - {0}</value>
+	</data>
+  <data name="Vendor_EndReminderBody" xml:space="preserve">
+		<value>{0}さん,\n\n以下のベンダーから締め出す終了日が近づくことを連絡します。\n\nベンダー詳細:\nベンダー名: {ObjectName}\nベンダー締め出す期間: から {DebarmentStartDate:dd-MMM-yyyy} まで {DebarmentEndDate:dd-MMM-yyyy}\n\nベンダー国: {OperatingAddressCountry}\nベンダー都市: {OperatingAddressCity}\nベンダー州: {OperatingAddressState}
+ベンダー住所: {OperatingAddress}\nベンダー携帯電話: {OperatingCellPhone}\nベンダーEメール: {OperatingEmail}\nベンダーファックス: {OperatingFax}\nベンダー電話: {OperatingPhone}\nベンダー連絡人: {OperatingContactPerson}</value>
+	</data>
+  <data name="Vendor_EndReminderSubject" xml:space="preserve">
+		<value>ベンダー締め出す終了日近づきます。- {0}</value>
+		<comment>'Vendor Debarment' is the blacklisting of vendors, so that the users will remember not to choose them in their next purchase.</comment>
+	</data>
+  <data name="Work_SmsSupervisorNotify" xml:space="preserve">
+		<value>{0}さん, 作業 {1} アサインされました。ステータスを更新して下さい。</value>
+	</data>
+  <data name="VendorApplication_EndReminderBody" xml:space="preserve">
+		<value>財務へ:
+
+ベンダー申請がクローズされたことを連絡します。ベンダーに請求処理がしてもいいです。ベンダー申請詳細は以下となります。
+
+	申請番号.: {ObjectNumber}
+	会社名: {CompanyName}	
+	会社住所: {CompanyAddress}
+	会社郵便番号: {CompanyPostalCode}
+	会社電話番号.: {CompanyTelNo}
+	会社ファックス番号: {CompanyFaxNo}
+	連絡人: {CompanyContactPerson}
+	NRIC 番号: {CompanyNRICNumber}
+	連絡番号: {CompanyContactPersonContactNo}
+	申請住所: {AddressApplyingFor}
+	サービス: {Service.ObjectName}
+	目的: {Purpose}
+	いつから: {FromDate:dd-MMM-yyyy}
+	いつまで: {ToDate:dd-MMM-yyyy}
+		
+	課金($): {ChargeAmount:#,##0.00}
+	備考: {RemarksToFinance}
+
+	承認される: {Approver.ObjectName}
+	処理日: {ProcessDate:dd-MMM-yyyy}
+</value>
+	</data>
+  <data name="VendorApplication_EndReminderSubject" xml:space="preserve">
+		<value>財務にベンダー申請のための請求通知です。 - {0}</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody1" xml:space="preserve">
+		<value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ユーザーさん
+&lt;br&gt;
+&lt;br&gt;
+次の注文書:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO 番号:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;記述:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;合計金額:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;開始日:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;終了日:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+Has been submitted for approvals from the following user(s) (order by Approval Limit):
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+</value>
+		<comment>IMPORTANT: Do not remove the &lt;HTML&gt; tags. Translate only the text between &lt;body&gt; and &lt;/body&gt;</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPendingApproverSubject" xml:space="preserve">
+		<value>PO/WO number : {0} is submitted for your approval</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody1" xml:space="preserve">
+		<value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Dear User,
+&lt;br&gt;
+&lt;br&gt;
+Following PO:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO Number:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Description:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Total Amount:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;Start Date:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;End Date:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+承認にために以下のユーザーで提出されました (承認限度順序):
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="1" cellspacing="0"&gt;
+&lt;tr&gt;
+&lt;td width="200px"&gt;User&lt;/td&gt;
+&lt;/tr&gt;</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsSubject" xml:space="preserve">
+		<value>PO/WO 番号 : {0} 承認のため提出されました。</value>
+	</data>
+  <data name="Purchaseorder_NotifyPOhasbeenApprovedBody" xml:space="preserve">
+		<value>PO/WO 番号 {0} {1}に承認されました
+詳細はシステムにログオンして下さい。
+</value>
+	</data>
+  <data name="Purchaseorder_NotifyPOhasbeenApprovedSubject" xml:space="preserve">
+		<value>PO/WO 番号 {0} に承認されました</value>
+	</data>
+  <data name="Purchaseorder_NotifyOriginalApproverBody" xml:space="preserve">
+		<value>PO/WO 番号: {ObjectNumber}
+記述: {Description}
+PO/WO 合計金額: {TotalPOAmount} 
+ {1}に{0}で承認されました
+</value>
+	</data>
+  <data name="Purchaseorder_NotifyOriginalApproverSubject" xml:space="preserve">
+		<value>PO/WO 番号: {0} {1}に承認されました</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody2" xml:space="preserve">
+		<value>&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPendingApproverBody3" xml:space="preserve">
+		<value>&lt;/table&gt;
+&lt;br&gt;
+Please log into Property System to approve/reject the PO/WO.
+&lt;/body&gt;
+&lt;/html&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody1" xml:space="preserve">
+		<value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ユーザーさん
+&lt;br&gt;
+&lt;br&gt;
+次の注文書:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO 番号:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;記述:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;合計金額:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;開始日:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;終了日:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+{1}に{0}で承認されました&lt;br&gt;
+&lt;br&gt;
+次のユーザーの操作を待っています。(承認限度順序) &lt;br&gt;
+&lt;br&gt;
+&lt;table border="0" cellspacing="0"&gt;</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody4" xml:space="preserve">
+		<value>&lt;tr&gt;&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingBody5" xml:space="preserve">
+		<value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_ApprovingSubject" xml:space="preserve">
+		<value>PO/WO 番号 : {0} {1}で承認されました</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedBody" xml:space="preserve">
+		<value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ユーザーさん
+&lt;br&gt;
+&lt;br&gt;
+次の注文書:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO 番号:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;記述:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;合計金額:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;開始日:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;終了日:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+ {0}に承認されました.
+&lt;/body&gt;
+&lt;/html&gt;</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_FullyApprovedSubject" xml:space="preserve">
+		<value>PO/WO 番号 : {0} に承認されました</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedBody" xml:space="preserve">
+		<value>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1"&gt;
+&lt;meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ユーザーさん
+&lt;br&gt;
+&lt;br&gt;
+次の注文書:
+&lt;br&gt;
+&lt;br&gt;
+&lt;table border="0"&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;PO/WO 番号:&lt;/td&gt;
+&lt;td&gt;{ObjectNumber}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;記述:&lt;/td&gt;
+&lt;td&gt;{Description}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;合計金額:&lt;/td&gt;
+&lt;td&gt;{TotalPOAmount:#,##0.00}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;開始日:&lt;/td&gt;
+&lt;td&gt;{DateOfOrder:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td width="20px"&gt;&lt;/td&gt;
+&lt;td&gt;終了日:&lt;/td&gt;
+&lt;td&gt;{EndDate:dd-MMM-yyyy}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br&gt;
+{1}に{0} で拒絶されました。
+&lt;/body&gt;
+&lt;/html&gt;</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsAndApprovers_RejectedSubject" xml:space="preserve">
+		<value>PO/WO 番号 : {0} {1}に拒絶されました</value>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody2" xml:space="preserve">
+		<value>&lt;tr&gt;
+&lt;td width="200px"&gt;{ObjectName}&lt;/td&gt;
+&lt;/tr&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyPOAdministratorsBody3" xml:space="preserve">
+		<value>&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+		<comment>DO NOT TRANSLATE</comment>
+	</data>
+  <data name="PurchaseOrder_NotifyGoodReceiptBody" xml:space="preserve">
+		<value>
+ユーザーさん
+
+次の作業クローズされ及び注文書に相当する品物受領書を作成しました。
+	作業番号: {0}
+	品物受領金額: {1:#,##0.00}
+	注文書: {2}</value>
+	</data>
+  <data name="PurchaseOrder_NotifyGoodReceiptHeader" xml:space="preserve">
+		<value>注文書の期間契約が作成された作業がクローズしました。</value>
+	</data>
+</root>

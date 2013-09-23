@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<!-- 
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in 
+    \Windows\Microsoft.Net\Framework\v2.x\Config 
+-->
+<configuration>
+	<configSections>
+		<sectionGroup name="anacle">
+			<section name="dataFramework" type="Anacle.DataFramework.Configuration.DataFrameworkSection, Anacle.DataFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4"/>
+			<section name="uiFramework" type="Anacle.UIFramework.Configuration.UIFrameworkSection, Anacle.UIFramework, Version=6.0.0.0, Culture=neutral"/>
+			<section name="workflowFramework" type="Anacle.WorkflowFramework.Configuration.WorkflowFrameworkSection, Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4"/>
+		</sectionGroup>
+		<sectionGroup name="blowery.web">
+			<section name="httpCompress" type="blowery.Web.HttpCompress.SectionHandler, blowery.Web.HttpCompress"/>
+		</sectionGroup>
+		<sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+			<sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+				<section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+				<sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+					<section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+					<section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+					<section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+				</sectionGroup>
+			</sectionGroup>
+		</sectionGroup>
+	</configSections>
+	<location path="service">
+		<system.web>
+			<authorization>
+				<allow users="*"/>
+			</authorization>
+		</system.web>
+	</location>
+	<anacle>
+		<!--
+      =======================================================================
+        Data Framework Settings
+        
+        1. logPath
+           Indicates where the log files for the DataFramework will be 
+           output to. Leave this entry blank to disable logging.
+       
+        2. dbProvider
+           Indicates the provider that will be used for the .NET DbFactory 
+           classes to access the database.
+           
+        3. maximumCacheObjects
+           Indicates the maximum number of objects that will be kept
+           in the cache that lasts for the scope of the outermost
+           connection. This cache is primarily used by the data 
+           framework to store single peristent objects loaded 
+           by the LoadObject(Guid id, bool includeDeactivatedObject) method.
+
+        4. guidType
+           Indicates what type of GUIDs should be generated for the ObjectIDs
+           of PersistentObjects. 
+           
+           Use "Comb" to generate GUIDs that is a function of the system
+           time and increments sequentially.
+           
+           Use "Random" to generate random GUIDs from the SQL Server database
+           that is entirely random.
+
+        5. imports
+           Contains a list of all namespaces that will be imported
+           during the compilation of the derived PersistentObject classes.  
+        
+        6. assemblies
+           Contains a list of all assemblies that will be referenced
+           in during the compilation of the derived PersistentObject classes.
+           
+      =======================================================================
+    -->
+		<dataFramework logPath="c:\log\weblog-{0:yyyy-MM-dd}.txt" dbProvider="System.Data.SqlClient" guidType="Comb">
+			<imports>
+				<add namespace="Anacle.WorkflowFramework"></add>
+			</imports>
+			<assemblies>
+				<add name="Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4"></add>
+			</assemblies>
+		</dataFramework>
+		<!--
+      =======================================================================
+        UI Framework Settings
+        
+        1. ajax/enable (True|False)
+           Indicates whether AJAX should be enabled for the application.
+
+        2. ajax/updateProgressContent
+           The HTML content to display in the UpdateProgress panel
+           during a partial postback.
+	    
+           Use 
+              the {0} parameter to place the filename for the loading image.
+              the {1} parameter to place the localized text for 'Please Wait...'
+    
+           Use '[' to represent the '<' and the ']' to represent the '>' characters, 
+           because we are not allowed the enter the '<' and '>' in the web.config file.
+           
+        3. ajax/updateProgressImage
+           Specifies the loading image URL to be displayed when with the 
+           AjaxUpdateProgressContent is shown.
+           
+        4. cache/cacheFolder
+           Specifies the cache folder that will be used to store temporary
+           data used by the UI Framework.
+      =======================================================================
+    -->
+		<uiFramework>
+			<ajax enable="True" updateProgressContent="[table style='width:130px; height: 30px; background-color:white; border: solid 1px silver'][tr][td align='center' valign='middle'][img src='{0}' border='0' align='absmiddle'/] [b]{1}[/b][/td][/tr][/table]" updateProgressImage="~/images/ajax-loader-facebook.gif"/>
+			<cache cacheFolder="c:\temp\"/>
+		</uiFramework>
+		<!--
+      =======================================================================
+        Workflow Framework Settings
+        
+        1. workflowEngineType
+           Indicates the type of the workflow engine that will be used to
+           host and execute all the workflows for the system. Currently, 
+           the following are available types:
+        
+           a. WorkflowFramework.WindowsWorkflowEngine, WorkflowFramework
+
+        2. windowsWorkflow/imports
+           Contains a list of all namespaces that are to be added to the
+           Windows Workflow type provider runtime for compilation of
+           the .xoml workflows.
+           
+        3. windowsWorkflow/assemblies
+           Contains a list of all assemblies that are to be added to the
+           Windows Workflow type provider runtime for compilation of
+           the .xoml workflows.
+           
+      =======================================================================
+    -->
+		<workflowFramework workflowEngineType="Anacle.WorkflowFramework.WindowsWorkflowEngine, Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+			<windowsWorkflow eventObjectType="LogicLayer.Events.AnacleEvents, LogicLayer">
+				<imports>
+					<add namespace="Anacle.DataFramework"></add>
+					<add namespace="LogicLayer"></add>
+				</imports>
+				<assemblies>
+					<add name="Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4"></add>
+					<add name="Anacle.DataFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4"></add>
+					<add name="LogicLayer"></add>
+				</assemblies>
+			</windowsWorkflow>
+		</workflowFramework>
+	</anacle>
+	<blowery.web>
+		<!--
+    =======================================================================
+			Here's an example on how to change the algorithm or compression level.
+      
+      <compressionModule 
+          preferredAlgorithm="deflate|gzip" 
+          compressionLevel="high|normal|low"/>
+    =======================================================================
+		-->
+		<httpCompress preferredAlgorithm="gzip" compressionLevel="high">
+			<excludedMimeTypes>
+				<add type="image/jpeg"/>
+				<add type="image/gif"/>
+				<add type="text/css"/>
+				<add type="application/pdf"/>
+				<add type="application/vnd.ms-excel"/>
+				<add type="application/vnd.ms-word"/>
+			</excludedMimeTypes>
+			<excludedPaths>
+				<add path="WebResource.axd"/>
+				<add path="ScriptResource.axd"/>
+				<add path="Reserved.ReportViewerWebControl.axd"/>
+				<add path="document.aspx"/>
+			</excludedPaths>
+		</httpCompress>
+	</blowery.web>
+	<appSettings>
+		<!--
+    =======================================================================
+      The Anacle.EAM License Key.
+    
+      If you have been provided a license key from Anacle Systems, 
+      copy that key and replace the one in the value here.
+    =======================================================================
+    -->
+		<add key="LicenseKey" value="3F111B661F471414ABC85A775E254DAEECB6D3074B056F8FB6A1298D1CC165F1E60F74C002C705257F39D4EFF5932C4D27B387B4541606C40D986065A23C2328B8CAB13678152589895A4F3BE8E8096829943F89CC508764BD58BBDBE86995957C905BBAA35B1CEC600DB37D97B1DE06ACCB743D745B00A01E89E21510FD433252005D3F318A66730B48CA6E4BCBD3FEE8ABA60E32ACDA7D"></add>
+		<!--
+    =======================================================================
+      The database connection strings.
+      
+      Remember to set up two separate user accounts:
+      Account #1 for "database"
+        account name: {databasename}_normal
+        public, db_datareader, db_datawriter
+      
+      Account #2 for "database_readonly"
+        account name: {databasename}_readonly
+        public, db_datareader
+    =======================================================================
+    -->
+		<add key="database" value="server=localhost; database=abell60-capitaland-ccl; uid=sa; pwd=hc0811"/>
+		<add key="database_readonly" value="server=localhost; database=abell60-capitaland-ccl; uid=sa; pwd=hc0811"/>
+		<add key="database_audit" value="server=localhost; database=abell60-capitaland-ccl; uid=sa; pwd=hc0811"/>
+		<!--<add key="database" value="server=kientrung\sql2005; database=abell60_capitaland_rcs; uid=sa; pwd=hc0811"/>
+		<add key="database_readonly" value="server=kientrung\sql2005; database=abell60_capitaland_rcs; uid=sa; pwd=hc0811"/>
+		<add key="database_audit" value="server=kientrung\sql2005; database=abell60_capitaland_rcs; uid=sa; pwd=hc0811"/>-->
+		<!--NOTICE****: for internal use only. When deploy to client side, 
+      please delete this ODBCConvert key-->
+		<add key="OdbcConvert" value="Yes"></add>
+		<!--
+    =======================================================================
+      URLs for the treeview images used throughout the entire
+      Anacle.EAM system.
+    =======================================================================
+    -->
+		<add key="ImageUrl_FixedRateBook" value="~/images/book.png"/>
+		<add key="ImageUrl_FixedRateLogical" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_FixedRatePhysical" value="~/images/otype.png"/>
+		<add key="ImageUrl_ChecklistLogical" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_ChecklistPhysical" value="~/images/otype.png"/>
+		<add key="ImageUrl_LocationLogical" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_LocationPhysical" value="~/images/location.png"/>
+		<add key="ImageUrl_EquipmentLogical" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_EquipmentPhysical" value="~/images/otype.png"/>
+		<add key="ImageUrl_ObjectGroup" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_ObjectType" value="~/images/otype.png"/>
+		<add key="ImageUrl_TaskFolder" value="~/images/folder.png"/>
+		<add key="ImageUrl_TaskItem" value="~/images/document_add.png"/>
+		<add key="ImageUrl_PointTriggerLogical" value="~/images/ogroup.png"/>
+		<add key="ImageUrl_PointTriggerPhysical" value="~/images/otype.png"/>
+		<!--
+    =======================================================================
+      Sets which instance this is for.
+      Accepted values: <blank>/MARCOM
+    =======================================================================
+    -->
+		<add key="CustomizedInstance" value="OPS"></add>
+		<!--
+    =======================================================================
+    this is specifically customized for Capitaland-CN
+    the approve process for capitaland-cn used Iworkflow, 
+    following are some interface key for Iworkflow.
+    we will use in RFQ and PurchaseInvoice 
+    -->
+		<add key="IworkflowLogFilePath" value="c:\log\IworkflowLog-{0:yyyy-MM-dd}.txt"/>
+		<add key="IworkflowProcessGroupCodeForPR" value="FMSPR"/>
+		<add key="IworkflowProcessGroupCodeForPA" value="FMSPA"/>
+		<add key="IworkflowApplicationKey" value="FMS"/>
+		<add key="IworkflowEncryptedKey" value="X09dXvhdbFufTv66XtUjWscgvwI="/>
+		<add key="IworkflowWebserviceURL" value="http://localhost/Iworkflow/Service1.asmx"/>
+		<!--
+    =======================================================================
+      This is specifically customized for CapitaLand.
+      Sets a link at the top of the page for users to go to another system easily.
+      The value contains a number of comma separated parameters:
+      
+      OtherSystemLink = "System name , Link , System name, Link, ..."
+      OtherSystemApplicablePositions = "partial position name 1, partial position name 2, ..." 
+    =======================================================================
+    -->
+		<!--<add key="OtherSystemLink" value="&lt;b&gt;MARCOM&lt;/b&gt;,,(switch to Operations),https://ops-cmt-prod.dc.capitaland.com" />-->
+		<add key="OtherSystemLink" value=""/>
+		<add key="OtherSystemApplicablePositions" value=""/>
+		<!--
+    =======================================================================
+      Sets whether or not to use the windows user logged on name as the name 
+      for authentication. This forces the login page to retrieve the LOGON_USER name
+      and authenticates against the user database.
+      
+      If you set this to true, ensure that the Windows Authentication in IIS is enabled,
+      and the Anonymous is disabled.
+      
+      Accepted values: true/false 
+    =======================================================================
+    -->
+		<add key="AuthenticateWithWindowsLogon" value="false"></add>
+		<!--
+    =======================================================================
+      Specifies the UI Culture to be used for the log on page.
+    =======================================================================
+    -->
+		<add key="LoginPage_UICulture" value="en-US"></add>
+		<!--
+    =======================================================================
+      Specifies the path used to display the charts for the dashboards.
+    =======================================================================
+    -->
+		<add key="ChartDisplayVirtualPath" value="~/components/chartdisplay.aspx"></add>
+		<add key="ReportPDFFormatPhysicalPath" value="\components\reportgrid.rpt"></add>
+		<!--
+    =======================================================================
+      Specifies the folder used to generate temporary report files.
+    =======================================================================
+    -->
+		<add key="ReportTempFolder" value="c:\temp\"/>
+		<!--
+    =======================================================================
+      Specifies the folder contains LogicLayer.xml file.
+    =======================================================================
+    -->
+		<add key="LogicLayerXML" value="E:\PROJECTS\abell.60\Application\abell.root\abell\LogicLayer\bin\Debug\LogicLayer.xml"/>
+		<!--
+    =======================================================================
+      Specifies the folder contains LogicLayer.xml file.
+    =======================================================================
+    -->
+		<add key="DataFrameworkXML" value="E:\PROJECTS\abell.60\Framework\AbellFramework.root\AbellFramework\Anacle.DataFramework\bin\Debug\Anacle.xml"/>
+		<!--
+	  =======================================================================
+	    Specifies the name of EAM services of this instance being installed.
+	  =======================================================================
+	  -->
+		<add key="EAMservice" value="Anacle.EAM v6.0 Service"></add>
+		<!--
+	  =======================================================================
+	    Set this flag to true if you are doing load testing.
+	  =======================================================================
+	  -->
+		<add key="LoadTesting" value="false"></add>
+	</appSettings>
+	<system.web>
+		<!-- Set maxRequestLength to increase max file size can be uploaded to application (in KB)-->
+		<httpRuntime maxRequestLength="20480" />
+		<customErrors mode="Off">
+		</customErrors>
+		<httpHandlers>
+			<add path="Reserved.ReportViewerWebControl.axd" verb="*" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" validate="false"/>
+			<remove verb="*" path="*.asmx"/>
+			<add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+		</httpHandlers>
+		<httpModules>
+			<add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="CompressionModule" type="blowery.Web.HttpCompress.HttpModule, blowery.web.HttpCompress"/>
+		</httpModules>
+		<pages viewStateEncryptionMode="Always" enableViewStateMac="true" enableEventValidation="false" enableViewState="true" validateRequest="false">
+			<controls>
+				<add src="~/components/map.ascx" tagPrefix="web" tagName="map"/>
+				<add src="~/components/menu.ascx" tagPrefix="web" tagName="menu"/>
+				<add src="~/components/menu2.ascx" tagPrefix="web" tagName="menu2"/>
+				<add src="~/components/objectmemo.ascx" tagPrefix="web" tagName="memo"/>
+				<add src="~/components/objectattachments.ascx" tagPrefix="web" tagName="attachments"/>
+				<add src="~/components/objectsearchpanel.ascx" tagPrefix="web" tagName="search"/>
+				<add src="~/components/objectsearchdialogbox.ascx" tagPrefix="web" tagName="searchdialogbox"/>
+				<add src="~/components/fileuploaddialogbox.ascx" tagPrefix="web" tagName="fileuploaddialogbox"/>
+				<add src="~/components/objectpanel.ascx" tagPrefix="web" tagName="object"/>
+				<add src="~/components/objectsubpanel.ascx" tagPrefix="web" tagName="subpanel"/>
+				<add src="~/components/objectbase.ascx" tagPrefix="web" tagName="base"/>
+				<add src="~/components/objectAudit.ascx" tagPrefix="web" tagName="audit"/>
+				<add src="~/components/pagepanel.ascx" tagPrefix="web" tagName="pagepanel"/>
+				<add src="~/components/separator.ascx" tagPrefix="web" tagName="separator"/>
+				<add src="~/components/objectCustomized.ascx" tagPrefix="web" tagName="customized"/>
+				<add src="~/components/objectAttribute.ascx" tagPrefix="web" tagName="attribute"/>
+				<add src="~/components/objectActivityHistory.ascx" tagPrefix="web" tagName="ActivityHistory"/>
+				<add src="~/components/webpartDashboard.ascx" tagPrefix="web" tagName="webpartDashboard"/>
+				<add src="~/components/searchCatalog.ascx" tagPrefix="web" tagName="searchcatalog"/>
+				<add src="~/components/searchFixedRate.ascx" tagPrefix="web" tagName="searchfixedrate"/>
+				<add assembly="dotnetCHARTING" namespace="dotnetCHARTING" tagPrefix="dotnetCHARTING"/>
+				<add assembly="Anacle.UIFramework, Version=6.0.0.0, Culture=neutral" namespace="Anacle.UIFramework" tagPrefix="ui"/>
+				<!-- TODO: Remove these -->
+				<add src="~/components/objectSearchCatalog.ascx" tagPrefix="web" tagName="catalog"/>
+				<add src="~/components/objectSearchRates.ascx" tagPrefix="web" tagName="rates"/>
+				<add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add tagPrefix="asp" namespace="AjaxControlToolkit" assembly="AjaxControlToolkit"/>
+				<add tagPrefix="asp" namespace="Microsoft.Web.Preview.UI" assembly="Microsoft.Web.Preview"/>
+				<add tagPrefix="asp" namespace="Microsoft.Web.Preview.UI.Controls" assembly="Microsoft.Web.Preview"/>
+			</controls>
+			<namespaces>
+				<clear/>
+				<add namespace="System"/>
+				<add namespace="System.Collections"/>
+				<add namespace="System.Collections.Generic"/>
+				<add namespace="System.Collections.Specialized"/>
+				<add namespace="System.Configuration"/>
+				<add namespace="System.Text"/>
+				<add namespace="System.Text.RegularExpressions"/>
+				<add namespace="System.Linq"/>
+				<add namespace="System.Xml.Linq"/>
+				<add namespace="System.Web"/>
+				<add namespace="System.Web.Caching"/>
+				<add namespace="System.Web.SessionState"/>
+				<add namespace="System.Web.Security"/>
+				<add namespace="System.Web.Profile"/>
+				<add namespace="System.Web.UI"/>
+				<add namespace="System.Web.UI.WebControls"/>
+				<add namespace="System.Web.UI.WebControls.WebParts"/>
+				<add namespace="System.Web.UI.HtmlControls"/>
+				<add namespace="Anacle.DataFramework"/>
+				<add namespace="Anacle.UIFramework"/>
+				<add namespace="Anacle.WorkflowFramework"/>
+				<add namespace="LogicLayer"/>
+			</namespaces>
+			<tagMapping>
+				<add tagType="System.Web.UI.WebControls.WebParts.WebPartManager" mappedTagType="Microsoft.Web.Preview.UI.Controls.WebParts.WebPartManager"/>
+				<add tagType="System.Web.UI.WebControls.WebParts.WebPartZone" mappedTagType="Microsoft.Web.Preview.UI.Controls.WebParts.WebPartZone"/>
+			</tagMapping>
+		</pages>
+		<!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+
+            Visual Basic options:
+            Set strict="true" to disallow all data type conversions 
+            where data loss can occur. 
+            Set explicit="true" to force declaration of all variables.
+        -->
+		<compilation debug="true" strict="false" explicit="true">
+			<assemblies>
+				<add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692FBEA5521E1304"/>
+				<add assembly="System.ServiceProcess, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="System.Workflow.Runtime, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+				<add assembly="CrystalDecisions.ReportAppServer.ClientDoc, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"/>
+				<add assembly="System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/></assemblies>
+			<buildProviders>
+				<add extension=".rdlc" type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+			</buildProviders>
+		</compilation>
+		<!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+		<authentication mode="Forms"/>
+		<!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors>
+        -->
+		<sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424"/>
+		<trace enabled="false"/>
+		<!-- 
+      =======================================================================
+      Indicate the ASP.NET Web Parts personalization provider here.
+      =======================================================================
+    -->
+		<webParts>
+			<personalization defaultProvider="WebPartsPersonalizationProvider">
+				<providers>
+					<add name="WebPartsPersonalizationProvider" type="LogicLayer.WebPartsPersonalizationProvider, LogicLayer"/>
+				</providers>
+			</personalization>
+		</webParts>
+	</system.web>
+	<system.web.extensions>
+		<scripting>
+			<webServices>
+				<jsonSerialization maxJsonLength="500000"></jsonSerialization>
+			</webServices>
+		</scripting>
+	</system.web.extensions>
+	<!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+	<system.webServer>
+		<validation validateIntegratedModeConfiguration="false"/>
+		<modules>
+			<remove name="ScriptModule"/>
+			<add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="CompressionModule" type="blowery.Web.HttpCompress.HttpModule, blowery.web.HttpCompress"/>
+		</modules>
+		<handlers>
+			<remove name="WebServiceHandlerFactory-Integrated"/>
+			<remove name="ScriptHandlerFactory"/>
+			<remove name="ScriptHandlerFactoryAppServices"/>
+			<remove name="ScriptResource"/>
+			<add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+			<add name="Reserved-ReportViewerWebControl-axd" path="Reserved.ReportViewerWebControl.axd" verb="*" type="Microsoft.Reporting.WebForms.HttpHandler, Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+		</handlers>
+		<urlCompression doStaticCompression="false"/>
+	</system.webServer>
+	<system.codedom>
+		<compilers>
+			<compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider,System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+				<providerOption name="CompilerVersion" value="v3.5"/>
+				<providerOption name="WarnAsError" value="false"/>
+			</compiler>
+			<compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.VisualBasic.VBCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+				<providerOption name="CompilerVersion" value="v3.5"/>
+				<providerOption name="OptionInfer" value="true"/>
+				<providerOption name="WarnAsError" value="false"/>
+			</compiler>
+		</compilers>
+	</system.codedom>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+</configuration>

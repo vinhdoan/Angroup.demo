@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="buttonRefreshResource1.Text" xml:space="preserve">
+    <value>刷新</value>
+  </data>
+  <data name="checkCreateOnlyIfWorksAreCancelledOrClosedResource1.Caption" xml:space="preserve">
+    <value>重复工作</value>
+  </data>
+  <data name="checkSaveHistoricalEventsResource1.Caption" xml:space="preserve">
+    <value>保存历史事件</value>
+  </data>
+  <data name="checkSaveHistoricalEventsResource1.Text" xml:space="preserve">
+    <value>是的，保存来自非同步事件伺服器的历史事件入数据库。</value>
+  </data>
+  <data name="dropOPCAEServerResource1.Caption" xml:space="preserve">
+    <value>OPC非同步事件伺服器</value>
+  </data>
+  <data name="dropPriorityResource1.Caption" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+  <data name="dropTypeOfProblemResource1.Caption" xml:space="preserve">
+    <value>问题类型</value>
+  </data>
+  <data name="dropTypeOfServiceResource1.Caption" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+  <data name="dropTypeOfWorkResource1.Caption" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+  <data name="hint1Resource1.Text" xml:space="preserve">
+    <value>只显示最新1000个事件。</value>
+  </data>
+  <data name="hintConditionNamesResource1.Text" xml:space="preserve">
+    <value>使用逗号间隔事件的条件与次条件，如： “SP_LOW，SP_HIGH”。
+&lt;br /&gt;
+&lt;br /&gt;
+使用‘*’以注明触发事件的条件与次条件。</value>
+  </data>
+  <data name="hintWorkDescriptionResource1.Text" xml:space="preserve">
+    <value>工作说明详细解说问题，如：                            &lt;br /&gt;
+&lt;br /&gt;
+“底层空调发出警报。”</value>
+  </data>
+  <data name="label1Resource1.Text" xml:space="preserve">
+    <value>严重性：</value>
+  </data>
+  <data name="labelAfterNumberOfTimesResource1.Text" xml:space="preserve">
+    <value>次数</value>
+  </data>
+  <data name="labelBreachConditionResource1.Text" xml:space="preserve">
+    <value>创建工作：</value>
+  </data>
+  <data name="labelCreateWorkResource1.Text" xml:space="preserve">
+    <value>只有在事件发生后才创建工作</value>
+  </data>
+  <data name="labelSeverity1Resource1.Text" xml:space="preserve">
+    <value>范围从</value>
+  </data>
+  <data name="labelSeverity2Resource1.Text" xml:space="preserve">
+    <value>至</value>
+  </data>
+  <data name="lbDescriptionResource1.Caption" xml:space="preserve">
+    <value>工作说明</value>
+  </data>
+  <data name="lbPriorityResource1.Caption" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+  <data name="lbProblemResource1.Caption" xml:space="preserve">
+    <value>问题类型</value>
+  </data>
+  <data name="lbServiceResource1.Caption" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+  <data name="lbWorkResource1.Caption" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>设备</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>当此事件发生时不触发任何操作</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>当此事件发生时创建工作</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>不管先前全部的工作状态，照常创建工作。</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>只有当先前全部的工作已关闭或已取消才创建工作。</value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+  <data name="radioCreateWorkOnEventResource1.Caption" xml:space="preserve">
+    <value>突破</value>
+  </data>
+  <data name="radioIsApplicableForLocationResource1.Caption" xml:space="preserve">
+    <value>区域/设备</value>
+  </data>
+  <data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+  <data name="tabEventHistoryResource1.Caption" xml:space="preserve">
+    <value>事件历史</value>
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>备忘录</value>
+  </data>
+  <data name="tabTriggerResource1.Caption" xml:space="preserve">
+    <value>触发</value>
+  </data>
+  <data name="textConditionNamesResource1.Caption" xml:space="preserve">
+    <value>条件名称</value>
+  </data>
+  <data name="textDescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+  <data name="textNumberOfEventsToTriggerActionResource1.Caption" xml:space="preserve">
+    <value>突破次数</value>
+  </data>
+  <data name="textOPCEventSourceResource1.Caption" xml:space="preserve">
+    <value>OPC事件来源</value>
+  </data>
+  <data name="textSeverityFromResource1.Caption" xml:space="preserve">
+    <value>严重性（从）</value>
+  </data>
+  <data name="textSeverityToResource1.Caption" xml:space="preserve">
+    <value>严重性（至）</value>
+  </data>
+  <data name="textSubConditionNamesResource1.Caption" xml:space="preserve">
+    <value>此条件名称</value>
+  </data>
+  <data name="textWorkDescriptionResource1.Caption" xml:space="preserve">
+    <value>工作说明</value>
+  </data>
+  <data name="treeEquipmentResource1.Caption" xml:space="preserve">
+    <value>设备</value>
+  </data>
+  <data name="treeLocationResource1.Caption" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="TreeTriggerResource1.Caption" xml:space="preserve">
+    <value>点触发</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>事件的日期/时间</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>来源</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>条件名称</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>此条件名称</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>工作号码</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>工作状态</value>
+  </data>
+  <data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>触发</value>
+  </data>
+  <data name="UISeparator2Resource1.Caption" xml:space="preserve">
+    <value>条件</value>
+  </data>
+  <data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>事件源名称</value>
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>OPC AE 事件</value>
+  </data>
+</root>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Shared">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=abell\sql2005;Initial Catalog=abell60-capitaland-ccl</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>8199b0cf-9193-4b2c-b26f-52e63ae0a5e9</DataSourceID>
+</RptDataSource>

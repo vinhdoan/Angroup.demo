@@ -1,0 +1,297 @@
+﻿<RuleDefinitions xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<RuleDefinitions.Conditions>
+		<RuleExpressionCondition Name="IfCardSystemReady">
+			<RuleExpressionCondition.Expression>
+				<ns0:CodeBinaryOperatorExpression Operator="ValueEquality" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:CodeBinaryOperatorExpression.Left>
+						<ns0:CodeMethodInvokeExpression>
+							<ns0:CodeMethodInvokeExpression.Parameters>
+								<ns0:CodePrimitiveExpression>
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">CARDSYSTEM01</ns1:String>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</ns0:CodeMethodInvokeExpression.Parameters>
+							<ns0:CodeMethodInvokeExpression.Method>
+								<ns0:CodeMethodReferenceExpression MethodName="ReadOPCTag">
+									<ns0:CodeMethodReferenceExpression.TargetObject>
+										<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3649.28582, Culture=neutral, PublicKeyToken=null" />
+									</ns0:CodeMethodReferenceExpression.TargetObject>
+								</ns0:CodeMethodReferenceExpression>
+							</ns0:CodeMethodInvokeExpression.Method>
+						</ns0:CodeMethodInvokeExpression>
+					</ns0:CodeBinaryOperatorExpression.Left>
+					<ns0:CodeBinaryOperatorExpression.Right>
+						<ns0:CodePrimitiveExpression>
+							<ns0:CodePrimitiveExpression.Value>
+								<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</ns1:Int32>
+							</ns0:CodePrimitiveExpression.Value>
+						</ns0:CodePrimitiveExpression>
+					</ns0:CodeBinaryOperatorExpression.Right>
+				</ns0:CodeBinaryOperatorExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+	</RuleDefinitions.Conditions>
+	<RuleDefinitions.RuleSets>
+		<RuleSet Name="Turn on Light 01" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT0001</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3649.28582, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+		<RuleSet Name="Turn off Aircon 01" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-01</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-02</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-03</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">0</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+		<RuleSet Name="Turn on Aircon 01" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-01</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-02</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">LIGHT01-03</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:Int32 xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">1</ns1:Int32>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="WriteOPCTag">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeTypeReferenceExpression Type="LogicLayer.OBMSWorkflow, LogicLayer, Version=6.0.3650.30376, Culture=neutral, PublicKeyToken=null" />
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+	</RuleDefinitions.RuleSets>
+</RuleDefinitions>

@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Adjust_DuplicateItem" xml:space="preserve">
+		<value>調整したい項目が既に同じバッチに存在しています。別のバッチを選択して下さい。</value>
+	</data>
+  <data name="Adjust_InsufficientItems" xml:space="preserve">
+		<value>倉庫の該当項目が数量不足のため調整できません。{0}
+</value>
+	</data>
+  <data name="AmountPerTerm_Invalid" xml:space="preserve">
+		<value>契約期間の合計金額がゼロ以上でなければ行けません。
+</value>
+		<comment>A term refers to a contract term (or a period of time)</comment>
+	</data>
+  <data name="Budget_DeleteBudgetItemFailed" xml:space="preserve">
+		<value>1つまたは複数の予算項目を削除できません。予算項目がもし年間予算項目または購入取引に参照されていれば削除できません。
+</value>
+	</data>
+  <data name="Budget_DuplicatedBudgetCategory" xml:space="preserve">
+		<value>同じの予算に重複な予算カテゴリーを見つかりました。もしあなたが新しい予算項目を作ろうとしていれば、それに非アクティブの予算が同じカテゴリーにあります。作る替わりにこの予算をアクティブにします。それ以外に他の予算カテゴリーを選択して下さい。
+</value>
+	</data>
+  <data name="Budget_DuplicatedItem" xml:space="preserve">
+		<value>該当項目がもう既に予算に存在しています。別の予算項目を選択して下さい。
+</value>
+	</data>
+  <data name="Budget_InactivateBudgetItemFailed" xml:space="preserve">
+		<value>1つまたは複数の予算項目を非アクティブできません。予算に一つまたは複数の消費未完了項目が付属していると非アクティブできません。
+</value>
+	</data>
+  <data name="Budget_InvalidTotalAmount" xml:space="preserve">
+		<value>合計金額に有効な数字を入力して下さい。
+</value>
+	</data>
+  <data name="Budget_ReferInactiveBudgetItem" xml:space="preserve">
+		<value>同じの予算に重複な予算カテゴリーを見つかりました。もしあなたが新しい予算項目を作ろうとしていれば、それに非アクティブの予算が同じカテゴリーにあります。作る替わりにこの予算をアクティブにします。それ以外に他の予算カテゴリーを選択して下さい。
+</value>
+	</data>
+  <data name="BudgetAllocation_SameSourceDestination" xml:space="preserve">
+		<value>予算における指定元と指定先は同じでは行けません。
+</value>
+		<comment>Item refers to a budget item.</comment>
+	</data>
+  <data name="BudgetCategory_ParentInvalid" xml:space="preserve">
+		<value>タイプカテゴリーにおける予算カテゴリーはライン項目における予算カテゴリーの配下に有ってはいけません。
+</value>
+	</data>
+  <data name="Calendar_NoWorkDays" xml:space="preserve">
+		<value>少なくとも１営業日を選択して下さい。
+</value>
+	</data>
+  <data name="CheckOut_DuplicateItem" xml:space="preserve">
+		<value>同じカタログ及び容器の在庫項目がすでに出庫に存在します。 異なるカタログあるいは容器を選択して下さい。
+</value>
+		<comment>Item refers to a inventory item.</comment>
+	</data>
+  <data name="CheckOut_InsufficientItems" xml:space="preserve">
+		<value>以下の在庫項目が数量不足のため出庫できません。{0}
+</value>
+	</data>
+  <data name="CheckOut_InsufficientQuantity" xml:space="preserve">
+		<value>1つまたは複数な在庫項目が数量不足ため出庫コミットできません。
+</value>
+	</data>
+  <data name="CheckOut_ItemInsufficientQuantity" xml:space="preserve">
+		<value>倉庫に該当項目の在庫数量が不足しています。
+</value>
+	</data>
+  <data name="Code_CyclicalReference" xml:space="preserve">
+		<value>該当親コードが結果的に循環的なチェーン状態になっています。自分自身より以下にならないような親コードを選択して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMaxDateTime" xml:space="preserve">
+		<value>範囲における最大値を日付時間フォーマットで入力して下さい。(yyyy-mm-dd hh:mm:ss)
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMaxDecimal" xml:space="preserve">
+		<value>範囲における最大値を小数フォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMaxDouble" xml:space="preserve">
+		<value>範囲における最大値をダブルフォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMaxInteger" xml:space="preserve">
+		<value>範囲における最大値を整数フォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMinDateTime" xml:space="preserve">
+		<value>範囲における最小値を日付時間フォーマットで入力して下さい。(yyyy-mm-dd hh:mm:ss)
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMinDecimal" xml:space="preserve">
+		<value>範囲における最小値を小数フォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMinDouble" xml:space="preserve">
+		<value>範囲における最小値をダブルフォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_InvalidMinInteger" xml:space="preserve">
+		<value>範囲における最小値を整数フォーマットで入力して下さい。
+</value>
+	</data>
+  <data name="CustomizedObject_NoRangeSpecify" xml:space="preserve">
+		<value>範囲における値を少なくとも1つを指定して下さい。 (最小/最大)
+</value>
+	</data>
+  <data name="Equipment_ParentIDInvalid" xml:space="preserve">
+		<value>該当フォルダーは物理的な設備の配下にあっては行けません。別の親を選択して下さい。
+</value>
+		<comment>A folder is like a folder in Windows, where you store your files.</comment>
+	</data>
+  <data name="EquipmentTypeSpares_DuplicateItem" xml:space="preserve">
+		<value>該当予備品が既に同じカタログに存在しています。別のカタログを指定して下さい。
+</value>
+	</data>
+  <data name="General_CommaSeparator" xml:space="preserve">
+		<value>, </value>
+	</data>
+  <data name="General_NameDuplicate" xml:space="preserve">
+		<value>該当名称が既に存在しています。別の名称を指定して下さい。
+該当名称が既に存在しています。別の名称を指定して下さい。
+</value>
+	</data>
+  <data name="Location_ParentIDInvalid" xml:space="preserve">
+		<value>該当フォルダーは物理的なロケーションの配下にあっては行けません。別の親を選択して下さい。
+</value>
+	</data>
+  <data name="MaxRenewal_Invalid" xml:space="preserve">
+		<value>契約期間の最大値はゼロ以上でなければ行けません。
+</value>
+		<comment>Term refers to a contract term.</comment>
+	</data>
+  <data name="MonthsPerTerm_Invalid" xml:space="preserve">
+		<value>契約期間毎における月指定はゼロ以上でなければ行けません。
+</value>
+	</data>
+  <data name="Multiple_SelectItem" xml:space="preserve">
+		<value>進む前にに少なくとも1つの項目を選択して下さい。
+</value>
+	</data>
+  <data name="PurchaseOrder_AmountNotEqual" xml:space="preserve">
+		<value>全ての予算購入項目 ({1:n}) の総合計が必ず全てのライン購入項目/契約金額と({0:n})一致しなければ行けません。
+</value>
+		<comment>Purchase Orders always have line items, where each line often represents the inventory, or service you want to purchase from your vendor.</comment>
+	</data>
+  <data name="PurchaseOrder_AtleastOneFinancialYear" xml:space="preserve">
+		<value>会計年度の予算項目レコードに少なくとも1つの予算金額を入力して下さい。
+</value>
+		<comment>Financial Year is an accounting term to indicate the period of time to consider as a full year for accounting for income/expenses</comment>
+	</data>
+  <data name="PurchaseOrder_BudgetInvalidForSelect" xml:space="preserve">
+		<value>該当予算項目の選択は無効です。もし購入指示書における購入日と終了日有効な範囲内になければ予算項目の追加はできません。
+</value>
+	</data>
+  <data name="PurchaseOrder_InactiveBudgetItemToConsume" xml:space="preserve">
+		<value>該当予算項目を消費できません。該当予算項目は非アクティブとなっています。
+</value>
+	</data>
+  <data name="PurchaseOrder_InsufficientBudgetitemForConsume" xml:space="preserve">
+		<value>該当予算項目に使用できる予算金額が不足ため消費できません。
+</value>
+	</data>
+  <data name="PurchaseOrder_InvalidPeriod" xml:space="preserve">
+		<value>購入指示書における有効な期間は18年以上を超えては行けません。
+</value>
+	</data>
+  <data name="PurchaseOrder_InvalidReapprove" xml:space="preserve">
+		<value>ライン項目の合計/契約金額が合計受領品または合計請求金額より小さくなっては行けません。
+</value>
+	</data>
+  <data name="PurchaseOrder_InvalidStartEndDate" xml:space="preserve">
+		<value>開始日が終了日より後になっては行けません。新しい値を指定して下さい。
+</value>
+	</data>
+  <data name="Purchaseorder_IsDuplicatedBudgetItem" xml:space="preserve">
+		<value>同じ予算項目は購入指示書の予算リストに存在しています。新しい項目を選択して下さい。
+</value>
+	</data>
+  <data name="PurchaseOrder_TaxCodesNotSelected" xml:space="preserve">
+		<value>少なくとも1つの購入指示書の項目には税コードが選択されておりません。 全ての項目に税コードを選択して下さい。
+</value>
+	</data>
+  <data name="PurchaseOrder_TotalBudgetAmountNotEqual" xml:space="preserve">
+		<value>全ての請求予算金額が({0:n}) 全ての請求金額と一致しなければ行けません。({1:n})
+</value>
+	</data>
+  <data name="PurchaseOrder_UnableToGenerate" xml:space="preserve">
+		<value>購入指示書を生成できません。購入指示書を作成できない原因はライン項目がないためかもしれません。
+</value>
+	</data>
+  <data name="PurchaseOrder_UnitPriceNotEntered" xml:space="preserve">
+		<value>少なくとも1つの購入指示書の項目に単価が指定されていません。全ての項目に単価を指定して下さい。
+</value>
+	</data>
+  <data name="PurchaseRequest_NoItemsSelected" xml:space="preserve">
+		<value>購買要求書にライン項目が選択されていません。少なくとも1つのライン項目を選択して下さい。
+</value>
+	</data>
+  <data name="QuantityOrdered_Invalid" xml:space="preserve">
+		<value>該当ライン項目の合計金額({0:#,##0.00})が受領品の合計金額よりも少なくては行けません。
+</value>
+	</data>
+  <data name="Report_CascadeControlLoop" xml:space="preserve">
+		<value>選択されたカスケードドロップダウンリストが結果的には無限ループになります。別のドロップダウンリストを選択して下さい。
+</value>
+		<comment>Cascading dropdowns refers to the UI's dropdown list. When the user selects an item in a dropdown list, the items in another dropdown list gets refreshed.</comment>
+	</data>
+  <data name="Report_FieldNotFound" xml:space="preserve">
+		
+	</data>
+  <data name="Report_IdentifierHasComma" xml:space="preserve">
+		<value />
+	</data>
+  <data name="Report_IdentifierHasSpaces" xml:space="preserve">
+		<value>指定された識別子には空白があり、それは許可されていません。全ての空白を取り除いてください
+</value>
+		<comment>White space is something that refers to contain a 'space'.</comment>
+	</data>
+  <data name="Report_InvalidReportFile" xml:space="preserve">
+		<value />
+	</data>
+  <data name="Report_PopulateQueryError" xml:space="preserve">
+		<value>クエリー問い合わせが次のメッセージ: {0}で失敗しましたので内容をリストフィールドに実装できません。
+</value>
+		<comment>'Query' refers to an SQL search query, or a query into the database. It does not refer to a question.</comment>
+	</data>
+  <data name="Report_QueryFailedWithMessage" xml:space="preserve">
+		
+	<value>レポートクエリーが以下のメッセージで失敗しました。</value></data>
+  <data name="Report_ReportFileNotFound" xml:space="preserve">
+		<value />
+	</data>
+  <data name="Report_SelectTemplate" xml:space="preserve">
+		<value>レポートテンプレートを指定して下さい。
+</value>
+		<comment></comment>
+	</data>
+  <data name="ReportTemplate_EditDenied" xml:space="preserve">
+		<value>テンプレートレポートを修正することができなません。 テンプレートクリエーターだけがそれをアクセスすることができます。
+</value>
+	</data>
+  <data name="RequestForQuotation_DuplicateVendor" xml:space="preserve">
+		<value>このベンダーが既にRFQのベンダーリストに存在しています。ベンダーを選択して下さい。
+</value>
+	</data>
+  <data name="RequestForQuotation_NoRFQItemsSelected" xml:space="preserve">
+		<value>見積り項目を選択されていません。少なくとも１つの見積り項目を選択して下さい。
+</value>
+	</data>
+  <data name="RequestForQuotation_NoVendor" xml:space="preserve">
+		<value>ベンダーを選択して下さい。
+</value>
+	</data>
+  <data name="RequestForQuotation_UnableToGenerate" xml:space="preserve">
+		<value>見積り要求の作成ができません。これはライン項目なしで見積り要求の作成しょうとしている可能性があります。
+</value>
+	</data>
+  <data name="ScheduledWork_DuplicateAdhocRate" xml:space="preserve">
+		<value>同じ特別レートが既に作業スケジュールに存在しています。別の特別レートを選択して下さい。
+</value>
+	</data>
+  <data name="ScheduledWork_DuplicateFixedRate" xml:space="preserve">
+		<value>同じ固定レートが既に作業スケジュールに存在しています。別の固定レートを選択して下さい。
+</value>
+	</data>
+  <data name="ScheduledWork_DuplicateMaterial" xml:space="preserve">
+		<value>同じがカタログ既に作業スケジュールに存在しています。別のカタログを選択して下さい。
+</value>
+	</data>
+  <data name="ScheduledWork_StaggeredEquipmentNotSpecified" xml:space="preserve">
+		<value>スタッガード設備が作業スケジュールに指定されていません。よろめきをセットすることによって、少なくとも1つのスタッガード設備を指定して下さい。
+</value>
+	</data>
+  <data name="ScheduledWork_StaggeredLocationNotSpecified" xml:space="preserve">
+		<value>スタッガードロケーションが作業スケジュールに指定されていません。よろめきをセットすることによって、少なくとも1つのスタッガードロケーションを指定して下さい。
+</value>
+	</data>
+  <data name="ScheduleWork_StartDateWithinContractPeriod" xml:space="preserve">
+		<value>初めての仕事開始日付契約期間の範囲内になければ行けません。
+</value>
+	</data>
+  <data name="ServiceLevel_DuplicateServiceLevelDetail" xml:space="preserve">
+		<value>同じステップナンバー、サービスのタイプ、及びプライオリティーのサービスレベルがこのサービスレベルに重複しています。別のステップナンバー、サービスのタイプ、及びプライオリティーを選択して下さい。
+</value>
+	</data>
+  <data name="ServiceLevel_LocationDuplicate" xml:space="preserve">
+		<value>もう1つのサービスレベルがすでに同じロケーションで定義されました。別の場所を指定してください。
+</value>
+	</data>
+  <data name="Store_DuplicateBin" xml:space="preserve">
+		<value>同じ名を持つ重複の容器がすでに店で存在します。
+</value>
+	</data>
+  <data name="Store_DuplicateItem" xml:space="preserve">
+		<value>同じカタログを持つ重複の項目がすでにこの店に存在します。別のカタログを選択して下さい。
+</value>
+	</data>
+  <data name="Store_NoLowInventoryItems" xml:space="preserve">
+		<value>再購入しきい値より下回った在庫項目がありません。購入要求書が作成されません。
+</value>
+	</data>
+  <data name="Transfer_DuplicateItem" xml:space="preserve">
+		<value>同じカタログと容器を持つ重複の項目がすでにこの移転に存在します。異なるカタログまたは容器を選択して下さい。
+</value>
+	</data>
+  <data name="Transfer_FromBinSameAsToBin" xml:space="preserve">
+		<value>指定された容器は同じです。この移転に異なる容器を選択して下さい。
+</value>
+	</data>
+  <data name="Transfer_InsufficientItems" xml:space="preserve">
+		<value>店にある次の項目が不足のため移転できません。
+</value>
+	</data>
+  <data name="UnitConversion_FromUnitDuplicate" xml:space="preserve">
+		<value>指定された測定単位既に定義されました。別の測定単位を選択して下さい。
+</value>
+		<comment>A Unit of Measure refers to the unit like centimeters, meters, each, dozen, kilogram, box of 10s, etc.</comment>
+	</data>
+  <data name="UnitConversion_ToUnitOfMeasureInvalid" xml:space="preserve">
+		<value>単位から'と異なる'単位に'を選択して下さい。
+</value>
+		<comment>'To Unit' and 'From Unit' appears in the modules\unitconversion\edit.aspx. Ensure that both text are translated the same.</comment>
+	</data>
+  <data name="User_DuplicateUser" xml:space="preserve">
+		<value>同じログイン名またはユーザー名既に存在しています。別のログイン名またはユーザー名を指定して下さい。
+</value>
+		<comment>A login name is the user login ID, like 'm.smith'. The user name is the actual registered name of the user, like 'Mike Smith.'</comment>
+	</data>
+  <data name="User_PasswordDifferent" xml:space="preserve">
+		<value>確認パスワード'に同じパスワードを入力して下さい。
+</value>
+		<comment>'Confirm Password' is a textbox where the user enters a second time, the same password so that the system can make sure it is the same as the first.</comment>
+	</data>
+  <data name="User_PasswordWrong" xml:space="preserve">
+		<value>パスワードが間違っています。
+</value>
+	</data>
+  <data name="Utility_DatetimeInvalid" xml:space="preserve">
+		<value>終了日が開始日より後及び同じでなければ行けません。
+</value>
+	</data>
+  <data name="Utility_UtilityValueInvalid" xml:space="preserve">
+		<value>少なくとも1つの実用値を入力して下さい。
+</value>
+	</data>
+  <data name="ViewProject_DoNotHaveAccessRight" xml:space="preserve">
+		<value>申し訳ないですがシステムはあなたのリクエストを処理できません。あたながプロジェクトオブジェクトを作るためのアクセス権を持っていません。 あなたのシステム管理者に連絡してください。
+</value>
+	</data>
+  <data name="ViewScheduleWork_DoNotHaveAccessRight" xml:space="preserve">
+		<value>申し訳ないですがシステムはあなたのリクエストを処理できません。あたながスケジュールワークオブジェクトを参照または修正するためのアクセス権を持っていません。 
+</value>
+		<comment>'Scheduled work' refers to a work planned before hand. Normally the work occurs on a regular basis (for example, 1 monthly scheduled works, 2 weekly scheduled works)</comment>
+	</data>
+  <data name="Work_AlreadyAcknowledged" xml:space="preserve">
+		<value>作業{0}既に承認しました。
+</value>
+	</data>
+  <data name="Work_AlreadyArrived" xml:space="preserve">
+		<value>作業{0}が既に到着しました。
+</value>
+	</data>
+  <data name="Work_AlreadyCompleted" xml:space="preserve">
+		<value>作業{0}が既に完了しました。
+</value>
+	</data>
+  <data name="Work_ArrivedBeforeAck" xml:space="preserve">
+		<value>作業{0}にエラーがあります。
+</value>
+	</data>
+  <data name="Work_CannotCompleteAtThisStage" xml:space="preserve">
+		<value>技術者がこの作業にアサインされていないため今回完了することができません。
+</value>
+	</data>
+  <data name="Work_DuplicateAdhocRate" xml:space="preserve">
+		<value>同じ特別レートが既に作業指図に存在しています。別の特別レートを選択して下さい。
+</value>
+	</data>
+  <data name="Work_DuplicateFixedRate" xml:space="preserve">
+		<value>同じ固定レートが既に作業指図に存在しています。別の固定レートを選択して下さい。
+</value>
+	</data>
+  <data name="Work_DuplicateMaterial" xml:space="preserve">
+		<value>同じ容器からの同じ店の材料はすでに作業指図に存在します。異なる店の材料または異なる容器を選択して下さい。
+</value>
+	</data>
+  <data name="Work_DuplicateTechnician" xml:space="preserve">
+		<value>同じ技術者が既に作業指図に存在しています。別の技術者を選択して下さい。
+</value>
+	</data>
+  <data name="Work_InsufficientStoreItems" xml:space="preserve">
+		<value>店にある次の項目が不足のため出庫できません。 {0}
+</value>
+	</data>
+  <data name="Work_InvalidateTotalBillingAmount" xml:space="preserve">
+		<value>合計請求金額 ({0:#,##0.00})が必ず合計課金金額({1:#,##0.00})より少なければ行けません。
+</value>
+	</data>
+  <data name="Work_LocationEquipmentNotSelected" xml:space="preserve">
+		<value>ロケーション/設備`項目が必須入力項目です。選択または入力して下さい。
+</value>
+	</data>
+  <data name="Work_OneOrMoreBillsHavebeenPosted" xml:space="preserve">
+		<value>処理の間に1つあるいはそれ以上の請求書が財政に送りました。これらの請求書はもはや修正することができません。システムはあなたが送信済みの請求書に変更を戻しました。
+</value>
+		<comment>'Posted to finance' refers to information sent from our system to the financial system.</comment>
+	</data>
+  <data name="Work_SomeChangesHaveNotBeSaved" xml:space="preserve">
+		<value>いくつかの変更が穂保存されていません。全ての変更を保存してから処理を続行して下さい。
+</value>
+	</data>
+  <data name="Work_StoreBinsNotSpecified" xml:space="preserve">
+		<value>いくつかの材料費項目には店及び容器が指定されていません。 それらを指定してください。
+</value>
+		<comment>'Material' refers to inventory/store. 'Cost Items' refer to the inventory being a cost that the work has to incur.</comment>
+	</data>
+  <data name="Work_TechnicianNotAssigned" xml:space="preserve">
+		<value>この作業に技術者または建築業者アサインされていません。少なくとも一人の技術者をアサインして下さい。
+</value>
+	</data>
+  <data name="Work_TechnicianNotSpecified" xml:space="preserve">
+		<value>いくつかの技術者費項目には技術者が指定されていません。 それらを指定してください。
+</value>
+		<comment>'Cost Items' refer to the inventory being a cost that the work has to incur. Technicians form part of the cost item, because their time or hourly pay has to be factored into the cost of the work.</comment>
+	</data>
+  <data name="Work_UnableToCreate" xml:space="preserve">
+		<value>申し訳ないですがシステムはあなたのリクエストを処理できません。あたなが購入指示書オブジェクトを作るためのアクセス権を持っていません。 あなたのシステム管理者に連絡してください。
+</value>
+	</data>
+  <data name="Work_UnableToEditOrView" xml:space="preserve">
+		<value>申し訳ないですがシステムはあなたのリクエストを処理できません。あたなが購入指示書オブジェクトを参照または修正するためのアクセス権を持っていません。 あなたのシステム管理者に連絡してください。
+</value>
+	</data>
+  <data name="Workflow_NoUsersToAssign" xml:space="preserve">
+		<value>作業フローエンジンがこの項目にユーザーまたは役割をアサインすることができません。
+</value>
+		<comment>The 'workflow engine' is a software module that assigns tasks to users.</comment>
+	</data>
+  <data name="Workflow_TransitionInvalid" xml:space="preserve">
+		<value>作業フローエンジンがこの項目を指定段階に移動することができません。
+</value>
+	</data>
+  <data name="YearlyBudget_InactivateBudgetItemFailed" xml:space="preserve">
+		<value>この予算項目がを非アクティブすることができません。一つまたは複数の予算消費処理または予算変動処理が付属しているからです。
+</value>
+	</data>
+  <data name="YearlyBudget_InactivateMulBudgetItemFailed" xml:space="preserve">
+		<value>1つまたは複数の予算項目がを非アクティブすることができません。一つまたは複数の予算消費処理または予算変動処理が付属しているからです。
+</value>
+		<comment>Budget variation is the changing of the figures in a budget.</comment>
+	</data>
+  <data name="PurchaseOrder_TotalBudgetPaymentNotEqual" xml:space="preserve">
+		<value>合計予算支払金額 {0:#,##0.00} が必ず支払金額{1:#,##0.00}より少ないかまたは一致しなければ行けません。
+</value>
+	</data>
+  <data name="PurchaseOrder_TotalInvoiceBudgetExceedOriginalBudget" xml:space="preserve">
+		<value>この予算項目({0:#,##0.00})の合計予算請求金額が当初配分された予算項目({1:#,##0.00})の元の予算金額を超えました。
+</value>
+	</data>
+  <data name="PurchaseOrder_UnableToClosed" xml:space="preserve">
+		<value>購入指示書をクローズできません。以下のことを確認して下さい。購入指示書のライン項目({1:#,##.00})が合計受領金額({1:#,##.00})と合計請求金額({2:#,##.00})とそれぞれ一致しています。合計税金込みの請求金額({7:#,##.00})が合計支払金額({3:#,##.00})と一致しています。合計予算金額({4:#,##.00})が必ず合計請求予算金額({5:#,##.00})と合計支払予算金額({6:#,##.00})とそれぞれ一致しています。
+</value>
+	</data>
+  <data name="UserSignOn_MoreSignOnCannotAdd" xml:space="preserve">
+		<value>1つまたは複数の登録が登録リストに追加することできません。ユーザーが既にロケーションまたはロケーションの親に登録されました。
+</value>
+	</data>
+  <data name="Work_ActualCostNotSpecified" xml:space="preserve">
+		<value>1つまたは複数の作業コストの実際原価コストがまた指定されていません。
+</value>
+	</data>
+  <data name="PurchaseOrder_PaymentBudgetInvalid" xml:space="preserve">
+		<value>支払予算金額が必ず請求予算金額を超えては行けません。
+</value>
+	</data>
+  <data name="PurchaseOrder_PaymentAmountGreaterTotalInvoice" xml:space="preserve">
+		<value>合計支金額({0:#,##0.0})が合計税込み請求金額({1:#,##0.00})を超えては行けません。
+</value>
+	</data>
+  <data name="MilestoneHaveBeenAdded" xml:space="preserve">
+		<value>重要な時点が重要な時点リストの終わりに追加しました。
+</value>
+	</data>
+  <data name="Request_ActualEndDate" xml:space="preserve">
+		<value>実際終了日を指定して下さい。
+</value>
+	</data>
+  <data name="ActualStart_Invalid" xml:space="preserve">
+		<value>実際開始日が必ず実際終了日以前でなければ行けません。
+</value>
+	</data>
+  <data name="Request_ActualStartDate" xml:space="preserve">
+		<value>プロジェクトの実際の開始日付を指定してください。
+</value>
+	</data>
+  <data name="Attachment_DocumentType" xml:space="preserve">
+		<value>ドキュメントタイプを指定して下さい。
+</value>
+	</data>
+  <data name="DocumentTemplate_SpecifyDocument" xml:space="preserve">
+		<value>ドキュメントテンプレートを指定してください
+</value>
+	</data>
+  <data name="PurchaseOrder_InvoiceUnsuccess" xml:space="preserve">
+		<value>請求書を作成できません。選択された領収証の請求書が作成されましたかまたは領収証がデータバースに保存されていません。
+</value>
+	</data>
+  <data name="PurchaseOrder_NoReceipt" xml:space="preserve">
+		<value>領収証が作成できません。全てのライン項目が受領しました。
+</value>
+	</data>
+  <data name="Work_ReassignSelectWork" xml:space="preserve">
+		<value>処理前に少なくとも1つの作業を選択して下さい。(注意事項として作業がクローズ、拒否、受領未決定(内部)の場合は再度アサインできません)
+</value>
+	</data>
+  <data name="Work_ReassignSuccess" xml:space="preserve">
+		<value>{0}作業が再度アサインすることが成功しました。
+</value>
+	</data>
+  <data name="ReportViewer_EnterFields" xml:space="preserve">
+		<value>次の項目に値を入力して下さい。
+</value>
+	</data>
+  <data name="Work_ReassignFailedDueToTechnician" xml:space="preserve">
+		<value>技術者が重複しているため{0}作業を再度アサインすることができません。
+</value>
+	</data>
+</root>

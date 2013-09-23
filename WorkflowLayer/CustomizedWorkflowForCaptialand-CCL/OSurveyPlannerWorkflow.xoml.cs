@@ -1,0 +1,35 @@
+﻿using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Collections;
+using System.Drawing;
+using System.Linq;
+using System.Workflow.ComponentModel.Compiler;
+using System.Workflow.ComponentModel.Serialization;
+using System.Workflow.ComponentModel;
+using System.Workflow.ComponentModel.Design;
+using System.Workflow.Runtime;
+using System.Workflow.Activities;
+using System.Workflow.Activities.Rules;
+
+namespace WorkflowLayer
+{
+    public partial class OSurveyPlannerWorkflow : Anacle.WorkflowFramework.AnacleStateMachineWorkflow
+	{
+        private void handleExternalEventActivity1_Invoked(object sender, ExternalDataEventArgs e)
+        {
+
+        }
+
+        private void H_Invoked(object sender, ExternalDataEventArgs e)
+        {
+
+        }
+
+        private void HandleINProgressEvent1_Invoked(object sender, ExternalDataEventArgs e)
+        {
+
+        }
+    }
+
+}

@@ -1,0 +1,2538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcknowledgementDateTimeResource1.Caption" xml:space="preserve">
+    <value>Acknowledgement</value>
+  </data>
+  <data name="AcknowledgementDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AcknowledgementDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>The date/time of acknowledgement of this work. Click 'Acknowledge' to set the date/time automatically. Note: Please remember to save to update the acknowledgement time.</value>
+  </data>
+  <data name="AcknowledgementDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>Actual End</value>
+  </data>
+  <data name="ActualEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>The date/time in which the work actually completed.</value>
+  </data>
+  <data name="ActualEndDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>Actual Start</value>
+  </data>
+  <data name="ActualStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ActualStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>The date/time in which the work actually started.</value>
+  </data>
+  <data name="ActualStartDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ArrivalDateTimeResource1.Caption" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="ArrivalDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ArrivalDateTimeResource1.ToolTip" xml:space="preserve">
+    <value>The date/time of arrival/response of this work. Click 'Arrive On-Site' to set the date/time automatically. Note: Please remember to save to update the arrival time.</value>
+  </data>
+  <data name="ArrivalDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAcknowledgeResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAcknowledgeResource1.Text" xml:space="preserve">
+    <value>Acknowledge</value>
+  </data>
+  <data name="buttonAcknowledgeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddMaterialsResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddMaterialsResource1.Text" xml:space="preserve">
+    <value>Add Multiple Inventory Items</value>
+  </data>
+  <data name="buttonAddMaterialsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddSparesResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonAddSparesResource1.Text" xml:space="preserve">
+    <value>Add Equipment Spares</value>
+  </data>
+  <data name="buttonAddSparesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyPointsResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyPointsResource1.Text" xml:space="preserve">
+    <value>Apply Points</value>
+  </data>
+  <data name="buttonApplyPointsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonArrivalResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonArrivalResource1.Text" xml:space="preserve">
+    <value>Arrive On-Site</value>
+  </data>
+  <data name="buttonArrivalResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditCaseResource1.ConfirmText" xml:space="preserve">
+    <value>Please remember to save this Work before editing the Case.\n\nAre you sure you want to continue?</value>
+  </data>
+  <data name="buttonEditCaseResource1.Text" xml:space="preserve">
+    <value>Edit Case</value>
+  </data>
+  <data name="buttonEditCaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditParentResource1.Text" xml:space="preserve">
+    <value>Edit Parent Work</value>
+  </data>
+  <data name="buttonEditParentResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonEditScheduledWorkResource1.ConfirmText" xml:space="preserve">
+    <value>Please remember to save this Work before editing the Scheduled Work.\n\nAre you sure you want to continue?</value>
+  </data>
+  <data name="buttonEditScheduledWorkResource1.Text" xml:space="preserve">
+    <value>Edit Scheduled Work</value>
+  </data>
+  <data name="buttonEditScheduledWorkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonItemsAddedResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonItemsAddedResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonItemsAddedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonViewCaseResource1.ConfirmText" xml:space="preserve">
+    <value>Please remember to save this Work before viewing the Case.\n\nAre you sure you want to continue?</value>
+  </data>
+  <data name="buttonViewCaseResource1.Text" xml:space="preserve">
+    <value>View Case</value>
+  </data>
+  <data name="buttonViewCaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonViewScheduledWorkResource1.ConfirmText" xml:space="preserve">
+    <value>Please remember to save this Work before viewing the Scheduled Work.\n\nAre you sure you want to continue?</value>
+  </data>
+  <data name="buttonViewScheduledWorkResource1.Text" xml:space="preserve">
+    <value>View Scheduled Work</value>
+  </data>
+  <data name="buttonViewScheduledWorkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>Cause of Problem</value>
+  </data>
+  <data name="CauseOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CauseOfProblemIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistItem_DescriptionResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistItem_DescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistItem_DescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistItem_DescriptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.Caption" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="ChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChecklistResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.Caption" xml:space="preserve">
+    <value>Related Works</value>
+  </data>
+  <data name="ChildrenResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChildrenResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+  <data name="ContactCellphoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactCellphoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="ContactEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactEmailResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="ContactFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactFaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.Caption" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="ContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPersonResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="ContactPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContactPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.Caption" xml:space="preserve">
+    <value>Contract End</value>
+  </data>
+  <data name="ContractEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractEndDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.Caption" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="ContractIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractIDResource1.ToolTip" xml:space="preserve">
+    <value>The contract/vendor responsible for this work.</value>
+  </data>
+  <data name="ContractIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.Caption" xml:space="preserve">
+    <value>Contract Name</value>
+  </data>
+  <data name="ContractNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.Caption" xml:space="preserve">
+    <value>Contract Start</value>
+  </data>
+  <data name="ContractStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ContractStartDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_SupervisorIDResource1.Caption" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="ddl_SupervisorIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_SupervisorIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_SupervisorIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_TechnicianIDResource1.Caption" xml:space="preserve">
+    <value>Technician</value>
+  </data>
+  <data name="ddl_TechnicianIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_TechnicianIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddl_TechnicianIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropCaseResource1.Caption" xml:space="preserve">
+    <value>Case</value>
+  </data>
+  <data name="dropCaseResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropCaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropCaseResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.Caption" xml:space="preserve">
+    <value>End Down Time</value>
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownEndDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.Caption" xml:space="preserve">
+    <value>Start Down Time </value>
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentDownStartDateTimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.Caption" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="EquipmentResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentResource1.ToolTip" xml:space="preserve">
+    <value>Use this to select the equipment that this work applies to.</value>
+  </data>
+  <data name="EquipmentResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FixedRateIDResource1.Caption" xml:space="preserve">
+    <value>Fixed Rate</value>
+  </data>
+  <data name="FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FixedRateIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.Caption" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="gridChecklistResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridChecklistResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReadingResource1.Caption" xml:space="preserve">
+    <value>Reading of Work</value>
+  </data>
+  <data name="gridReadingResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gridReadingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource2.Caption" xml:space="preserve">
+    <value>Charge</value>
+  </data>
+  <data name="IsChargedToCallerResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource2.ToolTip" xml:space="preserve">
+    <value>Indicates if this work should be charged to the caller when it is finally completed.</value>
+  </data>
+  <data name="IsChargedToCallerResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsEquipmentDownResource1.Caption" xml:space="preserve">
+    <value>Equipment Down?</value>
+  </data>
+  <data name="IsEquipmentDownResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsEquipmentDownResource1.Text" xml:space="preserve">
+    <value>Yes, the equipment was down for a period of time</value>
+  </data>
+  <data name="IsEquipmentDownResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsEquipmentDownResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkDescriptionResource1.Caption" xml:space="preserve">
+    <value>Schedule Name</value>
+  </data>
+  <data name="labelScheduledWorkDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkDescriptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkNumberResource1.Caption" xml:space="preserve">
+    <value>Schedule Number</value>
+  </data>
+  <data name="labelScheduledWorkNumberResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkNumberResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="labelScheduledWorkNumberResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbReadingResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbReadingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listEquipmentPointsResource1.Caption" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="listEquipmentPointsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listEquipmentPointsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listEquipmentPointsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Craft/Technician</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource10.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource10.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource11.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource11.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource12.Text" xml:space="preserve">
+    <value>3 (Highest)</value>
+  </data>
+  <data name="ListItemResource12.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource13.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource13.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource14.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource14.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ListItemResource15.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource15.Value" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ListItemResource16.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ListItemResource16.Value" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ListItemResource17.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource17.Value" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ListItemResource18.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource18.Value" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="ListItemResource19.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource19.Value" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource20.Text" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="ListItemResource20.Value" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="ListItemResource21.Text" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="ListItemResource21.Value" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="ListItemResource22.Text" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="ListItemResource22.Value" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="ListItemResource23.Text" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ListItemResource23.Value" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ListItemResource24.Text" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ListItemResource24.Value" xml:space="preserve">
+    <value>55</value>
+  </data>
+  <data name="ListItemResource25.Text" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="ListItemResource25.Value" xml:space="preserve">
+    <value>60</value>
+  </data>
+  <data name="ListItemResource26.Text" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="ListItemResource26.Value" xml:space="preserve">
+    <value>65</value>
+  </data>
+  <data name="ListItemResource27.Text" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="ListItemResource27.Value" xml:space="preserve">
+    <value>70</value>
+  </data>
+  <data name="ListItemResource28.Text" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="ListItemResource28.Value" xml:space="preserve">
+    <value>75</value>
+  </data>
+  <data name="ListItemResource29.Text" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="ListItemResource29.Value" xml:space="preserve">
+    <value>80</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource30.Text" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="ListItemResource30.Value" xml:space="preserve">
+    <value>85</value>
+  </data>
+  <data name="ListItemResource31.Text" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="ListItemResource31.Value" xml:space="preserve">
+    <value>90</value>
+  </data>
+  <data name="ListItemResource32.Text" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="ListItemResource32.Value" xml:space="preserve">
+    <value>95</value>
+  </data>
+  <data name="ListItemResource33.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="ListItemResource33.Value" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="ListItemResource34.Text" xml:space="preserve">
+    <value>Fixed Rate</value>
+  </data>
+  <data name="ListItemResource34.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource35.Text" xml:space="preserve">
+    <value>Manually Assign Technicians by Roster</value>
+  </data>
+  <data name="ListItemResource35.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource36.Text" xml:space="preserve">
+    <value>Automatically Assign All by Roster</value>
+  </data>
+  <data name="ListItemResource36.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource37.Text" xml:space="preserve">
+    <value>Automatically Assign One (in Round-Robin Fashion) by Roster</value>
+  </data>
+  <data name="ListItemResource37.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ListItemResource38.Text" xml:space="preserve">
+    <value>Manually Assign Any Technicians</value>
+  </data>
+  <data name="ListItemResource38.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ListItemResource4.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="ListItemResource5.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Yes </value>
+  </data>
+  <data name="ListItemResource6.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>No </value>
+  </data>
+  <data name="ListItemResource7.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource8.Value" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>0 (Lowest)</value>
+  </data>
+  <data name="ListItemResource9.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="listLocationPointsResource1.Caption" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="listLocationPointsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listLocationPointsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listLocationPointsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.Caption" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="LocationResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value>Use this to select the location that this work applies to.</value>
+  </data>
+  <data name="LocationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Notify_PanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Notify_PanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkSupervisorResource1.Caption" xml:space="preserve">
+    <value>Notify Supervisor</value>
+  </data>
+  <data name="NotifyWorkSupervisorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkSupervisorResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkSupervisorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkSupervisorResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkTechnicianResource1.Caption" xml:space="preserve">
+    <value>Notify Technician</value>
+  </data>
+  <data name="NotifyWorkTechnicianResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkTechnicianResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkTechnicianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NotifyWorkTechnicianResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="objectBaseResource1.ObjectNumberCaption" xml:space="preserve">
+    <value>Work Number</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAckArrTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAckArrTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelActualCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelActualCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAddMultipleResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAddMultipleResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAddSparesResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAddSparesResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCaseResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCaseResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelContractResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelContractResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownDateTimeResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEquipmentDownResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEstimatedCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEstimatedCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResolutionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResolutionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelResource1.Caption" xml:space="preserve">
+    <value>Work</value>
+  </data>
+  <data name="panelScheduledStartResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelScheduledStartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelScheduledWorkResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelScheduledWorkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTechnicianResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTechnicianResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelVendorResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelVendorResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkClassificationResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkClassificationResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkCostResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkDetailsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelWorkDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PercentageCompleteResource1.Caption" xml:space="preserve">
+    <value>Complete (%)</value>
+  </data>
+  <data name="PercentageCompleteResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PercentageCompleteResource1.ToolTip" xml:space="preserve">
+    <value>The percentage of completion of this work.</value>
+  </data>
+  <data name="PercentageCompleteResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PriorityResource1.Caption" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="PriorityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PriorityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PriorityResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdl_AssignmentModeResource1.Caption" xml:space="preserve">
+    <value>Assignment Mode</value>
+  </data>
+  <data name="rdl_AssignmentModeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdl_AssignmentModeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rdl_AssignmentModeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.Caption" xml:space="preserve">
+    <value>Resolution Description</value>
+  </data>
+  <data name="ResolutionDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionDescriptionResource1.ToolTip" xml:space="preserve">
+    <value>Details on the resolution of the problem.</value>
+  </data>
+  <data name="ResolutionDescriptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.Caption" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="ResolutionIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ResolutionIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource2.Caption" xml:space="preserve">
+    <value>Scheduled End</value>
+  </data>
+  <data name="ScheduledEndDateTimeResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource2.ToolTip" xml:space="preserve">
+    <value>The date/time in which the work is scheduled to complete.</value>
+  </data>
+  <data name="ScheduledEndDateTimeResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource2.Caption" xml:space="preserve">
+    <value>Scheduled Start</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource2.ToolTip" xml:space="preserve">
+    <value>The date/time in which the work is scheduled to start.</value>
+  </data>
+  <data name="ScheduledStartDateTimeResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SelectedResponseIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator1Resource1.Caption" xml:space="preserve">
+    <value>Problem</value>
+  </data>
+  <data name="Separator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator2Resource1.Caption" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="Separator2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator4Resource1.Caption" xml:space="preserve">
+    <value>Contract/Vendor</value>
+  </data>
+  <data name="Separator4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator5Resource1.Caption" xml:space="preserve">
+    <value>Parent Work</value>
+  </data>
+  <data name="Separator5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SignatureListResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SignatureListResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StoreBinIDResource1.Caption" xml:space="preserve">
+    <value>Bin (Avail Qty)</value>
+  </data>
+  <data name="StoreBinIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StoreBinIDResource1.ToolTip" xml:space="preserve">
+    <value>The bin where this item is checked out from.</value>
+  </data>
+  <data name="StoreBinIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StoreIDResource1.Caption" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="StoreIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StoreIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="StoreIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabContractResource1.Caption" xml:space="preserve">
+    <value>Contract</value>
+  </data>
+  <data name="tabContractResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabContractResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+  <data name="tabMemoResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabResolutionResource1.Caption" xml:space="preserve">
+    <value>Resolution</value>
+  </data>
+  <data name="tabResolutionResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabResolutionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbReadingResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbReadingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRemarksResource1.Caption" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="txtRemarksResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRemarksResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRemarksResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource2.Caption" xml:space="preserve">
+    <value>Type of Problem</value>
+  </data>
+  <data name="TypeOfProblemIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource2.Caption" xml:space="preserve">
+    <value>Type of Service</value>
+  </data>
+  <data name="TypeOfServiceIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource2.Caption" xml:space="preserve">
+    <value>Type of Work</value>
+  </data>
+  <data name="TypeOfWorkIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.Caption" xml:space="preserve">
+    <value>Location Path</value>
+  </data>
+  <data name="UIFieldLabel1Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.Caption" xml:space="preserve">
+    <value>Equipment Path</value>
+  </data>
+  <data name="UIFieldLabel2Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.Caption" xml:space="preserve">
+    <value>Work Number</value>
+  </data>
+  <data name="UIFieldLabel3Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel3Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.Caption" xml:space="preserve">
+    <value>Work Description</value>
+  </data>
+  <data name="UIFieldLabel4Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel4Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.Caption" xml:space="preserve">
+    <value>Work Type</value>
+  </data>
+  <data name="UIFieldLabel5Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel5Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.Caption" xml:space="preserve">
+    <value>Type of Service</value>
+  </data>
+  <data name="UIFieldLabel6Resource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIFieldLabel6Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Point</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource10.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource10.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+    <value>Est. Unit Cost&lt;br/&gt;</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource11.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource11.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+    <value>Total&lt;br/&gt;</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource12.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource12.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource12.HeaderText" xml:space="preserve">
+    <value>Act. Unit Cost&lt;br/&gt;</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Location/Equipment</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>Unit Of Measure</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>Last Reading</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource5.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>Last Date</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource6.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>Total&lt;br/&gt;</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource7.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>Charge&lt;br/&gt;</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource8.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource8.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>Craft / Store</value>
+  </data>
+  <data name="UIGridViewBoundColumnResource9.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource9.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove this item?</value>
+  </data>
+  <data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>Act. Factor</value>
+  </data>
+  <data name="UIGridViewColumnResource11.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>Act. Qty</value>
+  </data>
+  <data name="UIGridViewColumnResource18.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>Step</value>
+  </data>
+  <data name="UIGridViewColumnResource19.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="UIGridViewColumnResource20.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource20.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.CommandText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource21.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="UIGridViewColumnResource23.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>Type of Work</value>
+  </data>
+  <data name="UIGridViewColumnResource24.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>Type of Service</value>
+  </data>
+  <data name="UIGridViewColumnResource25.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource25.HeaderText" xml:space="preserve">
+    <value>Scheduled Start</value>
+  </data>
+  <data name="UIGridViewColumnResource26.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource26.HeaderText" xml:space="preserve">
+    <value>Scheduled End</value>
+  </data>
+  <data name="UIGridViewColumnResource27.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource27.HeaderText" xml:space="preserve">
+    <value>Actual Start</value>
+  </data>
+  <data name="UIGridViewColumnResource28.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource28.HeaderText" xml:space="preserve">
+    <value>Actual End</value>
+  </data>
+  <data name="UIGridViewColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UIGridViewColumnResource30.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource30.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource30.HeaderText" xml:space="preserve">
+    <value>Work Number</value>
+  </data>
+  <data name="UIGridViewColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="UIGridViewColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>Est. Factor</value>
+  </data>
+  <data name="UIGridViewColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>Est. Qty</value>
+  </data>
+  <data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>Delete Selected</value>
+  </data>
+  <data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+  <data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewTemplateColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewTemplateColumnResource1.FooterText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewTemplateColumnResource1.HeaderText" xml:space="preserve">
+    <value>Submitted Reading</value>
+  </data>
+  <data name="uitabview1Resource2.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="uitabview1Resource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="uitabview2Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource2.Caption" xml:space="preserve">
+    <value>Status History</value>
+  </data>
+  <data name="uitabview2Resource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview2Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview6Resource1.Caption" xml:space="preserve">
+    <value>Cost</value>
+  </data>
+  <data name="uitabview6Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview7Resource1.Caption" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+  <data name="uitabview7Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview8Resource1.Caption" xml:space="preserve">
+    <value>Related</value>
+  </data>
+  <data name="uitabview8Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview9Resource1.Caption" xml:space="preserve">
+    <value>Reading</value>
+  </data>
+  <data name="uitabview9Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnitOfMeasureResource1.Caption" xml:space="preserve">
+    <value>Unit of Measure</value>
+  </data>
+  <data name="UnitOfMeasureResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnitOfMeasureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnitOfMeasureResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.Caption" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="VendorNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VendorNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.Caption" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ToolTip" xml:space="preserve">
+    <value>The actual price factor applied when using this cost.</value>
+  </data>
+  <data name="WorkCost_ActualCostFactorResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.Caption" xml:space="preserve">
+    <value>Overtime Work?</value>
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualOvertimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.Caption" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ToolTip" xml:space="preserve">
+    <value>The actual quantity of the item or resource used for this work.</value>
+  </data>
+  <data name="WorkCost_ActualQuantityResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.Caption" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="WorkCost_ActualResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.Caption" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ToolTip" xml:space="preserve">
+    <value>The actual unit price incurred when using this cost.</value>
+  </data>
+  <data name="WorkCost_ActualUnitCostResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CatalogueIDResource1.Caption" xml:space="preserve">
+    <value>Catalog</value>
+  </data>
+  <data name="WorkCost_CatalogueIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CatalogueIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CatalogueIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ChargeOutResource1.Caption" xml:space="preserve">
+    <value>Charge </value>
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ToolTip" xml:space="preserve">
+    <value>The amount in dollars to be charged to the caller.</value>
+  </data>
+  <data name="WorkCost_ChargeOutResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.Caption" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="WorkCost_CostTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CostTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.Caption" xml:space="preserve">
+    <value>Craft</value>
+  </data>
+  <data name="WorkCost_CraftIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_CraftIDResource1.ToolTip" xml:space="preserve">
+    <value>The craft of the technician that will be assigned to the work.</value>
+  </data>
+  <data name="WorkCost_CraftIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.Caption" xml:space="preserve">
+    <value>Price Factor</value>
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ToolTip" xml:space="preserve">
+    <value>The estimated price factor to be applied when using this cost.</value>
+  </data>
+  <data name="WorkCost_EstimatedCostFactorResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.Caption" xml:space="preserve">
+    <value>Overtime Work?</value>
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedOvertimeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.Caption" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ToolTip" xml:space="preserve">
+    <value>The estimated quantity of the item or resource to be used for this work.</value>
+  </data>
+  <data name="WorkCost_EstimatedQuantityResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.Caption" xml:space="preserve">
+    <value>Estimated</value>
+  </data>
+  <data name="WorkCost_EstimatedResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.Caption" xml:space="preserve">
+    <value>Unit Price</value>
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ToolTip" xml:space="preserve">
+    <value>The estimated unit price to be incurred when using this cost.</value>
+  </data>
+  <data name="WorkCost_EstimatedUnitCostResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.Caption" xml:space="preserve">
+    <value>Description / Name</value>
+  </data>
+  <data name="WorkCost_NameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_NameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel4_1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel4_1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel4Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_PanelUOMResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_PanelUOMResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UnitOfMeasureIDResource1.Caption" xml:space="preserve">
+    <value>Check-Out Unit</value>
+  </data>
+  <data name="WorkCost_UnitOfMeasureIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UnitOfMeasureIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UnitOfMeasureIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.Caption" xml:space="preserve">
+    <value>Technician</value>
+  </data>
+  <data name="WorkCost_UserIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_UserIDResource1.ToolTip" xml:space="preserve">
+    <value>The technician that will be assigned to the work.</value>
+  </data>
+  <data name="WorkCost_UserIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.Caption" xml:space="preserve">
+    <value>Work Cost and Labor</value>
+  </data>
+  <data name="WorkCostResource1.EmptyDataText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCostResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource2.Caption" xml:space="preserve">
+    <value>Work Description</value>
+  </data>
+  <data name="WorkDescriptionResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_CellPhoneResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_CellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_CellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_EmailResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_EmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_EmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_FaxResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_FaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_FaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_NameResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_NameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_NameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_PhoneResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_PhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_PhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_WorkCostLimitResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_WorkCostLimitResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Approver_WorkCostLimitResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ApproverIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ApproverIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ApproverIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.ConfirmText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="buttonApplyParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerCellPhoneResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerEmailResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerFaxResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerNameResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerPhoneResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource2.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CallerTypeIDResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dropParameterTypeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="EquipmentLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="IsChargedToCallerResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="listParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocationLabelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelApproverResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelApproverResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerDetailsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerDetailsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelCallerResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelParametersResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelParametersResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ReadingResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledEndDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScheduledStartDateTimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep2Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="sep2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator6Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Separator6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupervisorIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupervisorIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SupervisorIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfProblemIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfServiceIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TypeOfWorkIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource29.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource2.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UITabStrip1Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview3Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview4Resource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview5Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uitabview5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_FixedRateIDResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_IsOvertimeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkCost_Panel2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkDescriptionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.GroupingText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadings_ObjectPanelResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.ErrorMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WorkParameterReadingsResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabeAccept" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelUsage" xml:space="preserve">
+    <value />
+  </data>
+</root>

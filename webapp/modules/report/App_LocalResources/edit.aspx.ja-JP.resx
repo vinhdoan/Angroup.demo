@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="buttonDownloadResource1.Text" xml:space="preserve">
+		<value>ダウンロードファイル</value>
+	</data>
+	<data name="buttonGetParamResource1.ConfirmText" xml:space="preserve">
+		<value>この操作が既存レポートフィルターを削除し、レポートパラメーターを元に新規フィルターを作成します。処理を続けても宜しいですか?</value>
+		<comment>'Filters' refer to a criteria that restricts the result of the search.</comment>
+	</data>
+	<data name="buttonGetParamResource1.Text" xml:space="preserve">
+		<value>レポートフィルターを生成</value>
+	</data>
+	<data name="buttonUploadResource1.Text" xml:space="preserve">
+		<value>アップロードファイル</value>
+	</data>
+	<data name="CascadeControlIDResource1.Caption" xml:space="preserve">
+		<value>カスケードコントロール</value>
+	</data>
+	<data name="CascadeControlIDResource1.ToolTip" xml:space="preserve">
+		<value>ドロップダウンリストが’変更されたら示されます。</value>
+	</data>
+	<data name="CategoryNameResource1.Caption" xml:space="preserve">
+		<value>カテゴリー名</value>
+	</data>
+	<data name="CategoryNameResource1.ToolTip" xml:space="preserve">
+		<value>メニューにカテゴリー名称が表示されます。</value>
+	</data>
+	<data name="ContextTreeResource1.Caption" xml:space="preserve">
+		<value>文脈ツリー </value>
+	</data>
+	<data name="ContextTreeResource1.ToolTip" xml:space="preserve">
+		<value>レポートの左のフレームに文脈ツリー が表示されます。</value>
+	</data>
+	<data name="ControlCaptionResource1.Caption" xml:space="preserve">
+		<value>コントロール キャプション </value>
+		<comment>'Control Caption' refers to some text that is displayed beside an input. For example: User Name: ___________  (The 'User Name' is the control caption)</comment>
+	</data>
+	<data name="ControlCaptionResource1.ToolTip" xml:space="preserve">
+		<value>フィールドのそばにに キャプション が表示されます。</value>
+	</data>
+	<data name="ControlIdentifierResource1.Caption" xml:space="preserve">
+		<value>識別子</value>
+	</data>
+	<data name="ControlIdentifierResource1.ToolTip" xml:space="preserve">
+		<value>識別子がSQLクエリーにフィルターとして使用されます。</value>
+	</data>
+	<data name="ControlSpanResource1.Caption" xml:space="preserve">
+		<value>スパン</value>
+		<comment>Span refers to the width of something. In Anacle.EAM, Span can either be a Full Span, or a Half Span</comment>
+	</data>
+	<data name="ControlSpanResource1.ToolTip" xml:space="preserve">
+		<value>検索フィールドがフォームの半分の幅または全部の幅であるかを示します。</value>
+	</data>
+	<data name="ControlTypeResource1.Caption" xml:space="preserve">
+		<value>コントロールタイプ</value>
+	</data>
+	<data name="ControlTypeResource1.ToolTip" xml:space="preserve">
+		<value>ユーザーが入力されたコントロールのタイプです。</value>
+	</data>
+	<data name="DataTextFieldResource1.Caption" xml:space="preserve">
+		<value>データテキストフィールド</value>
+		<comment>'Field' refers to a data field, not a farm field.</comment>
+	</data>
+	<data name="DataTextFieldResource1.ToolTip" xml:space="preserve">
+		<value>クエリーの結果カラムがダッシュ-ボードクエリーの値として使用されます。</value>
+	</data>
+	<data name="DataTypeResource1.Caption" xml:space="preserve">
+		<value>データタイプ</value>
+	</data>
+	<data name="DataTypeResource1.ToolTip" xml:space="preserve">
+		<value>検索フィールドのデータタイプです。</value>
+		<comment></comment>
+	</data>
+	<data name="DataValueFieldResource1.Caption" xml:space="preserve">
+		<value>データ値フィールド</value>
+		<comment>'Field' refers to a data field, not a farm field.</comment>
+	</data>
+	<data name="DataValueFieldResource1.ToolTip" xml:space="preserve">
+		<value>クエリーの結果カラムがユーザーに表示されます。</value>
+	</data>
+	<data name="DisplayOrderResource1.Caption" xml:space="preserve">
+		<value>表示順序</value>
+		<comment>The order of the displaying of items on a screen.</comment>
+	</data>
+	<data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+		<value>検索フィールドの表示順序です。最小から表示します。</value>
+	</data>
+	<data name="IsDynamicReportResource1.Caption" xml:space="preserve">
+		<value>レポートタイプ</value>
+	</data>
+	<data name="IsDynamicReportResource1.ToolTip" xml:space="preserve">
+		<value>レポートタイプを指定します。動的(ドラッグ・アンド・ドロップレポート)または静的(テンプレートrdl/rdlcファイル使用)です。</value>
+	</data>
+	<data name="IsPopulatedByQueryResource1.Caption" xml:space="preserve">
+		<value>クエリーで実装?</value>
+	</data>
+	<data name="IsPopulatedByQueryResource1.Text" xml:space="preserve">
+		<value>はい、クエリーの結果でこのリストを実装します。</value>
+	</data>
+	<data name="IsPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+		<value>ドロップダウンリストクエリーで実装するかまたはコンマ区きり値リストに示されます。</value>
+	</data>
+	<data name="lblRdlFilenameResource1.Text" xml:space="preserve">
+		<value>レポートテンプレートファイル:</value>
+	</data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+		<value>なし</value>
+	</data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+		<value>レート</value>
+	</data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+		<value>9</value>
+	</data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+		<value>半分</value>
+	</data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+		<value>全部</value>
+	</data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+		<value>テキストボックス</value>
+		<comment>This is a type of user interface control / field.</comment>
+	</data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+		<value>日付時間</value>
+		<comment>This is a type of user interface control / field.</comment>
+	</data>
+	<data name="ListItemResource14.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+		<value>ドロップダウンリスト</value>
+		<comment>This is a type of user interface control / field.</comment>
+	</data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+		<value>2</value>
+	</data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+		<value>ラジオボタンリスト</value>
+		<comment>This is a type of user interface control / field.</comment>
+	</data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+		<value>3</value>
+	</data>
+	<data name="ListItemResource17.Text" xml:space="preserve">
+		<value>文字</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource17.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource18.Text" xml:space="preserve">
+		<value>整数</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource18.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource19.Text" xml:space="preserve">
+		<value>少数</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource19.Value" xml:space="preserve">
+		<value>2</value>
+	</data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+		<value>チェックリスト</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource20.Text" xml:space="preserve">
+		<value>ダブル</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource20.Value" xml:space="preserve">
+		<value>3</value>
+	</data>
+	<data name="ListItemResource21.Text" xml:space="preserve">
+		<value>日付時間</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource21.Value" xml:space="preserve">
+		<value>4</value>
+	</data>
+	<data name="ListItemResource22.Text" xml:space="preserve">
+		<value>オブジェクト識別子</value>
+		<comment>This is a type of data.</comment>
+	</data>
+	<data name="ListItemResource22.Value" xml:space="preserve">
+		<value>5</value>
+	</data>
+	<data name="ListItemResource23.Text" xml:space="preserve">
+		<value>動的レポート</value>
+		<comment>Two types of reports in Anacle.EAM. Dynamic and Static.</comment>
+	</data>
+	<data name="ListItemResource23.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource24.Text" xml:space="preserve">
+		<value>静的レポート</value>
+	</data>
+	<data name="ListItemResource24.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource25.Text" xml:space="preserve">
+		<value>@</value>
+	</data>
+	<data name="ListItemResource25.Value" xml:space="preserve">
+		<value>@</value>
+	</data>
+	<data name="ListItemResource26.Text" xml:space="preserve">
+		<value>:</value>
+	</data>
+	<data name="ListItemResource26.Value" xml:space="preserve">
+		<value>:</value>
+	</data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+		<value>コード</value>
+		<comment>These are modules in the system. Make sure they are named the same way as the ones  named in objects.resx</comment>
+	</data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+		<value>2</value>
+	</data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+		<value>コードタイプ</value>
+	</data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+		<value>3</value>
+	</data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+		<value>設備</value>
+	</data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+		<value>4</value>
+	</data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+		<value>設備タイプ</value>
+	</data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+		<value>5</value>
+	</data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+		<value>ロケーション</value>
+	</data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+		<value>6</value>
+	</data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+		<value>ロケーションタイプ</value>
+	</data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+		<value>7</value>
+	</data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+		<value>ロケーション及び設備</value>
+	</data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+		<value>8</value>
+	</data>
+	<data name="ListQueryResource2.Caption" xml:space="preserve">
+		<value>SQLリスト</value>
+	</data>
+	<data name="ListQueryResource2.ToolTip" xml:space="preserve">
+		<value>SQLクエリーでドロップダウンリストを実装します。{ツリービューID}, {ツリービューオブジェクト}, {ユーザーID}が デフォルトフィールドとしてクエリーに用意されます。</value>
+		<comment>'Query' refers to a database query, not an enquiry.</comment>
+	</data>
+	<data name="OdbcSyntaxResource1.Caption" xml:space="preserve">
+		<value>Odbc文‘法を使用</value>
+		<comment>'Syntax' refers to a grammatical syntax, esp. for programming languages. Leave the abbreviate 'ODBC' as 'ODBC'.</comment>
+	</data>
+	<data name="OdbcSyntaxResource1.Text" xml:space="preserve">
+		<value>はい、クエリーをOdbcフォーマットで読みます。</value>
+	</data>
+	<data name="OdbcSyntaxResource1.ToolTip" xml:space="preserve">
+		<value>これをチェックされたら全てのレポートクエリーがODBC文法フォーマットに変換されます。</value>
+	</data>
+	<data name="PageResource1.Title" xml:space="preserve">
+		<value>Anacle.EAM</value>
+	</data>
+	<data name="paramPrefixResource1.Caption" xml:space="preserve">
+		<value>パラメーター前置記法</value>
+		<comment>'Parameter' refers to arguments passed into a function, NOT parameter readings in this case.</comment>
+	</data>
+	<data name="paramPrefixResource1.ToolTip" xml:space="preserve">
+		<value>前置記法がレポートのクエリーのパラメーターに使用されます。</value>
+	</data>
+	<data name="RdlInputFileResource1.Caption" xml:space="preserve">
+		<value>アップロードテンプレート</value>
+	</data>
+	<data name="RdlInputFileResource1.ToolTip" xml:space="preserve">
+		<value>rdl テンプレートがレポート表示に使用されます。</value>
+	</data>
+	<data name="ReportFieldsResource1.Caption" xml:space="preserve">
+		<value>フィルターフィールド</value>
+	</data>
+	<data name="ReportParamOrderResource1.Caption" xml:space="preserve">
+		<value>レポートフィールド順序</value>
+	</data>
+	<data name="ReportQueryResource1.Caption" xml:space="preserve">
+		<value>レポート SQL</value>
+	</data>
+	<data name="ReportQueryResource1.ToolTip" xml:space="preserve">
+		<value>SQLクエリーがレポート実装に使用されます。{ツリービューID}, {ツリービューオブジェクト}, {ユーザーID}が デフォルトフィールドとしてクエリーに用意されます。注意：プレビュータブでレポートをプレビューできます。</value>
+	</data>
+	<data name="ReportRolesResource1.Caption" xml:space="preserve">
+		<value>役割</value>
+	</data>
+	<data name="ReportRolesResource1.ToolTip" xml:space="preserve">
+		<value>この役割がこのレポートをビューアクセス権を示されます。</value>
+	</data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+		<value>クエリーリスト</value>
+	</data>
+	<data name="tabPreviewResource1.Caption" xml:space="preserve">
+		<value>プレビュー</value>
+	</data>
+	<data name="TextListResource1.Caption" xml:space="preserve">
+		<value>テキストリスト</value>
+	</data>
+	<data name="TextListResource1.ToolTip" xml:space="preserve">
+		<value>テキストのコンマ区きりリストがユーザーに選択のため表示されます。</value>
+	</data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+		<value>表示順序</value>
+	</data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+		<value>コントロール キャプション </value>
+		<comment>The text that appears beside an input field.</comment>
+	</data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+		<value>コントロール識別子</value>
+	</data>
+	<data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+		<value>データセット</value>
+	</data>
+	<data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+		<value>クエリー</value>
+	</data>
+	<data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+		<value>フィルター順序</value>
+	</data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+		<value>削除</value>
+	</data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+		<value>選択項目を削除しても宜しいですか?</value>
+	</data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+		<value>追加</value>
+	</data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+		<value>詳細</value>
+	</data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+		<value>添付書類</value>
+	</data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+		<value>メモ</value>
+	</data>
+	<data name="UITabView4Resource1.Caption" xml:space="preserve">
+		<value>データ</value>
+	</data>
+	<data name="UITabView4Resource2.Caption" xml:space="preserve">
+		<value>データ</value>
+	</data>
+	<data name="UITabView5Resource1.Caption" xml:space="preserve">
+		<value>アクセス</value>
+	</data>
+	<data name="ValueListResource1.Caption" xml:space="preserve">
+		<value>値リスト</value>
+	</data>
+	<data name="ValueListResource1.ToolTip" xml:space="preserve">
+		<value>コンマ区きりリストの値がテキストリストに相当します。</value>
+	</data>
+</root>

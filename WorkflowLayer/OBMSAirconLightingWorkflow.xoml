@@ -1,0 +1,71 @@
+﻿<ns0:AnacleStateMachineWorkflow x:Class="WorkflowLayer.OBMSAirconLightingWorkflow" InitialStateName="Start" x:Name="OBMSAirconLightingWorkflow" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="Start">
+		<EventDrivenActivity x:Name="StartProcessEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity1" EventName="Start" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.4924, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToStartProcess" TargetStateName="StartProcess" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost4" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="StartProcess">
+		<StateInitializationActivity x:Name="StartProcessActivity">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign2" RoleCodes="ASSETADMIN" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity2">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="MeetingRoomActivity">
+			<DelayActivity TimeoutDuration="00:00:05" x:Name="delayActivity1" />
+			<PolicyActivity x:Name="MeetingRoom1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Turn on AIRCON02-01" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<PolicyActivity x:Name="MeetingRoom2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Turn on AIRCON02-02" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<PolicyActivity x:Name="MeetingRoom3">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Turn on AIRCON02-03" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="setStateActivity1" TargetStateName="StartProcess" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity3">
+				<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="StopProcessActivity">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity3" EventName="ShutdownAll" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3651.4924, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToStopProcess" TargetStateName="StopProcess" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity5">
+				<FaultHandlerActivity x:Name="faultHandlerActivity5" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost5" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="StopProcess">
+		<StateInitializationActivity x:Name="TurnOffAndStop">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign1" RoleCodes="ASSETADMIN" />
+			<PolicyActivity x:Name="policyActivity2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="TurnOffAll" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity4">
+				<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+</ns0:AnacleStateMachineWorkflow>

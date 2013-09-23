@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Migrations>
+
+  <Migration name="Stores" handler="DataMigration.Logic.StoreHandler">
+    <Fields>
+      <Field type="nvarchar" name="NameOfStore"></Field>
+      <Field type="nvarchar" name="NameOfLocation"></Field>
+      <Field type="nvarchar" name="BinsOfStore"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="CatalogueType" handler="DataMigration.Logic.CatalogTypeHandler">
+    <Fields>
+      <Field type="nvarchar" name="CatalogType"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="Catalogue" handler="DataMigration.Logic.CatalogueHanlder">
+    <Fields>
+      <Field type="nvarchar" name="CatalogueItemName"></Field>
+      <Field type="nvarchar" name="CatalogueItemType"></Field>
+      <Field type="nvarchar" name="UnitOfMeasure"></Field>
+      <Field type="nvarchar" name="SellingPrice"></Field>
+      <Field type="nvarchar" name="StockCode"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="CheckList"
+             handler="DataMigration.Logic.CheckListHandler">
+    <Fields>
+      <Field name="ChecklistName"
+             type="nvarchar" ></Field>
+      <Field name="PhysicalChecklistType"
+             type="nvarchar"></Field>
+      <Field name="StepNumber"
+             type="nvarchar"></Field>
+      <Field name="StepDescription"
+             type="nvarchar"></Field>
+      <Field name="ChecklistItemType"
+             type="nvarchar"></Field>
+      <Field name="ChecklistResponseSet"
+             type="nvarchar"></Field>
+
+
+    </Fields>
+  </Migration>
+  <Migration name="StoreBinItems" handler="DataMigration.Logic.StoreItemHandler">
+    <Fields>
+      <Field type="nvarchar" name="NameOfStore"></Field>
+      <Field type="nvarchar" name="BinsOfStore"></Field>
+      <Field type="nvarchar" name="CatalogueOfBinItem"></Field>
+      <Field type="nvarchar" name="StockCode"></Field>
+      <Field type="nvarchar" name="UnitPrice"></Field>
+      <Field type="nvarchar" name="PhysicalQuantity"></Field>
+      <Field type="nvarchar" name="ReorderThreshold"></Field>
+      <Field type="nvarchar" name="ReorderDefault"></Field>
+    </Fields>
+  </Migration>
+  <Migration name="Contract" handler="DataMigration.Logic.ContractHandler">
+		<Fields>
+			<Field name="CONTRACT REFERENCE NUMBER" type="nvarchar"></Field>
+			<Field name="DESCRIPTION" type="nvarchar"></Field>
+			<Field name="ServiceLocation" type="nvarchar"></Field>
+			<Field name="Provides Maintenance Works? (Y/N)" type="nvarchar"></Field>
+			<Field name="TypeOfService" type="nvarchar"></Field>
+			<Field name="Provides Fixed Pricing Agreement? (Y/N)" type="nvarchar"></Field>
+			<Field name="FixedRate" type="nvarchar"></Field>
+			<Field name="PriceFactor" type="nvarchar"></Field>
+			<Field name="ContractManager" type="nvarchar"></Field>
+			<Field name="VENDOR NAME" type="nvarchar"></Field>
+			<Field name="MANAGEMENT" type="nvarchar"></Field>
+			<Field name="CONTACT PERSON" type="nvarchar"></Field>
+			<Field name="CONTACT CELLPHONE" type="nvarchar"></Field>
+			<Field name="CONTACT PHONE" type="nvarchar"></Field>
+			<Field name="CONTACT EMAIL" type="nvarchar"></Field>
+			<Field name="CONTACT FAX" type="nvarchar"></Field>
+			<Field name="VENDOR ADDRESS" type="nvarchar"></Field>
+			<Field name="Option Period" type="nvarchar"></Field>
+			<Field name="CONTRACT SUM" type="nvarchar"></Field>
+			<Field name="START DATE" type="nvarchar"></Field>
+			<Field name="END DATE" type="nvarchar"></Field>
+			<Field name="TERMS (FREE TEXT)" type="nvarchar"></Field>
+			<Field name="WARRANTY (FREE TEXT)" type="nvarchar"></Field>
+			<Field name="INSURANCE (FREE TEXT)" type="nvarchar"></Field>
+			<Field name="ContractGroup" type="nvarchar"></Field>
+			<Field name="CONSUMPTION THRESHOLD" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="FixedRate" handler="DataMigration.Logic.FixedRateHandler">
+		<Fields>
+			<Field name="FixedRateGroup" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="Vendor" handler="DataMigration.Logic.VendorHandler">
+		<Fields>
+      <Field name="VENDOR NAME" type="nvarchar"></Field>
+      <Field name="TAX CODE"
+             type="nvarchar"></Field>
+      <Field name="CURRENCY CODE"
+             type="nvarchar"></Field>
+			<Field name="OPERATING COUNTRY" type="nvarchar"></Field>
+			<Field name="OPERATING STATE" type="nvarchar"></Field>
+			<Field name="OPERATING CITY" type="nvarchar"></Field>
+			<Field name="OPERATING ADDRESS" type="nvarchar"></Field>
+			<Field name="OPERATING CELLPHONE" type="nvarchar"></Field>
+			<Field name="OPERATING PHONE" type="nvarchar"></Field>
+			<Field name="OPERATING FAX" type="nvarchar"></Field>
+      <Field name="OPERATING CONTACT PERSON" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="ContractGroup" handler="DataMigration.Logic.ContractGroupHandler">
+		<Fields>
+			<Field name="Contract Group L1" type="varchar"></Field>
+			<Field name="Contract Group L2" type="varchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="User" handler="DataMigration.Logic.UserHandler">
+		<Fields>
+			<Field name="User Name" type="nvarchar"></Field>
+			<Field name="Login Name" type="nvarchar"></Field>
+			<Field name="Positions" type="nvarchar"></Field>
+			<Field name="Cell Phone" type="nvarchar"></Field>
+			<Field name="Fax" type="nvarchar"></Field>
+			<Field name="Email" type="nvarchar"></Field>
+			<Field name="Phone" type="nvarchar"></Field>
+			<Field name="Country" type="nvarchar"></Field>
+			<Field name="State" type="nvarchar"></Field>
+			<Field name="City" type="nvarchar"></Field>
+			<Field name="Address" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="UpdateUserName" handler="DataMigration.Logic.UpdateUserNameHandler">
+		<Fields>
+			<Field name="NewUserName" type="nvarchar"></Field>
+			<Field name="UserName" type="nvarchar"></Field>
+			<Field name="Login Name (unique)" type="nvarchar"></Field>
+			<Field name="Password" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="LocationType" handler="DataMigration.Logic.LocationTypeHandler">
+		<Fields>
+			<Field name="LocationType" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="LocationEquipment" handler="DataMigration.Logic.LocationEquipmentHandler">
+		<Fields>
+			<Field name="Location Name (Hierarchical)" type="nvarchar"></Field>
+			<Field name="LocationType" type="nvarchar"></Field>
+			<Field name="Address" type="nvarchar"></Field>
+			<Field name="Postal Code" type="nvarchar"></Field>
+			<Field name="Gross Floor Area" type="nvarchar"></Field>
+			<Field name="Site Area" type="nvarchar"></Field>
+			<Field name="Area of Sch Field" type="nvarchar"></Field>
+			<Field name="Year Completed" type="nvarchar"></Field>
+			<Field name="Last/ Projected RR in FY" type="nvarchar"></Field>
+			<Field name="FundingType" type="nvarchar"></Field>
+			<Field name="SchoolType" type="nvarchar"></Field>
+			<Field name="Generic email" type="nvarchar"></Field>
+			<Field name="Construction Cost ($)" type="nvarchar"></Field>
+			<Field name="PRIME Phase" type="nvarchar"></Field>
+			<Field name="PRIME Completion Date" type="nvarchar"></Field>
+			<Field name="Project Contractor" type="nvarchar"></Field>
+			<Field name="Project Manager" type="nvarchar"></Field>
+			<Field name="CS Consultants" type="nvarchar"></Field>
+			<Field name="ME Consultants" type="nvarchar"></Field>
+			<Field name="QS Consultants" type="nvarchar"></Field>
+			<Field name="Nos of Blk" type="nvarchar"></Field>
+			<Field name="Nos of Floors" type="nvarchar"></Field>
+			<Field name="Full BFA Provisions (Full/Partial)" type="nvarchar"></Field>
+			<Field name="SWA Items ($)" type="nvarchar"></Field>
+			<Field name="Area provided for future classroms" type="nvarchar"></Field>
+			<Field name="Net Lettable Area" type="nvarchar"></Field>
+			<Field name="Structural Inspection Exercise-Completion Date" type="nvarchar"></Field>
+			<Field name="Structural Inspection Exercise-MA" type="nvarchar"></Field>
+			<Field name="Structural Inspection Exercise-PE" type="nvarchar"></Field>
+			<Field name="Direct connection with PUB mains" type="nvarchar"></Field>
+			<Field name="No. of water tanks" type="nvarchar"></Field>
+			<Field name="Fire hydrant pumping system" type="nvarchar"></Field>
+			<Field name="No. of lifts" type="nvarchar"></Field>
+			<Field name="Expiry date of lift licence (Mth/Yr)" type="nvarchar"></Field>
+			<Field name="Expiry date of electrical licence (Mth/Yr)" type="nvarchar"></Field>
+			<Field name="Architect" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="EquipmentType" handler="DataMigration.Logic.EquipmentTypeHandler">
+		<Fields>
+			<Field name="EquipmentTypeName" type="nvarchar"></Field>
+			<Field name="PhysicalType" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="EquipmentMaster" handler="DataMigration.Logic.EquipmentMasterHandler">
+		<Fields>
+			<Field name="EquipmentName" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="EquipmentTypeParameters" handler="DataMigration.Logic.EquipmentTypeParametersHandler">
+		<Fields>
+			<Field name="EquipmentType" type="nvarchar"></Field>
+			<Field name="ParameterName" type="nvarchar"></Field>
+			<Field name="UOM" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="Equipment" handler="DataMigration.Logic.EquipmentHandler">
+		<Fields>
+			<Field name="Equipment Name (unique identifier)" type="nvarchar"></Field>
+			<Field name="EquipmentSystem" type="nvarchar"></Field>
+			<Field name="EquipmentType" type="nvarchar"></Field>
+			<Field name="Parent" type="nvarchar"></Field>
+			<Field name="Location" type="nvarchar"></Field>
+			<Field name="Serial Number" type="nvarchar"></Field>
+			<Field name="BarCode" type="nvarchar"></Field>
+			<Field name="DateOfManufacture" type="nvarchar"></Field>
+			<Field name="DateOfOwnership" type="nvarchar"></Field>
+			<Field name="Price at Ownership ($)" type="nvarchar"></Field>
+			<Field name="WarrantyExpiry" type="nvarchar"></Field>
+			<Field name="Model No." type="nvarchar"></Field>
+			<Field name="Life Span (Years)" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="TypeOfService" handler="DataMigration.Logic.TypeOfServiceHandler">
+		<Fields>
+			<Field name="Work Type"  type="nvarchar"></Field>
+			<Field name="Type of Service"  type="nvarchar"></Field>
+			<Field  name="Problem Code" type="nvarchar"></Field>
+			<Field name="Cause of Problem"  type="nvarchar"></Field>
+			<Field name="Resolution"  type="nvarchar"></Field>
+			<Field name="Priority" type="int" ></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="UpdateWorkCodeHQ" handler="DataMigration.Logic.UpdateWorkCodeHQHandler">
+		<Fields>
+			<Field name="TypeOfWork"  type="nvarchar"></Field>
+			<Field name="TypeOfService"  type="nvarchar"></Field>
+			<Field  name="TypeOfProblem" type="nvarchar"></Field>
+			<Field name="CauseOfProblem"  type="nvarchar"></Field>
+			<Field name="Resolution"  type="nvarchar"></Field>
+			<Field name="Priority" type="int" ></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="UpdateWorkCodeNonHQ" handler="DataMigration.Logic.UpdateWorkCodeNonHQHandler">
+		<Fields>
+			<Field name="TypeOfWork"  type="nvarchar"></Field>
+			<Field name="TypeOfService"  type="nvarchar"></Field>
+			<Field  name="TypeOfProblem" type="nvarchar"></Field>
+			<Field name="CauseOfProblem"  type="nvarchar"></Field>
+			<Field name="Resolution"  type="nvarchar"></Field>
+			<Field name="Priority" type="int" ></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="TypeOfIncident" handler="DataMigration.Logic.TypeOfIncidentHandler">
+		<Fields>
+			<Field name="TypeOfIncident"  type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="Craft" handler="DataMigration.Logic.CraftHandler">
+		<Fields>
+			<Field name="CraftName" type="nvarchar"></Field>
+			<Field name="NormalRate" type="nvarchar"></Field>
+			<Field name="OvertimeRate" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="Superior" handler="DataMigration.Logic.SuperiorHandler">
+		<Fields>
+			<Field name="UserName" type="nvarchar"></Field>
+			<Field name="Superior" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="BudgetCategory" handler="DataMigration.Logic.BudgetCategoriesHandler">
+		<Fields>
+			<Field name="Budget Category Group L1*" type="nvarchar"></Field>
+			<Field name="Budget Category Group L2(Optional)" type="nvarchar"></Field>
+			<Field name="Budget Category Group L3(Optional)" type="nvarchar"></Field>
+			<Field name="Budget Category Group L4(Optional)" type="nvarchar"></Field>
+			<Field name="Budget Line Item*" type="nvarchar"></Field>
+			<Field name="Account Code" type="nvarchar"></Field>
+			<Field name="Cost Center" type="nvarchar"></Field>
+			<Field name="Project ID" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="Budget" handler="DataMigration.Logic.BudgetHandler">
+		<Fields>
+			<Field name="Budget Name *" type="nvarchar"></Field>
+			<Field name="Budget Location *" type="nvarchar"></Field>
+			<Field name="Start of Financial Month *" type="nvarchar"></Field>
+			<Field name="Financial Year *" type="nvarchar"></Field>
+			<Field name="Notify User 1 (Login Name)" type="nvarchar"></Field>
+			<Field name="Notify User 2 (Login Name)" type="nvarchar"></Field>
+			<Field name="Notify User 3 (Login Name)" type="nvarchar"></Field>
+			<Field name="Notify User 4 (Login Name)" type="nvarchar"></Field>
+			<Field name="Budget Item" type="nvarchar"></Field>
+			<Field name="YTD Budget (Original Amount) *" type="nvarchar"></Field>
+			<Field name="Budget Line Threshold *" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="YearlyBudget" handler="DataMigration.Logic.YearlyBudgetHandler">
+		<Fields>
+			<Field name="Budget Name *" type="nvarchar"></Field>
+			<Field name="Yearly Budget Name *" type="nvarchar"></Field>
+			<Field name="Yearly Financial Year *" type="nvarchar"></Field>
+			<Field name="Yearly Start of Financial Month *" type="nvarchar"></Field>
+			<Field name="Location" type="nvarchar"></Field>
+			<Field name="Budget Item" type="nvarchar"></Field>
+			<Field name="YTD Budget (Original Amount) *" type="nvarchar"></Field>
+			<Field name="Budget Line Threshold *" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="BudgetReadjust" handler="DataMigration.Logic.BudgetReadjustmentHandler">
+		<Fields>
+			<Field name="Yearly Budget Name *" type="nvarchar"></Field>
+			<Field name="Budget Item" type="nvarchar"></Field>
+			<Field name="YTD Budget (Original Amount) *" type="nvarchar"></Field>
+			<Field name="YTD Budget ( Adjusted) *" type="nvarchar"></Field>
+			<Field name="Budget Readjustment Admin" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="ContractConsumption" handler="DataMigration.Logic.ContractConsumptionHandler">
+		<Fields>
+			<Field name="System Contract No. " type="nvarchar"></Field>
+			<Field name="Contract Sum Consumed as at 23 Feb 09" type="nvarchar"></Field>
+			<Field name="PO Type*:" type="nvarchar"></Field>
+			<Field name="Description*:" type="nvarchar"></Field>
+			<Field name="JS Date*:" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="FacilityType" handler="DataMigration.Logic.FacilityTypeHandler">
+		<Fields>
+			<Field name="Facility" type="nvarchar"></Field>
+			<Field name="Facility Type" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="LocationFacility" handler="DataMigration.Logic.LocationFacilityHandler">
+		<Fields>
+			<Field name="School" type="nvarchar"></Field>
+			<Field name="Facility" type="nvarchar"></Field>
+			<Field name="Facility Type" type="nvarchar"></Field>
+			<Field name="Number of Units" type="nvarchar"></Field>
+			<Field name="Unit Area (m2)" type="nvarchar"></Field>
+			<Field name="Size (Length) (m)" type="nvarchar"></Field>
+			<Field name="Size (Breadth) (m)" type="nvarchar"></Field>
+			<Field name="Base Area Facilities (m2)" type="nvarchar"></Field>
+			<Field name="Comments" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="PSI" handler="DataMigration.Logic.PSIHandler">
+		<Fields>
+			<Field name="Location Name (Hierarchical)" type="nvarchar"></Field>
+			<Field name="Structural Inspection Exercise-Completion Date" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="Facility Conversion" handler="DataMigration.Logic.FacilityConversionHandler">
+		<Fields>
+			<Field name="Location Name" type="nvarchar"></Field>
+			<Field name="Address" type="nvarchar"></Field>
+			<Field name="Previous Facility Type" type="nvarchar"></Field>
+			<Field name="Previous Facility" type="nvarchar"></Field>
+			<Field name="New Facility Type" type="nvarchar"></Field>
+			<Field name="New Facility" type="nvarchar"></Field>
+			<Field name="Date of Change (DD-MM-YYYY)" type="nvarchar"></Field>
+			<Field name="SWA (Y/N)" type="nvarchar"></Field>
+			<Field name="Conversion (Y/N)" type="nvarchar"></Field>
+			<Field name="Change Details" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="Report" handler="DataMigration.Logic.ReportHandler">
+		<Fields>
+			<Field name="ReportName" type="nvarchar"></Field>
+			<Field name="HierarchyPath" type="nvarchar"></Field>
+			<Field name="IsDynamicReport" type="nvarchar"></Field>
+			<Field name="OdbcSyntax" type="nvarchar"></Field>
+			<Field name="ParamPrefix" type="nvarchar"></Field>
+			<Field name="CSharpMethodName" type="nvarchar"></Field>
+			<Field name="UseCSharpQuery" type="nvarchar"></Field>
+			<Field name="VisibleColumnAtStart" type="nvarchar"></Field>
+			<Field name="CategoryName" type="nvarchar"></Field>
+			<Field name="ContextTree" type="nvarchar"></Field>
+			<Field name="ReportQuery" type="nvarchar"></Field>
+			<Field name="ObjectNumber" type="nvarchar"></Field>
+			<Field name="IsDeleted" type="nvarchar"></Field>			
+		</Fields>
+	</Migration>
+	
+	<Migration name="ReportField" handler="DataMigration.Logic.ReportFieldHandler">
+		<Fields>
+			<Field name="ReportName" type="nvarchar"></Field>
+			<Field name="ControlIdentifier" type="nvarchar"></Field>
+			<Field name="DisplayOrder" type="nvarchar"></Field>
+			<Field name="ControlType" type="nvarchar"></Field>
+			<Field name="DataType" type="nvarchar"></Field>
+			<Field name="ListQuery" type="nvarchar"></Field>
+			<Field name="DataTextField" type="nvarchar"></Field>
+			<Field name="DataValueField" type="nvarchar"></Field>
+			<Field name="IsPopulatedByQuery" type="nvarchar"></Field>
+			<Field name="CascadeControl" type="nvarchar"></Field>
+			<Field name="TextList" type="nvarchar"></Field>
+			<Field name="ValueList" type="nvarchar"></Field>			
+			<Field name="ControlCaption" type="nvarchar"></Field>
+			<Field name="ControlSpan" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	
+	<Migration name="ReportTemplate" handler="DataMigration.Logic.ReportTemplateHandler">
+		<Fields>
+			<Field name="ReportName" type="nvarchar"></Field>
+			<Field name="ReportTemplateName" type="nvarchar"></Field>
+			<Field name="AccessControl" type="nvarchar"></Field>
+			<Field name="ReportXML" type="nvarchar"></Field>
+			<Field name="Description" type="nvarchar"></Field>
+			<Field name="ObjectNumber" type="nvarchar"></Field>
+			<Field name="Creator" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+
+	<Migration name="COPOpeningBalance" handler="DataMigration.Logic.COPOpeningBalanceHandler">
+		<Fields>
+			<Field name="System Contract Number" type="nvarchar"></Field>
+			<Field name="Contract Reference Number" type="nvarchar"></Field>
+			<Field name="Vendor" type="nvarchar"></Field>
+			<Field name="Contract Sum($)" type="nvarchar"></Field>
+			<Field name="Last COP Number" type="nvarchar"></Field>
+			<Field name="Total Claimed ($)" type="nvarchar"></Field>
+			<Field name="Total Deduction($)" type="nvarchar"></Field>
+			<Field name="Total GST ($)" type="nvarchar"></Field>
+			<Field name="Total LD ($)" type="nvarchar"></Field>
+			<Field name="Payee" type="nvarchar"></Field>
+			<Field name="5% Base Amount ($)" type="nvarchar"></Field>
+			<Field name="5% GST Amount ($)" type="nvarchar"></Field>
+			<Field name="7% Base Amount ($)" type="nvarchar"></Field>
+			<Field name="7% GST Amount ($)" type="nvarchar"></Field>
+		</Fields>
+	</Migration>
+	<Migration name="WorkCode" handler="DataMigration.Logic.WorkCodeHandler">
+		<Fields>
+			<Field name="TypeOfWork"  type="nvarchar"></Field>
+			<Field name="TypeOfService"  type="nvarchar"></Field>
+			<Field  name="TypeOfProblem" type="nvarchar"></Field>
+			<Field name="CauseOfProblem"  type="nvarchar"></Field>
+			<Field name="Resolution"  type="nvarchar"></Field>
+			<Field name="Priority" type="int" ></Field>
+		</Fields>
+	</Migration>
+  <Migration name="TransactionHistory" handler="DataMigration.Logic.TransationHistoryHandler">
+    <Fields>
+      <Field name="Account Number"  type="nvarchar"></Field>
+      <Field name="Ticket"  type="nvarchar"></Field>
+      <Field  name="Open Time" type="nvarchar"></Field>
+      <Field name="Type"  type="nvarchar"></Field>
+      <Field name="Size"  type="nvarchar"></Field>
+      <Field name="Item" type="nvarchar" ></Field>
+      <Field name="Price" type="nvarchar" ></Field>
+      <Field name="S / L" type="nvarchar" ></Field>
+      <Field name="T / P" type="nvarchar" ></Field>
+      <Field name="Close Time" type="nvarchar" ></Field>
+      <Field name="Price1" type="nvarchar" ></Field>
+      <Field name="Commission" type="nvarchar" ></Field>
+      <Field name="Taxes" type="nvarchar" ></Field>
+      <Field name="Swap" type="nvarchar" ></Field>
+      <Field name="Profit" type="nvarchar" ></Field>
+    </Fields>
+  </Migration>
+  
+</Migrations>

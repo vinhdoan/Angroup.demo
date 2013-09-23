@@ -1,0 +1,165 @@
+<%@ Page Language="C#" Theme="Corporate" Inherits="PageBase" Culture="auto" meta:resourcekey="PageResource1"
+    UICulture="auto" %>
+
+<%@ Register Src="~/components/menu.ascx" TagPrefix="web" TagName="menu" %>
+<%@ Register Src="~/components/objectsearchpanel.ascx" TagPrefix="web" TagName="search" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="Anacle.DataFramework" %>
+<%@ Import Namespace="LogicLayer" %>
+
+<script runat="server">
+    
+protected void Page_Load(object sender, EventArgs e)
+{
+    if (Request["AccountID"] != null && Security.Decrypt(Request["AccountID"]) != null)
+    {
+        Guid AccountID = new Guid(Security.Decrypt(Request["AccountID"]));
+        Guid BudgetPeriodID = new Guid(Security.Decrypt(Request["BudgetPeriodID"]));
+        OBudgetPeriod budgetPeriod = TablesLogic.tBudgetPeriod.Load(BudgetPeriodID);
+        if (budgetPeriod != null)
+        {
+            labelBudgetName.Text = budgetPeriod.Budget.ObjectName;
+            labelBudgetPeriodName.Text = budgetPeriod.ObjectName;
+            labelStartDate.Text = budgetPeriod.StartDate.Value.ToString("dd-MMM-yyyy");
+            labelEndDate.Text = budgetPeriod.EndDate.Value.ToString("dd-MMM-yyyy");
+
+            OAccount account = TablesLogic.tAccount.Load(AccountID);
+            labelAccount.Text = (account != null ? account.Path : "");
+                
+            //wj details
+            DataTable dtWJDetails = OAccount.WJDetails(AccountID, budgetPeriod.BudgetID.Value, budgetPeriod.StartDate.Value, budgetPeriod.EndDate.Value);
+            gridWJDetails.DataSource = dtWJDetails;
+            gridWJDetails.DataBind();
+
+            //direct invoices
+            DataTable dtInvoice = OAccount.DirectInvoice(AccountID, budgetPeriod.BudgetID.Value, budgetPeriod.StartDate.Value, budgetPeriod.EndDate.Value);
+            gridDirectInvoice.DataSource = dtInvoice;
+            gridDirectInvoice.DataBind();
+        }
+    }
+}
+
+protected override void OnPreRender(EventArgs e)
+{
+    base.OnPreRender(e);
+}
+
+protected void btnBackTop_Click(object sender, EventArgs e)
+{
+    Response.Redirect("budgetview.aspx?ID=" + HttpUtility.UrlEncode(Request["BudgetPeriodID"]));
+}
+
+protected void btnBackBottom_Click(object sender, EventArgs e)
+{
+    Response.Redirect("budgetview.aspx?ID=" + HttpUtility.UrlEncode(Request["BudgetPeriodID"]));
+}
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <link href="../../App_Themes/Corporate/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form2" runat="server">
+    <ui:UIPanel runat="server" ID="panelMain">
+        <div class="div-main">
+        <br />
+        <ui:UIButton runat="server" ID="btnBackTop" Text="Back" OnClick="btnBackTop_Click" />
+        <br />
+        <br />
+        <table>
+                    <tr>
+                        <td width="150px">
+                            <asp:Label ID="labelBudgetNameCaption" runat="server" Text="Budget: " Font-Bold="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelBudgetName" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelBudgetPeriodNameCaption" runat="server" Text="Budget Period: "
+                                Font-Bold="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelBudgetPeriodName" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelStartDateCaption" runat="server" Text="Date: " Font-Bold="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelStartDate" runat="server"></asp:Label>
+                            <asp:Label ID="labelTo" runat="server" Text=" to "></asp:Label>
+                            <asp:Label ID="labelEndDate" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelAccountCaption" runat="server" Text="Account: " Font-Bold="true"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelAccount" runat="server"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+        <br />
+        <ui:UISeparator runat="server" Caption="WJ Details" />
+            <asp:DataGrid ID="gridWJDetails" runat="server" DataKeyField="AccountID"
+                        CssClass="datagrid" HeaderStyle-CssClass="grid-header" BorderColor="#cccccc"
+                        BorderWidth="1" CellSpacing="0" CellPadding="1" AutoGenerateColumns="false" Width="100%"
+                        AllowPaging="false" >
+                        <Columns>
+                             <asp:BoundColumn DataField="AccountID" ReadOnly="True" Visible="false" ItemStyle-Width="150" HeaderText="WJ Number">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="RFQNumber" ReadOnly="True" ItemStyle-Width="150" HeaderText="WJ Number">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="PONumber" ReadOnly="True" HeaderText="PO Number" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="Left" ItemStyle-Width="150"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="InvoiceNumber" ItemStyle-Width="150" ReadOnly="True" Visible="true" HeaderText="Invoice Number">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Description" ItemStyle-Width="250" ReadOnly="True" HeaderText="Description" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="DateOfExpenditure" ReadOnly="True" HeaderText="Date Of Expenditure" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left" ItemStyle-Width="150" DataFormatString="{0:dd-MMM-yyyy}"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Amount" ReadOnly="True" HeaderText="Amount" ItemStyle-Width="150" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="right" HeaderStyle-HorizontalAlign="right" DataFormatString="{0:#,##0.00}"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="CreatedUser" ReadOnly="True" HeaderText="Requested By" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left" ></asp:BoundColumn>
+                            <asp:BoundColumn DataField="ApprovedBy" ReadOnly="True" HeaderText="Approved By" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" ItemStyle-Width="250" HeaderStyle-HorizontalAlign="left"></asp:BoundColumn>
+                        </Columns>
+                    </asp:DataGrid>
+            <br />
+            <br />
+            <ui:UISeparator ID="UISeparator1" runat="server" Caption="Direct Invoices" />
+            <asp:DataGrid ID="gridDirectInvoice" runat="server" DataKeyField="AccountID"
+                        CssClass="datagrid" HeaderStyle-CssClass="grid-header" BorderColor="#cccccc"
+                        BorderWidth="1" CellSpacing="0" CellPadding="1" AutoGenerateColumns="false" Width="100%"
+                        AllowPaging="false" >
+                        <Columns>
+                             <asp:BoundColumn DataField="AccountID" ReadOnly="True" Visible="false" ItemStyle-Width="100" HeaderText="WJ Number">
+                            </asp:BoundColumn>
+                            
+                            <asp:BoundColumn DataField="InvoiceNumber" ItemStyle-Width="100" ReadOnly="True" Visible="true" HeaderText="Invoice Number">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Description" ItemStyle-Width="250" ReadOnly="True" HeaderText="Description" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="DateOfExpenditure" ReadOnly="True" HeaderText="Date Of Expenditure" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left" ItemStyle-Width="150" DataFormatString="{0:dd-MMM-yyyy}"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Amount" ReadOnly="True" HeaderText="Amount" ItemStyle-Width="100" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="right" HeaderStyle-HorizontalAlign="right" DataFormatString="{0:#,##0.00}"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="CreatedUser" ReadOnly="True" HeaderText="Requested By" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" HeaderStyle-HorizontalAlign="left"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="ApprovedBy" ReadOnly="True" HeaderText="Approved By" ItemStyle-VerticalAlign="Middle"
+                                ItemStyle-HorizontalAlign="left" ItemStyle-Width="250" HeaderStyle-HorizontalAlign="left"></asp:BoundColumn>
+                        </Columns>
+           </asp:DataGrid>
+        </div>
+    </ui:UIPanel>
+    </form>
+</body>
+</html>

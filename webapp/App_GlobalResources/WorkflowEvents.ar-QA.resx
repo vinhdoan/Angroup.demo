@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accept" xml:space="preserve">
+    <value>قبول</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>تفعيل</value>
+  </data>
+  <data name="Agree" xml:space="preserve">
+    <value>موافق</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>موافقة</value>
+  </data>
+  <data name="Assign" xml:space="preserve">
+    <value>تعيين</value>
+  </data>
+  <data name="Award" xml:space="preserve">
+    <value>الجائزة</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="Collect" xml:space="preserve">
+    <value>جمع</value>
+  </data>
+  <data name="Commit" xml:space="preserve">
+    <value>ارتكاب</value>
+  </data>
+  <data name="Complete" xml:space="preserve">
+    <value>كامل</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>تأكيد</value>
+  </data>
+  <data name="Consent" xml:space="preserve">
+    <value>موافقة</value>
+  </data>
+  <data name="Deliver" xml:space="preserve">
+    <value>تسليم</value>
+  </data>
+  <data name="Evaluate" xml:space="preserve">
+    <value>تقييم</value>
+  </data>
+  <data name="Execute" xml:space="preserve">
+    <value>تنفيذ</value>
+  </data>
+  <data name="Finalize" xml:space="preserve">
+    <value>وضع اللمسات الأخيرة</value>
+  </data>
+  <data name="InProgress" xml:space="preserve">
+    <value>في التقدم</value>
+  </data>
+  <data name="Plan" xml:space="preserve">
+    <value>خطة</value>
+  </data>
+  <data name="Receive" xml:space="preserve">
+    <value>استقبال</value>
+  </data>
+  <data name="Recommend" xml:space="preserve">
+    <value>توصية</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>رفض</value>
+  </data>
+  <data name="RejectForRedraft" xml:space="preserve">
+    <value>رفض لإعادة صياغة</value>
+  </data>
+  <data name="Release" xml:space="preserve">
+    <value>إطلاق</value>
+  </data>
+  <data name="RemindRespondent" xml:space="preserve">
+    <value>أذكر  المجيب</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>عودة</value>
+  </data>
+  <data name="ReturnForRedraft" xml:space="preserve">
+    <value>عودة لإعادة صياغة</value>
+  </data>
+  <data name="ReturnToInProgress" xml:space="preserve">
+    <value>في العودة إلى التقدم</value>
+  </data>
+  <data name="Reverse" xml:space="preserve">
+    <value>عكس</value>
+  </data>
+  <data name="Rollback" xml:space="preserve">
+    <value>عودة</value>
+  </data>
+  <data name="SaveAsDraft" xml:space="preserve">
+    <value>أحفظ كمسودة</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>أرسل</value>
+  </data>
+  <data name="SubmitForAcceptance" xml:space="preserve">
+    <value>تقدم للقبول</value>
+  </data>
+  <data name="SubmitForAction" xml:space="preserve">
+    <value>تقدم للعمل</value>
+  </data>
+  <data name="SubmitForActivation" xml:space="preserve">
+    <value>تقدم للتحريك</value>
+  </data>
+  <data name="SubmitForAdjustment" xml:space="preserve">
+    <value>تقدم لتسوية</value>
+  </data>
+  <data name="SubmitForAgreement" xml:space="preserve">
+    <value>يقدم للاتفاق</value>
+  </data>
+  <data name="SubmitForApproval" xml:space="preserve">
+    <value>تقدم هذا من أجل الموافقة</value>
+  </data>
+  <data name="SubmitForAssessment" xml:space="preserve">
+    <value>تقدم للتقييم</value>
+  </data>
+  <data name="SubmitForAward" xml:space="preserve">
+    <value>تقدم للجائزة</value>
+  </data>
+  <data name="SubmitForClosure" xml:space="preserve">
+    <value>تقدم لاختتام</value>
+  </data>
+  <data name="SubmitForCollection" xml:space="preserve">
+    <value>تقدم للجمع</value>
+  </data>
+  <data name="SubmitForCommitment" xml:space="preserve">
+    <value>تقدم للالتزام</value>
+  </data>
+  <data name="SubmitForCompletion" xml:space="preserve">
+    <value>تقدم لاستكمال</value>
+  </data>
+  <data name="SubmitForConfirmation" xml:space="preserve">
+    <value>تقدم للتأكيد</value>
+  </data>
+  <data name="SubmitForConsentment" xml:space="preserve">
+    <value>تقدم للموافقة</value>
+  </data>
+  <data name="SubmitForDelivery" xml:space="preserve">
+    <value>تقدم للتسليم</value>
+  </data>
+  <data name="SubmitForEvaluation" xml:space="preserve">
+    <value>تقدم للتقييم</value>
+  </data>
+  <data name="SubmitForExecution" xml:space="preserve">
+    <value>تقدم للتنفيذ</value>
+  </data>
+  <data name="SubmitForFinalization" xml:space="preserve">
+    <value>تقدم لوضع الصيغة النهائية</value>
+  </data>
+  <data name="SubmitForInvitation" xml:space="preserve">
+    <value>تقدم للدعوة</value>
+  </data>
+  <data name="SubmitForModification" xml:space="preserve">
+    <value>تقدم للتعديل</value>
+  </data>
+  <data name="SubmitForPlanning" xml:space="preserve">
+    <value>تقدم للتخطيط</value>
+  </data>
+  <data name="SubmitForQuotation" xml:space="preserve">
+    <value>تقدم للتسعيرة</value>
+  </data>
+  <data name="SubmitForReceipt" xml:space="preserve">
+    <value>تقدم لاستلام</value>
+  </data>
+  <data name="SubmitForRecommendation" xml:space="preserve">
+    <value>تقدم لالتوصية</value>
+  </data>
+  <data name="SubmitForRelease" xml:space="preserve">
+    <value>تقدم الإصدار</value>
+  </data>
+  <data name="SubmitForVerification" xml:space="preserve">
+    <value>تقدم للتحقق</value>
+  </data>
+  <data name="SubmitForVoting" xml:space="preserve">
+    <value>تقدم للتصويت</value>
+  </data>
+  <data name="Terminate" xml:space="preserve">
+    <value>إنهاء</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تعديل عتبة / تاريخ انتهاء الصلاحية</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>تحقيق</value>
+  </data>
+  <data name="Vote" xml:space="preserve">
+    <value>تصويت</value>
+  </data>
+  <data name="WaitForClient" xml:space="preserve">
+    <value>انتظر الزبون</value>
+  </data>
+  <data name="WaitForContractor" xml:space="preserve">
+    <value>انتظر المتعهد</value>
+  </data>
+  <data name="WaitForCustomer" xml:space="preserve">
+    <value>انتظر الزبون</value>
+  </data>
+  <data name="WaitForMaterial" xml:space="preserve">
+    <value>انتظر الوازم</value>
+  </data>
+  <data name="WaitForOthers" xml:space="preserve">
+    <value>انتظر آالخرون</value>
+  </data>
+  <data name="WaitForRequestor" xml:space="preserve">
+    <value>انتظر الطالب</value>
+  </data>
+  <data name="WaitForSupplier" xml:space="preserve">
+    <value>انتظرالممون</value>
+  </data>
+  <data name="WaitForTenant" xml:space="preserve">
+    <value>انتظر المستأجر</value>
+  </data>
+  <data name="WaitForVendor" xml:space="preserve">
+    <value>انتظر البائع</value>
+  </data>
+</root>

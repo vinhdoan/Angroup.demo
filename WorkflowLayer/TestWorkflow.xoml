@@ -1,0 +1,39 @@
+﻿<ns0:AnacleStateMachineWorkflow x:Class="WorkflowLayer.TestWorkflow" InitialStateName="TestWorkflowInitialState" x:Name="OContractWorkflow" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="TestWorkflowInitialState">
+		<EventDrivenActivity x:Name="eventDrivenActivity1">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity1" EventName="Start" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3677.25099, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ReadPoint PointName="Light007" x:Name="readPoint1" />
+			<IfElseActivity x:Name="ifElseActivity1">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity1">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="Condition1" />
+					</IfElseBranchActivity.Condition>
+					<ns1:WritePoint PointName="Light004" x:Name="writePoint1" WriteValue="True" />
+					<FaultHandlersActivity x:Name="faultHandlersActivity3">
+						<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p16:Exception}" xmlns:p16="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+						</FaultHandlerActivity>
+					</FaultHandlersActivity>
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity2">
+					<ns1:WritePoint PointName="Light004" x:Name="writePoint2" WriteValue="False" />
+					<FaultHandlersActivity x:Name="faultHandlersActivity4">
+						<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p16:Exception}" xmlns:p16="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+							<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost4" />
+						</FaultHandlerActivity>
+					</FaultHandlersActivity>
+				</IfElseBranchActivity>
+				<FaultHandlersActivity x:Name="faultHandlersActivity2">
+					<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p14:Exception}" xmlns:p14="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+					</FaultHandlerActivity>
+				</FaultHandlersActivity>
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+</ns0:AnacleStateMachineWorkflow>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="buttonSearchResource1.Text" xml:space="preserve">
+    <value>添加所选项目</value>
+  </data>
+	<data name="Catalogue_CostingTypeResource3.Caption" xml:space="preserve">
+    <value>成本计算类型</value>
+  </data>
+	<data name="Catalogue_ItemTypeResource2.Caption" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+	<data name="checkInBinResource1.Caption" xml:space="preserve">
+    <value>仓室</value>
+  </data>
+	<data name="checkInBinResource2.Caption" xml:space="preserve">
+    <value>仓室</value>
+  </data>
+	<data name="checkinExpiryDateResource1.Caption" xml:space="preserve">
+    <value>失效日</value>
+  </data>
+	<data name="checkinExpiryDateResource2.Caption" xml:space="preserve">
+    <value>失效日</value>
+  </data>
+	<data name="checkinLotNumberResource1.Caption" xml:space="preserve">
+    <value>批号</value>
+  </data>
+	<data name="checkinLotNumberResource2.Caption" xml:space="preserve">
+    <value>批号</value>
+  </data>
+	<data name="checkinQuantityResource1.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="checkinQuantityResource2.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="checkInUnitPriceResource1.Caption" xml:space="preserve">
+    <value>单位价格</value>
+  </data>
+	<data name="checkInUnitPriceResource2.Caption" xml:space="preserve">
+    <value>单位价格</value>
+  </data>
+	<data name="ItemJustificationResource1.Caption" xml:space="preserve">
+    <value>理由</value>
+  </data>
+	<data name="labelCaptionResource1.Text" xml:space="preserve">
+    <value>目录</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>先进先出</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>后进先出</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>库存</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>无库存</value>
+  </data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>先进先出</value>
+  </data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>后进先出</value>
+  </data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>库存</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>无库存</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>先进先出</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>后进先出</value>
+  </data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>库存</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>无库存</value>
+  </data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>先进先出</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>后进先出</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+	<data name="PurchaseOrderQuantityOrderedResource2.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="PurchaseRequestQuantityRequiredResource1.Caption" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="PurchaseRequestQuantityRequiredResource2.Caption" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="QuotationQuantityRequiredResource1.Caption" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="QuotationQuantityRequiredResource2.Caption" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="txtReorderDefaultResource1.Caption" xml:space="preserve">
+    <value>重订数量</value>
+  </data>
+	<data name="txtReorderThresholdResource1.Caption" xml:space="preserve">
+    <value>重订临界值</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource12.HeaderText" xml:space="preserve">
+    <value>库存编号</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource13.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource14.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource15.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource16.HeaderText" xml:space="preserve">
+    <value>契约价格</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>库存编号</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>成本计算类型</value>
+  </data>
+	<data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>入库项目</value>
+  </data>
+	<data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value>库存编号</value>
+  </data>
+	<data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+	<data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>成本计算类型</value>
+  </data>
+	<data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value>仓室</value>
+  </data>
+	<data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+	<data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewColumnResource2.HeaderText" xml:space="preserve">
+    <value>单位价格</value>
+  </data>
+	<data name="UIGridViewColumnResource20.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewColumnResource21.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>所需数量</value>
+  </data>
+	<data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewColumnResource25.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewColumnResource26.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewColumnResource27.HeaderText" xml:space="preserve">
+    <value>制造商</value>
+  </data>
+	<data name="UIGridViewColumnResource28.HeaderText" xml:space="preserve">
+    <value>单位价格</value>
+  </data>
+	<data name="UIGridViewColumnResource29.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>入库项目</value>
+  </data>
+	<data name="UIGridViewColumnResource30.HeaderText" xml:space="preserve">
+    <value>税码</value>
+  </data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="UIGridViewColumnResource40.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewColumnResource41.HeaderText" xml:space="preserve">
+    <value>库存编号</value>
+  </data>
+	<data name="UIGridViewColumnResource46.HeaderText" xml:space="preserve">
+    <value>成本计算类型</value>
+  </data>
+	<data name="UIGridViewColumnResource47.HeaderText" xml:space="preserve">
+    <value>项目类型</value>
+  </data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>失效日</value>
+  </data>
+	<data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>批号</value>
+  </data>
+	<data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>目录名称</value>
+  </data>
+	<data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>计量单位</value>
+  </data>
+	<data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>型号</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource1.HeaderText" xml:space="preserve">
+    <value>仓室</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource2.HeaderText" xml:space="preserve">
+    <value>单位价格</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource3.HeaderText" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource4.HeaderText" xml:space="preserve">
+    <value>失效日</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource5.HeaderText" xml:space="preserve">
+    <value>批号</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource6.HeaderText" xml:space="preserve">
+    <value>重订数量</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource7.HeaderText" xml:space="preserve">
+    <value>重订临界值</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource8.HeaderText" xml:space="preserve">
+    <value>理由/备注</value>
+  </data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>结果</value>
+  </data>
+</root>

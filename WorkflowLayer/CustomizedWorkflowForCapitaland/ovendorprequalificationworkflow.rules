@@ -1,0 +1,223 @@
+﻿<RuleDefinitions xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<RuleDefinitions.Conditions>
+		<RuleExpressionCondition Name="approvalCondition">
+			<RuleExpressionCondition.Expression>
+				<ns0:CodePropertyReferenceExpression PropertyName="IsApproved" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:CodePropertyReferenceExpression.TargetObject>
+						<ns0:CodeThisReferenceExpression />
+					</ns0:CodePropertyReferenceExpression.TargetObject>
+				</ns0:CodePropertyReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+		<RuleExpressionCondition Expression="{p3:Null}" Name="IfApprove" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml" />
+		<RuleExpressionCondition Name="IfApproved">
+			<RuleExpressionCondition.Expression>
+				<ns0:CodePropertyReferenceExpression PropertyName="IsApproved" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns0:CodePropertyReferenceExpression.TargetObject>
+						<ns0:CodeThisReferenceExpression />
+					</ns0:CodePropertyReferenceExpression.TargetObject>
+				</ns0:CodePropertyReferenceExpression>
+			</RuleExpressionCondition.Expression>
+		</RuleExpressionCondition>
+	</RuleDefinitions.Conditions>
+	<RuleDefinitions.RuleSets>
+		<RuleSet Name="Cancel" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml" />
+		<RuleSet Name="Approve" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="ApproveForCapitaland">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeCastExpression TargetType="LogicLayer.OVendorPrequalification, LogicLayer, Version=6.0.3938.29381, Culture=neutral, PublicKeyToken=null">
+															<ns0:CodeCastExpression.Expression>
+																<ns0:CodePropertyReferenceExpression PropertyName="CurrentObject">
+																	<ns0:CodePropertyReferenceExpression.TargetObject>
+																		<ns0:CodeThisReferenceExpression />
+																	</ns0:CodePropertyReferenceExpression.TargetObject>
+																</ns0:CodePropertyReferenceExpression>
+															</ns0:CodeCastExpression.Expression>
+														</ns0:CodeCastExpression>
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+		<RuleSet Name="RejectedEmail" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">VendorPrequalification_RejectedforRework</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="SendEmailToLowerLevelApprovers">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeCastExpression TargetType="LogicLayer.LogicLayerPersistentObject, LogicLayer, Version=6.0.3938.29381, Culture=neutral, PublicKeyToken=null">
+															<ns0:CodeCastExpression.Expression>
+																<ns0:CodePropertyReferenceExpression PropertyName="CurrentObject">
+																	<ns0:CodePropertyReferenceExpression.TargetObject>
+																		<ns0:CodeThisReferenceExpression />
+																	</ns0:CodePropertyReferenceExpression.TargetObject>
+																</ns0:CodePropertyReferenceExpression>
+															</ns0:CodeCastExpression.Expression>
+														</ns0:CodeCastExpression>
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+		<RuleSet Name="CancelledEmail" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">VendorPrequalification_Cancelled</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="SendEmailToLowerLevelApprovers">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeCastExpression TargetType="LogicLayer.LogicLayerPersistentObjectBase, LogicLayer, Version=6.0.3938.29381, Culture=neutral, PublicKeyToken=null">
+															<ns0:CodeCastExpression.Expression>
+																<ns0:CodePropertyReferenceExpression PropertyName="CurrentObject">
+																	<ns0:CodePropertyReferenceExpression.TargetObject>
+																		<ns0:CodeThisReferenceExpression />
+																	</ns0:CodePropertyReferenceExpression.TargetObject>
+																</ns0:CodePropertyReferenceExpression>
+															</ns0:CodeCastExpression.Expression>
+														</ns0:CodeCastExpression>
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+		<RuleSet Name="ApprovedEmail" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="Rule1" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Parameters>
+												<ns0:CodePrimitiveExpression>
+													<ns0:CodePrimitiveExpression.Value>
+														<ns1:String xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">VendorPrequalification_Approved</ns1:String>
+													</ns0:CodePrimitiveExpression.Value>
+												</ns0:CodePrimitiveExpression>
+											</ns0:CodeMethodInvokeExpression.Parameters>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="SendEmailToLowerLevelApprovers">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeCastExpression TargetType="LogicLayer.LogicLayerPersistentObjectBase, LogicLayer, Version=6.0.3938.29381, Culture=neutral, PublicKeyToken=null">
+															<ns0:CodeCastExpression.Expression>
+																<ns0:CodePropertyReferenceExpression PropertyName="CurrentObject">
+																	<ns0:CodePropertyReferenceExpression.TargetObject>
+																		<ns0:CodeThisReferenceExpression />
+																	</ns0:CodePropertyReferenceExpression.TargetObject>
+																</ns0:CodePropertyReferenceExpression>
+															</ns0:CodeCastExpression.Expression>
+														</ns0:CodeCastExpression>
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+	</RuleDefinitions.RuleSets>
+</RuleDefinitions>

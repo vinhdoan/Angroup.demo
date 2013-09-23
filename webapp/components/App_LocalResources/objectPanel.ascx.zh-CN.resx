@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="buttonCancelResource1.Text" xml:space="preserve">
+    <value>关闭窗口</value>
+  </data>
+	<data name="buttonDeleteResource1.ConfirmText" xml:space="preserve">
+    <value>确定删除这个项目？\n\n请注意：删除后一些相关项目将无法使用。</value>
+  </data>
+	<data name="buttonDeleteResource1.Text" xml:space="preserve">
+    <value>删除项目</value>
+  </data>
+	<data name="buttOnValidateAndSaveAndNewResource1.Text" xml:space="preserve">
+    <value>保存及新建项目</value>
+  </data>
+	<data name="buttOnValidateAndSaveResource1.Text" xml:space="preserve">
+    <value>保存项目</value>
+  </data>
+	<data name="labelCaptionResource1.Text" xml:space="preserve">
+    <value>项目名称</value>
+  </data>
+	<data name="buttonCancelWorkflowPopupResource1.Text" xml:space="preserve">
+		<value>取消</value>
+	</data>
+	<data name="buttonCloneResource1.ConfirmText" xml:space="preserve">
+		<value>请在复制项目前保存项目。\n\n确定继续？</value>
+	</data>
+	<data name="buttonCloneResource1.Text" xml:space="preserve">
+		<value>复制项目</value>
+	</data>
+	<data name="buttOnValidateAndSaveAndCloseResource1.Text" xml:space="preserve">
+		<value>保存及关闭项目</value>
+	</data>
+	<data name="buttOnValidateAndSaveWorkflowPopupResource1.Text" xml:space="preserve">
+		<value>保存项目</value>
+	</data>
+	<data name="dropApprovalProcessResource1.Caption" xml:space="preserve">
+		<value>批准程序</value>
+	</data>
+	<data name="gridApprovalProcessResource1.Caption" xml:space="preserve">
+		<value>批准者层级</value>
+	</data>
+	<data name="labelApprovalNotRequiredResource1.Text" xml:space="preserve">
+		<value>这个程序无需批准。</value>
+	</data>
+	<data name="labelApprovedResource1.Text" xml:space="preserve">
+		<value>您是授权批准者。</value>
+	</data>
+	<data name="labelDocumentsResource1.Text" xml:space="preserve">
+		<value>选择生成文件</value>
+	</data>
+	<data name="labelModeOfForwardingResource1.Caption" xml:space="preserve">
+		<value>前进模式</value>
+	</data>
+	<data name="labelNoApproversFoundResource1.Text" xml:space="preserve">
+		<value>这个程序没有授权批准者。</value>
+	</data>
+	<data name="labelSelectedActionResource1.Caption" xml:space="preserve">
+		<value>所选操作</value>
+	</data>
+	<data name="linkCloseResource1.Text" xml:space="preserve">
+		<value>隐藏</value>
+	</data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+		<value>工作操作</value>
+	</data>
+	<data name="textTaskCurrentCommentsResource1.Caption" xml:space="preserve">
+		<value>意见</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+		<value>批准等级</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+		<value>批准限额</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+		<value>用户</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+		<value>身份</value>
+	</data>
+	<data name="buttonCancelResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCancelResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCancelWorkflowPopupResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCancelWorkflowPopupResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCloneResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCloneResource2.ConfirmText" xml:space="preserve">
+		<value>请在复制项目前保存项目。\n\n确定继续？</value>
+	</data>
+	<data name="buttonCloneResource2.Text" xml:space="preserve">
+		<value>复制项目</value>
+	</data>
+	<data name="buttonCloneResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonDeleteResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonHiddenResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonHiddenResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonHiddenResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonHiddenResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonPrintResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonPrintResource1.Text" xml:space="preserve">
+		<value>打印</value>
+	</data>
+	<data name="buttonPrintResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource2.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshSessionResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshSessionResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonRefreshSessionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveAndCloseResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveAndCloseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveAndNewResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveAndNewResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveWorkflowPopupResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveWorkflowPopupResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonWorkflowActionResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonWorkflowActionResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonWorkflowActionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkSkipLevelsResource1.Caption" xml:space="preserve">
+		<value>省略层级？</value>
+	</data>
+	<data name="checkSkipLevelsResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkSkipLevelsResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkSkipLevelsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkSkipLevelsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="datalistWorkflowButtonsResource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="datalistWorkflowButtonsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource2.Caption" xml:space="preserve">
+		<value>批准程序</value>
+	</data>
+	<data name="dropApprovalProcessResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="dropApprovalProcessResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource1.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource2.Caption" xml:space="preserve">
+		<value>批准者层级</value>
+	</data>
+	<data name="gridApprovalProcessResource2.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridApprovalProcessResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageGenerateDocumentResource1.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageGenerateDocumentResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageGenerateDocumentResource2.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageGenerateDocumentResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSeparatorResource1.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSeparatorResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSpellCheckResource1.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSpellCheckResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSubmenuResource1.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSubmenuResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSubmenuResource2.AlternateText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="imageSubmenuResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelApprovalNotRequiredResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelApprovalNotRequiredResource2.Text" xml:space="preserve">
+		<value>这个程序无需批准。</value>
+	</data>
+	<data name="labelApprovalNotRequiredResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelApprovedResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelApprovedResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelApprovedResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelCaptionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelDocumentsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelDocumentsResource2.Text" xml:space="preserve">
+		<value>选择生成文件</value>
+	</data>
+	<data name="labelDocumentsResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelMessageResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelMessageResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource2.Caption" xml:space="preserve">
+		<value>前进模式</value>
+	</data>
+	<data name="labelModeOfForwardingResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelModeOfForwardingResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelNoApproversFoundResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelNoApproversFoundResource2.Text" xml:space="preserve">
+		<value>这个程序没有授权批准者。</value>
+	</data>
+	<data name="labelNoApproversFoundResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelSelectedActionResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelSelectedActionResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="labelSelectedActionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkCloseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkCloseResource2.Text" xml:space="preserve">
+		<value>隐藏</value>
+	</data>
+	<data name="linkCloseResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkGenerateDocumentResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkGenerateDocumentResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkGenerateDocumentResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkGenerateDocumentResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkSpellCheckResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="linkSpellCheckResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="listDocumentTemplatesListResource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="listDocumentTemplatesListResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="listDocumentTemplatesListResource2.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="listDocumentTemplatesListResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="mainPanelResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="mainPanelResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="mainPanelResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="mainPanelResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelApprovalProcessResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelApprovalProcessResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelApprovalProcessResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelApprovalProcessResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesListResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesListResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesListResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesListResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelDocumentTemplatesResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelGeneratePulldownResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelGeneratePulldownResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelGeneratePulldownResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelGeneratePulldownResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMessageResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMessageResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMessageResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMessageResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelSpellCheckResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelSpellCheckResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelWorkflowPopupResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelWorkflowPopupResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelWorkflowPopupResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelWorkflowPopupResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep2Resource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep2Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep2Resource2.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep2Resource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanCloneButtonsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanCloneButtonsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanCloneButtonsResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanCloneButtonsResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDelete2Resource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDelete2Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDelete2Resource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDelete2Resource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDeleteResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDeleteResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDeleteResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanDeleteResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanPrintButtonsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanPrintButtonsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsInnerResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsInnerResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsInnerResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsInnerResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="spanSaveButtonsResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textClickedButtonResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textClickedButtonResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textClickedButtonResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textClickedButtonResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textSubPanelCountResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textSubPanelCountResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textSubPanelCountResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textSubPanelCountResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textTaskCurrentCommentsResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textTaskCurrentCommentsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textTaskCurrentCommentsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+		<value>所需批准数次</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource4.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource4.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource5.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource5.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+		<value>批准等级</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource6.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource6.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+		<value>批准限额</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource7.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource7.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+		<value>用户</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+		<value>职位</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+		<value>身份</value>
+	</data>
+</root>

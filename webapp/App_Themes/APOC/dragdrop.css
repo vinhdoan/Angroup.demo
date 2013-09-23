@@ -1,0 +1,223 @@
+ td
+{
+    border: none;
+}
+
+.dd-drop
+{ 
+	font-family: Arial;
+	font-size: 8pt;
+}
+
+.dd-title
+{
+	font-family: Century Gothic, Arial;
+	font-size: 15pt;
+	color: Black;
+	background-color: white;
+	font-weight: bold;
+	border-bottom: solid 1px black;
+	padding-bottom: 2px;
+}
+
+.dd-subtitle
+{
+	font-family: Century Gothic, Arial;
+	font-size: 10pt;
+	color: #666666;
+	background-color: white;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	
+}
+
+.dd-paper
+{
+	background-color: white;
+	border: solid 1px #333333;
+	padding: 16px;
+	height: 600px;
+}
+
+.dd-agg
+{
+    display: inline-block;
+}
+
+.dd-column  
+{
+	background-color: #99ddff;
+	height: 20px;
+	white-space: nowrap;
+
+	font-family: Arial;
+	font-size: 9pt;
+	padding: 6px 4px 0px 4px;
+	border: solid 1px #77bbdd;
+}
+
+.dd-columngroup 
+{
+	background-color: #bbbbbb;
+	color: black;
+	height: 20px;
+	white-space: nowrap;
+
+	font-family: Arial;
+	font-size: 9pt;
+	font-weight: bold;
+	padding: 6px 4px 0px 4px;
+	border: solid 1px #666666;
+}
+
+.dd-columngroup a, .dd-columngroup a:visited
+{
+    color: Black;
+}
+
+.dd-pivotdatacolumn 
+{
+	background-color: #99ddff;
+	height: 20px;
+	white-space: nowrap;
+
+	font-family: Arial;
+	font-size: 9pt;
+	padding: 6px 4px 0px 4px;
+	border: solid 1px #99ddff;
+}
+
+.dd-dropgroup
+{
+    border: solid 1px #666666;
+	background-color: #888888;
+	background-image: url('../../images/dropgroup.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	
+	width: 15px;
+	height: 26px;
+}
+
+
+.dd-droptop
+{
+    border: solid 1px #666666;
+	background-color: #888888;
+	background-image: url('../../images/dropgrouptop.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: black;
+	height: 20px;
+	font-size:0pt;
+}
+
+
+.dd-droporder
+{
+    border: solid 1px #77bbdd;
+	background-color: #77bbdd;
+	width: 15px;
+	height: 26px;
+}
+
+.dd-class
+{
+	font-family: Arial;
+	font-size: 8pt;
+	vertical-align: top;
+}
+
+.dd-chartclass
+{
+	font-family: Arial;
+	font-size: 8pt;
+	vertical-align: top;
+}
+
+.dd-chartph
+{
+	font-family: Arial;
+	font-size: 9pt;
+	vertical-align: top;
+
+	background-color: #eeeeee;
+	border: solid 1px #bbbbbb;
+}
+
+.dd-celldata
+{
+	background-color: white;
+}
+
+.dd-cellagg
+{
+	background-color: #ffff99;
+}
+
+.dd-celldata, .dd-celldata0, .dd-celldata1, .dd-celldata2, .dd-celldata3, .dd-celldata4, .dd-cellgroup
+{
+	padding: 3px 5px 3px 5px ;
+	
+	font-family: Arial;
+	font-size: 9pt;
+	vertical-align: top;
+	white-space: nowrap;
+	color: Black;
+}
+
+.dd-celldata0
+{
+	background-color: white;
+	border: solid 1px #cccccc;
+}
+
+.dd-celldata1
+{
+	background-color: #ffffdd;
+	border-top: solid 2px #ccccaa;
+	border-bottom: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+
+}
+
+.dd-celldata2
+{
+	background-color: #ddffbb;
+	border-top: solid 2px #aacc88;
+	border-bottom: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+
+}
+
+.dd-celldata3
+{
+	background-color: #ffbbdd;
+	border-top: solid 2px #ccaa88;
+	border-bottom: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	
+	font-weight: bold;
+}
+
+.dd-celldata4
+{
+	background-color: #bbddff;
+	border-top: solid 2px #88aacc;
+	border-bottom: solid 1px #cccccc;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+	
+	font-weight: bold;
+}
+
+.dd-cellgroup
+{
+	background-color: #eeeeee;
+	border: solid 1px #cccccc;
+}
+
+

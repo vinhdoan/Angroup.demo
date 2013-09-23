@@ -1,0 +1,2721 @@
+<%@ Page Language="C#" Theme="Corporate" Inherits="PageBase" Culture="auto" meta:resourcekey="PageResource1"
+    UICulture="auto" %>
+
+<%@ Register Src="~/components/menu.ascx" TagPrefix="web" TagName="menu" %>
+<%@ Register Src="~/components/objectsearchpanel.ascx" TagPrefix="web" TagName="search" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="Anacle.DataFramework" %>
+<%@ Import Namespace="LogicLayer" %>
+
+<%@ Register assembly="Anacle.UIFramework" namespace="Anacle.UIFramework" tagprefix="cc1" %>
+
+<script runat="server">
+    
+    protected void SetReportHeader()
+    {
+        labelBudgetName.Text = BudgetPeriod.Budget.ObjectName;
+        labelBudgetPeriodName.Text = BudgetPeriod.ObjectName;
+        labelStartDate.Text = BudgetPeriod.StartDate.Value.ToString("dd-MMM-yyyy");
+        labelEndDate.Text = BudgetPeriod.EndDate.Value.ToString("dd-MMM-yyyy");
+
+        StringBuilder sb = new StringBuilder();
+        foreach (OLocation location in BudgetPeriod.Budget.ApplicableLocations)
+            sb.Append(location.Path + "<br/>");
+        labelLocation.Text = sb.ToString();
+
+    }
+
+    //  Summary
+    protected void BuildGridSummary()
+    {
+        DataTable dt = BudgetPeriod.GenerateSummaryBudgetView();
+        this.gridSummaryView.DataSource = dt;
+        this.gridSummaryView.DataBind();
+    }
+
+    //  YTD
+    protected void BuildGridYear()
+    {
+        DataTable dt = BudgetPeriod.GenerateYearlyBudgetView();
+        this.gridYearView.DataSource = dt;
+        this.gridYearView.DataBind();
+    }
+
+    //  MTD
+    protected void BuildGridMonth()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddOpeningBalance, null, null);
+        this.gridMonthView.DataSource = dt;
+        this.gridMonthView.DataBind();
+    }
+
+    protected void BuildGridReallocated()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddVariations, new int[] { BudgetVariationType.Reallocation }, null);
+        this.gridReallocated.DataSource = dt;
+        this.gridReallocated.DataBind();
+    }
+
+    protected void BuildGridAdjusted()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddVariations, new int[] { BudgetVariationType.Adjustment }, null);
+        this.gridAdjusted.DataSource = dt;
+        this.gridAdjusted.DataBind();
+    }
+
+    protected void BuildGridPendingApproval()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddTransactions, null, new int[] { BudgetTransactionType.PurchasePendingApproval });
+        this.gridPendingApproval.DataSource = dt;
+        this.gridPendingApproval.DataBind();
+    }
+
+    protected void BuildGridApproved()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddTransactions, null, new int[] { BudgetTransactionType.PurchaseApproved, BudgetTransactionType.PurchaseInvoiceApproved });
+        this.gridApproved.DataSource = dt;
+        this.gridApproved.DataBind();
+    }
+
+    protected void BuildGridExpensed()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddTransactions, null, new int[] { BudgetTransactionType.DirectInvoiceApproved });
+        this.gridExpensed.DataSource = dt;
+        this.gridExpensed.DataBind();
+    }
+
+    protected void BuildGridExpensedPendingApproval()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddTransactions, null, new int[] { BudgetTransactionType.DirectInvoicePendingApproval });
+        this.gridExpensedPendingApproval.DataSource = dt;
+        this.gridExpensedPendingApproval.DataBind();
+    }
+
+    protected void BuildGridInvoiced()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalView(
+            BudgetViewOptions.AddTransactions, null, new int[] { BudgetTransactionType.PurchaseInvoiceApproved });
+        this.gridInvoiced.DataSource = dt;
+        this.gridInvoiced.DataBind();
+    }
+
+    protected void BuildGridPayment()
+    {
+        /*
+        //Write code to build data table for the MTD Payment view here
+        DataTable dt = new DataTable();
+        OYearlyBudget objYearlyBudget = TablesLogic.tYearlyBudget[this.BudgetID];
+        dt = OYearlyBudget.BuildTreeViewEffect(objYearlyBudget.Payment());
+        //assign datatable to respective grid
+        this.gridPayment.DataSource = dt;
+        this.gridPayment.DataBind();
+         * */
+    }
+
+    protected void BuildGridAvailable()
+    {
+        DataTable dt = BudgetPeriod.GenerateIntervalViewForCapitaland(
+            BudgetViewOptions.AddOpeningBalance |
+            BudgetViewOptions.AddVariations |
+            BudgetViewOptions.SubtractTransactions,
+            null,
+            null);
+        this.gridAvailable.DataSource = dt;
+        this.gridAvailable.DataBind();
+    }
+    protected void BuildGridAdjustmentDetails()
+    {
+        DataTable dt = BudgetPeriod.GenerateBudgetAdjustmentDetail();
+        this.gridAdjustmentDetails.DataSource = dt;
+        this.gridAdjustmentDetails.DataBind();
+    }
+    protected void BuildGridReallocationDetails()
+    {
+        DataTable dt = BudgetPeriod.GenerateBudgetReallocationDetail();
+        this.gridReallocationDetails.DataSource = dt;
+        this.gridReallocationDetails.DataBind();
+    }
+
+    /// <summary>
+    /// A cached copy of the application's base currency symbol.
+    /// </summary>
+    string currencySymbol = null;
+
+
+    /// <summary>
+    /// Gets the currency symbol.
+    /// </summary>
+    public string CurrencySymbol
+    {
+        get
+        {
+            if (currencySymbol == null)
+                currencySymbol = OApplicationSetting.Current.BaseCurrency.CurrencySymbol;
+            return currencySymbol;
+        }
+    }
+
+
+    /// <summary>
+    /// Sets up the grid to show the budget line item.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    void grid_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        DataGrid grid = sender as DataGrid;
+
+        // Hide the intervals that are greater than the total
+        // number of intervals in this budget period
+        //
+        if (sender is DataGrid && e.Item.ItemType == ListItemType.Header)
+        {
+            int numberOfIntervals = budgetPeriod.TotalNumberOfIntervals;
+            int monthsPerInterval = budgetPeriod.NumberOfMonthsPerInterval.Value;
+            for (int i = 0; i < grid.Columns.Count; i++)
+            {
+                if (grid.Columns[i] is BoundColumn &&
+                    ((BoundColumn)grid.Columns[i]).DataField.StartsWith("Interval") &&
+                    ((BoundColumn)grid.Columns[i]).DataField.EndsWith("Amount"))
+                {
+                    int interval = Convert.ToInt32(((BoundColumn)grid.Columns[i]).DataField
+                        .Replace("Interval", "").Replace("Amount", ""));
+                    if (interval > numberOfIntervals)
+                        grid.Columns[i].Visible = false;
+                    else
+                    {
+                        DateTime intervalStartDate = budgetPeriod.StartDate.Value.AddMonths((interval - 1) * monthsPerInterval);
+                        if (intervalStartDate.Day == 1)
+                            e.Item.Cells[i].Text =
+                                intervalStartDate.ToString("MMM-yyyy");
+                        else
+                            e.Item.Cells[i].Text =
+                                intervalStartDate.ToString("dd-MMM-yyyy");
+                    }
+                }
+            }
+        }
+
+        if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+        {
+            // if the Account is not a line item type, 
+            // set the font of the Account to bold
+            //
+            if (Convert.ToInt32(e.Item.Cells[2].Text) == 0)
+                e.Item.Cells[3].Font.Bold = true;
+
+            // Adding padding to simulate a tree effect.
+            //
+            int level = Convert.ToInt32(e.Item.Cells[1].Text);
+            e.Item.Cells[3].Text = new StringBuilder().Insert(0, "&nbsp; ", level).ToString() +
+                e.Item.Cells[3].Text.ToString();
+
+            // Show the currency (and highlight in red if negative.
+            // 
+            for (int i = 0; i < grid.Columns.Count; i++)
+            {
+                if (grid.Columns[i] is BoundColumn &&
+                    (((BoundColumn)grid.Columns[i]).DataField.StartsWith("Total") ||
+                    ((BoundColumn)grid.Columns[i]).DataField.StartsWith("Interval")))
+                {
+                    try
+                    {
+
+                        if (e.Item.Cells[i].Text != "" &&
+                            e.Item.Cells[i].Text != "&nbsp;")
+                        {
+                            if (Convert.ToDecimal(e.Item.Cells[i].Text) < 0)
+                            {
+                                e.Item.Cells[i].ForeColor = System.Drawing.Color.Red;
+                                e.Item.Cells[i].Text = Convert.ToDecimal(e.Item.Cells[i].Text).ToString("n");
+                            }
+                            else
+                            {
+                                e.Item.Cells[i].Text = Convert.ToDecimal(e.Item.Cells[i].Text).ToString("n");
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        i = i;
+                    }
+                }
+            }
+            if (Convert.ToInt32(e.Item.Cells[2].Text) == 1)
+            {
+                HyperLink account = (HyperLink)e.Item.FindControl("linkAccount");
+                account.Text = e.Item.Cells[3].Text;
+                account.NavigateUrl = "WJDetails.aspx?AccountID=" + HttpUtility.UrlEncode(Security.Encrypt(e.Item.Cells[0].Text)) +
+                    "&BudgetPeriodID=" + HttpUtility.UrlEncode(Security.Encrypt(BudgetPeriod.ObjectID.ToString()));
+                Label lblAccount = (Label)e.Item.FindControl("lblAccount");
+                lblAccount.Visible = false;
+            }
+            else
+            {
+                HyperLink account = (HyperLink)e.Item.FindControl("linkAccount");
+                account.Visible = false;
+                Label lblAccount = (Label)e.Item.FindControl("lblAccount");
+                lblAccount.Text = e.Item.Cells[3].Text;
+                lblAccount.Font.Bold = true;   
+                lblAccount.Visible = true;
+            }
+        }
+    }
+
+
+    void gridYearView_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridAvailable_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridPayment_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridInvoiced_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridExpensed_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridExpensedPendingApproval_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridApproved_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridPendingApproval_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridAdjusted_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridReallocated_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+    void gridMonthView_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        grid_ItemDataBound(sender, e);
+    }
+
+
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+
+        this.gridSummaryView.ItemDataBound += new DataGridItemEventHandler(gridYearView_ItemDataBound);
+        this.gridYearView.ItemDataBound += new DataGridItemEventHandler(gridYearView_ItemDataBound);
+        this.gridMonthView.ItemDataBound += new DataGridItemEventHandler(gridMonthView_ItemDataBound);
+        this.gridReallocated.ItemDataBound += new DataGridItemEventHandler(gridReallocated_ItemDataBound);
+        this.gridAdjusted.ItemDataBound += new DataGridItemEventHandler(gridAdjusted_ItemDataBound);
+        this.gridPendingApproval.ItemDataBound += new DataGridItemEventHandler(gridPendingApproval_ItemDataBound);
+        this.gridApproved.ItemDataBound += new DataGridItemEventHandler(gridApproved_ItemDataBound);
+        this.gridExpensed.ItemDataBound += new DataGridItemEventHandler(gridExpensed_ItemDataBound);
+        this.gridExpensedPendingApproval.ItemDataBound += new DataGridItemEventHandler(gridExpensedPendingApproval_ItemDataBound);
+        this.gridInvoiced.ItemDataBound += new DataGridItemEventHandler(gridInvoiced_ItemDataBound);
+        this.gridPayment.ItemDataBound += new DataGridItemEventHandler(gridPayment_ItemDataBound);
+        this.gridAvailable.ItemDataBound += new DataGridItemEventHandler(gridAvailable_ItemDataBound);
+        if (!IsPostBack)
+        {
+            if (BudgetPeriod.Budget.BudgetDeductionPolicy == BudgetDeductionPolicy.DeductAtSubmission)
+                gridSummaryView.Columns[15].HeaderText = Resources.Strings.BudgetView_SummaryWithPendingApproval;
+            else
+                gridSummaryView.Columns[15].HeaderText = Resources.Strings.BudgetView_SummaryWithoutPendingApproval;
+
+
+            BuildReport();
+            SetLabels();
+            SetReportHeader();
+
+        }
+    }
+
+    protected void SetLabels()
+    {
+        this.summaryLabel.Text = this.yearLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.yearLabel.Text = this.yearLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.monthLabel.Text = this.monthLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.reallocateLabel.Text = this.reallocateLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.adjustedLabel.Text = this.adjustedLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+
+        this.pendingLabel.Text = this.pendingLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.approveLabel.Text = this.approveLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.expenseLabel.Text = this.expenseLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.expensePendingApprovalLabel.Text = this.expenseLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.invoicedLabel.Text = this.invoicedLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.paymentLabel.Text = this.paymentLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+        this.availableLabel.Text = this.availableLabel.Text + DateTime.Now.ToString("dd-MMM-yyy HH:mm");
+       
+
+    }
+
+    protected void BuildReport()
+    {
+        switch (RequestView)
+        {
+            case 0:
+                BuildGridSummary();
+                break;
+            case 1:
+                BuildGridYear();
+                break;
+            case 2:
+                this.BuildGridMonth();
+                break;
+            case 3:
+                this.BuildGridReallocated();
+                this.BuildGridReallocationDetails();
+                break;
+            case 4:
+                this.BuildGridAdjusted();
+                BuildGridAdjustmentDetails();
+                break;
+            case 5:
+                this.BuildGridPendingApproval();
+                break;
+            case 6:
+                this.BuildGridApproved();
+                break;
+            case 7:
+                this.BuildGridExpensed();
+                break;
+            case 8:
+                this.BuildGridExpensedPendingApproval();
+                break;
+            case 9:
+                this.BuildGridInvoiced();
+                break;
+            case 10:
+                this.BuildGridPayment();
+                break;
+            case 11:
+                this.BuildGridAvailable();
+                this.BuildGridAdjusted();
+                this.BuildGridPendingApproval();
+                this.BuildGridApproved();
+                this.BuildGridExpensed();
+                break;
+
+        }
+    }
+
+    public int RequestView
+    {
+        get
+        {
+            if (ViewState["RequestView"] != null)
+                return Convert.ToInt32(ViewState["RequestView"]);
+            else
+                //return year budget view by default
+                return 0;
+        }
+        set
+        {
+            ViewState["RequestView"] = value;
+        }
+    }
+
+
+    /// <summary>
+    /// Gets the budget period ID from the query string.
+    /// </summary>
+    public Guid BudgetPeriodID
+    {
+        get
+        {
+            return new Guid(Security.DecryptGuid(Request["ID"].ToString()).ToString());
+        }
+    }
+
+
+    /// <summary>
+    /// A cached copy of the budget period object.
+    /// </summary>
+    OBudgetPeriod budgetPeriod = null;
+
+
+    /// <summary>
+    /// Gets the budget period object by loading it from the database.
+    /// Once loaded, the budget period object is cached for the current postback.
+    /// </summary>
+    public OBudgetPeriod BudgetPeriod
+    {
+        get
+        {
+            if (budgetPeriod == null)
+                budgetPeriod = TablesLogic.tBudgetPeriod.Load(BudgetPeriodID);
+            return budgetPeriod;
+        }
+    }
+
+
+
+
+    protected void summaryView_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 0;
+        BuildReport();
+    }
+
+    protected void yearView_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 1;
+        BuildReport();
+    }
+
+    protected void monthView_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 2;
+        BuildReport();
+    }
+
+    protected void reallocated_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 3;
+        BuildReport();
+    }
+
+    protected void adjusted_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 4;
+        BuildReport();
+    }
+
+    protected void pendingApproval_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 5;
+        BuildReport();
+    }
+
+    protected void approved_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 6;
+        BuildReport();
+    }
+
+    protected void expensed_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 7;
+        BuildReport();
+    }
+
+    protected void expensedPendingApproval_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 8;
+        BuildReport();
+    }
+
+    protected void invoiced_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 9;
+        BuildReport();
+    }
+
+    protected void payment_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 10;
+        BuildReport();
+    }
+
+    protected void available_OnClick(object sender, EventArgs e)
+    {
+        RequestView = 11;
+        BuildReport();
+    }
+    
+    protected override void OnPreRender(EventArgs e)
+    {
+        base.OnPreRender(e);
+
+        //grid visiblity
+        this.summaryPanel.Visible = RequestView == 0;
+        this.yearPanel.Visible = RequestView == 1;
+        this.monthPanel.Visible = RequestView == 2;
+        this.reallocatePanel.Visible = RequestView == 3;
+        this.adjustedPanel.Visible = (RequestView == 4 || RequestView == 11);
+        this.pendingPanel.Visible = (RequestView == 5 || RequestView == 11);
+        this.approvePanel.Visible = (RequestView == 6 || RequestView == 11);
+        this.expensePanel.Visible = (RequestView == 7 || RequestView == 11);
+        this.expensePendingApprovalPanel.Visible = (RequestView == 8 || RequestView == 11);
+        this.invoicedPanel.Visible = RequestView == 9;
+        this.paymentPanel.Visible = RequestView == 10;
+        this.availablePanel.Visible = RequestView == 11;
+
+        //reformat month number header for each column
+        ReformatMonthNameHeader(this.gridAvailable);
+        ReformatMonthNameHeader(this.gridExpensed);
+        ReformatMonthNameHeader(this.gridInvoiced);
+        ReformatMonthNameHeader(this.gridMonthView);
+        ReformatMonthNameHeader(this.gridPayment);
+        ReformatMonthNameHeader(this.gridPendingApproval);
+        ReformatMonthNameHeader(this.gridReallocated);
+        ReformatMonthNameHeader(this.gridAdjusted);
+        ReformatMonthNameHeader(this.gridApproved);
+
+    }
+
+    protected void ReformatMonthNameHeader(DataGrid grid)
+    {
+        /*
+        OYearlyBudget objYearlyBudget = TablesLogic.tYearlyBudget[this.BudgetID];
+        int month = 1;
+        for (int i = 5; i <= 16; i++)
+        {
+            grid.Columns[i].HeaderText = objYearlyBudget.GetFinancialMonthStart(month++).ToString("MMM");            
+        }
+         * */
+    }
+
+    protected void gridReallocationDetails_ItemDataBound(object sender, DataGridItemEventArgs e)
+    {
+        // Show the currency (and highlight in red if negative.
+        // 
+        for (int i = 0; i < gridReallocationDetails.Columns.Count; i++)
+        {
+            if (gridReallocationDetails.Columns[i] is BoundColumn &&
+                (((BoundColumn)gridReallocationDetails.Columns[i]).DataField.StartsWith("Amount")))
+            {
+                try
+                {
+
+                    if (e.Item.Cells[i].Text != "" &&
+                        e.Item.Cells[i].Text != "&nbsp;")
+                    {
+                        if (Convert.ToDecimal(e.Item.Cells[i].Text) < 0)
+                        {
+                            e.Item.Cells[i].ForeColor = System.Drawing.Color.Red;
+                            e.Item.Cells[i].Text = Convert.ToDecimal(e.Item.Cells[i].Text).ToString("n");
+                        }
+                        else
+                        {
+                            e.Item.Cells[i].Text = Convert.ToDecimal(e.Item.Cells[i].Text).ToString("n");
+                        }
+                    }
+                }
+                catch
+                {
+                    i = i;
+                }
+            }
+        }
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="pragma" content="no-cache" />
+    <link href="../../App_Themes/Corporate/StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form2" runat="server">
+    <ui:UIPanel runat="server" ID="panelMain" BorderStyle="NotSet" 
+        meta:resourcekey="panelMainResource1">
+        <div class="div-main">
+            <ui:UITabStrip runat="server" ID="tabStrip" BorderStyle="NotSet" 
+                meta:resourcekey="tabStripResource1">
+                <ui:UITabView runat="server" ID="tabSummaryView" Caption="Summary" 
+                    OnClick="summaryView_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabSummaryViewResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabYearView" Caption="YTD" 
+                    OnClick="yearView_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabYearViewResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabMonthView" Caption="Opening" 
+                    OnClick="monthView_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabMonthViewResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabReallocated" Caption="Reallocated" 
+                    OnClick="reallocated_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabReallocatedResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabAdjusted" Caption="Adjusted" 
+                    OnClick="adjusted_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabAdjustedResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabPendingApproval" Caption="Pending" 
+                    OnClick="pendingApproval_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabPendingApprovalResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabApprove" Caption="Approved" 
+                    OnClick="approved_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabApproveResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabExpensed" Caption="D.Invoice Pending" 
+                    OnClick="expensedPendingApproval_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabExpensedResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabExpensedPendingApproval" Caption="D.Invoice Approved"
+                    OnClick="expensed_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabExpensedPendingApprovalResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabInvoiced" Caption="PO Invoiced" 
+                    OnClick="invoiced_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabInvoicedResource1">
+                </ui:UITabView>
+                <ui:UITabView runat="server" ID="tabAvailable" Caption="Available" 
+                    OnClick="available_OnClick" BorderStyle="NotSet" 
+                    meta:resourcekey="tabAvailableResource1">
+                </ui:UITabView>
+                
+            </ui:UITabStrip>
+            <div class="div-form">
+                <table>
+                    <tr>
+                        <td width="150px">
+                            <asp:Label ID="labelBudgetNameCaption" runat="server" Text="Budget: " 
+                                Font-Bold="True" meta:resourcekey="labelBudgetNameCaptionResource1"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelBudgetName" runat="server" 
+                                meta:resourcekey="labelBudgetNameResource1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelBudgetPeriodNameCaption" runat="server" Text="Budget Period: "
+                                Font-Bold="True" meta:resourcekey="labelBudgetPeriodNameCaptionResource1"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelBudgetPeriodName" runat="server" 
+                                meta:resourcekey="labelBudgetPeriodNameResource1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelStartDateCaption" runat="server" Text="Date: " 
+                                Font-Bold="True" meta:resourcekey="labelStartDateCaptionResource1"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelStartDate" runat="server" 
+                                meta:resourcekey="labelStartDateResource1"></asp:Label>
+                            <asp:Label ID="labelTo" runat="server" Text=" to " 
+                                meta:resourcekey="labelToResource1"></asp:Label>
+                            <asp:Label ID="labelEndDate" runat="server" 
+                                meta:resourcekey="labelEndDateResource1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Label ID="labelLocationCaption" runat="server" Text="Location: " 
+                                Font-Bold="True" meta:resourcekey="labelLocationCaptionResource1"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:Label ID="labelLocation" runat="server" 
+                                meta:resourcekey="labelLocationResource1"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <hr />
+                <ui:UIPanel runat="server" ID="summaryPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="summaryPanelResource1">
+                    <asp:Label runat="server" ID="summaryLabel" Text="Summary Budget as at " 
+                        Font-Bold="True" meta:resourcekey="summaryLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridSummaryView" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridSummaryViewResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource1"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource1"></asp:HyperLink>
+                            </ItemTemplate>
+                           
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalOpeningBalance" ReadOnly="True" 
+                                HeaderText="(1) Opening Balance">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAdjustedAmount" ReadOnly="True" 
+                                HeaderText="(2) Adjusted Amount">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalReallocatedAmount" ReadOnly="True" 
+                                HeaderText="(3) Reallocated Amount">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalBalanceAfterVariation" ReadOnly="True" 
+                                HeaderText="(4) Total After Adjustments<br/>(1)+(2)+(3)">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalPendingApproval" ReadOnly="True" 
+                                HeaderText="(5) Total Pending Approval">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalApproved" ReadOnly="True" 
+                                HeaderText="(6) Total Approved">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalInvoiceApproved" ReadOnly="True" 
+                                HeaderText="(7) Total Invoiced">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalDirectInvoicePendingApproval" ReadOnly="True" 
+                                HeaderText="(8) Total Direct Invoice Pending Approval ">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalDirectInvoiceApproved" ReadOnly="True" 
+                                HeaderText="(9) Total Direct Invoice Approved ">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAvailableBalance" ReadOnly="True" 
+                                HeaderText="(10) Total Available<br/>(4)-(5)-(6)-(8)-(9)">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="yearPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="yearPanelResource1">
+                    <asp:Label runat="server" ID="yearLabel" Text="YTD Budget as at " 
+                        Font-Bold="True" meta:resourcekey="yearLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridYearView" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridYearViewResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" Visible="False" ReadOnly="True" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource2"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource2"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalOpeningBalance" ReadOnly="True" 
+                                HeaderText="(1) Opening Balance">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAdjustedAmount" ReadOnly="True" 
+                                HeaderText="(2) Adjusted Amount">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalReallocatedAmount" ReadOnly="True" 
+                                HeaderText="(3) Reallocated Amount">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalBalanceAfterVariation" ReadOnly="True" 
+                                HeaderText="(4) Total After Adjustments<br/>(1)+(2)+(3)">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalBalanceAfterVariationYTD" ReadOnly="True" 
+                                HeaderText="(5) Total After Adjustments YTD<br/>">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalCommittedYTD" ReadOnly="True" 
+                                HeaderText="(6) Committed YTD<br/>">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalCommittedRestOfBudgetPeriod" ReadOnly="True" 
+                                HeaderText="(7) Committed Rest of Budget Period<br/>">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalCommittedAfterCurrentBudgetPeriod" ReadOnly="True"
+                                HeaderText="(8) Committed for Future Years<br/>">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="PercentageVarianceYTD" ReadOnly="True" HeaderText="(9) % YTD Variance<br/>((5)-(6))/(5) * 100%"
+                                DataFormatString="{0:##0.00}">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAvailableBalanceExcludingPendingApprovals" ReadOnly="True"
+                                HeaderText="(10) Total Available<br/>(4)-(6)-(7)">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalPendingApproval" ReadOnly="True" 
+                                HeaderText="(11) Total Pending Approval">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAvailableBalance" ReadOnly="True" 
+                                HeaderText="(12) Total Available After Deducting Pending Approval<br/>(10)-(11)">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalPendingApprovalYTD" ReadOnly="True" 
+                                HeaderText="(11) Current Pending Approval">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" Width="80px" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="availablePanel" BorderStyle="NotSet" 
+                    meta:resourcekey="availablePanelResource1">
+                    <asp:Label runat="server" ID="availableLabel" Text="MTD Available as at " 
+                        Font-Bold="True" meta:resourcekey="availableLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridAvailable" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridAvailableResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" Visible="False" ReadOnly="True" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource3"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource3"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="monthPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="monthPanelResource1">
+                    <asp:Label runat="server" ID="monthLabel" Text="MTD budget as at " 
+                        Font-Bold="True" meta:resourcekey="monthLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridMonthView" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridMonthViewResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource4"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource4"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="reallocatePanel" BorderStyle="NotSet" 
+                    meta:resourcekey="reallocatePanelResource1">
+                    <asp:Label runat="server" ID="reallocateLabel" Text="MTD Reallocated as at " 
+                        Font-Bold="True" meta:resourcekey="reallocateLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridReallocated" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridReallocatedResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                                <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource5"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource5"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridReallocationDetails" runat="server" DataKeyField="AccountID"
+                        CssClass="datagrid" BorderColor="#CCCCCC"
+                        BorderWidth="1px" CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        OnItemDataBound="gridReallocationDetails_ItemDataBound" 
+                        meta:resourcekey="gridReallocationDetailsResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="ReallocateNumber" ReadOnly="True" 
+                                HeaderText="Adjustment Number">
+                                <ItemStyle Width="200px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" Width="500px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                                <ItemStyle Width="200px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month" ReadOnly="True" HeaderText="Month">
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Amount" ReadOnly="True" HeaderText="Amount">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                      <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="adjustedPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="adjustedPanelResource1">
+                    <asp:Label runat="server" ID="adjustedLabel" Text="MTD Adjusted as at " 
+                        Font-Bold="True" meta:resourcekey="adjustedLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridAdjusted" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridAdjustedResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                               <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource6"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource6"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    
+                    <asp:DataGrid ID="gridAdjustmentDetails" runat="server" DataKeyField="AccountID"
+                        CssClass="datagrid" BorderColor="#CCCCCC"
+                        BorderWidth="1px" CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridAdjustmentDetailsResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AdjustNumber" ReadOnly="True" 
+                                HeaderText="Adjustment Number">
+                                <ItemStyle Width="200px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" Width="500px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                                <ItemStyle Width="200px" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month" ReadOnly="True" HeaderText="Month">
+                                <HeaderStyle HorizontalAlign="Left" />
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Amount" ReadOnly="True" HeaderText="Amount" 
+                                DataFormatString="{0:#,##0.00}">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="pendingPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="pendingPanelResource1">
+                    <asp:Label runat="server" ID="pendingLabel" Text="MTD Pending Approval as at " 
+                        Font-Bold="True" meta:resourcekey="pendingLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridPendingApproval" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridPendingApprovalResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                                <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource7"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource7"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="approvePanel" BorderStyle="NotSet" 
+                    meta:resourcekey="approvePanelResource1">
+                    <asp:Label runat="server" ID="approveLabel" Text="MTD Approved as at " 
+                        Font-Bold="True" meta:resourcekey="approveLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridApproved" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridApprovedResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource8"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource8"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="expensePendingApprovalPanel" 
+                    BorderStyle="NotSet" meta:resourcekey="expensePendingApprovalPanelResource1">
+                    <asp:Label runat="server" ID="expensePendingApprovalLabel" Text="MTD Direct Invoices (Pending Approval) as at "
+                        Font-Bold="True" meta:resourcekey="expensePendingApprovalLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridExpensedPendingApproval" runat="server" DataKeyField="AccountID"
+                        CssClass="datagrid" BorderColor="#CCCCCC"
+                        BorderWidth="1px" CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridExpensedPendingApprovalResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource9"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource9"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="expensePanel" BorderStyle="NotSet" 
+                    meta:resourcekey="expensePanelResource1">
+                    <asp:Label runat="server" ID="expenseLabel" Text="MTD Direct Invoices (Pending Approval) as at "
+                        Font-Bold="True" meta:resourcekey="expenseLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridExpensed" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridExpensedResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource10"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource10"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" 
+                                HeaderText="Total Available">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="invoicedPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="invoicedPanelResource1">
+                    <asp:Label runat="server" ID="invoicedLabel" Text="MTD PO Invoiced as at " 
+                        Font-Bold="True" meta:resourcekey="invoicedLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridInvoiced" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridInvoicedResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Level" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="Type" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="AccountName" ReadOnly="True" Visible="False" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:TemplateColumn HeaderText="Account">
+                            <ItemTemplate>
+                                <asp:Label runat="server" ID="lblAccount" 
+                                    meta:resourcekey="lblAccountResource11"></asp:Label>
+                                <asp:HyperLink runat="server" ID="linkAccount" 
+                                    meta:resourcekey="linkAccountResource11"></asp:HyperLink>
+                            </ItemTemplate>
+                            </asp:TemplateColumn>
+                            <asp:BoundColumn DataField="AccountCode" ReadOnly="True" 
+                                HeaderText="Account Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="TotalAmount" ReadOnly="True" HeaderText="Total">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval01Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval02Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval03Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval04Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval05Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval06Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval07Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval08Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval09Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval10Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval11Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval12Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval13Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval14Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval15Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval16Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval17Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval18Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval19Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval20Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval21Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval22Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval23Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval24Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval25Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval26Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval27Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval28Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval29Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval30Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval31Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval32Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval33Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval34Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval35Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Interval36Amount" ReadOnly="True">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                <ui:UIPanel runat="server" ID="paymentPanel" BorderStyle="NotSet" 
+                    meta:resourcekey="paymentPanelResource1">
+                    <asp:Label runat="server" ID="paymentLabel" Text="MTD Payment as at " 
+                        Font-Bold="True" meta:resourcekey="paymentLabelResource1"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:DataGrid ID="gridPayment" runat="server" DataKeyField="AccountID" 
+                        CssClass="datagrid" BorderColor="#CCCCCC" BorderWidth="1px"
+                        CellPadding="1" AutoGenerateColumns="False" Width="100%" 
+                        meta:resourcekey="gridPaymentResource1">
+                        <Columns>
+                            <asp:BoundColumn DataField="AccountID" Visible="False" ReadOnly="True"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="LevelOfBudgetCategory" Visible="False" ReadOnly="True">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="CategoryType" ReadOnly="True" Visible="False"></asp:BoundColumn>
+                            <asp:BoundColumn DataField="BudgetCategoryName" ReadOnly="True" 
+                                HeaderText="Account">
+                                <ItemStyle HorizontalAlign="Left" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="FinanceCode" ReadOnly="True" 
+                                HeaderText="Finance Code">
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Payment" ReadOnly="True" 
+                                HeaderText="(8) Total Paid by Finance">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month01Amount" ReadOnly="True" HeaderText="Jan">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month02Amount" ReadOnly="True" HeaderText="Feb">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month03Amount" ReadOnly="True" HeaderText="Mar">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month04Amount" ReadOnly="True" HeaderText="Apr">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month05Amount" ReadOnly="True" HeaderText="May">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month06Amount" ReadOnly="True" HeaderText="Jun">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month07Amount" ReadOnly="True" HeaderText="Jul">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month08Amount" ReadOnly="True" HeaderText="Aug">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month09Amount" ReadOnly="True" HeaderText="Sep">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month10Amount" ReadOnly="True" HeaderText="Oct">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month11Amount" ReadOnly="True" HeaderText="Nov">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                            <asp:BoundColumn DataField="Month12Amount" ReadOnly="True" HeaderText="Dec">
+                                <HeaderStyle HorizontalAlign="Right" />
+                                <ItemStyle HorizontalAlign="Right" VerticalAlign="Middle" />
+                            </asp:BoundColumn>
+                        </Columns>
+                        <HeaderStyle CssClass="grid-header" />
+                    </asp:DataGrid>
+                    <br />
+                    <br />
+                </ui:UIPanel>
+                
+               
+            </div>
+        </div>
+    </ui:UIPanel>
+    </form>
+</body>
+</html>

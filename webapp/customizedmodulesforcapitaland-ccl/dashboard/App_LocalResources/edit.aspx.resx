@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="CascadeControlIDResource1.Caption" xml:space="preserve">
+    <value>Cascading Control</value>
+  </data>
+	<data name="CascadeControlIDResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CascadeControlIDResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the dropdown list control that is updated if this dropdown list changes.</value>
+  </data>
+	<data name="CascadeControlIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkDashboard3DResource1.Caption" xml:space="preserve">
+    <value>3D</value>
+  </data>
+	<data name="checkDashboard3DResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkDashboard3DResource1.Text" xml:space="preserve">
+    <value>Yes, display this dashboard in 3D</value>
+  </data>
+	<data name="checkDashboard3DResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkDashboard3DResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlIdentifierResource1.Caption" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+	<data name="ControlIdentifierResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlIdentifierResource1.ToolTip" xml:space="preserve">
+    <value>The identifier that can be used in the SQL query to perform a filter.</value>
+  </data>
+	<data name="ControlIdentifierResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlTypeResource1.Caption" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+	<data name="ControlTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ControlTypeResource1.ToolTip" xml:space="preserve">
+    <value>The type of the control that the user inputs.</value>
+  </data>
+	<data name="ControlTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CSharpMethodNameResource1.Caption" xml:space="preserve">
+    <value>C# Method Name</value>
+  </data>
+	<data name="CSharpMethodNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="CSharpMethodNameResource1.ToolTip" xml:space="preserve">
+    <value>Enter the C# method name in the LogicLayer.Reports class that is to be called to generate the report.</value>
+  </data>
+	<data name="CSharpMethodNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardQueryResource1.Caption" xml:space="preserve">
+    <value>Dashboard SQL</value>
+  </data>
+	<data name="DashboardQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardQueryResource1.ToolTip" xml:space="preserve">
+    <value>The query in SQL that is used to populate the dashboard. Note: You can preview your dashboard in the 'Preview' tab.</value>
+  </data>
+	<data name="DashboardQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardRolesResource1.Caption" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+	<data name="DashboardRolesResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardRolesResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the roles that have access to view this dashboard.</value>
+  </data>
+	<data name="DashboardRolesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTextFieldResource1.Caption" xml:space="preserve">
+    <value>Data Text Field</value>
+  </data>
+	<data name="DataTextFieldResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTextFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used as a value in the dashboard query.</value>
+  </data>
+	<data name="DataTextFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTypeResource1.Caption" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+	<data name="DataTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataTypeResource1.ToolTip" xml:space="preserve">
+    <value>The data type of the search field.</value>
+  </data>
+	<data name="DataTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataValueFieldResource1.Caption" xml:space="preserve">
+    <value>Data Value Field</value>
+  </data>
+	<data name="DataValueFieldResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DataValueFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be displayed to the user.</value>
+  </data>
+	<data name="DataValueFieldResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="DisplayOrderResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+    <value>The order of display of the search field. Lower appears first.</value>
+  </data>
+	<data name="DisplayOrderResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardPieTypeResource1.Caption" xml:space="preserve">
+    <value>Pie Type</value>
+  </data>
+	<data name="dropDashboardPieTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardPieTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardPieTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardSeriesTypeResource1.Caption" xml:space="preserve">
+    <value>Series Type</value>
+  </data>
+	<data name="dropDashboardSeriesTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardSeriesTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardSeriesTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardShowHorizontalResource1.Caption" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+	<data name="dropDashboardShowHorizontalResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardShowHorizontalResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardShowHorizontalResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardTypeResource1.Caption" xml:space="preserve">
+    <value>Dashboard Type</value>
+  </data>
+	<data name="dropDashboardTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropDashboardTypeResource1.ToolTip" xml:space="preserve">
+    <value>The type of dashboard.</value>
+  </data>
+	<data name="dropDashboardTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropXAxisTypeResource1.Caption" xml:space="preserve">
+    <value>Axis Type</value>
+  </data>
+	<data name="dropXAxisTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropXAxisTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropXAxisTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropYAxisTypeResource1.Caption" xml:space="preserve">
+    <value>Axis Type</value>
+  </data>
+	<data name="dropYAxisTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropYAxisTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropYAxisTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridDashboardFieldsResource1.Caption" xml:space="preserve">
+    <value>Filter Fields</value>
+  </data>
+	<data name="gridDashboardFieldsResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridDashboardFieldsResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridDashboardFieldsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridDashboardFieldsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsAutoCalibrateResource1.Caption" xml:space="preserve">
+    <value>Auto Calibrate</value>
+  </data>
+	<data name="IsAutoCalibrateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsAutoCalibrateResource1.Text" xml:space="preserve">
+    <value>Yes, please auto-calibrate the scale</value>
+  </data>
+	<data name="IsAutoCalibrateResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the gauge scale should be auto-calibrated based on the values of the result, or manually specified.</value>
+  </data>
+	<data name="IsAutoCalibrateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Caption" xml:space="preserve">
+    <value>Populate with Query?</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the dropdown list should be populated with a query, or populated with a list of comma-separated values.</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>DropDownList</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Populate with a query</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Populate with a C# Method</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+    <value>Grid</value>
+  </data>
+	<data name="ListItemResource14.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>Gauge</value>
+  </data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource17.Text" xml:space="preserve">
+    <value>Scatter</value>
+  </data>
+	<data name="ListItemResource17.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource18.Text" xml:space="preserve">
+    <value>Bubble</value>
+  </data>
+	<data name="ListItemResource18.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource19.Text" xml:space="preserve">
+    <value>Basic (bar chart, line char, or area chart)</value>
+  </data>
+	<data name="ListItemResource19.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>RadioButtonList</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource20.Text" xml:space="preserve">
+    <value>Radar</value>
+  </data>
+	<data name="ListItemResource20.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="ListItemResource21.Text" xml:space="preserve">
+    <value>Polar</value>
+  </data>
+	<data name="ListItemResource21.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+	<data name="ListItemResource22.Text" xml:space="preserve">
+    <value>Multiple Pies</value>
+  </data>
+	<data name="ListItemResource22.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource23.Text" xml:space="preserve">
+    <value>Nested Pies</value>
+  </data>
+	<data name="ListItemResource23.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource24.Text" xml:space="preserve">
+    <value>Multiple Donuts</value>
+  </data>
+	<data name="ListItemResource24.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource25.Text" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+	<data name="ListItemResource25.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource26.Text" xml:space="preserve">
+    <value>Line</value>
+  </data>
+	<data name="ListItemResource26.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource27.Text" xml:space="preserve">
+    <value>Area Line</value>
+  </data>
+	<data name="ListItemResource27.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource28.Text" xml:space="preserve">
+    <value>Spline</value>
+  </data>
+	<data name="ListItemResource28.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource29.Text" xml:space="preserve">
+    <value>Area Spline</value>
+  </data>
+	<data name="ListItemResource29.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>String</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource30.Text" xml:space="preserve">
+    <value>Cone</value>
+  </data>
+	<data name="ListItemResource30.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource31.Text" xml:space="preserve">
+    <value>Pyramid</value>
+  </data>
+	<data name="ListItemResource31.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="ListItemResource32.Text" xml:space="preserve">
+    <value>Cylinder</value>
+  </data>
+	<data name="ListItemResource32.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+	<data name="ListItemResource33.Text" xml:space="preserve">
+    <value>Vertical </value>
+  </data>
+	<data name="ListItemResource33.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource34.Text" xml:space="preserve">
+    <value>Horizontal </value>
+  </data>
+	<data name="ListItemResource34.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource35.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="ListItemResource35.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource36.Text" xml:space="preserve">
+    <value>Date/Time</value>
+  </data>
+	<data name="ListItemResource36.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource37.Text" xml:space="preserve">
+    <value>Names of series defined as data in one specific column</value>
+  </data>
+	<data name="ListItemResource37.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource38.Text" xml:space="preserve">
+    <value>Names of series defined as the column name in all columns (except for the X-Axis column)</value>
+  </data>
+	<data name="ListItemResource38.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource39.Text" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+	<data name="ListItemResource39.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource40.Text" xml:space="preserve">
+    <value>Stacked</value>
+  </data>
+	<data name="ListItemResource40.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource41.Text" xml:space="preserve">
+    <value>Fully Stacked</value>
+  </data>
+	<data name="ListItemResource41.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Double</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Object Identifier</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Populate with a List of Comma-separated values</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListQueryResource2.Caption" xml:space="preserve">
+    <value>List SQL</value>
+  </data>
+	<data name="ListQueryResource2.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ListQueryResource2.ToolTip" xml:space="preserve">
+    <value>The query in SQL that is used to populate the dropdown list. The default {TreeviewID}, {TreeviewObject}, {UserID} are default fields available for the SQL query.</value>
+  </data>
+	<data name="ListQueryResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+	<data name="panelBubbleSizeResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelBubbleSizeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelChartParametersResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelChartParametersResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelCSharpResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelCSharpResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDashboardFieldResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDashboardFieldResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelListQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelListQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelManualScaleResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelManualScaleResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelNotPopulatedByQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelNotPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelPopulatedByQueryResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+	<data name="panelScaleResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelScaleResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelSeriesResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelSeriesResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="radioSeriesByColumnsResource1.Caption" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+	<data name="radioSeriesByColumnsResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="radioSeriesByColumnsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="radioSeriesByColumnsResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.Caption" xml:space="preserve">
+    <value>C# Method</value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ReportFieldCMethodResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>Gauge Scale</value>
+  </data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDisplayResource1.Caption" xml:space="preserve">
+    <value>Display</value>
+  </data>
+	<data name="tabDisplayResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDisplayResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabPreviewResource1.Caption" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+	<data name="tabPreviewResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabPreviewResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.Caption" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="textControlCaptionResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textControlCaptionResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TextListResource1.Caption" xml:space="preserve">
+    <value>Text List</value>
+  </data>
+	<data name="TextListResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="TextListResource1.ToolTip" xml:space="preserve">
+    <value>A comma separated list of text that will appear to the user for selection</value>
+  </data>
+	<data name="TextListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textSeriesColumnNameResource1.Caption" xml:space="preserve">
+    <value>Series Column</value>
+  </data>
+	<data name="textSeriesColumnNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textSeriesColumnNameResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used to group the data in a series.</value>
+  </data>
+	<data name="textSeriesColumnNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textSizeColumnNameResource1.Caption" xml:space="preserve">
+    <value>Size Column Name</value>
+  </data>
+	<data name="textSizeColumnNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textSizeColumnNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textSizeColumnNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textXAxisLabelTextResource1.Caption" xml:space="preserve">
+    <value>Axis Label</value>
+  </data>
+	<data name="textXAxisLabelTextResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textXAxisLabelTextResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textXAxisLabelTextResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textYAxisLabelTextResource1.Caption" xml:space="preserve">
+    <value>Axis Label</value>
+  </data>
+	<data name="textYAxisLabelTextResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textYAxisLabelTextResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textYAxisLabelTextResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>Control Identifier</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove this item?</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove the selected items?</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>Series</value>
+  </data>
+	<data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator2Resource1.Caption" xml:space="preserve">
+    <value>Category Axis</value>
+  </data>
+	<data name="UISeparator2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator3Resource1.Caption" xml:space="preserve">
+    <value>Result Axis</value>
+  </data>
+	<data name="UISeparator3Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator4Resource1.Caption" xml:space="preserve">
+    <value>List Query</value>
+  </data>
+	<data name="UISeparator4Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator5Resource1.Caption" xml:space="preserve">
+    <value>Bubble Size</value>
+  </data>
+	<data name="UISeparator5Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="uitabview1Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+	<data name="uitabview2Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+	<data name="uitabview3Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview3Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView4Resource1.Caption" xml:space="preserve">
+    <value>Data</value>
+  </data>
+	<data name="UITabView4Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView4Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView5Resource1.Caption" xml:space="preserve">
+    <value>Access</value>
+  </data>
+	<data name="UITabView5Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UITabView5Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.Caption" xml:space="preserve">
+    <value>Use C#</value>
+  </data>
+	<data name="UseCSharpQueryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UseCSharpQueryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ValueListResource1.Caption" xml:space="preserve">
+    <value>Value List</value>
+  </data>
+	<data name="ValueListResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ValueListResource1.ToolTip" xml:space="preserve">
+    <value>The comma separated list of values that corresponds to the text list.</value>
+  </data>
+	<data name="ValueListResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="XAxisColumnNameResource1.Caption" xml:space="preserve">
+    <value>Axis Column Name</value>
+  </data>
+	<data name="XAxisColumnNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="XAxisColumnNameResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used as the labels in the X-Axis column.</value>
+  </data>
+	<data name="XAxisColumnNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisColumnNameResource1.Caption" xml:space="preserve">
+    <value>Axis Column Name</value>
+  </data>
+	<data name="YAxisColumnNameResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisColumnNameResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used as the values.</value>
+  </data>
+	<data name="YAxisColumnNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisIntervalResource1.Caption" xml:space="preserve">
+    <value>Scale Interval</value>
+  </data>
+	<data name="YAxisIntervalResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisIntervalResource1.ToolTip" xml:space="preserve">
+    <value>The interval between the minimum and the maximum. This interval should roughly divide the range between the minimum and the maximum to ten. For example, if the minimum and maximum is 0 and 100, the interval could be 10.</value>
+  </data>
+	<data name="YAxisIntervalResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisMaximumResource1.Caption" xml:space="preserve">
+    <value>Scale Maximum</value>
+  </data>
+	<data name="YAxisMaximumResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisMaximumResource1.ToolTip" xml:space="preserve">
+    <value>The maximum value of the scale. Any values that go above the maximum will be displayed slightly past the maximum marking.</value>
+  </data>
+	<data name="YAxisMaximumResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisMinimumResource1.Caption" xml:space="preserve">
+    <value>Scale Minimum</value>
+  </data>
+	<data name="YAxisMinimumResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisMinimumResource1.ToolTip" xml:space="preserve">
+    <value>The minimum value of the scale. Any values that fall below the minimum will be displayed slightly before the minimum marking.</value>
+  </data>
+	<data name="YAxisMinimumResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardTypeResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DashboardTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownQueryResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownQueryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownTextFieldResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownTextFieldResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownValueFieldResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DropDownValueFieldResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="HeaderTextResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="HeaderTextResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsDropDownAvailableResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsDropDownAvailableResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsDropDownAvailableResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="XAxisNameResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="XAxisNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisNameResource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="YAxisNameResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Dashboard Name</value>
+  </data>
+</root>

@@ -1,0 +1,224 @@
+﻿<ns0:AnacleStateMachineWorkflow x:Class="WorkflowLayer.OLocationStockTakeWorkflow" InitialStateName="Start" x:Name="OLocationStockTakeWorkflow" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="Start">
+		<EventDrivenActivity x:Name="SubmitForDraft">
+			<HandleExternalEventActivity Description="SaveAsDraft" x:Name="handleExternalEventActivity1" EventName="SaveAsDraft" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity1" TargetStateName="Draft" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="ThrowExceptionToHostActivity" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="StartEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity6" EventName="Start" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity6" TargetStateName="InProgress" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity10">
+				<FaultHandlerActivity x:Name="faultHandlerActivity10" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost9" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Draft">
+		<StateInitializationActivity x:Name="InitializeDraftState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign1" ScheduledStartDateTime="DateTime.Now" RoleCodes="STOCKTAKEADMIN,STOCKTAKER" ScheduledEndDateTime="DateTime.Now.AddDays(3)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity2">
+				<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="StartEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity2" EventName="Start" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity2" TargetStateName="InProgress" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity3">
+				<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="InProgress">
+		<StateInitializationActivity x:Name="InitializeInProgressState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign2" ScheduledStartDateTime="DateTime.Now" RoleCodes="STOCKTAKER" ScheduledEndDateTime="DateTime.Now.AddDays(3)" />
+			<PolicyActivity x:Name="policyActivity1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="StartStockTake" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity4">
+				<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="InProgressEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity3" EventName="SubmitForReconciliation" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity3" TargetStateName="PendingReconciliation" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity6">
+				<FaultHandlerActivity x:Name="faultHandlerActivity6" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost5" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingReconciliation">
+		<StateInitializationActivity x:Name="InitializationPendingAssignment">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign3" ScheduledStartDateTime="DateTime.Now" RoleCodes="STOCKTAKEADMIN,STOCKTAKER" ScheduledEndDateTime="DateTime.Now.AddDays(3)" />
+			<PolicyActivity x:Name="policyActivity3">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CreateReconciliationItems" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity5">
+				<FaultHandlerActivity x:Name="faultHandlerActivity9" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost8" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForApprovalEvent">
+			<HandleExternalEventActivity Description="SUBMIT_APPROVAL" x:Name="HandleApproveEvent" EventName="SubmitForApproval" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity13">
+				<FaultHandlerActivity x:Name="faultHandlerActivity13" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost12" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<SetStateActivity x:Name="setStateActivity7" TargetStateName="PendingApproval" />
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CloseEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity5" EventName="Close" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity5" TargetStateName="Close" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity9">
+				<FaultHandlerActivity x:Name="faultHandlerActivity8" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost7" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="RejectedForRework">
+		<StateInitializationActivity x:Name="InitializeRejectedForReworkState">
+			<ns1:SetStateAndAssign x:Name="setStateToRejectedForRework" ScheduledStartDateTime="DateTime.Now" RoleCodes="STOCKTAKEADMIN,STOCKTAKER" ScheduledEndDateTime="DateTime.Now.AddDays(7)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivityRejectedForRework">
+				<FaultHandlerActivity x:Name="faultHandlerActivityRejectedForRework" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostActivityRejectedForRework" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityRejectedForRework" />
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForApprovalEventFromRejectedForRework">
+			<HandleExternalEventActivity x:Name="handleSubmitForApprovalEventFromRejectedForReworkToPendingApproval" EventName="SubmitForApproval" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="FromRejectedForReworkToPendingApproval" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivityFromRejectedForReworkToPendingApproval">
+				<FaultHandlerActivity x:Name="faultHandlerActivityFromRejectedForReworkToPendingApproval" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostFromRejectedForReworkToPendingApproval" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityFromRejectedForReworkToPendingApproval" />
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEventFromRejectedForRework">
+			<HandleExternalEventActivity Description="Cancel" x:Name="handleApproveEventFromRejectedForReworkToCancelled" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="FromRejectedForReworkToCancelled" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivityFromRejectedForReworkToCancelled">
+				<FaultHandlerActivity x:Name="faultHandlerActivityFromRejectedForReworkToCancelled" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostActivityFromRejectedForReworkToCancelled" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityFromRejectedForReworkToCancelled" />
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingApproval">
+		<StateInitializationActivity x:Name="InitializePendingApprovalState">
+			<ns1:SetStateAndAssignApprover x:Name="setStateToPendingApproval" />
+			<PolicyActivity x:Name="SubmitForApprovalPolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SubmitForApproval" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<IfElseActivity x:Name="ifIsApproved">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity1">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="Condition1" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateToApprovedFromPendingApproval" TargetStateName="Approved" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity2" />
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivityPendingApproval">
+				<FaultHandlerActivity x:Name="faultHandlerActivityPendingApproval" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostPendingApproval" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityPendingApproval" />
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ApproveEventFromPendingApproval">
+			<HandleExternalEventActivity x:Name="handleApproveEventFromPendingApproval" EventName="Approve" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ApproveTask x:Name="approveTask1" />
+			<SetStateActivity x:Name="FromPendingApprovalToPendingApproval" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivityFromPendingApprovalToPendingApproval">
+				<FaultHandlerActivity x:Name="faultHandlerActivityFromPendingApprovalToPendingApproval" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostActivityFromPendingApprovalToPendingApproval" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityFromPendingApprovalToPendingApproval" />
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="RejectEventFromPendingApproval">
+			<HandleExternalEventActivity x:Name="handleApproveEventFromPendingApprovalToRejectedForRework" EventName="RejectForRedraft" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<ns1:RejectTask x:Name="rejectTask1" />
+			<FaultHandlersActivity x:Name="faultHandlersActivityFromPendingApprovalToRejectedForRework">
+				<FaultHandlerActivity x:Name="faultHandlerActivityFromPendingApprovalToRejectedForRework" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostActivityFromPendingApprovalToRejectedForRework" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityFromPendingApprovalToRejectedForRework" />
+			<SetStateActivity x:Name="FromPendingApprovalToRejectedForRework" TargetStateName="RejectedForRework" />
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Approved">
+		<StateInitializationActivity x:Name="InitializeApprovedState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign5" ScheduledStartDateTime="DateTime.Now" RoleCodes="STOCKTAKEADMIN" ScheduledEndDateTime="DateTime.Now.AddDays(3)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity14">
+				<FaultHandlerActivity x:Name="faultHandlerActivity14" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="CloseEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity8" EventName="Close" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3830.26878, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity10" TargetStateName="Close" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity11">
+				<FaultHandlerActivity x:Name="faultHandlerActivity11" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost10" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Cancelled">
+		<StateInitializationActivity x:Name="InitializeCancelledState">
+			<ns1:SetStateAndAssign x:Name="setStateToCancelled" RoleCodes="STOCKTAKEADMIN" />
+			<PolicyActivity x:Name="policyActivity4">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CloseStockTake" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivityCancelled">
+				<FaultHandlerActivity x:Name="faultHandlerActivityCancelled" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHostActivityCancelled" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivityCancelled" />
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="Close">
+		<StateInitializationActivity x:Name="InitializationClose">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign4" RoleCodes="SYSTEMADMIN" />
+			<PolicyActivity x:Name="policyActivity2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CloseStockTake" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity7">
+				<FaultHandlerActivity x:Name="faultHandlerActivity7" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost6" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+</ns0:AnacleStateMachineWorkflow>

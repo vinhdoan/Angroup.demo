@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="btnDownloadResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnDownloadResource1.Text" xml:space="preserve">
+    <value>Download Excel template</value>
+  </data>
+	<data name="btnDownloadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnUploadCancelResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnUploadCancelResource1.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="btnUploadCancelResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnUploadConfirmResource1.ConfirmText" xml:space="preserve">
+    <value>All existing budget opening amounts will be lost and new openings will be created based on the Excel spreadsheet. Are you sure you wish to continue?</value>
+  </data>
+	<data name="btnUploadConfirmResource1.Text" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+	<data name="btnUploadConfirmResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnUploadResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="btnUploadResource1.Text" xml:space="preserve">
+    <value>Upload Excel Data</value>
+  </data>
+	<data name="btnUploadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonOpenNewBudgetPeriodResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to open a new budget period? Please ensure that this budget period has been saved before opening a new budget period.</value>
+  </data>
+	<data name="buttonOpenNewBudgetPeriodResource1.Text" xml:space="preserve">
+    <value>Open new budget period</value>
+  </data>
+	<data name="buttonOpenNewBudgetPeriodResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonShowBudgetViewResource1.ConfirmText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="buttonShowBudgetViewResource1.Text" xml:space="preserve">
+    <value>Show Budget View</value>
+  </data>
+	<data name="buttonShowBudgetViewResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsActiveResource1.Caption" xml:space="preserve">
+    <value>Is Active?</value>
+  </data>
+	<data name="checkIsActiveResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsActiveResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsActiveResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="checkIsActiveResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateClosingDateResource1.Caption" xml:space="preserve">
+    <value>Closing Date</value>
+  </data>
+	<data name="dateClosingDateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateClosingDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateClosingDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateEndDateResource1.Caption" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+	<data name="dateEndDateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateEndDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateEndDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateStartDateResource1.Caption" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+	<data name="dateStartDateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateStartDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dateStartDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropBudgetResource1.Caption" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+	<data name="dropBudgetResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropBudgetResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropBudgetResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridBudgetPeriodOpeningBalancesResource1.Caption" xml:space="preserve">
+    <value>Opening Balances</value>
+  </data>
+	<data name="gridBudgetPeriodOpeningBalancesResource1.EmptyDataText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridBudgetPeriodOpeningBalancesResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridBudgetPeriodOpeningBalancesResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="gridBudgetPeriodOpeningBalancesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="hintClosingDateResource1.Text" xml:space="preserve">
+    <value>
+                            &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;The closing date indicates the date that expenditures can no longer 
+                            be created against this budget period.</value>
+  </data>
+	<data name="hintClosingDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="hintNumberOfMonthsPerIntervalResource1.Text" xml:space="preserve">
+    <value>
+                        &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Each budget period (usually a yearly budget) can be broken down into 
+                        further accounting periods (usually months). In the case of a yearly budget, the 
+                        number of months per interval is usually 1. &lt;br __designer:mapid="1446" /&gt;
+                        &lt;br __designer:mapid="1447" /&gt;Please note that the total number of intervals (deduced from the entire period of the budget divided by the number of months per interval) must 
+                        &lt;b __designer:mapid="1448"&gt;not&lt;/b&gt; be greater than 36.</value>
+  </data>
+	<data name="hintNumberOfMonthsPerIntervalResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="InputFileResource1.Caption" xml:space="preserve">
+    <value>Budget Adjustment</value>
+  </data>
+	<data name="InputFileResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="InputFileResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="InputFileResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="labelBudgetTotalResource1.Caption" xml:space="preserve">
+    <value>Budget Total</value>
+  </data>
+	<data name="labelBudgetTotalResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="labelBudgetTotalResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="labelBudgetTotalResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="linkDistributeResource1.Text" xml:space="preserve">
+    <value>Distribute</value>
+  </data>
+	<data name="linkDistributeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Budget Period Name</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+	<data name="panelbudgetperiodResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelbudgetperiodResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelClosingDateResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelClosingDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDetails2Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDetails2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDetailsResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelDetailsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelExcelResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelExcelResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>Budget Period</value>
+  </data>
+	<data name="panelUploadResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelUploadResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+	<data name="tabAttachmentsResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabBudgetAmountsResource1.Caption" xml:space="preserve">
+    <value>Balances</value>
+  </data>
+	<data name="tabBudgetAmountsResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabBudgetAmountsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="tabDetailsResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+	<data name="tabMemoResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabMemoResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textLowBudgetThresholdResource1.Caption" xml:space="preserve">
+    <value>Threshold (%)</value>
+  </data>
+	<data name="textLowBudgetThresholdResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textLowBudgetThresholdResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textLowBudgetThresholdResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textNumberOfMonthsPerIntervalResource1.Caption" xml:space="preserve">
+    <value>Months per Interval</value>
+  </data>
+	<data name="textNumberOfMonthsPerIntervalResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textNumberOfMonthsPerIntervalResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textNumberOfMonthsPerIntervalResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance01Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance01Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance01Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance01Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance02Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance02Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance02Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance02Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance03Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance03Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance03Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance03Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance04Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance04Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance04Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance04Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance05Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance05Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance05Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance05Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance06Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance06Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance06Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance06Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance07Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance07Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance07Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance07Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance08Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance08Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance08Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance08Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance09Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance09Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance09Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance09Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance10Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance10Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance10Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance10Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance11Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance11Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance11Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance11Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance12Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance12Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance12Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance12Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance13Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance13Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance13Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance13Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance14Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance14Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance14Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance14Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance15Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance15Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance15Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance15Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance16Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance16Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance16Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance16Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance17Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance17Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance17Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance17Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance18Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance18Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance18Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance18Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance19Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance19Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance19Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance19Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance20Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance20Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance20Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance20Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance21Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance21Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance21Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance21Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance22Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance22Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance22Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance22Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance23Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance23Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance23Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance23Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance24Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance24Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance24Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance24Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance25Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance25Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance25Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance25Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance26Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance26Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance26Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance26Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance27Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance27Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance27Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance27Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance28Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance28Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance28Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance28Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance29Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance29Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance29Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance29Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance30Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance30Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance30Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance30Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance31Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance31Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance31Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance31Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance32Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance32Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance32Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance32Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance33Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance33Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance33Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance33Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance34Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance34Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance34Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance34Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance35Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance35Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance35Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance35Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance36Resource1.Caption" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance36Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance36Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textOpeningBalance36Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textTotalOpeningBalanceResource1.Caption" xml:space="preserve">
+    <value>Total</value>
+  </data>
+	<data name="textTotalOpeningBalanceResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textTotalOpeningBalanceResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="textTotalOpeningBalanceResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="treeAccountResource1.Caption" xml:space="preserve">
+    <value>Add Account</value>
+  </data>
+	<data name="treeAccountResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="treeAccountResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="treeAccountResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>Account</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you want to remove this item?</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.Text" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Remove Selected</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to remove the selected items?</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource1.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource1.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource1.HeaderText" xml:space="preserve">
+    <value>Is Active?</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource10.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource10.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource10.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource11.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource11.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource11.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource12.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource12.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource12.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource13.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource13.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource13.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource14.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource14.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource14.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource15.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource15.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource15.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource16.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource16.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource16.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource17.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource17.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource17.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource18.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource18.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource18.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource19.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource19.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource19.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource2.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource2.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource2.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource20.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource20.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource20.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource21.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource21.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource21.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource22.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource22.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource22.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource23.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource23.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource23.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource24.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource24.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource24.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource25.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource25.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource25.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource26.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource26.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource26.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource27.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource27.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource27.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource28.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource28.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource28.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource29.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource29.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource29.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource3.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource3.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource3.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource30.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource30.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource30.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource31.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource31.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource31.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource32.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource32.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource32.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource33.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource33.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource33.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource34.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource34.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource34.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource35.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource35.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource35.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource36.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource36.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource36.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource37.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource37.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource37.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource38.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource38.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource38.HeaderText" xml:space="preserve">
+    <value>Total</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource39.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource39.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource39.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource4.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource4.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource4.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource40.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource40.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource40.HeaderText" xml:space="preserve">
+    <value>Threshold (%)</value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource5.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource5.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource5.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource6.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource6.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource6.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource7.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource7.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource7.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource8.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource8.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource8.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource9.AccessibleHeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource9.FooterText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UIGridViewTemplateColumnResource9.HeaderText" xml:space="preserve">
+    <value></value>
+  </data>
+</root>

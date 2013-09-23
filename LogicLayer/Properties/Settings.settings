@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LogicLayer.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LogicLayer_ExcelWebServices_ExcelReaderWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/excelreader/excelreaderwebservice.asmx</Value>
+    </Setting>
+    <Setting Name="LogicLayer_CRVservice_VendorService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://belle/crvservice/vendorservice.asmx</Value>
+    </Setting>
+    <Setting Name="LogicLayer_CRVTenderService_TenderService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://demo.anacle.com/crvservice/tenderservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="CallerCellPhoneResource1.Caption" xml:space="preserve">
+    <value>手提电话</value>
+  </data>
+	<data name="CallerEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+	<data name="CallerFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+	<data name="CallerHistoryResource1.Caption" xml:space="preserve">
+    <value>致电者历史</value>
+  </data>
+	<data name="CallerIDResource2.Caption" xml:space="preserve">
+    <value>致电者</value>
+  </data>
+	<data name="CallerIDResource2.ToolTip" xml:space="preserve">
+    <value>申请此工作的致电者。若相关致电者不在此列表，请留空。您可在‘名字’栏位内输入其姓名。</value>
+  </data>
+	<data name="CallerNameResource2.Caption" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="CallerNameResource2.ToolTip" xml:space="preserve">
+    <value>致电者的名字。</value>
+  </data>
+	<data name="CallerPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+	<data name="CallerTypeIDResource2.Caption" xml:space="preserve">
+    <value>致电者类型</value>
+  </data>
+	<data name="CallerTypeIDResource2.ToolTip" xml:space="preserve">
+    <value>致电者类型。</value>
+  </data>
+	<data name="checkIsAutoCloseResource1.Caption" xml:space="preserve">
+    <value>自动关闭</value>
+  </data>
+	<data name="checkIsAutoCloseResource1.Text" xml:space="preserve">
+    <value>是的，当所有相关文件已被关闭或取消时，系统自动关闭此个案。</value>
+  </data>
+	<data name="dateDateRequiredResource1.Caption" xml:space="preserve">
+    <value>需求日期</value>
+  </data>
+	<data name="dropPOPurchaseTypeResource1.Caption" xml:space="preserve">
+    <value>采购类型</value>
+  </data>
+	<data name="dropPurchaseTypeResource1.Caption" xml:space="preserve">
+    <value>采购类型</value>
+  </data>
+	<data name="EquipmentLabelResource1.Caption" xml:space="preserve">
+    <value>设备路径</value>
+  </data>
+	<data name="EquipmentResource1.Caption" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="EquipmentResource1.ToolTip" xml:space="preserve">
+    <value>用此选择个案相关的设备。</value>
+  </data>
+	<data name="gridPurchaseOrdersResource1.Caption" xml:space="preserve">
+    <value>采购单</value>
+  </data>
+	<data name="gridRequestForQuotationsResource1.Caption" xml:space="preserve">
+    <value>报价申请</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>0（最低）</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>3（最高）</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>3（最高）</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>0（最低）</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="LocationHistoryResource1.Caption" xml:space="preserve">
+    <value>区域历史</value>
+  </data>
+	<data name="LocationLabelResource1.Caption" xml:space="preserve">
+    <value>区域路径</value>
+  </data>
+	<data name="LocationResource1.Caption" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="LocationResource1.ToolTip" xml:space="preserve">
+    <value>用此选择个案相关的区域。</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+	<data name="PriorityResource1.Caption" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+	<data name="ProblemDescriptionResource1.Caption" xml:space="preserve">
+    <value>问题说明</value>
+  </data>
+	<data name="RequestorCellResource1.Caption" xml:space="preserve">
+    <value>手提电话</value>
+  </data>
+	<data name="RequestorEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+	<data name="RequestorFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+	<data name="RequestorHistoryResource1.Caption" xml:space="preserve">
+    <value>申请者历史</value>
+  </data>
+	<data name="RequestorIDResource2.Caption" xml:space="preserve">
+    <value>申请者</value>
+  </data>
+	<data name="RequestorIDResource2.ToolTip" xml:space="preserve">
+    <value>申请此工作的申请者。若相关申请者不在此列表，请留空。您可在‘名字’栏位内输入其姓名。</value>
+  </data>
+	<data name="RequestorNameResource2.Caption" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="RequestorNameResource2.ToolTip" xml:space="preserve">
+    <value>申请者的名字。</value>
+  </data>
+	<data name="RequestorPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+	<data name="RequestorTypeResource2.Caption" xml:space="preserve">
+    <value>申请者类别</value>
+  </data>
+	<data name="RequestorTypeResource2.ToolTip" xml:space="preserve">
+    <value>申请者类型。</value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>申请者</value>
+  </data>
+	<data name="Separator1Resource1.Caption" xml:space="preserve">
+    <value>问题</value>
+  </data>
+	<data name="SupervisorIDResource1.Caption" xml:space="preserve">
+    <value>监督者</value>
+  </data>
+	<data name="SupervisorIDResource1.ToolTip" xml:space="preserve">
+    <value>此工作的监督者。</value>
+  </data>
+	<data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+	<data name="tabLocationEquipmentResource1.Caption" xml:space="preserve">
+    <value>区域/设备</value>
+  </data>
+	<data name="tabWorkAndPurchaseOrdersResource1.Caption" xml:space="preserve">
+    <value>工作</value>
+  </data>
+	<data name="tabWorkResource1.Caption" xml:space="preserve">
+    <value>问题</value>
+  </data>
+	<data name="textDescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="textPODateOfOrderResource1.Caption" xml:space="preserve">
+    <value>采购日期</value>
+  </data>
+	<data name="textPODateRequiredResource1.Caption" xml:space="preserve">
+    <value>需求日期</value>
+  </data>
+	<data name="textPODescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="treePOEquipmentResource1.Caption" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="treePOEquipmentResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的设备。</value>
+  </data>
+	<data name="treePOLocationResource1.Caption" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="treePOLocationResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的区域。</value>
+  </data>
+	<data name="treeRFQEquipmentResource1.Caption" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="treeRFQEquipmentResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的设备。</value>
+  </data>
+	<data name="treeRFQLocationResource1.Caption" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="treeRFQLocationResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的区域。</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+    <value>类型</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource12.HeaderText" xml:space="preserve">
+    <value>采购单号码</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource13.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource14.HeaderText" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource15.HeaderText" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource16.HeaderText" xml:space="preserve">
+    <value>需求日期</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource17.HeaderText" xml:space="preserve">
+    <value>采购日期</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource18.HeaderText" xml:space="preserve">
+    <value>类型</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource19.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>问题类型</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>报价申请号码</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+    <value>需求日期</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+    <value>您确定要删除此项目？</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource4.ConfirmText" xml:space="preserve">
+    <value>您确定要删除此项目？</value>
+  </data>
+	<data name="UIGridViewColumnResource10.HeaderText" xml:space="preserve">
+    <value>日期/时间</value>
+  </data>
+	<data name="UIGridViewColumnResource11.HeaderText" xml:space="preserve">
+    <value>申请者名字</value>
+  </data>
+	<data name="UIGridViewColumnResource12.HeaderText" xml:space="preserve">
+    <value>问题说明</value>
+  </data>
+	<data name="UIGridViewColumnResource13.HeaderText" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+	<data name="UIGridViewColumnResource14.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewColumnResource15.HeaderText" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="UIGridViewColumnResource16.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="UIGridViewColumnResource17.HeaderText" xml:space="preserve">
+    <value>个案号码</value>
+  </data>
+	<data name="UIGridViewColumnResource18.HeaderText" xml:space="preserve">
+    <value>日期/时间</value>
+  </data>
+	<data name="UIGridViewColumnResource19.HeaderText" xml:space="preserve">
+    <value>申请者名字</value>
+  </data>
+	<data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>您确定要删除此项目？</value>
+  </data>
+	<data name="UIGridViewColumnResource20.HeaderText" xml:space="preserve">
+    <value>问题说明</value>
+  </data>
+	<data name="UIGridViewColumnResource21.HeaderText" xml:space="preserve">
+    <value>优先级别</value>
+  </data>
+	<data name="UIGridViewColumnResource22.HeaderText" xml:space="preserve">
+    <value>区域</value>
+  </data>
+	<data name="UIGridViewColumnResource23.HeaderText" xml:space="preserve">
+    <value>设备</value>
+  </data>
+	<data name="UIGridViewColumnResource24.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>工作号码</value>
+  </data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+	<data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>工作说明</value>
+  </data>
+	<data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>监督者</value>
+  </data>
+	<data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="UIGridViewColumnResource9.HeaderText" xml:space="preserve">
+    <value>个案号码</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>您确定要删除所选项目？</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+	<data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+    <value>您确定要删除所选项目？</value>
+  </data>
+	<data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+	<data name="UIGridViewCommandResource5.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="UIGridViewCommandResource5.ConfirmText" xml:space="preserve">
+    <value>您确定要删除所选项目？</value>
+  </data>
+	<data name="UIGridViewCommandResource6.CommandText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>备忘录</value>
+  </data>
+	<data name="uitabview4Resource1.Caption" xml:space="preserve">
+    <value>通过区域</value>
+  </data>
+	<data name="uitabview5Resource1.Caption" xml:space="preserve">
+    <value>通过设备</value>
+  </data>
+	<data name="uitabview6Resource1.Caption" xml:space="preserve">
+    <value>通过区域</value>
+  </data>
+	<data name="uitabview7Resource1.Caption" xml:space="preserve">
+    <value>通过设备</value>
+  </data>
+	<data name="Work_EquipmentPathResource1.Caption" xml:space="preserve">
+    <value>设备路径</value>
+  </data>
+	<data name="Work_EquipmentResource1.Caption" xml:space="preserve">
+    <value>选择</value>
+  </data>
+	<data name="Work_EquipmentResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的设备。</value>
+  </data>
+	<data name="Work_LocationPathResource1.Caption" xml:space="preserve">
+    <value>区域路径</value>
+  </data>
+	<data name="Work_LocationResource1.Caption" xml:space="preserve">
+    <value>选择</value>
+  </data>
+	<data name="Work_LocationResource1.ToolTip" xml:space="preserve">
+    <value>用此选择工作相关的区域。</value>
+  </data>
+	<data name="Work_SupervisorIDResource1.Caption" xml:space="preserve">
+    <value>监督者</value>
+  </data>
+	<data name="Work_SupervisorIDResource1.ToolTip" xml:space="preserve">
+    <value>此工作的监督者。</value>
+  </data>
+	<data name="Work_TypeOfProblemIDResource1.Caption" xml:space="preserve">
+    <value>问题类型</value>
+  </data>
+	<data name="Work_TypeOfServiceIDResource1.Caption" xml:space="preserve">
+    <value>服务类型</value>
+  </data>
+	<data name="Work_TypeOfWorkIDResource1.Caption" xml:space="preserve">
+    <value>工作类型</value>
+  </data>
+	<data name="WorkDescriptionResource2.Caption" xml:space="preserve">
+    <value>工作说明</value>
+  </data>
+	<data name="WorksResource1.Caption" xml:space="preserve">
+    <value>工作</value>
+  </data>
+	<data name="listStatusResource1.Caption" xml:space="preserve">
+    <value>状态</value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>个案</value>
+  </data>
+</root>

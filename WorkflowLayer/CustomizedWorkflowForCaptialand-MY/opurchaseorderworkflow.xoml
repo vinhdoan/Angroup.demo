@@ -1,0 +1,367 @@
+﻿<ns0:AnacleStateMachineWorkflow x:Class="OPurchaseOrderWorkflow" InitialStateName="Start" x:Name="OPurchaseOrder" DynamicUpdateCondition="{x:Null}" CompletedStateName="{x:Null}" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow" xmlns:ns1="clr-namespace:Anacle.WorkflowActivityLibrary;Assembly=Anacle.WorkflowActivityLibrary, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ns0="clr-namespace:Anacle.WorkflowFramework;Assembly=Anacle.WorkflowFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=d9fb2f42e09229b4">
+	<StateActivity x:Name="Start">
+		<EventDrivenActivity x:Name="SaveAsDraftEvent">
+			<HandleExternalEventActivity Description="SUBMIT_UPDATE" x:Name="HandleUpdateEvent" EventName="SaveAsDraft" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity1" TargetStateName="Draft" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity1">
+				<FaultHandlerActivity x:Name="faultHandlerActivity1" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="ThrowExceptionToHostActivity" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+			<CancellationHandlerActivity x:Name="cancellationHandlerActivity1" />
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForApprovalEvent">
+			<HandleExternalEventActivity Description="SUBMIT_RECEIPT" x:Name="HandleReceiveEvent" EventName="SubmitForApproval" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToPendingApproval" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity2">
+				<FaultHandlerActivity x:Name="faultHandlerActivity2" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost1" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForReceiptEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity4" EventName="SubmitForReceipt" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToPendingReceipt" TargetStateName="PendingReceipt" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity14">
+				<FaultHandlerActivity x:Name="faultHandlerActivity14" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost13" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Draft">
+		<StateInitializationActivity x:Name="InitializeDraftState">
+			<ns1:SetStateAndAssign x:Name="SetStateToUpdated" ScheduledStartDateTime="DateTime.Now" RoleCodes="PURCHASEADMIN" ScheduledEndDateTime="DateTime.Now.AddDays(7)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity6">
+				<FaultHandlerActivity x:Name="faultHandlerActivity6" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost5" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForApprovalEvent2">
+			<HandleExternalEventActivity Description="SUBMIT_RECEIPT" x:Name="HandleReceiveEvent2" EventName="SubmitForApproval" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToPendingApproval2" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity5">
+				<FaultHandlerActivity x:Name="faultHandlerActivity5" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost4" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent3">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity6" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity4" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity15">
+				<FaultHandlerActivity x:Name="faultHandlerActivity15" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost14" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingReceipt">
+		<StateInitializationActivity x:Name="InitializeReceivedState">
+			<ns1:SetStateAndAssign x:Name="SetStateToReceived" ScheduledStartDateTime="DateTime.Now" RoleCodes="PURCHASEADMIN" ScheduledEndDateTime="DateTime.Now.AddDays(7)" />
+			<PolicyActivity x:Name="ApprovePolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Approve" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity7">
+				<FaultHandlerActivity x:Name="faultHandlerActivity7" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost6" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="CloseEvent">
+			<HandleExternalEventActivity Description="CLOSE" x:Name="HandleCloseEvent" EventName="Close" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity3" TargetStateName="Close" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity3">
+				<FaultHandlerActivity x:Name="faultHandlerActivity3" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost2" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForApproval_CancellationEvent">
+			<HandleExternalEventActivity Description="SUBMIT_RECEIPT" x:Name="handleExternalEventActivity11" EventName="SubmitForApproval_Cancellation" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity12" TargetStateName="PendingCancellation" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity25">
+				<FaultHandlerActivity x:Name="faultHandlerActivity25" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost24" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="SubmitForApproval_CancelAndRevisedEvent">
+			<HandleExternalEventActivity Description="SUBMIT_RECEIPT" x:Name="handleExternalEventActivity5" EventName="SubmitForApproval_CancelAndRevise" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity2" TargetStateName="PendingCancelAndRevised" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity4">
+				<FaultHandlerActivity x:Name="faultHandlerActivity4" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost3" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="Close">
+		<StateInitializationActivity x:Name="InitializeCloseState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign1" RoleCodes="PURCHASEADMIN" />
+			<PolicyActivity x:Name="ClosePolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Close" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity8">
+				<FaultHandlerActivity x:Name="faultHandlerActivity8" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost7" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="Cancelled">
+		<StateInitializationActivity x:Name="InitializeCancelState">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign2" RoleCodes="SYSTEMADMIN" />
+			<PolicyActivity x:Name="CancelPolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Cancel" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity9">
+				<FaultHandlerActivity x:Name="faultHandlerActivity9" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost8" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingApproval">
+		<StateInitializationActivity x:Name="InitializePendingApproval">
+			<ns1:SetStateAndAssignApprover x:Name="setStateAndAssignApprover1" />
+			<PolicyActivity x:Name="SubmitForApprovalPolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="SubmitForApproval" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<IfElseActivity x:Name="ifElseActivity1">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity1">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="IsSkipApproval" />
+					</IfElseBranchActivity.Condition>
+					<ns1:ApproveTask x:Name="approveTask2" />
+					<SetStateActivity x:Name="setStateActivity5" TargetStateName="PendingReceipt" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity3" />
+				<FaultHandlersActivity x:Name="faultHandlersActivity16">
+					<FaultHandlerActivity x:Name="faultHandlerActivity16" FaultType="{x:Type p14:Exception}" xmlns:p14="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+						<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost15" />
+					</FaultHandlerActivity>
+				</FaultHandlersActivity>
+			</IfElseActivity>
+			<IfElseActivity x:Name="ifIsApproved">
+				<IfElseBranchActivity x:Name="ifApproved">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="IfIsApproved" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateToApproved" TargetStateName="PendingReceipt" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity2" />
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity10">
+				<FaultHandlerActivity x:Name="faultHandlerActivity10" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost9" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ApproveEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity3" EventName="Approve" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ApproveTask x:Name="approveTask1" />
+			<PolicyActivity x:Name="policyActivity1">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="ApprovedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="GoToPendingApproval3" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity11">
+				<FaultHandlerActivity x:Name="faultHandlerActivity11" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost10" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="RejectEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity2" EventName="Reject" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:RejectTask x:Name="rejectTask3" />
+			<PolicyActivity x:Name="RejectPolicy">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Reject" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<PolicyActivity x:Name="policyActivity2">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="RejectedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="GoToRejectedforRework" TargetStateName="RejectedforRework" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity12">
+				<FaultHandlerActivity x:Name="faultHandlerActivity12" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost11" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity1" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:RejectTask x:Name="rejectTask2" />
+			<PolicyActivity x:Name="policyActivity3">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CancelledEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="GoToCancelEvent" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity13">
+				<FaultHandlerActivity x:Name="faultHandlerActivity13" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost12" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="RejectedforRework">
+		<StateInitializationActivity x:Name="InitializeRejectedforRework">
+			<ns1:SetStateAndAssign x:Name="setStatetoUpdated2" ScheduledStartDateTime="DateTime.Now" RoleCodes="PURCHASEADMIN" ScheduledEndDateTime="DateTime.Now.AddDays(7)" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity17">
+				<FaultHandlerActivity x:Name="faultHandlerActivity17" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost16" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="SubmitForApprovalEvent3">
+			<HandleExternalEventActivity Description="SUBMIT_RECEIPT" x:Name="HandleReceiveEvent3" EventName="SubmitForApproval" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="GoToPendingApproval6" TargetStateName="PendingApproval" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity18">
+				<FaultHandlerActivity x:Name="faultHandlerActivity18" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost17" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="CancelEvent4">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity7" EventName="Cancel" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<SetStateActivity x:Name="setStateActivity6" TargetStateName="Cancelled" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity19">
+				<FaultHandlerActivity x:Name="faultHandlerActivity19" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost18" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingCancellation">
+		<StateInitializationActivity x:Name="InitializePendingCancellation">
+			<ns1:SetStateAndAssignApprover x:Name="setStateAndAssignApprover2" />
+			<IfElseActivity x:Name="ifElseActivity3">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity6">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="IfIsApproved" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity11" TargetStateName="Cancelled" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity7" />
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity20">
+				<FaultHandlerActivity x:Name="faultHandlerActivity20" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost19" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ApproveEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity8" EventName="Approve" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ApproveTask x:Name="approveTask3" />
+			<PolicyActivity x:Name="policyActivity5">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="ApprovedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="GoToPendingCancellation" TargetStateName="PendingCancellation" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity21">
+				<FaultHandlerActivity x:Name="faultHandlerActivity21" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost20" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="RejectEvent2">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity9" EventName="Reject" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:RejectTask x:Name="rejectTask1" />
+			<PolicyActivity x:Name="policyActivity7">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CancellationRejectedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="GotoPendingReceipt2" TargetStateName="PendingReceipt" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity22">
+				<FaultHandlerActivity x:Name="faultHandlerActivity22" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost21" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="PendingCancelAndRevised">
+		<StateInitializationActivity x:Name="InitializePendingCancelledAndRevised">
+			<ns1:SetStateAndAssignApprover x:Name="setStateAndAssignApprover3" />
+			<IfElseActivity x:Name="ifElseActivity2">
+				<IfElseBranchActivity x:Name="ifElseBranchActivity4">
+					<IfElseBranchActivity.Condition>
+						<RuleConditionReference ConditionName="IfIsApproved" />
+					</IfElseBranchActivity.Condition>
+					<SetStateActivity x:Name="setStateActivity9" TargetStateName="CancelledAndRevised" />
+				</IfElseBranchActivity>
+				<IfElseBranchActivity x:Name="ifElseBranchActivity5" />
+			</IfElseActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity26">
+				<FaultHandlerActivity x:Name="faultHandlerActivity26" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost25" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+		<EventDrivenActivity x:Name="ApproveEvent3">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity10" EventName="Approve" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:ApproveTask x:Name="approveTask5" />
+			<PolicyActivity x:Name="policyActivity4">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="ApprovedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="setStateActivity7" TargetStateName="CancelledAndRevised" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity23">
+				<FaultHandlerActivity x:Name="faultHandlerActivity23" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost22" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+		<EventDrivenActivity x:Name="RejectEvent3">
+			<HandleExternalEventActivity x:Name="handleExternalEventActivity12" EventName="Reject" InterfaceType="{x:Type p10:IAnacleEvents}" xmlns:p10="clr-namespace:LogicLayer.Events;Assembly=LogicLayer, Version=6.0.3890.30983, Culture=neutral, PublicKeyToken=null" />
+			<ns1:RejectTask x:Name="rejectTask4" />
+			<PolicyActivity x:Name="policyActivity8">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="CancellationRejectedEmail" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<SetStateActivity x:Name="setStateActivity8" TargetStateName="PendingReceipt" />
+			<FaultHandlersActivity x:Name="faultHandlersActivity27">
+				<FaultHandlerActivity x:Name="faultHandlerActivity27" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost26" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</EventDrivenActivity>
+	</StateActivity>
+	<StateActivity x:Name="CancelledAndRevised">
+		<StateInitializationActivity x:Name="InitializeCancelledAndRevised">
+			<ns1:SetStateAndAssign x:Name="setStateAndAssign4" RoleCodes="SYSTEMADMIN" />
+			<PolicyActivity x:Name="policyActivity6">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Rule Set1" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<PolicyActivity x:Name="policyActivity9">
+				<PolicyActivity.RuleSetReference>
+					<RuleSetReference RuleSetName="Cancel" />
+				</PolicyActivity.RuleSetReference>
+			</PolicyActivity>
+			<FaultHandlersActivity x:Name="faultHandlersActivity28">
+				<FaultHandlerActivity x:Name="faultHandlerActivity28" FaultType="{x:Type p12:Exception}" xmlns:p12="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+					<ns1:ThrowExceptionToHost x:Name="throwExceptionToHost27" />
+				</FaultHandlerActivity>
+			</FaultHandlersActivity>
+		</StateInitializationActivity>
+	</StateActivity>
+</ns0:AnacleStateMachineWorkflow>

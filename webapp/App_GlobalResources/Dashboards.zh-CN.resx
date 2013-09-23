@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DashboardNumberOfOpenedClosedWorks" xml:space="preserve">
+    <value>开启/关闭 工作数量</value>
+  </data>
+  <data name="DashboardPrioritiesByActualCostsOfWorks" xml:space="preserve">
+    <value>工作实际成本优先事项</value>
+  </data>
+  <data name="DashboardPrioritiesByNumberOfWorks" xml:space="preserve">
+    <value>工作数量优先事项</value>
+  </data>
+  <data name="DashboardStoreItemCostMovementOver12Months" xml:space="preserve">
+    <value>仓库项目12个月以来的费用流动</value>
+  </data>
+  <data name="DashboardTop10BudgetsAccountsByApprovedExpense" xml:space="preserve">
+    <value>十大预算账目（已核定支出排名）</value>
+  </data>
+  <data name="DashboardTop10BudgetsByApprovedExpense" xml:space="preserve">
+    <value>十大预算（已核定支出排名）</value>
+  </data>
+  <data name="DashboardTop10ContractsByCostsOfPurchaseOrders" xml:space="preserve">
+    <value>十大合同（以采购单费用排名）</value>
+  </data>
+  <data name="DashboardTop10ContractsByNumberOfPurchaseOrders" xml:space="preserve">
+    <value>十大合同（以采购单数量排名</value>
+  </data>
+  <data name="DashboardTop10InventoryCatalogsByMovementCost" xml:space="preserve">
+    <value>十大库存目录（以流动费用排名）</value>
+  </data>
+  <data name="DashboardTop10LocationByCostOfWorks" xml:space="preserve">
+    <value>十大区域（以工作成本排名）</value>
+  </data>
+  <data name="DashboardTop10LocationByNumberOfWorks" xml:space="preserve">
+    <value>十大区域（以工作数量排名</value>
+  </data>
+  <data name="DashboardTop10PurchaseTypesByCostsOfPurchaseOrders" xml:space="preserve">
+    <value>十大采购类型（以采购单费用排名）</value>
+  </data>
+  <data name="DashboardTop10PurchaseTypesByNumberOfPurchaseOrders" xml:space="preserve">
+    <value>十大采购类型（以采购单数量排名）</value>
+  </data>
+  <data name="DashboardTop10PurchaseTypesByNumberOfPurchaseRequestForQuotations" xml:space="preserve">
+    <value>十大采购类型（以报价单数量排名）</value>
+  </data>
+  <data name="DashboardTop10PurchaseTypesByNumberOfPurchaseRequests" xml:space="preserve">
+    <value>十大采购类型（以购买请求数量排名）</value>
+  </data>
+  <data name="DashboardTop10StatusesByActualCostsOfWorks" xml:space="preserve">
+    <value>十大状态（以工作实际成本排名）</value>
+  </data>
+  <data name="DashboardTop10StatusesByCostsOfPurchaseOrders" xml:space="preserve">
+    <value>十大状态（以采购单费用排名）</value>
+  </data>
+  <data name="DashboardTop10StatusesByNumberOfPurchaseOrders" xml:space="preserve">
+    <value>十大状态（以采购单数量排名）</value>
+  </data>
+  <data name="DashboardTop10StatusesByNumberOfRequestsForQuotations" xml:space="preserve">
+    <value>十大状态（以报价单数量排名）</value>
+  </data>
+  <data name="DashboardTop10StatusesByNumberOfWorks" xml:space="preserve">
+    <value>十大状态（以工作数量排名）</value>
+  </data>
+  <data name="DashboardTop10StoreByItemMovementCost" xml:space="preserve">
+    <value>十大仓库（以项目流动费用排名）</value>
+  </data>
+  <data name="DashboardTop10TypeOfServiceByActualCostsOfWorks" xml:space="preserve">
+    <value>十大服务类型（以工作实际成本排名）</value>
+  </data>
+  <data name="DashboardTop10TypeOfServicesByNumberOfWorks" xml:space="preserve">
+    <value>十大服务类型（以工作数量排名）</value>
+  </data>
+  <data name="DashboardTop10TypeOfWorksByActualCostsOfWorks" xml:space="preserve">
+    <value>十大工作类型（以工作实际成本排名）</value>
+  </data>
+  <data name="DashboardTop10TypeOfWorksByNumberOfWorks" xml:space="preserve">
+    <value>十大工作类型（以工作数量排名）</value>
+  </data>
+  <data name="DashboardTop10VendorsByCostsOfPurchaseOrders" xml:space="preserve">
+    <value>十大供应商（以采购单费用排名）</value>
+  </data>
+  <data name="DashboardTop10VendorsByNumberOfPurchaseOrders" xml:space="preserve">
+    <value>十大供应商（以采购单数量排名）</value>
+  </data>
+  <data name="DashboardTrendOfBudgetAmountsPendingApprovalApprovedInvoiced" xml:space="preserve">
+    <value>预算金额趋势（待批准/已批准/已发票）</value>
+  </data>
+  <data name="DashboardTrendOfCostsOfPOsApprovedReceivedInvoiced" xml:space="preserve">
+    <value>采购单费用趋势 （已批准/已接收/已发票）</value>
+  </data>
+  <data name="DashboardTrendOfNumberOfWorksByTypeOfWork" xml:space="preserve">
+    <value>工作数量趋势（以工作类型为基准）</value>
+  </data>
+  <data name="DashboardTrendOfTotalInvoiceAmountByInvoiceTypes" xml:space="preserve">
+    <value>总发票金额趋势（以发票类型为基准）</value>
+  </data>
+</root>

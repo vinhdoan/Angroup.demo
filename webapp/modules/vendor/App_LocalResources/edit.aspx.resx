@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BillingAddressCityResource1.Caption" xml:space="preserve">
+    <value>City</value>
+  </data>
+	<data name="BillingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressCityResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>Country</value>
+  </data>
+	<data name="BillingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressCountryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressResource1.Caption" xml:space="preserve">
+    <value>Address</value>
+  </data>
+	<data name="BillingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressStateResource1.Caption" xml:space="preserve">
+    <value>State</value>
+  </data>
+	<data name="BillingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingAddressStateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+	<data name="BillingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingCellPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingContactPersonResource1.Caption" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+	<data name="BillingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingContactPersonResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="BillingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingEmailResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingEmailResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+	<data name="BillingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingFaxResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingFaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+	<data name="BillingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingPhoneResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="BillingPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentReasonResource1.Caption" xml:space="preserve">
+    <value>Reason</value>
+  </data>
+	<data name="DebarmentReasonResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentReasonResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentReasonResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentResource2.Caption" xml:space="preserve">
+    <value>Debarment</value>
+  </data>
+	<data name="DebarmentResource2.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentResource2.Text" xml:space="preserve">
+    <value>Yes, this vendor is debarred</value>
+  </data>
+	<data name="DebarmentResource2.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="DebarmentResource2.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropCurrencyResource1.Caption" xml:space="preserve">
+    <value>Default Currency</value>
+  </data>
+	<data name="dropCurrencyResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropCurrencyResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropCurrencyResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropTaxCodeResource1.Caption" xml:space="preserve">
+    <value>Default Tax Code</value>
+  </data>
+	<data name="dropTaxCodeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropTaxCodeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="dropTaxCodeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="EndDateResource1.Caption" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+	<data name="EndDateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="EndDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="EndDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FirstResource1.Caption" xml:space="preserve">
+    <value>First</value>
+  </data>
+	<data name="FirstResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FirstResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FirstResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FourthResource1.Caption" xml:space="preserve">
+    <value>Fourth</value>
+  </data>
+	<data name="FourthResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FourthResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="FourthResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="lbResource1.Caption" xml:space="preserve">
+    <value>Notification before Debarment End Date (Days)</value>
+  </data>
+	<data name="lbResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="lbResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="lbResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+    <value>Vendor Name</value>
+  </data>
+	<data name="OperatingAddressCityResource1.Caption" xml:space="preserve">
+    <value>City</value>
+  </data>
+	<data name="OperatingAddressCityResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressCityResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressCityResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressCountryResource1.Caption" xml:space="preserve">
+    <value>Country</value>
+  </data>
+	<data name="OperatingAddressCountryResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressCountryResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressCountryResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressResource1.Caption" xml:space="preserve">
+    <value>Address</value>
+  </data>
+	<data name="OperatingAddressResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressStateResource1.Caption" xml:space="preserve">
+    <value>State</value>
+  </data>
+	<data name="OperatingAddressStateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressStateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingAddressStateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingCellPhoneResource1.Caption" xml:space="preserve">
+    <value>Cellphone</value>
+  </data>
+	<data name="OperatingCellPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingCellPhoneResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingCellPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingContactPersonResource1.Caption" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+	<data name="OperatingContactPersonResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingContactPersonResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingContactPersonResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingEmailResource1.Caption" xml:space="preserve">
+    <value>Email</value>
+  </data>
+	<data name="OperatingEmailResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingEmailResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingEmailResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingFaxResource1.Caption" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+	<data name="OperatingFaxResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingFaxResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingFaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingPhoneResource1.Caption" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+	<data name="OperatingPhoneResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingPhoneResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="OperatingPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panel1Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panel1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+	<data name="Person1Resource1.Caption" xml:space="preserve">
+    <value>Person1</value>
+  </data>
+	<data name="Person1Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person2Resource1.Caption" xml:space="preserve">
+    <value>Person2</value>
+  </data>
+	<data name="Person2Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person3Resource1.Caption" xml:space="preserve">
+    <value>Person3</value>
+  </data>
+	<data name="Person3Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person3Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person3Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person4Resource1.Caption" xml:space="preserve">
+    <value>Person4</value>
+  </data>
+	<data name="Person4Resource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person4Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Person4Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="SecondResource1.Caption" xml:space="preserve">
+    <value>Second</value>
+  </data>
+	<data name="SecondResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="SecondResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="SecondResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>Operating Location</value>
+  </data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Separator1Resource1.Caption" xml:space="preserve">
+    <value>Billing Location</value>
+  </data>
+	<data name="Separator1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="Separator2Resource2.Caption" xml:space="preserve">
+    <value>Notification Time</value>
+  </data>
+	<data name="Separator2Resource2.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="StartDateResource1.Caption" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+	<data name="StartDateResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="StartDateResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="StartDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDebarmentResource1.Caption" xml:space="preserve">
+    <value>Debarment</value>
+  </data>
+	<data name="tabDebarmentResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabDebarmentResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ThirdResource1.Caption" xml:space="preserve">
+    <value>Third</value>
+  </data>
+	<data name="ThirdResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ThirdResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="ThirdResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator1Resource1.Caption" xml:space="preserve">
+    <value>People to Notify </value>
+  </data>
+	<data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="UISeparator2Resource1.Caption" xml:space="preserve">
+    <value>Currency and Tax</value>
+  </data>
+	<data name="UISeparator2Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="uitabview1Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview1Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview5Resource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+	<data name="uitabview5Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview5Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview8Resource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+	<data name="uitabview8Resource1.GroupingText" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="uitabview8Resource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorClassificationResource1.Caption" xml:space="preserve">
+    <value>Vendor Classification</value>
+  </data>
+	<data name="VendorClassificationResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorClassificationResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorClassificationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorTypeResource1.Caption" xml:space="preserve">
+    <value>Vendor Type</value>
+  </data>
+	<data name="VendorTypeResource1.ErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorTypeResource1.ToolTip" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="VendorTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+    <value></value>
+  </data>
+</root>

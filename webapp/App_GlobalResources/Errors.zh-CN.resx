@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Calendar_NoWorkDays" xml:space="preserve">
+    <value>错误！请输入工作天数。</value>
+  </data>
+  <data name="Code_CyclicalReference" xml:space="preserve">
+    <value>错误！逻辑层次有错，请重新选择。</value>
+  </data>
+  <data name="General_NameDuplicate" xml:space="preserve">
+    <value>错误！名称重复，请重新输入。</value>
+  </data>
+  <data name="Report_CascadeControlLoop" xml:space="preserve">
+    <value>错误！逻辑层次有错，请重新选择。</value>
+  </data>
+  <data name="Report_IdentifierHasSpaces" xml:space="preserve">
+    <value>错误！请去除空白部分。</value>
+  </data>
+  <data name="Report_PopulateQueryError" xml:space="preserve">
+    <value>错误！系统无法获得数据 -- {0}</value>
+  </data>
+  <data name="Report_QueryFailedWithMessage" xml:space="preserve">
+    <value>错误！无法获得报表数据 -- {0}</value>
+  </data>
+  <data name="ServiceLevel_LocationDuplicate" xml:space="preserve">
+    <value>错误！这个区域的服务水平标准已经存在，请选择别的区域。</value>
+  </data>
+  <data name="User_PasswordDifferent" xml:space="preserve">
+    <value>错误！密码不一致，请重新输入。</value>
+  </data>
+  <data name="Work_TechnicianNotAssigned" xml:space="preserve">
+    <value>请您至少至少选择一个工作人员。</value>
+  </data>
+  <data name="Adjust_InsufficientItems" xml:space="preserve">
+    <value>以下仓库项目数量不足以进行调整。{0}</value>
+  </data>
+  <data name="Budget_DeleteBudgetItemFailed" xml:space="preserve">
+    <value>由于被系统或采购交易参照，预算项目无法被删除。</value>
+  </data>
+  <data name="Budget_DuplicatedBudgetCategory" xml:space="preserve">
+    <value>搜获相同预算种类项目。在一个预算里，每一个预算种类只能有一个项目。</value>
+  </data>
+  <data name="Budget_DuplicatedItem" xml:space="preserve">
+    <value>搜获相同预算项目。请另选预算项目。</value>
+  </data>
+  <data name="Budget_InactivateBudgetItemFailed" xml:space="preserve">
+    <value>由于有待消耗项目附属着，预算项目无法被去活化。</value>
+  </data>
+  <data name="Budget_InvalidTotalAmount" xml:space="preserve">
+    <value>请为总额输入有效值。</value>
+  </data>
+  <data name="Budget_ReferInactiveBudgetItem" xml:space="preserve">
+    <value>搜获相同预算种类项目。在一个预算里，每一个预算种类只能有一个项目。</value>
+  </data>
+  <data name="BudgetAllocation_SameSourceDestination" xml:space="preserve">
+    <value>来源与目标不能为同一项目。</value>
+  </data>
+  <data name="BudgetCategory_ParentInvalid" xml:space="preserve">
+    <value>种类类型的预算种类不能位置于行式项目类型的预算种类之下。</value>
+  </data>
+  <data name="CheckOut_DuplicateItem" xml:space="preserve">
+    <value>搜获拥有相同目录与仓室的项目。请另选目录或仓室。</value>
+  </data>
+  <data name="CheckOut_InsufficientItems" xml:space="preserve">
+    <value>以下仓库项目的数量不足以进行签出。{0}</value>
+  </data>
+  <data name="CheckOut_InsufficientQuantity" xml:space="preserve">
+    <value>由于仓库项目可用数量不足，签出无法顺利进行。</value>
+  </data>
+  <data name="CheckOut_ItemInsufficientQuantity" xml:space="preserve">
+    <value>仓库项目的数量不足。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDateTime" xml:space="preserve">
+    <value>请输入时间日期的范围最大值（yyyy-mm-dd hh:mm:ss）</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDecimal" xml:space="preserve">
+    <value>请输入小数的范围最大值。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxDouble" xml:space="preserve">
+    <value>请输入双精度型小数的范围最大值。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMaxInteger" xml:space="preserve">
+    <value>请输入整数的范围最大值。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDateTime" xml:space="preserve">
+    <value>请输入时间日期的范围最小值（yyyy-mm-dd hh:mm:ss）</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDecimal" xml:space="preserve">
+    <value>请输入小数的范围最小值。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinDouble" xml:space="preserve">
+    <value>请输入双精度型小数的范围最小值。</value>
+  </data>
+  <data name="CustomizedObject_InvalidMinInteger" xml:space="preserve">
+    <value>请输入整数的范围最小值。</value>
+  </data>
+  <data name="CustomizedObject_NoRangeSpecify" xml:space="preserve">
+    <value>请输入至少最大值或最小值。</value>
+  </data>
+  <data name="DocumentTemplate_SpecifyDocument" xml:space="preserve">
+    <value>请选择文件模板。</value>
+  </data>
+  <data name="Equipment_ParentIDInvalid" xml:space="preserve">
+    <value>该文件夹不能附属于实质设备。请另选上层。</value>
+  </data>
+  <data name="EquipmentTypeSpares_DuplicateItem" xml:space="preserve">
+    <value>搜获拥有相同目录的设备备份。请另选目录。</value>
+  </data>
+  <data name="General_CommaSeparator" xml:space="preserve">
+    <value>，</value>
+  </data>
+  <data name="General_RequiredField" xml:space="preserve">
+    <value>此为必填栏位。请输入有效值。</value>
+  </data>
+  <data name="General_TwoDecimalPlaces" xml:space="preserve">
+    <value>此栏位只能接受小数最多至两位数。</value>
+  </data>
+  <data name="Location_ParentIDInvalid" xml:space="preserve">
+    <value>该文件夹不能附属于实质区域。请另选上层。</value>
+  </data>
+  <data name="Multiple_SelectItem" xml:space="preserve">
+    <value>请选择至少一个项目以继续。</value>
+  </data>
+  <data name="Property_DuplicateChargeType" xml:space="preserve">
+    <value>此费用种类已存在。请另选费用种类。</value>
+  </data>
+  <data name="PurchaseOrder_AmountNotEqual" xml:space="preserve">
+    <value>所有采购预算项目的总额（{1:n}）必须与所有采购行式项目的总额（{0:n}）相同。</value>
+  </data>
+  <data name="PurchaseOrder_AtleastOneFinancialYear" xml:space="preserve">
+    <value>请为每一预选项目记录输入至少一个财务年的预算数额。</value>
+  </data>
+  <data name="PurchaseOrder_BudgetInvalidForSelect" xml:space="preserve">
+    <value>由于采购单的开始日期与结束日期不在有效范围内，此预算项目无法被选用。</value>
+  </data>
+  <data name="PurchaseOrder_InactiveBudgetItemToConsume" xml:space="preserve">
+    <value>由于预算项目已被去活化，预算项目无法被消耗。</value>
+  </data>
+  <data name="PurchaseOrder_InsufficientBudgetitemForConsume" xml:space="preserve">
+    <value>可用预算数额（{0:n}）不足以消耗预算项目。</value>
+  </data>
+  <data name="PurchaseOrder_InvalidPeriod" xml:space="preserve">
+    <value>采购单时期不能超过18年。</value>
+  </data>
+  <data name="PurchaseOrder_InvalidStartEndDate" xml:space="preserve">
+    <value>开始日期不能比结束日期迟。请另选有效值。</value>
+  </data>
+  <data name="Purchaseorder_IsDuplicatedBudgetItem" xml:space="preserve">
+    <value>搜获相同预算项目。请另选预算项目。</value>
+  </data>
+  <data name="PurchaseOrder_PaymentAmountGreaterTotalInvoice" xml:space="preserve">
+    <value>总付款金额（{0:#,##0.0}）不能大于总发票金额（{1:#,##0.00}）。</value>
+  </data>
+  <data name="PurchaseOrder_PaymentBudgetInvalid" xml:space="preserve">
+    <value>付款预算金额不能大于发票预算金额。</value>
+  </data>
+  <data name="PurchaseOrder_TaxCodesNotSelected" xml:space="preserve">
+    <value>至少一个采购项目没有税码。请为每一项目选择税码。</value>
+  </data>
+  <data name="PurchaseOrder_TotalBudgetAmountNotEqual" xml:space="preserve">
+    <value>总预算金额（{0:n}）一定要等于总发票金额（{1:n}）。</value>
+  </data>
+  <data name="PurchaseOrder_TotalBudgetPaymentNotEqual" xml:space="preserve">
+    <value>总付款预算金额（{0:#,##0.00}）一定要小于或等于总付款金额（{1:#,##0.00}）。</value>
+  </data>
+  <data name="PurchaseOrder_TotalInvoiceBudgetExceedOriginalBudget" xml:space="preserve">
+    <value>此预算项目的总发票预算（{0:#,##0.00}）已超出原本的预算金额（{1:#,##0.00}）。</value>
+  </data>
+  <data name="PurchaseOrder_UnableToGenerate" xml:space="preserve">
+    <value>由于没有采购项目，或者购买请求或报价单已生成另一采购单，此采购单无法生成。</value>
+  </data>
+  <data name="PurchaseOrder_UnitPriceNotEntered" xml:space="preserve">
+    <value>至少一个采购项目没有单位价格。请为每一项目选择单位价格。</value>
+  </data>
+  <data name="PurchaseRequest_NoItemsSelected" xml:space="preserve">
+    <value>没有选到购买请求项目。请至少选择一项。</value>
+  </data>
+  <data name="QuantityOrdered_Invalid" xml:space="preserve">
+    <value>此行式项目的总额（{0:#,##0.00}）不能低于其货物接收的总额（{1:#,##0.00}）。</value>
+  </data>
+  <data name="Report_InvalidReportFile" xml:space="preserve">
+    <value>报告文件失效</value>
+  </data>
+  <data name="Report_SelectTemplate" xml:space="preserve">
+    <value>请选择报告模板。</value>
+  </data>
+  <data name="ReportTemplate_EditDenied" xml:space="preserve">
+    <value>无法编辑报告模板。唯有创建者能编辑。</value>
+  </data>
+  <data name="RequestForQuotation_DuplicateVendor" xml:space="preserve">
+    <value>由于此供应商已在此报价单中，因此无法再被添加。</value>
+  </data>
+  <data name="RequestForQuotation_NoRFQItemsSelected" xml:space="preserve">
+    <value>没有选到报价项目。请至少选择一项。</value>
+  </data>
+  <data name="RequestForQuotation_NoVendor" xml:space="preserve">
+    <value>请选择供应商。</value>
+  </data>
+  <data name="RequestForQuotation_UnableToGenerate" xml:space="preserve">
+    <value>由于没有报价项目，或者购买请求已生成另一报价单，此报价单无法生成。</value>
+  </data>
+  <data name="ScheduledWork_DuplicateAdhocRate" xml:space="preserve">
+    <value>搜获相同的特别利率。请另选特别利率。</value>
+  </data>
+  <data name="ScheduledWork_DuplicateFixedRate" xml:space="preserve">
+    <value>搜获相同的固定利率。请另选固定利率。</value>
+  </data>
+  <data name="ScheduledWork_DuplicateMaterial" xml:space="preserve">
+    <value>搜获相同的目录。请另选目录。</value>
+  </data>
+  <data name="ScheduledWork_StaggeredEquipmentNotSpecified" xml:space="preserve">
+    <value>没有选到间隔交错的设备。请选择至少一项。</value>
+  </data>
+  <data name="ScheduledWork_StaggeredLocationNotSpecified" xml:space="preserve">
+    <value>没有选到间隔交错的区域。请选择至少一项。</value>
+  </data>
+  <data name="ServiceLevel_DuplicateServiceLevelDetail" xml:space="preserve">
+    <value>搜获拥有相同步数、 服务类型和优先级别的服务水平标准。请另选拥有不同步数或服务类型或优先级别的服务水平标准。</value>
+  </data>
+  <data name="Store_DuplicateBin" xml:space="preserve">
+    <value>搜获拥有相同名称的仓室。</value>
+  </data>
+  <data name="Store_DuplicateItem" xml:space="preserve">
+    <value>搜获拥有相同目录的仓库项目。请另选目录。</value>
+  </data>
+  <data name="Store_NoLowInventoryItems" xml:space="preserve">
+    <value>没有库存项目低于再购临界值。购买请求将不被生成。</value>
+  </data>
+  <data name="Transfer_DuplicateItem" xml:space="preserve">
+    <value>搜获拥有相同目录与仓室的调动项目。请另选目录或仓室。</value>
+  </data>
+  <data name="Transfer_FromBinSameAsToBin" xml:space="preserve">
+    <value>来源与目标仓室皆为同一仓室。请另选仓室。</value>
+  </data>
+  <data name="Transfer_InsufficientItems" xml:space="preserve">
+    <value>以下仓库项目的数量不足以进行调动。{0}</value>
+  </data>
+  <data name="UnitConversion_FromUnitDuplicate" xml:space="preserve">
+    <value>此计量单位已被选取。请另选计量单位。</value>
+  </data>
+  <data name="UnitConversion_ToUnitOfMeasureInvalid" xml:space="preserve">
+    <value>请确定来源与目标计量单位皆为不同的计量单位。</value>
+  </data>
+  <data name="User_DuplicateUser" xml:space="preserve">
+    <value>拥有相同用户名或登录名的用户已经存在。请另选用户名或登录名。</value>
+  </data>
+  <data name="User_PasswordWrong" xml:space="preserve">
+    <value>密码不对。</value>
+  </data>
+  <data name="UserSignOn_MoreSignOnCannotAdd" xml:space="preserve">
+    <value>至少一个指责无法被添加至登录列表。</value>
+  </data>
+  <data name="Utility_DatetimeInvalid" xml:space="preserve">
+    <value>结束日期一定要等于或迟于开始日期。</value>
+  </data>
+  <data name="Utility_UtilityValueInvalid" xml:space="preserve">
+    <value>请输入至少一个实用价值。</value>
+  </data>
+  <data name="ViewProject_DoNotHaveAccessRight" xml:space="preserve">
+    <value>基于您没有权限，系统无法执行您的要求。请联络系统管理员。</value>
+  </data>
+  <data name="ViewScheduleWork_DoNotHaveAccessRight" xml:space="preserve">
+    <value>基于您没有权限，系统无法执行您的要求。请联络系统管理员。</value>
+  </data>
+  <data name="Work_AlreadyAcknowledged" xml:space="preserve">
+    <value>工作{0}已被确认。</value>
+  </data>
+  <data name="Work_AlreadyArrived" xml:space="preserve">
+    <value>工作{0}已到达。</value>
+  </data>
+  <data name="Work_AlreadyCompleted" xml:space="preserve">
+    <value>工作{0}已完成。</value>
+  </data>
+  <data name="Work_ArrivedBeforeAck" xml:space="preserve">
+    <value>工作{0}有出错。</value>
+  </data>
+  <data name="Work_CannotCompleteAtThisStage" xml:space="preserve">
+    <value>由于没有指派技术人员，工作{0}无法完成。</value>
+  </data>
+  <data name="Work_DuplicateAdhocRate" xml:space="preserve">
+    <value>搜获相同的特别利率。请另选特别利率。</value>
+  </data>
+  <data name="Work_DuplicateFixedRate" xml:space="preserve">
+    <value>搜获相同的固定利率。请另选固定利率。</value>
+  </data>
+  <data name="Work_DuplicateMaterial" xml:space="preserve">
+    <value>搜获相同仓库物料及仓室。请另选仓库物料或仓室。</value>
+  </data>
+  <data name="Work_DuplicateTechnician" xml:space="preserve">
+    <value>搜获相同的技术人员。请另选技术人员。</value>
+  </data>
+  <data name="Work_InsufficientStoreItems" xml:space="preserve">
+    <value>以下仓库项目的数量不足以进行签出。{0}</value>
+  </data>
+  <data name="Work_LocationEquipmentNotSelected" xml:space="preserve">
+    <value>‘区域/设备’为必填栏位。</value>
+  </data>
+  <data name="Work_StoreBinsNotSpecified" xml:space="preserve">
+    <value>至少一个物料成本项目没有指定仓库或仓室。请选之。</value>
+  </data>
+  <data name="Work_TechnicianNotSpecified" xml:space="preserve">
+    <value>至少一个技术人员成本项目没有指定技术人员。请选之。</value>
+  </data>
+  <data name="Workflow_NoUsersToAssign" xml:space="preserve">
+    <value>工作流程引擎无法指派该项目给任何用户或职位。</value>
+  </data>
+  <data name="Workflow_TransitionInvalid" xml:space="preserve">
+    <value>工作流程引擎无法转移该项目至指定状态。</value>
+  </data>
+  <data name="YearlyBudget_InactivateBudgetItemFailed" xml:space="preserve">
+    <value>由于有预算消耗交易或预算变更交易附属着，此预算项目无法被删除。</value>
+  </data>
+  <data name="YearlyBudget_InactivateMulBudgetItemFailed" xml:space="preserve">
+    <value>由于有预算消耗交易或预算变更交易附属着，至少一个预算项目无法被删除。</value>
+  </data>
+  <data name="PurchaseOrder_NoReceipt" xml:space="preserve">
+    <value>所有的行式项目已被接收。无法创建收据。</value>
+  </data>
+  <data name="Work_ReassignFailedDueToTechnician" xml:space="preserve">
+    <value>由于拥有相同技术人员，{0}个工作无法被重新指派。</value>
+  </data>
+  <data name="Work_ReassignSelectWork" xml:space="preserve">
+    <value>请选择至少一个工作以继续。（已关闭、已退回、待内部接纳皆不能被重新指派）</value>
+  </data>
+  <data name="Work_ReassignSuccess" xml:space="preserve">
+    <value>{0}个工作重新指派成功。</value>
+  </data>
+  <data name="General_ObjectModified" xml:space="preserve">
+    <value>此项目已被其他用户编辑过。重新从数据库读取新的版本。</value>
+  </data>
+  <data name="Budget_CashAccountingNoBudget" xml:space="preserve">
+    <value>于付款之时判断</value>
+  </data>
+  <data name="Attachment_DocumentType" xml:space="preserve">
+    <value>请选择文件类型。</value>
+  </data>
+  <data name="Workflow_TransitionErrorRecordLocked" xml:space="preserve">
+    <value>由于工作流程引擎遭遇以下错误，此记录已被锁住：
+{0}</value>
+  </data>
+  <data name="Workflow_ValidationFailed" xml:space="preserve">
+    <value>由于以下验证错误，工作流程无法被读取：</value>
+  </data>
+  <data name="ApprovalHierarchy_UsersRolesNotSpecified" xml:space="preserve">
+    <value>每一个批准层级需至少指派给一个用户或职位。</value>
+  </data>
+  <data name="Function_DuplicateObjectType" xml:space="preserve">
+    <value>拥有相同对象类型的菜单已经存在。请另选对象类型。</value>
+  </data>
+  <data name="Role_DuplicateRoleCode" xml:space="preserve">
+    <value>拥有相同身份代码的身份已经存在。请另选身份代码。</value>
+  </data>
+  <data name="Adjust_DuplicateItem" xml:space="preserve">
+    <value>搜获拥有相同目录、仓室及批号的签出项目。请另选目录或仓室或批号。</value>
+  </data>
+  <data name="User_EmailWrong" xml:space="preserve">
+    <value>电邮验证失败。</value>
+  </data>
+  <data name="User_UserNameNotExist" xml:space="preserve">
+    <value>用户名字不存在。</value>
+  </data>
+  <data name="User_ExceedMaxLogins" xml:space="preserve">
+    <value>您的登录尝试次数已超过了最大值。</value>
+  </data>
+  <data name="User_PasswordCannotChange" xml:space="preserve">
+    <value>您必须等待{0}天以便再能够更改密码。</value>
+  </data>
+  <data name="User_PasswordReset" xml:space="preserve">
+    <value>您的密码已被重设。新的密码将会被电邮至您的电邮信箱。请使用新的密码登录。</value>
+  </data>
+  <data name="Currency_ExchangeRateDateOverlaps" xml:space="preserve">
+    <value>此外汇汇率的有效期限与系统目前的汇率重叠。请更改有效期限。</value>
+  </data>
+  <data name="User_PasswordHistoryExists" xml:space="preserve">
+    <value>请输入与之前的{0}密码不同的新密码。</value>
+  </data>
+  <data name="User_PasswordMustContainAlphaNumericCharacters" xml:space="preserve">
+    <value>密码必须拥有至少一个英文字母和数字字符。</value>
+  </data>
+  <data name="User_PasswordMinimumLength" xml:space="preserve">
+    <value>密码必须拥有{0}个字符。</value>
+  </data>
+  <data name="General_SelectOneOrMoreItemsToAdd" xml:space="preserve">
+    <value>请选择添加至少一个项目。</value>
+  </data>
+  <data name="StoreCheckIn_DuplicateEquipmentName" xml:space="preserve">
+    <value>搜获拥有相同名称、上层的设备。请另选名称。</value>
+  </data>
+  <data name="WorkflowRepository_DuplicateObjectType" xml:space="preserve">
+    <value>此对象类型已出现在另一个工作流程中。请另选对象类型。</value>
+  </data>
+  <data name="WorkflowRepository_ExtensionInvalid" xml:space="preserve">
+    <value>上传文件类型不符合。文件类型应为{0}。</value>
+  </data>
+  <data name="WorkflowRepository_UnableToValidateWorkflow" xml:space="preserve">
+    <value>由于目前的工作流程引擎并不是Windows Workflow Engine，系统无法检验工作流程。</value>
+  </data>
+  <data name="WorkflowRepositry_WorkflowValidationError" xml:space="preserve">
+    <value>由于以下验证出错，工作流程无法被上传：
+{0}</value>
+  </data>
+  <data name="User_AccountBanned" xml:space="preserve">
+    <value>您的用户户口已被吊销。</value>
+  </data>
+  <data name="User_PasswordMustContainAlphaNumericSpecialCharacters" xml:space="preserve">
+    <value>密码必须至少有一个字母、一个数字以及一个特殊符号（如：~、!、@、#等）。</value>
+  </data>
+  <data name="Dashboard_CannotConvertToDateTime" xml:space="preserve">
+    <value>位于‘{1}’的数据数值‘{0}’无法被转换成时间日期格式。</value>
+  </data>
+  <data name="Dashboard_CannotConvertToDouble" xml:space="preserve">
+    <value>位于‘{1}’的数据数值‘{0}’无法被转换成双精度式小数格式。</value>
+  </data>
+  <data name="DocumentTemplate_UnableToGenerate" xml:space="preserve">
+    <value>由于以下错误，文件无法生成：</value>
+  </data>
+  <data name="Role_FunctionAlreadyGranted" xml:space="preserve">
+    <value>一个或多个菜单已被授权。</value>
+  </data>
+  <data name="Function_RoleAlreadyGranted" xml:space="preserve">
+    <value>一个或多个身份已被授权。</value>
+  </data>
+  <data name="Point_DuplicateEquipmentTypeParameter" xml:space="preserve">
+    <value>拥有相同设备与参数的点已经存在。请另选设备或参数。</value>
+  </data>
+  <data name="Point_DuplicateLocationTypeParameter" xml:space="preserve">
+    <value>拥有相同区域与参数的点已经存在。请另选区域或参数。</value>
+  </data>
+  <data name="Point_DuplicateName" xml:space="preserve">
+    <value>拥有相同名称的点已经存在。请另选名称。</value>
+  </data>
+  <data name="BudgetPeriod_UnableToAddDuplicateAccount" xml:space="preserve">
+    <value>所选账目已经存在。请另选账目。</value>
+  </data>
+  <data name="BudgetPeriod_OpeningBalanceTotalNotEqualsToIndividualIntervals" xml:space="preserve">
+    <value>所输入的总余额不等于所有个别时段的余额和。</value>
+  </data>
+  <data name="BudgetAdjustment_InsufficientAmount" xml:space="preserve">
+    <value>以下账目的数额不足以进行预算调整：
+{0}</value>
+  </data>
+  <data name="RunningNumberGenerator_DuplicateObjectTypeName" xml:space="preserve">
+    <value>对象类型名称已经存在于另一个顺序号生成器中。请另选对象类型名称。</value>
+  </data>
+  <data name="RunningNumberGenerator_FormatStringInvalid" xml:space="preserve">
+    <value>字串格式失效。</value>
+  </data>
+  <data name="BudgetReallocation_CheckTotalAmountItemsFromEqualTotalAmountItemsTo" xml:space="preserve">
+    <value>经重新分配后，预算项目来源总额（{0:c}）一定要等于预算项目目标总额（{1:c}）。</value>
+  </data>
+  <data name="BudgetReallocation_InsufficientAmount" xml:space="preserve">
+    <value>以下账目的数额不足以进行预算调整：
+{0}</value>
+  </data>
+  <data name="PurchaseRequest_InsufficientBudget" xml:space="preserve">
+    <value>由于以下预算账目的可用数额不足，该购买请求无法被提交。</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>行式项目的总额不等于{0}的预算总额。</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount_EntirePR" xml:space="preserve">
+    <value>整个购买请求。</value>
+  </data>
+  <data name="PurchaseRequest_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>项目号码{0}。</value>
+  </data>
+  <data name="RequestForQuotation_DuplicateVendors" xml:space="preserve">
+    <value>由于已经存在于报价单中，以下供应商无法被添加：
+{0}</value>
+  </data>
+  <data name="PurchaseOrder_InsufficientBudget" xml:space="preserve">
+    <value>由于以下预算账目的可用数额不足，该采购单无法被提交。</value>
+  </data>
+  <data name="RequestForQuotation_InsufficientBudget" xml:space="preserve">
+    <value>由于以下预算账目的可用数额不足，该报价单无法被提交。</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>行式项目的总额不等于{0}的预算总额。</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount_EntirePO" xml:space="preserve">
+    <value>整个采购单。</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>项目号码{0}。</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount" xml:space="preserve">
+    <value>所授权的行式项目总额不等于{0}的预算总额。请确保您在提交前已授权该项目。</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount_EntireRFQ" xml:space="preserve">
+    <value>整个报价单。</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountNotEqualsBudgetAmount_LineItem" xml:space="preserve">
+    <value>项目号码{0}。</value>
+  </data>
+  <data name="PurchaseSettings_DuplicateLocation" xml:space="preserve">
+    <value>相同区域已经被选用于另一个购买设定中。请另选区域。</value>
+  </data>
+  <data name="RequestForQuotation_InsufficientQuotations" xml:space="preserve">
+    <value>报价单的报价数量不足。请输入至少{0}个报价。</value>
+  </data>
+  <data name="PurchaseOrder_ItemAmountLessThanBudgetAmount" xml:space="preserve">
+    <value>行式项目的总额低于{0}的预算总额。</value>
+  </data>
+  <data name="RequestForQuotation_ItemAmountLessThanBudgetAmount" xml:space="preserve">
+    <value>所授权的行式项目总额低于{0}的预算总额。请确保您在提交前已授权该项目。</value>
+  </data>
+  <data name="PurchaseSettings_NoLocationsSelected" xml:space="preserve">
+    <value>没有选定区域。请选择至少一个区域。</value>
+  </data>
+  <data name="PurchaseSettings_NoPurchaseTypesSelected" xml:space="preserve">
+    <value>没有选定购买类型。请选择至少一个购买类型。</value>
+  </data>
+  <data name="PurchaseOrder_NoRFQBeforePO" xml:space="preserve">
+    <value>无法提交此采购单。您必须先生成与此采购单同额的报价单。</value>
+  </data>
+  <data name="PurchaseRequest_LineItemsAlreadyGeneratedIntoRFQOrPOs" xml:space="preserve">
+    <value>以下行式项目已生成报价单或采购单：
+{0}</value>
+  </data>
+  <data name="ApplicationSettings_LoginLogoIcorrectFormat" xml:space="preserve">
+    <value>系统登录图标的类型错误。请只上传JPEG或PNG或GIF。</value>
+  </data>
+  <data name="ApplicationSettings_ResolutionIncorrect" xml:space="preserve">
+    <value>图标的大小必须为宽600像素以及高400像素。</value>
+  </data>
+  <data name="EAMservice_LogonFailure" xml:space="preserve">
+    <value>系统管理员登录失败。服务程序无法被启动或终止。</value>
+  </data>
+  <data name="EAMservice_ViewError" xml:space="preserve">
+    <value>由于以下错误而无法浏览服务程序：</value>
+  </data>
+  <data name="Report_InvalidTemplateFile" xml:space="preserve">
+    <value>请为模板选择有效文件。</value>
+  </data>
+  <data name="Report_TemplateNameEmpty" xml:space="preserve">
+    <value>请在继续前先选择模板。</value>
+  </data>
+  <data name="Report_EmptyFile" xml:space="preserve">
+    <value>请选择上传报告模板文件。</value>
+  </data>
+  <data name="Report_InvalidRdlTemplateFile" xml:space="preserve">
+    <value>文件格式错误。请上传rdl报告模板。</value>
+  </data>
+  <data name="Report_InvalidRptTemplateFile" xml:space="preserve">
+    <value>文件格式错误。请上传crystal报告模板。</value>
+  </data>
+  <data name="Report_TemplateNameDuplicate" xml:space="preserve">
+    <value>模板名字已经存在。请另选报告模板名字。</value>
+  </data>
+  <data name="SurveyPlanner_RespondentRequire" xml:space="preserve">
+    <value>请确保每一个问卷调查至少有一个调查对象。</value>
+  </data>
+  <data name="SurveyPlanner_UnableLoadForm" xml:space="preserve">
+    <value>无法读取问卷调查。请联络管理员以确保您的电邮资料是对的。</value>
+  </data>
+  <data name="Case_RelatedDocumentsNotClosedOrCancelled" xml:space="preserve">
+    <value>由于相关的工作、报价单、采购单未完成或取消，此个案无法被关闭。</value>
+  </data>
+  <data name="Case_CannotBeClosedOrCancelled" xml:space="preserve">
+    <value>由于此个案已关闭或取消，系统无法将之与工作、报价单、采购单进行连接。请另选个案。</value>
+  </data>
+  <data name="RequestForQuotation_RFQNotAwarded" xml:space="preserve">
+    <value>由于报价单{0}不在授权状态中，采购单无法被生成。</value>
+  </data>
+  <data name="RequestForQuotation_RFQNotAwardedToSingleVendor" xml:space="preserve">
+    <value>由于报价单{0}并不是授权予单一供应商，采购单无法被生成。</value>
+  </data>
+  <data name="General_CannotEditWorkBecauseNotAssignedToYou" xml:space="preserve">
+    <value>由于目前此项目并不是指派给您，您无法对其进行编辑。</value>
+  </data>
+  <data name="NotificationHierarchy_UsersRolesNotSpecified" xml:space="preserve">
+    <value>每一个通知层级必须指派给至少一个用户或身份。</value>
+  </data>
+  <data name="NotificationProcess_TimingsOutOfOrder" xml:space="preserve">
+    <value>通知时间并无按顺序排列。请确保通话时间随着层级一同增加。</value>
+  </data>
+  <data name="Lms_Location_UploadImageFailed" xml:space="preserve">
+    <value>无法运行图像文件。请选择图像大小上限为1MB的文件。</value>
+  </data>
+  <data name="LMS_Location_NoImage" xml:space="preserve">
+    <value>图像是必需的。请为该区域上传图像。</value>
+  </data>
+  <data name="RequestForQuotation_RFQBudgetDistributionModeMustBeLineItem" xml:space="preserve">
+    <value>由于所选报价单{0}的预算模式并非为行式项目分配法，系统无法生成采购单。</value>
+  </data>
+  <data name="RequestForQuotation_RFQHaveDifferentProperties" xml:space="preserve">
+    <value>由于资料不符，系统无法通过所选的报价单生成采购单。</value>
+  </data>
+  <data name="LMS_Point_SameLocation" xml:space="preserve">
+    <value>拥有相同区域的点已经存在。请另选区域。</value>
+  </data>
+  <data name="RequestForQuotation_NoLineItemsAwarded" xml:space="preserve">
+    <value>没有任何行式项目授权予任何供应商。请确保在提交报价单前至少有一个行式项目已授权予供应商。</value>
+  </data>
+  <data name="Equipment_EquipmentTypeNotSelected" xml:space="preserve">
+    <value>请先选择设备类型。</value>
+  </data>
+  <data name="Equipment_UnableToCreatePointsNoPoints" xml:space="preserve">
+    <value>由于所选设备类型没有点的设置，系统无法创建点。</value>
+  </data>
+  <data name="Location_LocationTypeNotSelected" xml:space="preserve">
+    <value>请先选择区域类型。</value>
+  </data>
+  <data name="Location_UnableToCreatePointsNoPoints" xml:space="preserve">
+    <value>由于所选区域类型没有点的设置，系统无法创建点。</value>
+  </data>
+  <data name="Dashboard_DuplicateIdentifier" xml:space="preserve">
+    <value>标识符以存在于另一个仪表图栏位中。请另选标识符。</value>
+  </data>
+  <data name="Report_DuplicateIdentifier" xml:space="preserve">
+    <value>标识符以存在于另一个报告栏位中。请另选标识符。</value>
+  </data>
+  <data name="Reading_DateOfReadingEmpty" xml:space="preserve">
+    <value>阅读日期为必填栏位。</value>
+  </data>
+  <data name="Reading_DateOfReadingNotValid" xml:space="preserve">
+    <value>阅读日期栏位错误。请确保其值为有效日期。</value>
+  </data>
+  <data name="Reading_EquipmentDoesNotExist" xml:space="preserve">
+    <value>设备路径不存在于系统中。</value>
+  </data>
+  <data name="Reading_LocationDoesNotExist" xml:space="preserve">
+    <value>区域路径不存在于系统中。</value>
+  </data>
+  <data name="Reading_LocationEquipmentEntered" xml:space="preserve">
+    <value>区域栏位和设备栏位已填入。请确保只填入单一栏位。</value>
+  </data>
+  <data name="Reading_PointDoesNotExist" xml:space="preserve">
+    <value>该点不存在于所选区域或设备中。</value>
+  </data>
+  <data name="Reading_ReadingAlreadyExists" xml:space="preserve">
+    <value>拥有相同区域或设备、 点、日期的阅读已经存在。</value>
+  </data>
+  <data name="Reading_ReadingEmpty" xml:space="preserve">
+    <value>阅读栏位必填。请输入所有阅读栏位。</value>
+  </data>
+  <data name="Reading_ReadingNotValid" xml:space="preserve">
+    <value>阅读栏位错误。请确保其值为有效小数。</value>
+  </data>
+  <data name="UnitConversion_ConversionFactorMoreThanFourDecimalPlaces" xml:space="preserve">
+    <value>由于换算系数（{0}）或其倒数（1/{0}）的小数超过四位数，此为失效值。</value>
+  </data>
+  <data name="Work_NoTechnicianAssigned" xml:space="preserve">
+    <value>此工作并没有指派技术人员。请指派至少一个技术人员。</value>
+  </data>
+  <data name="PurchaseInvoice_CannotCancelDueToExistingCreditDebitMemos" xml:space="preserve">
+    <value>由于有着相关贷项/借项凭单，此发票{0}无法被取消。</value>
+  </data>
+  <data name="PurchaseInvoice_CannotApplyBudgetsDueToUnknownAmount" xml:space="preserve">
+    <value>由于无法确定发票数额的基准货币，系统无法自动应用预算。</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientBudgetForCancellation" xml:space="preserve">
+    <value>由于以下预算项目的数额不足，贷项/借项凭单无法被取消：
+{0}</value>
+  </data>
+  <data name="PurchaseInvoice_TotalCreditAmountAndTaxMoreThanOriginalInvoice" xml:space="preserve">
+    <value>由于贷项/借项凭单的总额大于发票总额，系统无法提交贷项/借项凭单。</value>
+  </data>
+  <data name="ExcelUpload_NoExcelUploaded" xml:space="preserve">
+    <value>没有Excel文件被上传。请先上传Excel文件。</value>
+  </data>
+  <data name="ExcelUpload_UnableToUploadDueToErrors" xml:space="preserve">
+    <value>无法输入上传Excel文件。请更改并重试。</value>
+  </data>
+  <data name="ExcelUpload_UploadedDataCleared" xml:space="preserve">
+    <value>上传数据已被清除。</value>
+  </data>
+  <data name="ExcelUpload_UploadedSuccessfully" xml:space="preserve">
+    <value>数据已成功被输入数据库中。</value>
+  </data>
+  <data name="OPCAEEvent_DuplicateName" xml:space="preserve">
+    <value>相同名字的OPC非同步事件已经存在。请另选名字。</value>
+  </data>
+  <data name="Point_DuplicateOPCItemName" xml:space="preserve">
+    <value>OPC项目名字已经存在于相同OPC DA伺服器的另一个点中。请另选OPC项目名字。</value>
+  </data>
+  <data name="PurchaseInvoice_CreditDebitMeomoOnInvoiceNotSelected" xml:space="preserve">
+    <value>由于还未选择与贷项/借项凭单对比的发票，系统无法应用此发票预算。</value>
+  </data>
+  <data name="OPCAEEvent_DuplicateEventSource" xml:space="preserve">
+    <value>OPC非同步事件来源已经存在于相同OPC DA伺服器的另一个OPC非同步事件中。请另选OPC非同步事件来源。</value>
+  </data>
+  <data name="BudgetPeriod_TotalNegative" xml:space="preserve">
+    <value>总额不该为负数。请输入大于或等于0的有效值。</value>
+  </data>
+  <data name="Task_CannotPerformMassActionNoTasksSelected" xml:space="preserve">
+    <value>由于没有选择工单，系统无法执行所选操作。请在点击‘确认’键前选择至少一个工单。</value>
+  </data>
+  <data name="Reading_NothingChanged" xml:space="preserve">
+    <value>所选阅读数值不变。</value>
+  </data>
+  <data name="PurchaseOrder_StoreBinsLocked" xml:space="preserve">
+    <value>由于所选仓室‘{0}’被封锁以进行库存盘点，采购单无法被保存。</value>
+  </data>
+  <data name="Work_StoreBinsLocked" xml:space="preserve">
+    <value>由于以下仓室被封锁以进行库存盘点，工作无法被保存：
+{0}</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetAccountsNotActive" xml:space="preserve">
+    <value>由于以下预算账目于预算期内为非活跃状态，购买发票无法被提交：
+{0}</value>
+  </data>
+  <data name="PurchaseInvoice_InsufficientBudget" xml:space="preserve">
+    <value>由于以下预算账目的数额不足，购买发票无法被提交：
+{0}</value>
+  </data>
+  <data name="NotificationProcess_NoApplicablePrioritiesSet" xml:space="preserve">
+    <value>此通知程序需至少一个优先级别。</value>
+  </data>
+  <data name="ApprovalProcess_LimitsOutOfOrder" xml:space="preserve">
+    <value>批准上限并无按顺序排列。请确保批准上限随着层级一同增加。</value>
+  </data>
+  <data name="General_CannotPrintNewObject" xml:space="preserve">
+    <value>无法为新创建项目生成报告。请保存并重试。</value>
+  </data>
+  <data name="General_OdbcException" xml:space="preserve">
+    <value>系统繁忙，请重试。</value>
+  </data>
+  <data name="StockTake_NoItemsToAdjust" xml:space="preserve">
+    <value>没有任何项目需要调整。</value>
+  </data>
+  <data name="BudgetPeriod_BudgetPeriodOverlapsExistingBudgetPeriod" xml:space="preserve">
+    <value>此预算时期与另一个预选时期交错：
+{0}
+从（1:dd-MM-yyyy）至（2:dd-MM-yyyy）</value>
+  </data>
+  <data name="RequestForQuotation_BudgetAccountsNotActive" xml:space="preserve">
+    <value>由于以下预算账目于预算期内为非活跃状态，报价单无法被提交：
+{0}</value>
+  </data>
+  <data name="PurchaseOrder_BudgetAccountsNotActive" xml:space="preserve">
+    <value>由于以下预算账目于预算期内为非活跃状态，采购单无法被提交：
+{0}</value>
+  </data>
+  <data name="Transfer_FromStoreBinToStoreBinDoNotMatchTransfer" xml:space="preserve">
+    <value>所选仓室和来源与目标仓库不符。请解除所有项目并重试。</value>
+  </data>
+  <data name="Transfer_FromStoreToStoreChanged" xml:space="preserve">
+    <value>来源与目标仓库已变更以致无法添加所选项目。请重新搜索。</value>
+  </data>
+  <data name="StoreCheckIn_StoreChanged" xml:space="preserve">
+    <value>仓库已变更以致无法添加所选项目。请重新搜索。</value>
+  </data>
+  <data name="StoreCheckOut_StoreChanged" xml:space="preserve">
+    <value>仓库已变更以致无法添加所选项目。请重新搜索。</value>
+  </data>
+  <data name="StoreTransfer_StoreChanged" xml:space="preserve">
+    <value>仓库已变更以致无法添加所选项目。请重新搜索。</value>
+  </data>
+  <data name="StockTake_StoreBinsLocked" xml:space="preserve">
+    <value>由于仓室{0}已被封锁，您无法进行库存盘点。</value>
+  </data>
+  <data name="StoreCheckIn_StoreBinsLocked" xml:space="preserve">
+    <value>由于以下仓室已被封锁，系统无法签入所选项目：
+{0}</value>
+  </data>
+  <data name="StoreCheckOut_StoreBinsLocked" xml:space="preserve">
+    <value>由于以下仓室已被封锁，系统无法签出所选项目：</value>
+  </data>
+  <data name="StoreTransfer_StoreBinsLocked" xml:space="preserve">
+    <value>由于以下仓室已被封锁，系统无法转移所选项目：</value>
+  </data>
+  <data name="Position_DuplicateName" xml:space="preserve">
+    <value>职位名称已经存在。请另选职位名称。</value>
+  </data>
+  <data name="Reading_NonSelected" xml:space="preserve">
+    <value>请更新至少一个点。</value>
+  </data>
+  <data name="Reading_UpdateFailed" xml:space="preserve">
+    <value>由于‘{1}’，点（{0}）上传失败。</value>
+  </data>
+  <data name="Reading_ValueExceedMax" xml:space="preserve">
+    <value>阅读数值超过最大值。</value>
+  </data>
+  <data name="Reading_ValueFormatIncorrect" xml:space="preserve">
+    <value>阅读数值格式错误。</value>
+  </data>
+  <data name="Reading_EmptyFile" xml:space="preserve">
+    <value>此文件没有任何记录。</value>
+  </data>
+  <data name="Reading_InvalidFile" xml:space="preserve">
+    <value>上传文件不存在或格式错误。请只上传Excel文件。</value>
+  </data>
+  <data name="ApprovalProcess_Limits" xml:space="preserve">
+    <value>所输入的批准上限不在范围内。请输入大于0的批准上限。</value>
+  </data>
+  <data name="BudgetAdjustment_Added" xml:space="preserve">
+    <value>{0}个预算调整记录已被创建。</value>
+  </data>
+  <data name="BudgetAdjustment_NoAdjustment" xml:space="preserve">
+    <value>以下账目并无任何调整：
+{0}</value>
+  </data>
+  <data name="General_ItemNotExist" xml:space="preserve">
+    <value>{0}并不存在。</value>
+  </data>
+  <data name="Budget_ExcelNotMatch" xml:space="preserve">
+    <value>Excel文件并不符合预算项目。</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetPeriodsClosed" xml:space="preserve">
+    <value>由于以下的预算时期并非活跃或已关闭，购买发票将无法被生成：
+{0}</value>
+  </data>
+  <data name="PurchaseOrder_BudgetPeriodsClosed" xml:space="preserve">
+    <value>由于以下的预算时期并非活跃或已关闭，采购单将无法被生成：
+{0}</value>
+  </data>
+  <data name="RequestForQuotation_BudgetPeriodsClosed" xml:space="preserve">
+    <value>由于以下的预算时期并非活跃或已关闭，报价单将无法被生成：
+{0}</value>
+  </data>
+  <data name="PurchaseRequest_CannotBeCancelledItemsGeneratedToRFQOrPO" xml:space="preserve">
+    <value>由于至少有一个行式项目已生成报价单或采购单，此购买请求无法被取消。</value>
+  </data>
+  <data name="RequestForQuotation_CannotBeCancelledItemsGeneratedToRFQOrPO" xml:space="preserve">
+    <value>由于至少有一个行式项目已生成采购单，此报价单无法被取消。</value>
+  </data>
+  <data name="PurchaseOrder_CannotBeCancelledGoodsReceiptAndInvoiceGenerated" xml:space="preserve">
+    <value>由于至少有一个行式项目已生成货物收据或发票，此采购单无法被取消。</value>
+  </data>
+  <data name="PurchaseInvoice_BudgetAmountNotEqualsTotalAmount" xml:space="preserve">
+    <value>由于预算总额不等于发票总额，此发票无法被提交。</value>
+  </data>
+  <data name="Utility_UtilityValueNegative" xml:space="preserve">
+    <value>实用价值不能为负数。请输入大于0的实用价值。</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDateTime" xml:space="preserve">
+    <value>日期的最大值必须大于最小值。</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDecimal" xml:space="preserve">
+    <value>小数的最大值必须大于最小值。</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinDouble" xml:space="preserve">
+    <value>双精度式小数的最大值必须大于最小值。</value>
+  </data>
+  <data name="CustomizedObject_MaxLessMinInteger" xml:space="preserve">
+    <value>整数的最大值必须大于最小值。</value>
+  </data>
+  <data name="StoreRequest_BinLocked" xml:space="preserve">
+    <value>由于以下仓室已被封锁，系统无法签出或归还项目：
+{0}</value>
+  </data>
+  <data name="StoreRequest_InsufficientItems1" xml:space="preserve">
+    <value>以下仓库项目的数量不足以满足此请求：
+{0}</value>
+  </data>
+  <data name="StoreRequest_InvalidReturn" xml:space="preserve">
+    <value>由于归还数量大于签出数量，以下项目无法被归还：
+{0}</value>
+  </data>
+  <data name="StoreRequest_DuplicateItemName" xml:space="preserve">
+    <value>拥有相同目录和仓室的项目已经存在于此请求中。请另选目录或仓室。</value>
+  </data>
+  <data name="StoreRequest_ItemNotInStore" xml:space="preserve">
+    <value>以下项目并不存在于此仓库中：
+{0}</value>
+  </data>
+  <data name="RequestForQuotation_LineItemsAlreadyGeneratedIntoRFQOrPOs" xml:space="preserve">
+    <value>以下行式项目已被生成至采购单中：
+{0}</value>
+  </data>
+  <data name="RequestForQuotation_LineItemsNotAwardedToASingleVendor" xml:space="preserve">
+    <value>由于所选行式项目并不授权予同一个供应商，系统无法生成采购单。</value>
+  </data>
+  <data name="BudgetReallocate_TotalNegative" xml:space="preserve">
+    <value>总额不该为负数。请输入大于或等于0的总额。</value>
+  </data>
+  <data name="Task_ActionUnsuccessful" xml:space="preserve">
+    <value>以下工单无法成功完成{0}操作：
+{1}
+请确保工单处于合适的状态中。</value>
+  </data>
+  <data name="RequestForQuotation_QuantityRequired" xml:space="preserve">
+    <value>总数量要与下述地点的分配数量总和保持一致。</value>
+  </data>
+</root>

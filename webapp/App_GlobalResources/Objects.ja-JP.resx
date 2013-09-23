@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BUDGET_ALLOCATION" xml:space="preserve">
+    <value>Allocation</value>
+  </data>
+	<data name="BUDGET_CATEGORIES" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+	<data name="BUDGET_ITEM" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+	<data name="BUDGET_LOG" xml:space="preserve">
+    <value>Log</value>
+  </data>
+	<data name="CALENDAR" xml:space="preserve">
+    <value>カレンダー</value>
+  </data>
+	<data name="CATALOGUE" xml:space="preserve">
+    <value>カタログ</value>
+  </data>
+	<data name="CENTRE_ADMIN" xml:space="preserve">
+    <value>管理</value>
+  </data>
+	<data name="CENTRE_ANALYSIS" xml:space="preserve">
+    <value>分析</value>
+  </data>
+	<data name="CENTRE_ASSET" xml:space="preserve">
+    <value>資産</value>
+  </data>
+	<data name="CENTRE_BUDGET" xml:space="preserve">
+    <value>予算</value>
+  </data>
+	<data name="CENTRE_BUILDER" xml:space="preserve">
+    <value>レポート作成</value>
+  </data>
+	<data name="CENTRE_INVENTORY" xml:space="preserve">
+    <value>資材</value>
+  </data>
+	<data name="CENTRE_PROCUREMENT" xml:space="preserve">
+    <value>購買</value>
+  </data>
+	<data name="CENTRE_SERVICE" xml:space="preserve">
+    <value>サービス</value>
+  </data>
+	<data name="CENTRE_VENDOR" xml:space="preserve">
+    <value>売り手</value>
+  </data>
+	<data name="CENTRE_WORK" xml:space="preserve">
+    <value>作業</value>
+  </data>
+	<data name="CHECKLIST" xml:space="preserve">
+    <value>チェックリスト</value>
+  </data>
+	<data name="CHECKLISTRESPONSE" xml:space="preserve">
+    <value>チェックリスト応答</value>
+  </data>
+	<data name="CODE" xml:space="preserve">
+    <value>コード</value>
+  </data>
+	<data name="CODETYPE" xml:space="preserve">
+    <value>コード類型</value>
+  </data>
+	<data name="CONTRACT" xml:space="preserve">
+    <value>契約</value>
+  </data>
+	<data name="CONTRACT_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="CONTRACT_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Close Contract</value>
+  </data>
+	<data name="CONTRACT_INPROGRESS" xml:space="preserve">
+    <value>Contract In-Progress</value>
+  </data>
+	<data name="CONTRACT_INPROGRESS_ACTIONNAME" xml:space="preserve">
+    <value>Submit Contract and Begin</value>
+  </data>
+	<data name="CONTRACT_MODIFYDATE" xml:space="preserve">
+    <value>Date Modified</value>
+  </data>
+	<data name="CONTRACT_MODIFYDATE_ACTIONNAME" xml:space="preserve">
+    <value>Modify Contract Date</value>
+  </data>
+	<data name="CONTRACT_PENDINGRENEWAL" xml:space="preserve">
+    <value>Pending Renewal</value>
+  </data>
+	<data name="CONTRACT_PENDINGRENEWAL_ACTIONNAME" xml:space="preserve">
+    <value>Submit Contract for Renewal</value>
+  </data>
+	<data name="CRAFT" xml:space="preserve">
+    <value>技術</value>
+  </data>
+	<data name="CURRENCY" xml:space="preserve">
+    <value>通貨</value>
+  </data>
+	<data name="CURRENCYEXCHANGE" xml:space="preserve">
+    <value>為替率</value>
+  </data>
+	<data name="DASHBOARD" xml:space="preserve">
+    <value>ダッシュボード</value>
+  </data>
+	<data name="DATABASE" xml:space="preserve">
+    <value>データベース</value>
+  </data>
+	<data name="EQUIPMENT" xml:space="preserve">
+    <value>設備</value>
+  </data>
+	<data name="EQUIPMENTTYPE" xml:space="preserve">
+    <value>設備タイプ</value>
+  </data>
+	<data name="FIXEDRATE" xml:space="preserve">
+    <value>定価</value>
+  </data>
+	<data name="LOCATION" xml:space="preserve">
+    <value>ロケーション</value>
+  </data>
+	<data name="LOCATIONTYPE" xml:space="preserve">
+    <value>ロケーションタイプ</value>
+  </data>
+	<data name="MYWORK" xml:space="preserve">
+    <value>マイ作られた作業</value>
+  </data>
+	<data name="OBJECTRECORD" xml:space="preserve">
+    <value>カスタマイズオブジェクト</value>
+  </data>
+	<data name="OBJECTRECORD_TABVIEW" xml:space="preserve">
+    <value>フィールド</value>
+  </data>
+	<data name="PURCHASE" xml:space="preserve">
+    <value>購買</value>
+  </data>
+	<data name="PURCHASE_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="PURCHASE_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="PURCHASE_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Pending Approval</value>
+  </data>
+	<data name="PURCHASE_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Approval</value>
+  </data>
+	<data name="PURCHASE_PENDINGINVOICE" xml:space="preserve">
+    <value>Pending Invoice</value>
+  </data>
+	<data name="PURCHASE_PENDINGINVOICE_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Invoicing</value>
+  </data>
+	<data name="PURCHASE_PENDINGQUOTATION" xml:space="preserve">
+    <value>Pending Quotation</value>
+  </data>
+	<data name="PURCHASE_PENDINGQUOTATION_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Quotation</value>
+  </data>
+	<data name="PURCHASE_REJECTED" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+	<data name="PURCHASE_REJECTED_ACTIONNAME" xml:space="preserve">
+    <value>Reject Purchase</value>
+  </data>
+	<data name="PURCHASEORDER" xml:space="preserve">
+    <value>購入指示書</value>
+  </data>
+	<data name="PURCHASEORDER_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="PURCHASEORDER_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="PURCHASEORDER_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="PURCHASEORDER_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="PURCHASEORDER_PENDINGRECEIPT" xml:space="preserve">
+    <value>Pending Receipt</value>
+  </data>
+	<data name="PURCHASEORDER_PENDINGRECEIPT_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Receipt</value>
+  </data>
+	<data name="PURCHASEREQUEST" xml:space="preserve">
+    <value>購買要求書</value>
+  </data>
+	<data name="PURCHASEREQUEST_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="PURCHASEREQUEST_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="PURCHASEREQUEST_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="PURCHASEREQUEST_GENERATED" xml:space="preserve">
+    <value>RFQ/PO Generated</value>
+  </data>
+	<data name="PURCHASEREQUEST_GENERATED_ACTIONNAME" xml:space="preserve">
+    <value>-</value>
+  </data>
+	<data name="PURCHASEREQUEST_SAVED" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+	<data name="PURCHASEREQUEST_SAVED_ACTIONNAME" xml:space="preserve">
+    <value>Save without Submitting</value>
+  </data>
+	<data name="PURCHASEREQUEST_SUBMITTED" xml:space="preserve">
+    <value>Submitted</value>
+  </data>
+	<data name="PURCHASEREQUEST_SUBMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Submit to Purchase Manager</value>
+  </data>
+	<data name="REPORT" xml:space="preserve">
+    <value>レポート</value>
+  </data>
+	<data name="REQUESTFORQUOTATION" xml:space="preserve">
+    <value>見積り依頼</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_AWARDED" xml:space="preserve">
+    <value>Awarded</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_AWARDED_ACTIONNAME" xml:space="preserve">
+    <value>Award</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Pending Approval</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Approval</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGEVALUATION" xml:space="preserve">
+    <value>Pending Evaluation</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGEVALUATION_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Evaluation</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGQUOTATION" xml:space="preserve">
+    <value>Pending Quotation</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGQUOTATION_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Quotation</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGREEVALUATION" xml:space="preserve">
+    <value>Pending Re-Evaluation</value>
+  </data>
+	<data name="REQUESTFORQUOTATION_PENDINGREEVALUATION_ACTIONNAME" xml:space="preserve">
+    <value>Return for Re-Evaluation</value>
+  </data>
+	<data name="SCHEDULEDWORK" xml:space="preserve">
+    <value>作業スケジュール</value>
+  </data>
+	<data name="SCHEDULEDWORK_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="SCHEDULEDWORK_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Cancel Works</value>
+  </data>
+	<data name="SCHEDULEDWORK_WORKSCREATED" xml:space="preserve">
+    <value>Works Created</value>
+  </data>
+	<data name="SCHEDULEDWORK_WORKSCREATED_ACTIONNAME" xml:space="preserve">
+    <value>Submit and Create Works</value>
+  </data>
+	<data name="SERVICELEVEL" xml:space="preserve">
+    <value>サービスレベル</value>
+  </data>
+	<data name="SQL" xml:space="preserve">
+    <value>データベース</value>
+  </data>
+	<data name="START" xml:space="preserve">
+    <value></value>
+  </data>
+	<data name="STORE" xml:space="preserve">
+    <value>倉庫</value>
+  </data>
+	<data name="STOREADJUST" xml:space="preserve">
+    <value>在庫調整</value>
+  </data>
+	<data name="STOREADJUST_COMMITTED" xml:space="preserve">
+    <value>Committed</value>
+  </data>
+	<data name="STOREADJUST_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Commit to Store</value>
+  </data>
+	<data name="STOREADJUST_PENDINGCOMMIT" xml:space="preserve">
+    <value>Pending Commitment</value>
+  </data>
+	<data name="STOREADJUST_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Save and Commit Later</value>
+  </data>
+	<data name="STORECHECKIN" xml:space="preserve">
+    <value>入庫</value>
+  </data>
+	<data name="STORECHECKIN_COMMITTED" xml:space="preserve">
+    <value>Committed</value>
+  </data>
+	<data name="STORECHECKIN_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Commit to Store</value>
+  </data>
+	<data name="STORECHECKIN_PENDINGCOMMIT" xml:space="preserve">
+    <value>Pending Commitment</value>
+  </data>
+	<data name="STORECHECKIN_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Save and Commit Later</value>
+  </data>
+	<data name="STORECHECKOUT" xml:space="preserve">
+    <value>出庫</value>
+  </data>
+	<data name="STORECHECKOUT_COMMITTED" xml:space="preserve">
+    <value>Committed</value>
+  </data>
+	<data name="STORECHECKOUT_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Commit to Store</value>
+  </data>
+	<data name="STORECHECKOUT_PENDINGCOMMIT" xml:space="preserve">
+    <value>Pending Commitment</value>
+  </data>
+	<data name="STORECHECKOUT_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Save and Commit Later</value>
+  </data>
+	<data name="STORESTOCK" xml:space="preserve">
+    <value>Stock View</value>
+  </data>
+	<data name="STORETRANSFER" xml:space="preserve">
+    <value>転庫</value>
+  </data>
+	<data name="STORETRANSFER_COMMITTED" xml:space="preserve">
+    <value>Committed</value>
+  </data>
+	<data name="STORETRANSFER_COMMITTED_ACTIONNAME" xml:space="preserve">
+    <value>Commit to Store</value>
+  </data>
+	<data name="STORETRANSFER_PENDINGCOMMIT" xml:space="preserve">
+    <value>Pending Commitment</value>
+  </data>
+	<data name="STORETRANSFER_PENDINGCOMMIT_ACTIONNAME" xml:space="preserve">
+    <value>Save and Commit Later</value>
+  </data>
+	<data name="TAXCODE" xml:space="preserve">
+    <value>税コード</value>
+  </data>
+	<data name="UNITCONVERSION" xml:space="preserve">
+    <value>単位転換</value>
+  </data>
+	<data name="USER" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+	<data name="VENDOR" xml:space="preserve">
+    <value>売り手</value>
+  </data>
+	<data name="WORK" xml:space="preserve">
+    <value>作業</value>
+  </data>
+	<data name="WORK_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="WORK_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Close Work</value>
+  </data>
+	<data name="WORK_PENDINGAPPROVAL" xml:space="preserve">
+    <value>Pending Approval</value>
+  </data>
+	<data name="WORK_PENDINGAPPROVAL_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Approval</value>
+  </data>
+	<data name="WORK_PENDINGASSIGNMENT" xml:space="preserve">
+    <value>Pending Assignment</value>
+  </data>
+	<data name="WORK_PENDINGASSIGNMENT_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Assignment</value>
+  </data>
+	<data name="WORK_PENDINGCLOSURE" xml:space="preserve">
+    <value>Pending Closure</value>
+  </data>
+	<data name="WORK_PENDINGCLOSURE_ACTIONNAME" xml:space="preserve">
+    <value>Complete Work and Submit for Closure</value>
+  </data>
+	<data name="WORK_PENDINGCONTRACTOR" xml:space="preserve">
+    <value>Pending Contractor</value>
+  </data>
+	<data name="WORK_PENDINGCONTRACTOR_ACTIONNAME" xml:space="preserve">
+    <value>Wait for Contractor</value>
+  </data>
+	<data name="WORK_PENDINGEXECUTION" xml:space="preserve">
+    <value>Pending Execution</value>
+  </data>
+	<data name="WORK_PENDINGEXECUTION_ACTIONNAME" xml:space="preserve">
+    <value>Start Work</value>
+  </data>
+	<data name="WORK_PENDINGHELPDESK" xml:space="preserve">
+    <value>Pending Helpdesk Submission</value>
+  </data>
+	<data name="WORK_PENDINGHELPDESK_ACTIONNAME" xml:space="preserve">
+    <value>Submit to Helpdesk</value>
+  </data>
+	<data name="WORK_PENDINGMATERIAL" xml:space="preserve">
+    <value>Pending Material</value>
+  </data>
+	<data name="WORK_PENDINGMATERIAL_ACTIONNAME" xml:space="preserve">
+    <value>Wait for Material</value>
+  </data>
+	<data name="WORK_PENDINGOTHERS" xml:space="preserve">
+    <value>Pending Others</value>
+  </data>
+	<data name="WORK_PENDINGOTHERS_ACTIONNAME" xml:space="preserve">
+    <value>Wait (Other Reasons)</value>
+  </data>
+	<data name="WORK_PENDINGPLANNING" xml:space="preserve">
+    <value>Pending Planning</value>
+  </data>
+	<data name="WORK_PENDINGPLANNING_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Planning</value>
+  </data>
+	<data name="WORK_REJECTED" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+	<data name="WORK_REJECTED_ACTIONNAME" xml:space="preserve">
+    <value>Reject Work</value>
+  </data>
+	<data name="WORKREQUEST" xml:space="preserve">
+    <value>作業要求</value>
+  </data>
+	<data name="WORKREQUEST_CANCELLED" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+	<data name="WORKREQUEST_CANCELLED_ACTIONNAME" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+	<data name="WORKREQUEST_CLOSED" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+	<data name="WORKREQUEST_CLOSED_ACTIONNAME" xml:space="preserve">
+    <value>Close</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGEXECUTION" xml:space="preserve">
+    <value>Pending Execution</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGEXECUTION_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Execution</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGHELPDESK" xml:space="preserve">
+    <value>Pending Helpdesk</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGHELPDESK_ACTIONNAME" xml:space="preserve">
+    <value>Submit to Helpdesk</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGPLANNING" xml:space="preserve">
+    <value>Pending Planning</value>
+  </data>
+	<data name="WORKREQUEST_PENDINGPLANNING_ACTIONNAME" xml:space="preserve">
+    <value>Submit for Planning</value>
+  </data>
+</root>

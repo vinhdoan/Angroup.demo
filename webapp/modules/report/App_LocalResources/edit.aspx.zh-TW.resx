@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don\'t support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="CascadeControlIDResource1.Caption" xml:space="preserve">
+    <value>Cascading Dropdown</value>
+  </data>
+	<data name="CascadeControlIDResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the dropdown list control that is updated if this dropdown list changes.</value>
+  </data>
+	<data name="CategoryNameResource1.Caption" xml:space="preserve">
+    <value>類別名稱</value>
+  </data>
+	<data name="CategoryNameResource1.ToolTip" xml:space="preserve">
+    <value>The category name as displayed on the menu.</value>
+  </data>
+	<data name="ContextTreeResource1.Caption" xml:space="preserve">
+    <value>樹型目錄</value>
+  </data>
+	<data name="ContextTreeResource1.ToolTip" xml:space="preserve">
+    <value>The context tree that appears on the left frame for the report.</value>
+  </data>
+	<data name="ControlCaptionResource1.Caption" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="ControlCaptionResource1.ToolTip" xml:space="preserve">
+    <value>The caption that appears on screen beside the search field.</value>
+  </data>
+	<data name="ControlIdentifierResource1.Caption" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+	<data name="ControlIdentifierResource1.ToolTip" xml:space="preserve">
+    <value>The identifier that can be used in the SQL query to perform a filter.</value>
+  </data>
+	<data name="ControlSpanResource1.Caption" xml:space="preserve">
+    <value>Span</value>
+  </data>
+	<data name="ControlSpanResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the search field spans half the width of the form, or the full width.</value>
+  </data>
+	<data name="ControlTypeResource1.Caption" xml:space="preserve">
+    <value>Control Type</value>
+  </data>
+	<data name="ControlTypeResource1.ToolTip" xml:space="preserve">
+    <value>The type of the control that the user inputs.</value>
+  </data>
+	<data name="DataTextFieldResource1.Caption" xml:space="preserve">
+    <value>Data Text Field</value>
+  </data>
+	<data name="DataTextFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be used as a value in the dashboard query.</value>
+  </data>
+	<data name="DataTypeResource1.Caption" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+	<data name="DataTypeResource1.ToolTip" xml:space="preserve">
+    <value>The data type of the search field.</value>
+  </data>
+	<data name="DataValueFieldResource1.Caption" xml:space="preserve">
+    <value>Data Value Field</value>
+  </data>
+	<data name="DataValueFieldResource1.ToolTip" xml:space="preserve">
+    <value>The column of the result of the query that will be displayed to the user.</value>
+  </data>
+	<data name="DisplayOrderResource1.Caption" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="DisplayOrderResource1.ToolTip" xml:space="preserve">
+    <value>The order of display of the search field. Lower appears first.</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Caption" xml:space="preserve">
+    <value>Populate with Query?</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.Text" xml:space="preserve">
+    <value>Yes, populate this list with the results from a query.</value>
+  </data>
+	<data name="IsPopulatedByQueryResource1.ToolTip" xml:space="preserve">
+    <value>Indicates if the dropdown list should be populated with a query, or populated with a list of comma-separated values.</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>None</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource10.Text" xml:space="preserve">
+    <value>Rates</value>
+  </data>
+	<data name="ListItemResource10.Value" xml:space="preserve">
+    <value>9</value>
+  </data>
+	<data name="ListItemResource11.Text" xml:space="preserve">
+    <value>Half</value>
+  </data>
+	<data name="ListItemResource11.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource12.Text" xml:space="preserve">
+    <value>Full</value>
+  </data>
+	<data name="ListItemResource12.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource13.Text" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+	<data name="ListItemResource13.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource14.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+	<data name="ListItemResource14.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource15.Text" xml:space="preserve">
+    <value>DropDownList</value>
+  </data>
+	<data name="ListItemResource15.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource16.Text" xml:space="preserve">
+    <value>RadioButtonList</value>
+  </data>
+	<data name="ListItemResource16.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource17.Text" xml:space="preserve">
+    <value>String</value>
+  </data>
+	<data name="ListItemResource17.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource18.Text" xml:space="preserve">
+    <value>Integer</value>
+  </data>
+	<data name="ListItemResource18.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource19.Text" xml:space="preserve">
+    <value>Decimal</value>
+  </data>
+	<data name="ListItemResource19.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Checklist</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource20.Text" xml:space="preserve">
+    <value>Double</value>
+  </data>
+	<data name="ListItemResource20.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource21.Text" xml:space="preserve">
+    <value>DateTime</value>
+  </data>
+	<data name="ListItemResource21.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource22.Text" xml:space="preserve">
+    <value>Object Identifier</value>
+  </data>
+	<data name="ListItemResource22.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Code</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+    <value>CodeType</value>
+  </data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+    <value>5</value>
+  </data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+    <value>EquipmentType</value>
+  </data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+    <value>4</value>
+  </data>
+	<data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+	<data name="ListItemResource7.Value" xml:space="preserve">
+    <value>6</value>
+  </data>
+	<data name="ListItemResource8.Text" xml:space="preserve">
+    <value>LocationType</value>
+  </data>
+	<data name="ListItemResource8.Value" xml:space="preserve">
+    <value>7</value>
+  </data>
+	<data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Location and Equipment</value>
+  </data>
+	<data name="ListItemResource9.Value" xml:space="preserve">
+    <value>8</value>
+  </data>
+	<data name="ListQueryResource2.Caption" xml:space="preserve">
+    <value>List SQL</value>
+  </data>
+	<data name="ListQueryResource2.ToolTip" xml:space="preserve">
+    <value>The query in SQL that is used to populate the dropdown list.</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>Anacle.EAM</value>
+  </data>
+	<data name="ReportFieldsResource1.Caption" xml:space="preserve">
+    <value>Filter Fields</value>
+  </data>
+	<data name="ReportQueryResource1.Caption" xml:space="preserve">
+    <value>Report SQL</value>
+  </data>
+	<data name="ReportQueryResource1.ToolTip" xml:space="preserve">
+    <value>The query in SQL that is used to populate the report. Note: You can preview your report in the \'Preview\' tab.</value>
+  </data>
+	<data name="ReportRolesResource1.Caption" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+	<data name="ReportRolesResource1.ToolTip" xml:space="preserve">
+    <value>Indicates the roles that have access to view this report.</value>
+  </data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+    <value>List Query</value>
+  </data>
+	<data name="tabPreviewResource1.Caption" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+	<data name="TextListResource1.Caption" xml:space="preserve">
+    <value>Text List</value>
+  </data>
+	<data name="TextListResource1.ToolTip" xml:space="preserve">
+    <value>A comma separated list of text that will appear to the user for selection</value>
+  </data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>Display Order</value>
+  </data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>Control Caption</value>
+  </data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>Control Identifier</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>Are you sure you wish to delete the selected items?</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>Add</value>
+  </data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+    <value>Details</value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>Memo</value>
+  </data>
+	<data name="UITabView4Resource1.Caption" xml:space="preserve">
+    <value>Data</value>
+  </data>
+	<data name="UITabView5Resource1.Caption" xml:space="preserve">
+    <value>Access</value>
+  </data>
+	<data name="ValueListResource1.Caption" xml:space="preserve">
+    <value>Value List</value>
+  </data>
+	<data name="ValueListResource1.ToolTip" xml:space="preserve">
+    <value>The comma separated list of values that corresponds to the text list.</value>
+  </data>
+</root>

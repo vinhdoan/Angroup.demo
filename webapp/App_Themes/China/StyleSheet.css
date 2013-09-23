@@ -1,0 +1,936 @@
+﻿body 
+{
+    background-color: white;
+    font-family: Tahoma;
+    font-size: 8pt;
+    margin: 0px 0px 0px 0px;
+}
+
+a, a:visited
+{
+    color: #1F497D;
+}
+
+table, select, input, textarea
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+}
+
+.field-error, .field-error input, .field-error select, .field-error textarea
+{
+	background-color:#ffcccc;
+	color: #cc0000;
+}
+
+.field-required, .field-required input, .field-required select, .field-required textarea
+{
+	color:#0000cc;
+}
+
+br
+{
+	clear: both;
+}
+
+
+.separator
+{
+    border-bottom: solid 1px #dddddd;
+    font-weight: bold;
+    font-size: 8pt;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 12px 0px;
+    clear: both;
+}
+
+.treeview  
+{
+	background-color: #e6e6fa;
+}
+
+.treenode
+{
+	color: Gray;
+}
+
+.treenode a
+{
+	color: blue;
+}
+
+.webpart-zonecontainer
+{
+	padding: 0px 5px 0px 5px;
+	border-left: dashed 1px gray;
+}
+
+.webpart-zonecontainerleft
+{
+	padding: 0px 5px 0px 5px;
+}
+
+.contextmenu
+{
+	width: 200px;
+	border: solid 1px #777777;
+	background-color: #eeeeee;
+	padding: 5px 5px 3px 5px;
+}
+
+.contextmenu div
+{
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+}
+
+.contextmenu div a
+{
+	margin-bottom: 2px;
+	padding-bottom: 2px;
+	background-color: #eeeeee;
+	display: inline;
+	color: #39639d;
+	text-decoration: underline;
+}
+
+.searchabledropdown a
+{
+    padding: 0px 2px 0px 2px;
+    color: Black;
+    background-color: White;
+    cursor: hand;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.sddnormal
+{
+	border: solid 1px silver;
+	background-color: white;
+	padding: 2px 2px 2px 2px;
+	background-image: url('../../images/sdd0.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.sddhover
+{
+	border: solid 1px black;
+	background-color: white;
+	padding: 2px 2px 2px 2px;
+	background-image: url('../../images/sdd1.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.sddsearch
+{
+	border: solid 1px black;
+	background-color: white;
+	padding: 2px 2px 2px 2px;
+	background-image: url('../../images/sdds.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.menu
+{
+    background-image: url(../../images/top-corporate.jpg);
+    color: white;
+}
+
+.menu-top td, .menu-top a, .menu-top a:visited, .menu-top a:visited
+{
+    height:22px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-staticitem a div
+{
+    font-weight: bold;
+	cursor: hand;
+	color: Navy;
+    padding: 8px 8px 8px 8px;
+}
+
+.menu-staticitem a:hover div
+{
+    font-weight: bold;
+    background-color: #4f81bd;
+    color:White;
+	cursor: hand;
+    padding: 8px 8px 8px 8px;
+}
+
+.menu-dropdown
+{
+    background-color: white;
+    border: solid 1px #1F497D;
+	z-index: 1000000;
+}
+
+.menu-dynamicitem a div
+{
+    background-color: white;
+	color: #1F497D;
+	cursor: hand;
+    padding: 4px 16px 4px 16px;
+}
+
+.menu-dynamicitem a:hover div
+{
+    background-color: #1F497D;
+    color: white;
+	cursor: hand;
+    padding: 4px 16px 4px 16px;
+}
+
+.hint 
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.hint table
+{
+    border: solid 1px #cccccc;
+    background-color: #eeece1;
+}
+
+.hint table table
+{
+    border: solid 1px #cccccc;
+    background-color: white;
+}
+
+.grid-caption div
+{
+    border-bottom: solid 1px #dddddd;
+    font-weight: bold;
+    font-size: 8pt;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 0px 0px;
+    clear: both;
+}
+
+.grid-caption-error div, .grid-caption-error img
+{
+    border-bottom: solid 1px #dddddd;
+    font-weight: bold;
+    font-size: 8pt;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 0px 0px;
+    clear: both;
+}
+
+
+.grid-caption-error
+{
+	background-color:#ffcccc;
+	color: #cc0000;
+}
+
+.grid-command
+{
+    border-bottom: solid 1px #dddddd;
+    padding: 6px 8px 6px 8px;
+    background-color: #eeece1;
+}
+
+.grid-header
+{
+    border: none;
+    background-color: #4f81bd;
+    background-image: url(../../images/gh-corporate.gif);
+    background-repeat: repeat-x;
+    color: white;
+}
+
+.grid-header a, .grid-header a:hover, .grid-header a:visited
+{
+	color: white;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.grid-header th, .grid-header td
+{
+    border: none;
+    height: 16px;
+    padding: 3px 3px 3px 3px;
+    font-weight: normal;
+}
+
+.grid-dayheader
+{
+    border: none;
+    padding: 3px 3px 3px 3px;
+    background-color: #eeece1;
+}
+
+.grid-day
+{
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+}
+
+.grid-day-big
+{
+    padding: 3px 3px 3px 3px;
+}
+
+.grid-footer
+{
+    border: none;
+    background-color: #eeece1;
+}
+
+.grid-footer td
+{
+    font-weight: bold;
+    border: none;
+    height: 16px;
+    padding: 3px 3px 3px 3px;
+    border-bottom: solid 1px #dddddd;
+}
+
+.grid-row
+{
+	border: none;
+}
+
+.grid-row td
+{
+	border-bottom: solid 1px #dddddd;
+    padding-left: 3px;	
+    padding-right: 3px;
+	height: 20px;
+}
+
+.grid-row td table 
+{
+	border: none;
+	padding: 0 0 0 0;
+	height: auto;
+}
+
+.grid-row td table td
+{
+	padding: 0 0 0 0;
+	border: none;
+	height: auto;
+}
+
+.grid-pager 
+{
+    background-color: #eeece1;
+}
+
+.grid-pager td
+{
+    padding: 0px 0px 0px 4px;
+    height: 20px;
+    border: none;
+    border-bottom: solid 1px #dddddd;
+}
+
+.grid-pager td div,
+.grid-pager td div table,
+.grid-pager td div table td
+{
+    border: none;
+}
+
+.div-form
+{
+    border: none;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+    min-width: 800px;
+}
+
+.div-main
+{
+    padding: 0 0 0 0;
+}
+
+.div-tree
+{
+    background-color: white;
+}
+
+
+.task-title
+{
+    font-weight: bold;
+    color: white;
+    background-color: #3377ff;
+    height: 20px;
+}
+
+.task-header
+{
+    font-weight: bold;
+    color: White;
+    background-color: #66ccff;
+    height: 20px;
+}
+
+.task-urgentitem
+{
+    color:red;
+}
+
+.task-item
+{
+    height: 20px;
+}
+
+.task-altitem
+{
+    height: 20px;
+    background-color:#eeece1;
+}
+
+.tooltip-header
+{
+    padding: 2px 2px 2px 2px;
+    background-color: #aaddff;
+    border: solid 1px #aaddff;
+}
+
+.tooltip-body
+{
+    padding: 2px 2px 2px 2px;
+    background-color: white;
+    border: solid 1px #aaddff;
+}
+
+
+.object-name, .search-name
+{
+    padding-left: 8px;
+    font-family:  Trebuchet MS;
+    font-size: 13pt;
+    color: white;
+    background-color: #4f81bd;
+    background-image: url(../../images/top2-corporate.jpg);
+    border: 0 0 0 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.object-buttons, .search-buttons, .subobject-buttons, .home-buttons
+{
+    padding: 6px 8px 6px 8px;
+    background-color: #5cd2f2;
+}
+
+.object-buttons a, .search-buttons a, .subobject-buttons a, .home-buttons a
+{
+    color: #1F497D;
+}
+
+.object-message, .search-message
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px black;
+    background-color: #ffffaa;
+}
+
+.subobject-panel
+{
+    border: solid 1px #77eeff;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+}
+
+.dashboard-container
+{
+	font-family:Tahoma;
+	width:300px;
+	float:left;
+	border: solid 1px #9C9E73 ;
+}
+
+.dashboard-header
+{
+	font-family:Tahoma;
+	width:300px;
+	height:20px;
+	background-color:#C3C49C;
+	font-weight:bold;
+	color:black;
+	vertical-align: middle;
+}
+
+.dashboard-iframe
+{
+	font-family:Tahoma;
+	width:300px;
+	height:320px
+}
+
+.gantt-
+.gantt-PendingAssignment,
+.gantt-PendingHelpdesk, 
+.gantt-PendingPlanning
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px blue;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #bbbbff;
+}
+
+.gantt-PendingApproval
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px blue;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #bbbbff;
+}
+
+.gantt-PendingAssignment
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px blue;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #bbbbff;
+}
+
+.gantt-PendingExecution
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px green;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #bbffbb;
+}
+
+
+.gantt-Rejected, 
+.gantt-Cancelled,
+.gantt-Close
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px gray;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #eeeeee;
+}
+
+.gantt-PendingClosure
+{
+	height: 16px;
+	width: 95%;
+	border: solid 1px cyan;
+	font-family:Tahoma;
+	font-size:8pt;
+	background-color: #bbffff;
+}
+
+.gantt-background
+{
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	font-family:Tahoma;
+	font-size:8pt;
+	padding: 1px 1px 1px 1px;
+	height: 0px;
+}
+
+.gantt-rangeheader
+{
+	background-color: #dddddd;
+	border: solid 1px #cccccc;
+	font-family:Tahoma;
+	font-size:7pt;
+	font-weight: normal;
+	padding: 0px 1px 0px 1px;
+	height:0px;
+}
+
+.gantt-today
+{
+	background-color: #ddddff;
+	border: solid 1px #cccccc;
+	font-family:Tahoma;
+	font-size:8pt;
+	padding: 1px 1px 1px 1px;
+	height:0px;
+}
+
+.gantt-weekend
+{
+	background-color: #dddddd;
+	border: solid 1px #cccccc;
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight: normal;
+	padding: 1px 1px 1px 1px;
+	height:0px;
+}
+
+.gantt-title
+{
+	background-color: #dddddd;
+	border: solid 1px #cccccc;
+	font-family:Tahoma;
+	font-size:8pt;
+	font-weight: normal;
+	height:0px;
+}
+
+.gantt-tooltip-body
+{
+	width: 250px;
+	background-color: #ffffff;
+	border: solid 1px #cccccc;
+	padding: 2px 4px 2px 4px;
+}
+
+.gantt-tooltip-header
+{
+	width: 260px;
+	background-color: #ddddff;
+	border: solid 1px #bbbbff;
+	padding: 2px 4px 2px 4px;
+}
+
+.gantt-complete
+{
+	height: 4px;
+	background-color: black;
+	border: solid 1px black;
+}
+
+/*----------------------------------------------
+ CSS for charts
+----------------------------------------------*/
+
+.chartsubmitbutton
+{
+	 font-family:Verdana, Sans-Serif;
+	 font-size:8pt;
+	 background-color:#ddddff;
+	 border: solid 1px #608161;
+}
+.chartdroparea
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;
+    border-style:groove;
+    border-width:thin;
+    padding:2px;
+}
+
+.chartsetuparea
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;    
+	border-bottom-width: 2px;
+    border-bottom-style: ridge;  
+	
+    padding:2px;
+}
+
+
+
+.advancedreportagggroupheader
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:#0000A3;   
+    background-color: #ddffdd;
+    padding:2px;
+}
+
+.advancedreportgroup
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;
+    background-color: #ffffdd;
+    padding:2px;
+}
+
+.advancedreportitem
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;
+    background-color: white;
+    padding:2px;
+}
+
+.reportgridpager
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;    
+    padding: 4px;
+}
+
+.advancedreportaltitem
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;
+    background-color: #eeeeee;
+    padding:2px;
+}
+
+.reporttitle
+{
+    background : transparent url(../../images/reportTop.gif) top left;         
+    font-weight: bold;
+    font-size: 8pt;
+    font-family: Tahoma;    
+    color: white;
+    height: 25px;   
+}
+
+
+.advancedreportungroupcolheader
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:black;
+    background-color: #ddddff;
+}
+
+.advancedreportgroupcolheader
+{
+    font-family: Tahoma;
+    font-size:8pt;
+    color:blue;
+    background-color: #ddddff;
+}
+
+
+.advancedreportdropnormal
+{   	
+    background-color: #ddddff;    
+}
+
+.advancedreportdropover_agg
+{
+	
+    border: solid 1px #0000ff;
+}
+
+.advancedreportdropover_ungroup
+{
+    border: solid 1px black;
+    background-color: Black;    
+    
+}
+
+
+.advancedreportdropover_ungrouppivot
+{
+    border: solid 1px black;
+	background-color: Black;  	
+}
+
+
+.advancedreportdropover_groupY
+{
+    border: solid 2px #7777ff;
+    background-color: #7777ff;             
+}
+
+
+.advancedreportdropover_groupx
+{
+    border: solid 1px #7777ff;
+    background-color: #7777ff;    
+}
+
+.reportheaderbuttonnormal
+{
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;   
+    border: solid 1px #4A6F9B;
+    cursor:pointer;
+    height:21px;
+    height:21px;
+}
+
+
+.reportheaderbuttonmouseover
+{
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;
+    background-color: #6085B0;
+    border: solid 1px #6085B0;
+    cursor:pointer;
+    height:21px;
+    width:21px;
+}
+
+.advancedreportbuttonnormal
+{
+	border: solid 1px #AED3F0;
+    cursor:pointer;
+    height:21px;
+    width:21px;
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;
+    background-color: #AED3F0;
+    
+}
+
+
+.advancedreportbuttonmouseover
+{
+    background-color: #8BBEE7;
+    border: solid 1px #3F668F;
+    cursor:pointer;
+    height:21px;
+    width:21px;
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;
+
+}
+
+.reportbarleft
+{
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;    
+    border-right-style: solid;
+    border-right-color: #103B5D;
+    border-right-width: 1px;
+    border-top-style: solid;
+    border-top-color: #103B5D;
+    border-top-width: 1px;    
+    background-color: #AED3F0;
+           
+}
+.reportbackground
+{   
+    
+    border-top-width: 2px;
+    border-top-style: groove;
+    border-top-color: #5F3FD6;
+    border-left-style:groove;
+    border-left-width: 2px;
+    border-left-color: #5F3FD6;
+    border-right-style:inset;
+    border-right-width: 2px;
+    border-right-color: #6887BB;
+    border-bottom-style:inset;
+    border-bottom-width: 2px;
+    border-bottom-color: #6887BB;
+   
+           
+}
+
+.reportbarright
+{
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma;    
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #103B5D;
+    background-color :  #AED3F0;    
+     
+    
+}
+.leftpanelrow
+{
+	border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #103B5D;
+}
+
+.parallelviewdivide
+{
+	border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #6887BB;
+}
+
+.tabstrip {
+	width:100%;
+	background:#cccccc;
+	padding: 8px 0px 0px 0px;
+	line-height:normal;
+}
+
+.tabstrip ul 
+{
+	margin:0;
+	padding:3px 0 0 3px;
+	list-style:none;
+}
+.tabstrip li {
+	display:inline;
+	margin:0;
+	padding:0;
+}
+.tabstrip a {
+	float:left;
+	background:#eeeeee url("../../images/tab-gray.gif") no-repeat left top;
+	padding:0 0 0 9px;
+	text-decoration:none;
+	color:#000;
+}
+.tabstrip a span {
+	float:left;
+	display:block;
+	background:#eeeeee url("../../images/tab-gray.gif") no-repeat right top;
+	padding: 4px 15px 3px 6px;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.tabstrip a span {float:none;}
+/* End IE5-Mac hack */
+.tabstrip .selected a span {
+	padding-bottom:4px;
+}
+.tabstrip a:hover, .tabstrip a:hover span {
+	background-color:#E4F1BC;
+	color:#000;
+}
+.tabstrip .selected a span, .tabstrip .selected a {
+	background-color: white;
+}
+
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+	z-index: 99999;
+}
+
+.modalPopup {
+	background-color:white;
+	border-width:1px;
+	border-style:solid;
+	border-color:Gray;
+	padding: 8px 8px 8px 8px;
+	width:550px;
+	z-index: 100000;
+}

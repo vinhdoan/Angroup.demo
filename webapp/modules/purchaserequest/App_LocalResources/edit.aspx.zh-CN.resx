@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BillToAddressResource1.Caption" xml:space="preserve">
+    <value>地址</value>
+  </data>
+	<data name="BillToAttentionResource1.Caption" xml:space="preserve">
+    <value>收件人</value>
+  </data>
+	<data name="buttonGeneratePOResource1.ConfirmText" xml:space="preserve">
+    <value>确定从所选项目新建采购单吗？</value>
+  </data>
+	<data name="buttonGeneratePOResource1.Text" xml:space="preserve">
+    <value>从所选项目新建采购单</value>
+  </data>
+	<data name="buttonGenerateRFQResource1.ConfirmText" xml:space="preserve">
+    <value>确定从所选项目新建报价征求吗？</value>
+  </data>
+	<data name="buttonGenerateRFQResource1.Text" xml:space="preserve">
+    <value>从所选项目新建报价征求</value>
+  </data>
+	<data name="CatalogueIDResource1.Caption" xml:space="preserve">
+    <value>存货目录</value>
+  </data>
+	<data name="DateRequiredResource1.Caption" xml:space="preserve">
+    <value>需要日期</value>
+  </data>
+	<data name="DescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="ItemDescriptionResource1.Caption" xml:space="preserve">
+    <value>说明</value>
+  </data>
+	<data name="ItemNumberResource1.Caption" xml:space="preserve">
+    <value>项目编号</value>
+  </data>
+	<data name="ItemTypeResource1.Caption" xml:space="preserve">
+    <value>项目类别</value>
+  </data>
+	<data name="Label1Resource1.Text" xml:space="preserve">
+    <value>运至：</value>
+  </data>
+	<data name="Label2Resource1.Text" xml:space="preserve">
+    <value>收票人：</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>物料</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>服务</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+	<data name="PurchaseAdministratorIDResource1.Caption" xml:space="preserve">
+    <value>采购经理</value>
+  </data>
+	<data name="PurchaseRequestItemsResource1.Caption" xml:space="preserve">
+    <value>项目</value>
+  </data>
+	<data name="PurchaseRequestorIDResource1.Caption" xml:space="preserve">
+    <value>采购申请人</value>
+  </data>
+	<data name="ShipToAddressResource1.Caption" xml:space="preserve">
+    <value>地址</value>
+  </data>
+	<data name="ShipToAttentionResource1.Caption" xml:space="preserve">
+    <value>收件人</value>
+  </data>
+	<data name="StoreIDResource1.Caption" xml:space="preserve">
+    <value>仓库</value>
+  </data>
+	<data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>详情</value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.Caption" xml:space="preserve">
+    <value>数量</value>
+  </data>
+	<data name="UIGridViewColumnResource2.ConfirmText" xml:space="preserve">
+    <value>确定删除记录吗?</value>
+  </data>
+	<data name="UIGridViewColumnResource3.HeaderText" xml:space="preserve">
+    <value>编号</value>
+  </data>
+	<data name="UIGridViewColumnResource4.HeaderText" xml:space="preserve">
+    <value>类型</value>
+  </data>
+	<data name="UIGridViewColumnResource5.HeaderText" xml:space="preserve">
+    <value>详情</value>
+  </data>
+	<data name="UIGridViewColumnResource6.HeaderText" xml:space="preserve">
+    <value>单位</value>
+  </data>
+	<data name="UIGridViewColumnResource7.HeaderText" xml:space="preserve">
+    <value>请输入数量</value>
+  </data>
+	<data name="UIGridViewColumnResource8.HeaderText" xml:space="preserve">
+    <value>复制</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="UIGridViewCommandResource1.ConfirmText" xml:space="preserve">
+    <value>您确认要删除所选项?</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>新增</value>
+  </data>
+	<data name="uitabview2Resource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+	<data name="uitabview3Resource1.Caption" xml:space="preserve">
+    <value>备注</value>
+  </data>
+	<data name="uitabview4Resource1.Caption" xml:space="preserve">
+    <value>项目</value>
+  </data>
+	<data name="UnitOfMeasureIDResource1.Caption" xml:space="preserve">
+    <value>单位</value>
+  </data>
+	<data name="UnitOfMeasureResource1.Caption" xml:space="preserve">
+    <value>单位</value>
+  </data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+		<value>采购申请</value>
+	</data>
+	<data name="objectBaseResource1.ObjectNumberCaption" xml:space="preserve">
+		<value>采购申请单号</value>
+	</data>
+	<data name="FixedRateIDResource1.Caption" xml:space="preserve">
+		<value>固定单价</value>
+	</data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+		<value>其他</value>
+	</data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+		<value>以数量接收</value>
+	</data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+		<value>以金额接收</value>
+	</data>
+	<data name="radioReceiptModeResource1.Caption" xml:space="preserve">
+		<value>接收方式</value>
+	</data>
+	<data name="treeEquipmentResource1.Caption" xml:space="preserve">
+		<value>设备</value>
+	</data>
+	<data name="treeLocationResource1.Caption" xml:space="preserve">
+		<value>区域</value>
+	</data>
+	<data name="txtBackgroundResource1.Caption" xml:space="preserve">
+		<value>背景</value>
+	</data>
+	<data name="txtScopeResource1.Caption" xml:space="preserve">
+		<value>范围</value>
+	</data>
+	<data name="uitabview1Resource1.Caption" xml:space="preserve">
+		<value>状态历史</value>
+	</data>
+	<data name="UnitOfMeasure2Resource1.Caption" xml:space="preserve">
+		<value>单位</value>
+	</data>
+	<data name="buttonAddFixedRateItemsResource1.Text" xml:space="preserve">
+		<value>添加多个服务项目</value>
+	</data>
+	<data name="buttonAddMaterialItemsResource1.Text" xml:space="preserve">
+		<value>添加多个物料项目</value>
+	</data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+		<value>2</value>
+	</data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+		<value>0</value>
+	</data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+</root>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="AccessControlResource1.Caption" xml:space="preserve">
+    <value>权限控制</value>
+  </data>
+	<data name="AccessControlResource1.ToolTip" xml:space="preserve">
+    <value>设置是否允许其他用户修改格式，或只是格式创建人</value>
+  </data>
+	<data name="buttonCancelResource1.Text" xml:space="preserve">
+    <value>&lt;img align="absmiddle" src="../../images/Window-Delete-big.gif" alt="Close" style="border:none; " /&gt;关闭呈现格式界面</value>
+  </data>
+	<data name="buttOnValidateAndSaveNewResource1.Text" xml:space="preserve">
+    <value>另外保存新格式？</value>
+  </data>
+	<data name="buttOnValidateAndSaveResource1.ConfirmText" xml:space="preserve">
+    <value>保存更新?</value>
+  </data>
+	<data name="buttOnValidateAndSaveResource1.Text" xml:space="preserve">
+    <value>保存更新</value>
+  </data>
+	<data name="buttOnValidateAndSaveTemplateResource1.Text" xml:space="preserve">
+    <value>点击此钮以保存呈现格式</value>
+  </data>
+	<data name="ListItemResource1.Text" xml:space="preserve">
+    <value>所有人可编辑</value>
+  </data>
+	<data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+	<data name="ListItemResource2.Text" xml:space="preserve">
+    <value>只有我可编辑，其他看得见</value>
+  </data>
+	<data name="ListItemResource2.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+	<data name="ListItemResource3.Text" xml:space="preserve">
+    <value>只有我可编辑和看见</value>
+  </data>
+	<data name="ListItemResource3.Value" xml:space="preserve">
+    <value>3</value>
+  </data>
+	<data name="PageResource1.Title" xml:space="preserve">
+    <value>安科.EAM</value>
+  </data>
+	<data name="ReportObjectResource1.ChartTypeNames" xml:space="preserve">
+    <value>饼图 (多数);饼图 (嵌套);圈饼图;仪表盘;柱形图
+;柱形图 (堆积); 柱形图 (百分比堆积);条形图; 条形图(堆积);条形图 (百分比堆积);雷达图 (蜘蛛形);雷达图 (堆积);雷达图 (百分比堆积);极坐标图;极坐标图 (堆积);极坐标图 (百分比堆积)</value>
+  </data>
+	<data name="ReportObjectResource1.CountText" xml:space="preserve">
+    <value>数</value>
+  </data>
+	<data name="ReportObjectResource1.ImagePath" xml:space="preserve">
+    <value>../../images/</value>
+  </data>
+	<data name="ReportObjectResource1.MonthFormatString" xml:space="preserve">
+    <value>{0:MMM-yyyy}</value>
+  </data>
+	<data name="ReportObjectResource1.MonthString" xml:space="preserve">
+    <value>月份</value>
+  </data>
+	<data name="ReportObjectResource1.PageCaption" xml:space="preserve">
+    <value>第{0}页/共{0}页</value>
+  </data>
+	<assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="ReportObjectResource1.PrintRowHeight" type="System.Resources.ResXNullRef, System.Windows.Forms">
+		<value />
+	</data>
+	<data name="ReportObjectResource1.QuarterFormatString" xml:space="preserve">
+    <value>{0:QMM-yyyy}</value>
+  </data>
+	<data name="ReportObjectResource1.QuarterString" xml:space="preserve">
+    <value>季度</value>
+  </data>
+	<data name="ReportObjectResource1.ReportGeneratedBy" type="System.Resources.ResXNullRef, System.Windows.Forms">
+		<value />
+	</data>
+	<data name="ReportObjectResource1.ReportGeneratedDate" type="System.Resources.ResXNullRef, System.Windows.Forms">
+		<value />
+	</data>
+	<data name="ReportObjectResource1.ReportParameters" type="System.Resources.ResXNullRef, System.Windows.Forms">
+		<value />
+	</data>
+	<data name="ReportObjectResource1.YearFormatString" xml:space="preserve">
+    <value>{0:yyyy}</value>
+  </data>
+	<data name="ReportObjectResource1.YearString" xml:space="preserve">
+    <value>年度</value>
+  </data>
+	<data name="TemplateDescriptionResource1.Caption" xml:space="preserve">
+    <value>描述</value>
+  </data>
+	<data name="TemplateDescriptionResource1.ToolTip" xml:space="preserve">
+    <value>报表呈现格式描述</value>
+  </data>
+	<data name="TemplateNameResource1.Caption" xml:space="preserve">
+    <value>呈现格式名称</value>
+  </data>
+	<data name="TemplateNameResource1.ToolTip" xml:space="preserve">
+    <value>报表呈现格式名称</value>
+  </data>
+	<data name="AccessControlResource2.Caption" xml:space="preserve">
+		<value>权限控制</value>
+	</data>
+	<data name="AccessControlResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AccessControlResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AccessControlResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCancelResource2.Text" xml:space="preserve">
+		<value>&lt;img align="absmiddle" 
+                                    src="../../images/Window-Delete-big.gif" alt="Close" style="border:none; " 
+                                    __designer:mapid="150" /&gt;关闭呈现格式界面</value>
+	</data>
+	<data name="buttonCancelResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCloseWindowResource1.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttonCloseWindowResource1.Text" xml:space="preserve">
+		<value>关闭窗口</value>
+	</data>
+	<data name="buttonCloseWindowResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveNewResource2.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveNewResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveNewResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveResource2.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveResource2.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="buttOnValidateAndSaveTemplateResource2.Text" xml:space="preserve">
+		<value>点击此钮以保存呈现格式</value>
+	</data>
+	<data name="buttOnValidateAndSaveTemplateResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ListItemResource4.Text" xml:space="preserve">
+		<value>所有人可编辑</value>
+	</data>
+	<data name="ListItemResource4.Value" xml:space="preserve">
+		<value>1</value>
+	</data>
+	<data name="ListItemResource5.Text" xml:space="preserve">
+		<value>只有我可编辑，其他看得见</value>
+	</data>
+	<data name="ListItemResource5.Value" xml:space="preserve">
+		<value>2</value>
+	</data>
+	<data name="ListItemResource6.Text" xml:space="preserve">
+		<value>只有我可编辑和看见</value>
+	</data>
+	<data name="ListItemResource6.Value" xml:space="preserve">
+		<value>3</value>
+	</data>
+	<data name="PageResource2.Title" xml:space="preserve">
+		<value>安科.EAM</value>
+	</data>
+	<data name="panelResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelSaveTemplateResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelSaveTemplateResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.ChartTypeNames" xml:space="preserve">
+		<value>饼图 (多数);饼图 (嵌套);圈饼图;仪表盘;柱形图
+;柱形图 (堆积); 柱形图 (百分比堆积);条形图; 条形图(堆积);条形图 (百分比堆积);雷达图 (蜘蛛形);雷达图 (堆积);雷达图 (百分比堆积);极坐标图;极坐标图 (堆积);极坐标图 (百分比堆积)</value>
+	</data>
+	<data name="ReportObjectResource2.ChartXAxisName" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.ChartYAxisName" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.CountText" xml:space="preserve">
+		<value>数</value>
+	</data>
+	<data name="ReportObjectResource2.ImagePath" xml:space="preserve">
+		<value>../../images/</value>
+	</data>
+	<data name="ReportObjectResource2.MonthFormatString" xml:space="preserve">
+		<value>{0:MMM-yyyy}</value>
+	</data>
+	<data name="ReportObjectResource2.MonthString" xml:space="preserve">
+		<value>月份</value>
+	</data>
+	<data name="ReportObjectResource2.PageCaption" xml:space="preserve">
+		<value>第{0}页/共{0}页</value>
+	</data>
+	<data name="ReportObjectResource2.QuarterFormatString" xml:space="preserve">
+		<value>{0:QMM-yyyy}</value>
+	</data>
+	<data name="ReportObjectResource2.QuarterString" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.ReportCaption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ReportObjectResource2.YearFormatString" xml:space="preserve">
+		<value>{0:yyyy}</value>
+	</data>
+	<data name="ReportObjectResource2.YearString" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="TemplateDescriptionResource2.Caption" xml:space="preserve">
+		<value>描述</value>
+	</data>
+	<data name="TemplateDescriptionResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="TemplateDescriptionResource2.ToolTip" xml:space="preserve">
+		<value>报表呈现格式描述</value>
+	</data>
+	<data name="TemplateDescriptionResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="TemplateNameResource2.Caption" xml:space="preserve">
+		<value>呈现格式名称</value>
+	</data>
+	<data name="TemplateNameResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="TemplateNameResource2.ToolTip" xml:space="preserve">
+		<value>报表呈现格式名称</value>
+	</data>
+	<data name="TemplateNameResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+</root>

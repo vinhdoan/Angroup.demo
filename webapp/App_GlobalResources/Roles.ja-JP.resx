@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ADMIN" xml:space="preserve">
+		<value>スーパー管理者
+</value>
+		<comment>The highest level system administrator.</comment>
+	</data>
+  <data name="ASSETADMIN" xml:space="preserve">
+		<value>資産管理者
+</value>
+		<comment>An administrator who creates locations/equipment or anything to do with the company's assets.</comment>
+	</data>
+  <data name="BUDGETADMIN" xml:space="preserve">
+		<value>予算管理者
+</value>
+		<comment>An administrator who creates/updates budget info.</comment>
+	</data>
+  <data name="BUDGETAPPROVER" xml:space="preserve">
+		<value>予算承認者
+</value>
+		<comment></comment>
+	</data>
+  <data name="CONTRACTADMIN" xml:space="preserve">
+		<value>契約管理者
+</value>
+	</data>
+  <data name="DASHBOARDADMIN" xml:space="preserve">
+		<value>ダッシュ-ボード管理者
+</value>
+	</data>
+  <data name="FINANCE" xml:space="preserve">
+		<value>財務
+</value>
+	</data>
+  <data name="INVENTORYMANAGER" xml:space="preserve">
+		<value>在庫マネージャー
+</value>
+	</data>
+  <data name="PROJECTMANAGER" xml:space="preserve">
+		<value>プロジェクトマネージャー
+</value>
+	</data>
+  <data name="PURCHASEADMIN" xml:space="preserve">
+		<value>購入管理者
+</value>
+	</data>
+  <data name="PURCHASEAPPROVER" xml:space="preserve">
+		<value>購入承認者
+</value>
+	</data>
+  <data name="PURCHASEREQUESTOR" xml:space="preserve">
+		<value>購入要求者
+</value>
+	</data>
+  <data name="REPORTADMIN" xml:space="preserve">
+		<value>報告管理者
+</value>
+	</data>
+  <data name="RESIDENT" xml:space="preserve">
+		<value>住民
+</value>
+		<comment>A person who stays in a housing unit/apartment/condominium.</comment>
+	</data>
+  <data name="SERVICEMANAGER" xml:space="preserve">
+		<value>サービスマネージャー
+</value>
+		<comment>A person in charge of service.</comment>
+	</data>
+  <data name="SERVICEVENDOR" xml:space="preserve">
+		<value>サービスベンダー
+</value>
+		<comment>A vendor who provides service to the customer.</comment>
+	</data>
+  <data name="SYSTEMADMIN" xml:space="preserve">
+		<value>システム管理者
+</value>
+		<comment>A normal system administrator.</comment>
+	</data>
+  <data name="USERADMIN" xml:space="preserve">
+		<value>ユーザー管理者
+</value>
+	</data>
+  <data name="VENDORADMIN" xml:space="preserve">
+		<value>ベンダー管理者
+</value>
+	</data>
+  <data name="WORKAPPROVER" xml:space="preserve">
+		<value>作業承認者
+</value>
+		<comment>Work refers to a work order/instruction.</comment>
+	</data>
+  <data name="WORKCALLER" xml:space="preserve">
+		<value>訪問者
+</value>
+	</data>
+  <data name="WORKHELPDESK" xml:space="preserve">
+		<value>ヘルプデスク
+</value>
+	</data>
+  <data name="WORKREQUESTSUPERVISOR" xml:space="preserve">
+		<value>作業要求監督者
+</value>
+		<comment>Work refers to a work order/instruction.</comment>
+	</data>
+  <data name="WORKSUPERVISOR" xml:space="preserve">
+		<value>作業監督者
+</value>
+		<comment>Work refers to a work order/instruction.</comment>
+	</data>
+  <data name="WORKTECHNICIAN" xml:space="preserve">
+		<value>技術者
+</value>
+	</data>
+</root>

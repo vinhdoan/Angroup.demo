@@ -1,0 +1,87 @@
+﻿#divHidden {display:none}
+.divNoDisplay {display:none}
+/*Gridview table class (currently applicable for header)*/
+.dd-class
+{	
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight:bold;
+	vertical-align: top;
+}
+.dd-paper
+{
+	background-color: white;
+	border: none;
+	padding: 0px;
+	height: 600px;
+}
+.dd-cellgroup
+{
+	font-weight:normal;
+	font-family: Tahoma;
+	font-size: 8pt;
+	vertical-align: top;
+	padding: 2px;
+	color: black;
+	background-color: #ffffbb;
+	white-space: nowrap;
+}
+.dd-celldata0
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight:normal;
+	vertical-align: top;
+	padding: 1px;
+	color: Black;
+	background-color: white;
+	white-space: nowrap;
+}
+
+.dd-celldata1
+{
+	font-weight:normal;
+	font-family: Tahoma;
+	font-size: 8pt;
+	vertical-align: top;
+	padding: 1px;
+	color: Black;
+	background-color: #eeeeee;
+	white-space: nowrap;
+}
+/*gridview cell grouping data*/
+.dd-celldata2
+{
+	font-family: Tahoma;
+	font-size: 8pt;
+	font-weight:bold;
+	vertical-align: top;
+	padding: 1px;
+	color: Black;
+	background-color: #dddddd;
+	white-space: nowrap;
+}
+
+.dd-celldata3
+{
+	font-weight:bold;
+	font-family: Tahoma;
+	font-size: 8pt;
+	vertical-align: top;
+	padding: 1px;
+	color: Black;
+	background-color: #cccccc;
+	white-space: nowrap;
+}
+
+.dd-celldata4
+{
+	font-weight:bold;
+	font-family: Tahoma;
+	font-size: 8pt;
+	vertical-align: top;
+	padding: 1px;
+	color: Black;
+	background-color: #bbbbbb;
+	white-space: nowrap;
+}

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CenterAdmin" xml:space="preserve">
+    <value>نظام الإدارة</value>
+  </data>
+  <data name="CenterAnalysis" xml:space="preserve">
+    <value>تقارير</value>
+  </data>
+  <data name="CenterAsset" xml:space="preserve">
+    <value>شىء ثمين</value>
+  </data>
+  <data name="CenterBudget" xml:space="preserve">
+    <value>ميزانية</value>
+  </data>
+  <data name="CenterInventory" xml:space="preserve">
+    <value>جرد</value>
+  </data>
+  <data name="CenterProcurement" xml:space="preserve">
+    <value>شراء</value>
+  </data>
+  <data name="CenterReportBuilder" xml:space="preserve">
+    <value>تقرير تصميم أداة</value>
+  </data>
+  <data name="CenterService" xml:space="preserve">
+    <value>خدمة الزبائن</value>
+  </data>
+  <data name="CenterVendor" xml:space="preserve">
+    <value>تعاقد</value>
+  </data>
+  <data name="CenterWork" xml:space="preserve">
+    <value>أعمال الصيانة</value>
+  </data>
+  <data name="MiscDatabase" xml:space="preserve">
+    <value>قاعدة بيانات</value>
+  </data>
+  <data name="MiscMyWork" xml:space="preserve">
+    <value>المهام التي أنشأتها لي</value>
+  </data>
+  <data name="MiscReassignTasks" xml:space="preserve">
+    <value>إعادة تعيين المهام</value>
+  </data>
+  <data name="MiscReportMigrate" xml:space="preserve">
+    <value>تحديث التقرير القالب</value>
+  </data>
+  <data name="OAccount" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="OAnnouncement" xml:space="preserve">
+    <value>تصريح</value>
+  </data>
+  <data name="OApplicationSetting" xml:space="preserve">
+    <value>إعدادات البرامج</value>
+  </data>
+  <data name="OApprovalHierarchy" xml:space="preserve">
+    <value>التسلسل الهرمي للموافقة</value>
+  </data>
+  <data name="OApprovalProcess" xml:space="preserve">
+    <value>عملية الموافقة</value>
+  </data>
+  <data name="OAttachmentType" xml:space="preserve">
+    <value>نوع الوثيقة</value>
+  </data>
+  <data name="OBudget" xml:space="preserve">
+    <value>الميزانية</value>
+  </data>
+  <data name="OBudgetAdjustment" xml:space="preserve">
+    <value>تعديل الميزانية</value>
+  </data>
+  <data name="OBudgetCategory" xml:space="preserve">
+    <value>الفئة الميزانية</value>
+  </data>
+  <data name="OBudgetLog" xml:space="preserve">
+    <value>سجل الميزانية</value>
+  </data>
+  <data name="OBudgetPeriod" xml:space="preserve">
+    <value>فترة الميزانية</value>
+  </data>
+  <data name="OBudgetReallocation" xml:space="preserve">
+    <value>إعادة تخصيص موارد الميزانية</value>
+  </data>
+  <data name="OCalendar" xml:space="preserve">
+    <value>تقويم</value>
+  </data>
+  <data name="OCase" xml:space="preserve">
+    <value>أفادت القضية</value>
+  </data>
+  <data name="OCatalogue" xml:space="preserve">
+    <value>التسويقي</value>
+  </data>
+  <data name="OChecklist" xml:space="preserve">
+    <value>المرجعية</value>
+  </data>
+  <data name="OChecklistResponse" xml:space="preserve">
+    <value>ردود المرجعية</value>
+  </data>
+  <data name="OCode" xml:space="preserve">
+    <value>مصطلح</value>
+  </data>
+  <data name="OCodeType" xml:space="preserve">
+    <value>نوع من مصطلح</value>
+  </data>
+  <data name="OCompany" xml:space="preserve">
+    <value>شركة</value>
+  </data>
+  <data name="OContract" xml:space="preserve">
+    <value>تعاقد</value>
+  </data>
+  <data name="OCraft" xml:space="preserve">
+    <value>مهنة</value>
+  </data>
+  <data name="OCurrency" xml:space="preserve">
+    <value>العملة</value>
+  </data>
+  <data name="OCurrencyExchange" xml:space="preserve">
+    <value>سعر صرف العملة</value>
+  </data>
+  <data name="OCustomizedObject" xml:space="preserve">
+    <value>كائن مخصص</value>
+  </data>
+  <data name="OCustomizedRecordObject" xml:space="preserve">
+    <value>كائن مخصص</value>
+  </data>
+  <data name="ODashboard" xml:space="preserve">
+    <value>لوحة أجهزة القياس</value>
+  </data>
+  <data name="ODocumentTemplate" xml:space="preserve">
+    <value>الوثيقة القالب</value>
+  </data>
+  <data name="ODocumentTemplateType" xml:space="preserve">
+    <value>نوع الوثيقة القالب</value>
+  </data>
+  <data name="OEquipment" xml:space="preserve">
+    <value>المعدات</value>
+  </data>
+  <data name="OEquipmentType" xml:space="preserve">
+    <value>نوع من المعدات</value>
+  </data>
+  <data name="OFixedRate" xml:space="preserve">
+    <value>جدول الأسعار</value>
+  </data>
+  <data name="OFunction" xml:space="preserve">
+    <value>وظيفة</value>
+  </data>
+  <data name="OLanguage" xml:space="preserve">
+    <value>لغة</value>
+  </data>
+  <data name="OLocation" xml:space="preserve">
+    <value>موقع</value>
+  </data>
+  <data name="OLocationType" xml:space="preserve">
+    <value>نوع الموقع</value>
+  </data>
+  <data name="OMessage" xml:space="preserve">
+    <value>سجل للرسائل</value>
+  </data>
+  <data name="OMessageTemplate" xml:space="preserve">
+    <value>رسالة القالب</value>
+  </data>
+  <data name="ONotificationHierarchy" xml:space="preserve">
+    <value>التسلسل الهرمي للإعلام</value>
+  </data>
+  <data name="ONotificationMilestones" xml:space="preserve">
+    <value>معالم الإخطار</value>
+  </data>
+  <data name="ONotificationProcess" xml:space="preserve">
+    <value>عملية الإخطار</value>
+  </data>
+  <data name="OOPCAEEvent" xml:space="preserve">
+    <value>حادثة (OPC AE)</value>
+  </data>
+  <data name="OOPCAEServer" xml:space="preserve">
+    <value> ملقم (OPC AE)</value>
+  </data>
+  <data name="OOPCDAServer" xml:space="preserve">
+    <value> ملقم (OPC DA)</value>
+  </data>
+  <data name="OPoint" xml:space="preserve">
+    <value>وسيلة</value>
+  </data>
+  <data name="OPointTrigger" xml:space="preserve">
+    <value>علم المثلثات</value>
+  </data>
+  <data name="OPosition" xml:space="preserve">
+    <value>مكانة</value>
+  </data>
+  <data name="OProject" xml:space="preserve">
+    <value>مشروع</value>
+  </data>
+  <data name="OPurchaseInvoice" xml:space="preserve">
+    <value>فاتورة</value>
+  </data>
+  <data name="OPurchaseOrder" xml:space="preserve">
+    <value>أمر الشراء</value>
+  </data>
+  <data name="OPurchaseRequest" xml:space="preserve">
+    <value>طلب شراء</value>
+  </data>
+  <data name="OPurchaseSettings" xml:space="preserve">
+    <value>الشراء إعدادات</value>
+  </data>
+  <data name="OQuotation" xml:space="preserve">
+    <value>الأسعار</value>
+  </data>
+  <data name="OReading_Excel" xml:space="preserve">
+    <value>التحديث مع Excel</value>
+  </data>
+  <data name="OReading_Manual" xml:space="preserve">
+    <value>التحديث يدويا</value>
+  </data>
+  <data name="OReport" xml:space="preserve">
+    <value>تقارير</value>
+  </data>
+  <data name="ORequestForQuotation" xml:space="preserve">
+    <value>طلب تقديم عروض الأسعار</value>
+  </data>
+  <data name="ORole" xml:space="preserve">
+    <value>دور</value>
+  </data>
+  <data name="ORunningNumberGenerator" xml:space="preserve">
+    <value>الرقم التسلسلي للمولدات</value>
+  </data>
+  <data name="OScheduledWork" xml:space="preserve">
+    <value>جدولة مهام الصيانة</value>
+  </data>
+  <data name="OServiceLevel" xml:space="preserve">
+    <value>مستوى خدمة العملاء</value>
+  </data>
+  <data name="OSessionAudit" xml:space="preserve">
+    <value>سجل الدخول</value>
+  </data>
+  <data name="OStore" xml:space="preserve">
+    <value>مخزن</value>
+  </data>
+  <data name="OStoreAdjust" xml:space="preserve">
+    <value>ضبط المخزون</value>
+  </data>
+  <data name="OStoreCheckIn" xml:space="preserve">
+    <value>وضعت في البند</value>
+  </data>
+  <data name="OStoreCheckOut" xml:space="preserve">
+    <value>اخراج البند</value>
+  </data>
+  <data name="OStoreStock" xml:space="preserve">
+    <value>عرض جرد الرصيد</value>
+  </data>
+  <data name="OStoreStockTake" xml:space="preserve">
+    <value>الأسهم تأخذ</value>
+  </data>
+  <data name="OStoreTransfer" xml:space="preserve">
+    <value>البند نقل</value>
+  </data>
+  <data name="OSurveyGroup" xml:space="preserve">
+    <value>مسح العملاء</value>
+  </data>
+  <data name="OSurveyPlanner" xml:space="preserve">
+    <value>استطلاع رأى العملاء مخطط</value>
+  </data>
+  <data name="OSurveyRespondent" xml:space="preserve">
+    <value>استطلاع رأى العملاء المدعى</value>
+  </data>
+  <data name="OTaxCode" xml:space="preserve">
+    <value>الضرائب مصطلح</value>
+  </data>
+  <data name="OUnitConversion" xml:space="preserve">
+    <value>تحويل وحدات قياس من بين</value>
+  </data>
+  <data name="OUser" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
+  <data name="OUtility" xml:space="preserve">
+    <value>مؤسسة عامة</value>
+  </data>
+  <data name="OVendor" xml:space="preserve">
+    <value>بائع</value>
+  </data>
+  <data name="OWork" xml:space="preserve">
+    <value>أعمال الصيانة</value>
+  </data>
+  <data name="OWorkflowRepository" xml:space="preserve">
+    <value>قاعدة بيانات للسير العمل</value>
+  </data>
+  <data name="OWorkRequest" xml:space="preserve">
+    <value>أعمال الصيانة الطلب</value>
+  </data>
+  <data name="OYearlyBudget" xml:space="preserve">
+    <value>الميزانية السنوية</value>
+  </data>
+  <data name="ServiceView" xml:space="preserve">
+    <value>البرامج المؤتمتة</value>
+  </data>
+  <data name="SubCategoryCodes" xml:space="preserve">
+    <value>مصطلح</value>
+  </data>
+  <data name="SubCategoryReading" xml:space="preserve">
+    <value>القراءة التحديث</value>
+  </data>
+</root>

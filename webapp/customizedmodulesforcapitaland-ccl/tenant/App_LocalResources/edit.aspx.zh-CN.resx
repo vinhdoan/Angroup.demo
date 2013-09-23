@@ -1,0 +1,1503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="metadata">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" />
+							</xsd:sequence>
+							<xsd:attribute name="name" use="required" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="assembly">
+						<xsd:complexType>
+							<xsd:attribute name="alias" type="xsd:string" />
+							<xsd:attribute name="name" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+							<xsd:attribute ref="xml:space" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="checkIsBannedResource1.Caption" xml:space="preserve">
+    <value>被禁止</value>
+  </data>
+	<data name="checkIsBannedResource1.Text" xml:space="preserve">
+    <value>是的，目前该组户被禁止登录系统。</value>
+  </data>
+	<data name="chkResetPasswordResource1.Caption" xml:space="preserve">
+    <value>重设密码</value>
+  </data>
+	<data name="chkResetPasswordResource1.Text" xml:space="preserve">
+    <value>是的，当我保存时，生成一个新密码，并通过电邮发送电子邮件给组户。</value>
+  </data>
+	<data name="CraftResource1.Caption" xml:space="preserve">
+    <value>工种</value>
+  </data>
+	<data name="CraftResource1.ToolTip" xml:space="preserve">
+    <value>该技术人员所属工种。</value>
+  </data>
+	<data name="gridTenantContactsResource1.Caption" xml:space="preserve">
+    <value>租户联络人</value>
+  </data>
+	<data name="LanguageNameResource1.Caption" xml:space="preserve">
+    <value>语言</value>
+  </data>
+	<data name="LanguageNameResource1.ToolTip" xml:space="preserve">
+    <value>该主题的更改将只在下次登录时生效。</value>
+  </data>
+	<data name="listPositionResource1.Caption" xml:space="preserve">
+    <value>位置</value>
+  </data>
+	<data name="Password1Resource1.Caption" xml:space="preserve">
+    <value>密码</value>
+  </data>
+	<data name="Password2Resource1.Caption" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+	<data name="tabAttachmentsResource1.Caption" xml:space="preserve">
+    <value>附件</value>
+  </data>
+	<data name="tabCredentialsResource1.Caption" xml:space="preserve">
+    <value>凭证</value>
+  </data>
+	<data name="tabDetailsResource1.Caption" xml:space="preserve">
+    <value>资料</value>
+  </data>
+	<data name="tabMemoResource1.Caption" xml:space="preserve">
+    <value>备忘录</value>
+  </data>
+	<data name="tabPositionResource1.Caption" xml:space="preserve">
+    <value>位置</value>
+  </data>
+	<data name="tabThemeResource1.Caption" xml:space="preserve">
+    <value>主题</value>
+  </data>
+	<data name="textContactCellphoneResource1.Caption" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+	<data name="textContactDepartmentResource1.Caption" xml:space="preserve">
+    <value>部门</value>
+  </data>
+	<data name="textContactEmailResource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+	<data name="textContactFaxResource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+	<data name="textContactObjectNameResource1.Caption" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="textContactPhoneResource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+	<data name="textContactPositionResource1.Caption" xml:space="preserve">
+    <value>位置</value>
+  </data>
+	<data name="textRemarksResource1.Caption" xml:space="preserve">
+    <value>备注</value>
+  </data>
+	<data name="ThemeNameResource1.Caption" xml:space="preserve">
+    <value>主题</value>
+  </data>
+	<data name="ThemeNameResource1.ToolTip" xml:space="preserve">
+    <value>该主题的更改将只在下次登录时生效。</value>
+  </data>
+	<data name="uifieldstring10Resource1.Caption" xml:space="preserve">
+    <value>地址</value>
+  </data>
+	<data name="uifieldstring4Resource1.Caption" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+	<data name="uifieldstring5Resource1.Caption" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+	<data name="uifieldstring6Resource1.Caption" xml:space="preserve">
+    <value>传真</value>
+  </data>
+	<data name="uifieldstring7Resource1.Caption" xml:space="preserve">
+    <value>国家</value>
+  </data>
+	<data name="uifieldstring8Resource1.Caption" xml:space="preserve">
+    <value>省份</value>
+  </data>
+	<data name="uifieldstring9Resource1.Caption" xml:space="preserve">
+    <value>城市</value>
+  </data>
+	<data name="UIFieldTextBox1Resource1.Caption" xml:space="preserve">
+    <value>电话</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource1.HeaderText" xml:space="preserve">
+    <value>名字</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource2.HeaderText" xml:space="preserve">
+    <value>位置</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource3.HeaderText" xml:space="preserve">
+    <value>部门</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource4.HeaderText" xml:space="preserve">
+    <value>电话</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource5.HeaderText" xml:space="preserve">
+    <value>手机号码</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource6.HeaderText" xml:space="preserve">
+    <value>传真</value>
+  </data>
+	<data name="UIGridViewBoundColumnResource7.HeaderText" xml:space="preserve">
+    <value>电邮</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource1.CommandText" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.CommandText" xml:space="preserve">
+    <value>删除</value>
+  </data>
+	<data name="UIGridViewButtonColumnResource2.ConfirmText" xml:space="preserve">
+    <value>确定删除这个项目？</value>
+  </data>
+	<data name="UIGridViewCommandResource1.CommandText" xml:space="preserve">
+    <value>添加</value>
+  </data>
+	<data name="UIGridViewCommandResource2.CommandText" xml:space="preserve">
+    <value>删除所选</value>
+  </data>
+	<data name="UIGridViewCommandResource2.ConfirmText" xml:space="preserve">
+    <value>确实删除所选的项目？</value>
+  </data>
+	<data name="UserLoginNameResource1.Caption" xml:space="preserve">
+    <value>登录名</value>
+  </data>
+	<data name="AddressLine1Resource1.Caption" xml:space="preserve">
+		<value>地址1</value>
+	</data>
+	<data name="AddressLine1Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine2Resource1.Caption" xml:space="preserve">
+		<value>地址2</value>
+	</data>
+	<data name="AddressLine2Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine2Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine3Resource1.Caption" xml:space="preserve">
+		<value>地址3</value>
+	</data>
+	<data name="AddressLine3Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine3Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine3Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine4Resource1.Caption" xml:space="preserve">
+		<value>地址4</value>
+	</data>
+	<data name="AddressLine4Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine4Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AddressLine4Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosAssetIDResource1.Caption" xml:space="preserve">
+		<value>Amos Asset ID</value>
+	</data>
+	<data name="AmosAssetIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosAssetIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosAssetIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosBillAddressIDResource1.Caption" xml:space="preserve">
+		<value>Amos Bill Address ID</value>
+	</data>
+	<data name="AmosBillAddressIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosBillAddressIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosBillAddressIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosContactIDResource1.Caption" xml:space="preserve">
+		<value>Amos Contact ID</value>
+	</data>
+	<data name="AmosContactIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosContactIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosContactIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosLeaseIDResource1.Caption" xml:space="preserve">
+		<value>Amos Lease ID</value>
+	</data>
+	<data name="AmosLeaseIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosLeaseIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosLeaseIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosOrgIDResource1.Caption" xml:space="preserve">
+		<value>Amos Org ID</value>
+	</data>
+	<data name="AmosOrgIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosOrgIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosOrgIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosSeparatorResource1.Caption" xml:space="preserve">
+		<value>Amos</value>
+	</data>
+	<data name="AmosSeparatorResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosSuiteIDResource1.Caption" xml:space="preserve">
+		<value>Amos Suite ID</value>
+	</data>
+	<data name="AmosSuiteIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosSuiteIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="AmosSuiteIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="cbFromAmosResource1.Caption" xml:space="preserve">
+		<value>源自Amos</value>
+	</data>
+	<data name="cbFromAmosResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="cbFromAmosResource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="cbFromAmosResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="cbFromAmosResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkIsBannedResource2.Caption" xml:space="preserve">
+		<value>被禁止</value>
+	</data>
+	<data name="checkIsBannedResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkIsBannedResource2.Text" xml:space="preserve">
+		<value>是的，目前该组户被禁止登录系统。</value>
+	</data>
+	<data name="checkIsBannedResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="checkIsBannedResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="chkResetPasswordResource2.Caption" xml:space="preserve">
+		<value>重设密码</value>
+	</data>
+	<data name="chkResetPasswordResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="chkResetPasswordResource2.Text" xml:space="preserve">
+		<value>是的，当我保存时，生成一个新密码，并通过电邮发送电子邮件给组户。</value>
+	</data>
+	<data name="chkResetPasswordResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="chkResetPasswordResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ContactAmosOrgIDResource1.Caption" xml:space="preserve">
+		<value>Amos Org ID</value>
+	</data>
+	<data name="ContactAmosOrgIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ContactAmosOrgIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ContactAmosOrgIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="contactUpdatedOnResource1.Caption" xml:space="preserve">
+		<value>更新日期/时间</value>
+	</data>
+	<data name="contactUpdatedOnResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="contactUpdatedOnResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="contactUpdatedOnResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlStatusResource1.Caption" xml:space="preserve">
+		<value>状态</value>
+	</data>
+	<data name="ddlStatusResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlStatusResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlStatusResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantContactTypeResource1.Caption" xml:space="preserve">
+		<value>租户联络人类型</value>
+	</data>
+	<data name="ddlTenantContactTypeResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantContactTypeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantContactTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantTypeResource1.Caption" xml:space="preserve">
+		<value>租户类型</value>
+	</data>
+	<data name="ddlTenantTypeResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantTypeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ddlTenantTypeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="EndDateResource1.Caption" xml:space="preserve">
+		<value>结束日期</value>
+	</data>
+	<data name="EndDateResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="EndDateResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="EndDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridActivitiesResource1.Caption" xml:space="preserve">
+		<value>活动</value>
+	</data>
+	<data name="gridActivitiesResource1.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridActivitiesResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridActivitiesResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridActivitiesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridCasesResource1.Caption" xml:space="preserve">
+		<value>个案/工作</value>
+	</data>
+	<data name="gridCasesResource1.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridCasesResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridCasesResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridCasesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantContactsResource2.Caption" xml:space="preserve">
+		<value>租户联络人</value>
+	</data>
+	<data name="gridTenantContactsResource2.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantContactsResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantContactsResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantContactsResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantLeaseResource1.Caption" xml:space="preserve">
+		<value>租户租约</value>
+	</data>
+	<data name="gridTenantLeaseResource1.EmptyDataText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantLeaseResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantLeaseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="gridTenantLeaseResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LanguageNameResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LanguageNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseAmosOrgIDResource1.Caption" xml:space="preserve">
+		<value>Amos Org ID</value>
+	</data>
+	<data name="LeaseAmosOrgIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseAmosOrgIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseAmosOrgIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseStatusDateResource1.Caption" xml:space="preserve">
+		<value>租约状态日期</value>
+	</data>
+	<data name="LeaseStatusDateResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseStatusDateResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="LeaseStatusDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="leaseUpdatedOnResource1.Caption" xml:space="preserve">
+		<value>更新日期/时间</value>
+	</data>
+	<data name="leaseUpdatedOnResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="leaseUpdatedOnResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="leaseUpdatedOnResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="objectpanelTenantContactsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="objectpanelTenantContactsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="objectpanelTenantLeaseResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="objectpanelTenantLeaseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="PageResource1.Title" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelAmosResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelAmosResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelLeaseResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelLeaseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelMainResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelTenantContactsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelTenantContactsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelThemeResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelThemeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password1Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password2Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password2Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="Password2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep1Resource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="sep1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="StartDateResource1.Caption" xml:space="preserve">
+		<value>开始日期</value>
+	</data>
+	<data name="StartDateResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="StartDateResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="StartDateResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabAttachmentsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabAttachmentsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabCaseResource1.Caption" xml:space="preserve">
+		<value>个案/工作</value>
+	</data>
+	<data name="tabCaseResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabCaseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabContactResource1.Caption" xml:space="preserve">
+		<value>联络人</value>
+	</data>
+	<data name="tabContactResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabContactResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabCredentialsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabCredentialsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabDetailsResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabDetailsResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabLeaseResource1.Caption" xml:space="preserve">
+		<value>租约</value>
+	</data>
+	<data name="tabLeaseResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabLeaseResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabMemoResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabMemoResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabObjectResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabObjectResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabTenantActivityResource1.Caption" xml:space="preserve">
+		<value>活动</value>
+	</data>
+	<data name="tabTenantActivityResource1.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabTenantActivityResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabThemeResource2.Caption" xml:space="preserve">
+		<value>主题</value>
+	</data>
+	<data name="tabThemeResource2.GroupingText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="tabThemeResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactCellphoneResource2.Caption" xml:space="preserve">
+		<value>手机号码</value>
+	</data>
+	<data name="textContactCellphoneResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactCellphoneResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactCellphoneResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactDepartmentResource2.Caption" xml:space="preserve">
+		<value>部门</value>
+	</data>
+	<data name="textContactDepartmentResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactDepartmentResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactDepartmentResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactEmailResource2.Caption" xml:space="preserve">
+		<value>电邮</value>
+	</data>
+	<data name="textContactEmailResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactEmailResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactEmailResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactFaxResource2.Caption" xml:space="preserve">
+		<value>传真</value>
+	</data>
+	<data name="textContactFaxResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactFaxResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactFaxResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactObjectNameResource2.Caption" xml:space="preserve">
+		<value>名字</value>
+	</data>
+	<data name="textContactObjectNameResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactObjectNameResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactObjectNameResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactPositionResource2.Caption" xml:space="preserve">
+		<value>位置</value>
+	</data>
+	<data name="textContactPositionResource2.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactPositionResource2.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textContactPositionResource2.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textDislikesResource1.Caption" xml:space="preserve">
+		<value>所不喜欢</value>
+	</data>
+	<data name="textDislikesResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textDislikesResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textDislikesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textInformationResource1.Caption" xml:space="preserve">
+		<value>额外资料</value>
+	</data>
+	<data name="textInformationResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textInformationResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textInformationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textLikesResource1.Caption" xml:space="preserve">
+		<value>所喜欢</value>
+	</data>
+	<data name="textLikesResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textLikesResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="textLikesResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ThemeNameResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="ThemeNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="treeLocationResource1.Caption" xml:space="preserve">
+		<value>区域</value>
+	</data>
+	<data name="treeLocationResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="treeLocationResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="treeLocationResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtAddressResource1.Caption" xml:space="preserve">
+		<value>地址</value>
+	</data>
+	<data name="txtAddressResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtAddressResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtAddressResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtDIDResource1.Caption" xml:space="preserve">
+		<value>直接拨号</value>
+	</data>
+	<data name="txtDIDResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtDIDResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtDIDResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtEmailResource1.Caption" xml:space="preserve">
+		<value>电邮</value>
+	</data>
+	<data name="txtEmailResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtEmailResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtEmailResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtFaxResource1.Caption" xml:space="preserve">
+		<value>传真</value>
+	</data>
+	<data name="txtFaxResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtFaxResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtFaxResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtHighlightResource1.Caption" xml:space="preserve">
+		<value>要点</value>
+	</data>
+	<data name="txtHighlightResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtHighlightResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtHighlightResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtIndustryTradeResource1.Caption" xml:space="preserve">
+		<value>业界贸易</value>
+	</data>
+	<data name="txtIndustryTradeResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtIndustryTradeResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtIndustryTradeResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtOperationHourResource1.Caption" xml:space="preserve">
+		<value>营业时间</value>
+	</data>
+	<data name="txtOperationHourResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtOperationHourResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtOperationHourResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtPhoneResource1.Caption" xml:space="preserve">
+		<value>电话</value>
+	</data>
+	<data name="txtPhoneResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtPhoneResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtPhoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTelephoneResource1.Caption" xml:space="preserve">
+		<value>电话</value>
+	</data>
+	<data name="txtTelephoneResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTelephoneResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTelephoneResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTenantProfileResource1.Caption" xml:space="preserve">
+		<value>租户概况</value>
+	</data>
+	<data name="txtTenantProfileResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTenantProfileResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtTenantProfileResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtWebsiteResource1.Caption" xml:space="preserve">
+		<value>网址</value>
+	</data>
+	<data name="txtWebsiteResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtWebsiteResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="txtWebsiteResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox1Resource1.Caption" xml:space="preserve">
+		<value>源自Amos</value>
+	</data>
+	<data name="UIFieldCheckBox1Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox1Resource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox1Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox2Resource1.Caption" xml:space="preserve">
+		<value>源自Amos</value>
+	</data>
+	<data name="UIFieldCheckBox2Resource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox2Resource1.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox2Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIFieldCheckBox2Resource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource10.HeaderText" xml:space="preserve">
+		<value>位置</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource11.HeaderText" xml:space="preserve">
+		<value>部门</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource12.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource12.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource12.HeaderText" xml:space="preserve">
+		<value>直接拨号</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource13.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource13.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource13.HeaderText" xml:space="preserve">
+		<value>手机号码</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource14.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource14.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource14.HeaderText" xml:space="preserve">
+		<value>传真</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource15.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource15.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource15.HeaderText" xml:space="preserve">
+		<value>电邮</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource16.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource16.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource16.HeaderText" xml:space="preserve">
+		<value>源自Amos</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource17.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource17.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource17.HeaderText" xml:space="preserve">
+		<value>Amos Contact ID</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource18.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource18.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource18.HeaderText" xml:space="preserve">
+		<value>区域</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource19.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource19.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource19.HeaderText" xml:space="preserve">
+		<value>开始日期</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource20.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource20.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource20.HeaderText" xml:space="preserve">
+		<value>结束日期</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource21.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource21.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource21.HeaderText" xml:space="preserve">
+		<value>状态</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource22.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource22.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource22.HeaderText" xml:space="preserve">
+		<value>活动类型</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource23.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource23.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource23.HeaderText" xml:space="preserve">
+		<value>日期/时间</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource24.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource24.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource24.HeaderText" xml:space="preserve">
+		<value>职员名字</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource25.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource25.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource25.HeaderText" xml:space="preserve">
+		<value>议程</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource26.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource26.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource26.HeaderText" xml:space="preserve">
+		<value>个案号</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource27.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource27.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource27.HeaderText" xml:space="preserve">
+		<value>个案问题描述</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource28.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource28.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource28.HeaderText" xml:space="preserve">
+		<value>状态</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource29.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource29.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource29.HeaderText" xml:space="preserve">
+		<value>工作号</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource30.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource30.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource30.HeaderText" xml:space="preserve">
+		<value>工作类型</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource31.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource31.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource31.HeaderText" xml:space="preserve">
+		<value>服务类型</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource32.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource32.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource32.HeaderText" xml:space="preserve">
+		<value>故障类型</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource33.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource33.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource33.HeaderText" xml:space="preserve">
+		<value>工作描述</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource34.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource34.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource34.HeaderText" xml:space="preserve">
+		<value>工作状态</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource8.HeaderText" xml:space="preserve">
+		<value>名字</value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewBoundColumnResource9.HeaderText" xml:space="preserve">
+		<value>租户联络人类型</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.CommandText" xml:space="preserve">
+		<value>删除</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.ConfirmText" xml:space="preserve">
+		<value>请在查看个案前先保存该租户。\n\n确定要继续吗？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource10.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.CommandText" xml:space="preserve">
+		<value>编辑</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource3.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.CommandText" xml:space="preserve">
+		<value>删除</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.ConfirmText" xml:space="preserve">
+		<value>确定删除这个项目？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource4.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.CommandText" xml:space="preserve">
+		<value>编辑</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource5.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.CommandText" xml:space="preserve">
+		<value>删除</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.ConfirmText" xml:space="preserve">
+		<value>确定删除这个项目？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource6.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.CommandText" xml:space="preserve">
+		<value>编辑</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.ConfirmText" xml:space="preserve">
+		<value>请在编辑租户活动前先保存该租户。\n\n确定要继续吗？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource7.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.CommandText" xml:space="preserve">
+		<value>删除</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.ConfirmText" xml:space="preserve">
+		<value>请在查看租户活动前先保存该租户。\n\n确定要继续吗？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource8.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.AccessibleHeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.CommandText" xml:space="preserve">
+		<value>编辑</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.ConfirmText" xml:space="preserve">
+		<value>请在编辑个案前先保存该租户。\n\n确定要继续吗？</value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.FooterText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.HeaderText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewButtonColumnResource9.Text" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewCommandResource3.CommandText" xml:space="preserve">
+		<value>添加</value>
+	</data>
+	<data name="UIGridViewCommandResource3.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewCommandResource4.CommandText" xml:space="preserve">
+		<value>删除所选</value>
+	</data>
+	<data name="UIGridViewCommandResource4.ConfirmText" xml:space="preserve">
+		<value>确实删除所选的项目？</value>
+	</data>
+	<data name="UIGridViewCommandResource5.CommandText" xml:space="preserve">
+		<value>添加</value>
+	</data>
+	<data name="UIGridViewCommandResource5.ConfirmText" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UIGridViewCommandResource6.CommandText" xml:space="preserve">
+		<value>删除所选</value>
+	</data>
+	<data name="UIGridViewCommandResource6.ConfirmText" xml:space="preserve">
+		<value>确实删除所选的项目？</value>
+	</data>
+	<data name="UISeparator1Resource1.Caption" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UISeparator1Resource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="updatedOnResource1.Caption" xml:space="preserve">
+		<value>更新日期/时间</value>
+	</data>
+	<data name="updatedOnResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="updatedOnResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="updatedOnResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UserLoginNameResource1.ErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UserLoginNameResource1.ToolTip" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="UserLoginNameResource1.ValidationRegexErrorMessage" xml:space="preserve">
+		<value></value>
+	</data>
+	<data name="panelResource1.Caption" xml:space="preserve">
+		<value>租户</value>
+	</data>
+	<data name="objectBaseResource1.ObjectNameCaption" xml:space="preserve">
+		<value>租户名</value>
+	</data>
+</root>

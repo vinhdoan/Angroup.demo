@@ -1,0 +1,1715 @@
+﻿html, body
+{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background-color: #ebebeb;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, button, input, table, textarea, .win-textarea, select, option
+{
+    letter-spacing: 0.02em;
+    font-family: Segoe UI, Arial, Helvetica, Sans-Serif;
+}
+
+
+a, a:visited
+{
+    color: #1F497D;
+}
+
+a:focus
+{
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+table, select, input, textarea
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+    color: black;
+}
+
+.field-error, .field-error input, .field-error select, .field-error textarea
+{
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+
+.field-required, .field-required input, .field-required select, .field-required textarea
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+    color: #0000cc;
+}
+
+br
+{
+    clear: both;
+}
+
+
+.separator
+{
+    border-bottom: solid 1px #dddddd;
+    font-weight: bold;
+    font-size: 9pt;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 12px 0px;
+    clear: both;
+}
+
+.treeview
+{
+    background-color: #e6e6fa;
+}
+
+.treenode
+{
+    color: Gray;
+}
+
+.treenode a
+{
+    color: blue;
+}
+
+.webpart-zonecontainer
+{
+    padding: 0px 5px 0px 5px;
+    border-left: dashed 1px gray;
+}
+
+.webpart-zonecontainerleft
+{
+    padding: 0px 5px 0px 5px;
+}
+
+.contextmenu
+{
+    width: 200px;
+    border: solid 1px #777777;
+    background-color: #eeeeee;
+    padding: 5px 5px 3px 5px;
+}
+
+.contextmenu div
+{
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+}
+
+.contextmenu div a
+{
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    background-color: #eeeeee;
+    display: inline;
+    color: #39639d;
+    text-decoration: underline;
+}
+
+.searchabledropdown a
+{
+    padding: 0px 2px 0px 2px;
+    color: Black;
+    background-color: White;
+    cursor: hand;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.sddnormal
+{
+    border: solid 1px silver;
+    background-color: white;
+    padding: 2px 2px 2px 2px;
+    background-image: url('../../images/sdd0.gif');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.sddhover
+{
+    border: solid 1px black;
+    background-color: white;
+    padding: 2px 2px 2px 2px;
+    background-image: url('../../images/sdd1.gif');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.sddsearch
+{
+    border: solid 1px black;
+    background-color: white;
+    padding: 2px 2px 2px 2px;
+    background-image: url('../../images/sdds.gif');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/*Menu Style*/
+.menu
+{
+    min-width: 980px;
+    color: white;
+    background-color: Black;
+    border-bottom: solid 1px #333333;
+}
+
+.menu-main
+{
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+
+.menu-logo
+{
+    color: white;
+    font-size: 1.85em;
+    background-repeat: no-repeat;
+    width: 500px;
+}
+
+.menu-top td
+{
+    font-family: Segoe UI, Arial;
+    padding-top: 5px;
+    padding-left: 15px;
+    min-height: 10px;
+}
+
+
+.menu-top a, .menu-top a:visited, .menu-top a:visited
+{
+    height: 22px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-profile a, .menu-profile a:visited, .menu-profile a:visited
+{
+    color: White;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 1.12em;
+}
+
+.menu-profile a:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.menu-apptop
+{
+    background-color: #002157;
+}
+
+
+.menu-createnew a div
+{
+    cursor: hand;
+    padding: 4px 4px 4px 4px;
+}
+
+.menu-createnew a:hover div
+{
+    background-color: ButtonFace;
+    cursor: pointer;
+    padding: 4px 4px 4px 4px;
+}
+
+.menu-staticitem a
+{
+    text-decoration: none;
+    display: inline-block;
+    color: #bbbbbb;
+    font-size: 11pt;
+    cursor: pointer;
+    text-transform: lowercase;
+    padding: 5px 12px 5px 12px;
+    height: 18px;
+    border-bottom: solid 4px black;
+}
+
+.menu-staticitem a:hover, .menu-staticitem a:active
+{
+    color: white;
+    font-size: 11pt;
+    cursor: pointer;
+    text-transform: lowercase;
+    padding: 5px 12px 5px 12px;
+    height: 18px;
+    border-bottom: solid 4px white;
+}
+
+
+/*
+.menu-staticitem a div
+{
+    font-weight: bold;
+	cursor: hand;
+	color: White;
+    padding: 8px 8px 8px 8px;
+}
+
+.menu-staticitem a:hover div
+{
+    font-weight: bold;
+    background-color: #4f81bd;
+	cursor: hand;
+    padding: 8px 8px 8px 8px;
+}
+*/
+.menu-dropdown
+{
+    background-color: white;
+    border: solid 1px #1F497D;
+    z-index: 1000000;
+}
+
+
+.menu-dynamicitemheader
+{
+    display: inline-block;
+    background-color: #0058b3;
+    color: white;
+    font-size: 10pt;
+    cursor: default;
+    padding: 2px 24px 2px 16px;
+    width: 100%;
+    font-weight: bold;
+}
+
+a.menu-dynamicitem
+{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #107FC9;
+    border-bottom: solid 1px #0E4EAD;
+    color: white;
+    font-size: 10pt;
+    cursor: pointer;
+    padding: 8px 24px 8px 16px;
+    width: 100%;
+}
+
+a.menu-dynamicitem:hover, a.menu-dynamicitem:active
+{
+    background-color: black;
+    border-bottom: solid 1px #0E4EAD;
+    color: white;
+    cursor: pointer;
+    padding: 8px 24px 8px 16px;
+}
+
+a.menu-dynamicitem2
+{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #0058b3;
+    border-bottom: solid 1px #004080;
+    color: white;
+    font-size: 10pt;
+    cursor: pointer;
+    padding: 8px 24px 8px 16px;
+    width: 100%;
+}
+
+a.menu-dynamicitem2:hover, a.menu-dynamicitem2:active
+{
+    background-color: black;
+    border-bottom: solid 1px #004080;
+    color: white;
+    cursor: pointer;
+    padding: 8px 24px 8px 16px;
+}
+/*
+.menu-dynamicitem a div
+{
+    background-color: white;
+	color: #1F497D;
+	cursor: hand;
+    padding: 4px 16px 4px 16px;
+    
+}
+
+.menu-dynamicitem a:hover div
+{
+    background-color: #1F497D;
+    color: white;
+	cursor: hand;
+    padding: 4px 16px 4px 16px;
+}
+*/
+.hint
+{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.hint table
+{
+    border: solid 1px #cccccc;
+    background-color: #eeece1;
+}
+
+.hint table table
+{
+    border: solid 1px #cccccc;
+    background-color: white;
+}
+/* Grid Style Settings */
+.grid
+{
+    border: none;
+    border-spacing: 0;
+}
+
+.grid-headerscrollable
+{
+    background-color: #eeeeee;
+    color: #555555;
+}
+
+.grid-rowscrollable
+{
+    border-left: solid 1px #cfcfcf;
+    border-right: solid 1px #cfcfcf;
+    border-bottom: solid 1px #cfcfcf;
+    border: none;
+}
+
+.grid-footerscrollable
+{
+    border-top: solid 2px #aaaaaa;
+    border-bottom: solid 1px #cccccc;
+}
+
+.grid-caption div
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.000em;
+    color: #666666;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 0px 0px;
+    color: #777777;
+    clear: both;
+}
+
+.grid-caption-error div, .grid-caption-error img
+{
+    color: #cc0000;
+    vertical-align: middle;
+}
+
+
+.grid-caption-error div
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.000em;
+}
+
+.grid-caption-error
+{
+    background-color: #ffcccc;
+    color: #cc0000;
+}
+
+.grid-command
+{
+    border-left: solid 1px #dddddd;
+    border-right: solid 1px #dddddd;
+    border-top: solid 1px #dddddd;
+    padding: 6px 8px 6px 8px;
+    background-color: #eeece1;
+}
+
+.grid-required div
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.000em;
+    padding: 0px 0px 2px 2px;
+    margin: 8px 0px 0px 0px;
+    color: #0000cc;
+    clear: both;
+}
+.grid-header
+{
+    line-height: 1.5em;
+    background-color: #ebebeb;
+    color: Black;
+    color: #24A0DA;
+    border: none;
+    text-transform: uppercase;
+    font-size: 9pt;
+}
+
+.grid-header a, .grid-header a:visited
+{
+    font-size: 9pt;
+    font-family: Segoe UI;
+    color: black;
+    font-weight: bold;
+    color: #3b5998;
+    color: #24A0DA;
+    text-decoration: none;
+}
+
+.grid-header a:hover
+{
+    text-decoration: underline;
+}
+
+.grid-header th, .grid-header td
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #666666;
+    color: #24A0DA;
+    white-space: normal;
+    border-top: none;
+    border-bottom: solid 1px #777777;
+    border-left: dotted 1px #777777;
+    padding: 4px 6px 4px 6px;
+}
+.grid-dayheader
+{
+    border: none;
+    padding: 3px 3px 3px 3px;
+    background-color: #eeece1;
+}
+
+.grid-day
+{
+    text-align: center;
+    padding: 3px 3px 3px 3px;
+}
+
+.grid-day-big
+{
+    padding: 3px 3px 3px 3px;
+}
+
+.grid-footer
+{
+    border-top: solid 2px #cccccc;
+    border-bottom: solid 1px #cccccc;
+}
+
+.grid-footer td
+{
+    font-weight: bold;
+    border: none;
+    height: 16px;
+    border-bottom: solid 1px #dddddd;
+    padding: 4px 6px 4px 6px;
+}
+
+.grid-row
+{
+    border: none;
+    background-color: #FFF;
+}
+
+.grid-row td
+{
+    border-bottom: solid 1px #cccccc;
+    white-space: normal;
+    padding: 4px 6px 4px 6px;
+    min-height: 2.25em;
+    color: #444;
+}
+
+.grid-emptyrow td
+{
+    background-color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #cccccc;
+    white-space: normal;
+    text-align: center;
+    vertical-align: middle;
+    color: Gray;
+}
+
+.grid-row td table
+{
+    border: none;
+    padding: 0 0 0 0;
+    height: auto;
+}
+
+.grid-row td table td
+{
+    padding: 0 0 0 0;
+    border: none;
+    height: auto;
+}
+
+
+.grid-pager td
+{
+    padding: 2px 4px 8px 0px;
+    border: none;
+}
+
+.grid-pager td div
+{
+    display: inline-block;
+    float: left;
+}
+
+.grid-pager td div, .grid-pager td div table, .grid-pager td div table td
+{
+    border: none;
+}
+
+.grid-pager a
+{
+    display: inline-block;
+    padding-top: 8px;
+    height: 26px;
+    width: 34px;
+    text-align: center;
+    border-left: solid 1px #dddddd;
+    border-right: solid 1px #dddddd;
+    color: black;
+    text-decoration: none;
+}
+
+.grid-pager a:hover
+{
+    border-left: solid 1px #dddddd;
+    border-right: solid 1px #dddddd;
+    background-color: #eeeeee;
+    color: #0077ff;
+}
+
+.grid-pager span
+{
+    display: inline-block;
+    padding-top: 8px;
+    height: 26px;
+    width: 34px;
+    text-align: center;
+    border-left: solid 1px #dddddd;
+    border-right: solid 1px #dddddd;
+    background-color: #dddddd;
+    color: black;
+    font-weight: bold;
+}
+
+.grid-pager td div, .grid-pager td div table, .grid-pager td div table td
+{
+    border: none;
+}
+
+.div-form
+{
+    border: none;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+    min-width: 800px;
+}
+
+.div-main
+{
+    padding: 0px 0px 0px 0px;
+}
+
+.div-tree
+{
+    background-color: white;
+}
+
+
+.task-title
+{
+    font-weight: bold;
+    color: white;
+    background-color: #3377ff;
+    height: 20px;
+}
+
+.task-header
+{
+    font-weight: bold;
+    color: White;
+    background-color: #66ccff;
+    height: 20px;
+}
+
+.task-urgentitem
+{
+    color: red;
+}
+
+.task-item
+{
+    height: 20px;
+}
+
+.task-altitem
+{
+    height: 20px;
+    background-color: #eeece1;
+}
+
+.tooltip-header
+{
+    padding: 2px 2px 2px 2px;
+    background-color: #aaddff;
+    border: solid 1px #aaddff;
+}
+
+.tooltip-body
+{
+    padding: 2px 2px 2px 2px;
+    background-color: white;
+    border: solid 1px #aaddff;
+}
+
+
+.object-name, .search-name
+{
+    padding-left: 8px;
+    font-family: Trebuchet MS;
+    font-size: 13pt;
+    color: white;
+    background-color: #4f81bd;
+    background-image: url(../../images/top2-corporate.jpg);
+    border: 0 0 0 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.search-caption
+{
+    font-size: 17pt;
+    color: #0077ff;
+}
+
+
+.object-name a, .search-name a
+{
+    color: white;
+    padding-bottom: 4px;
+}
+
+.object-buttons, .search-buttons, .subobject-buttons
+{
+    padding: 6px 8px 6px 8px;
+    background-color: #5cd2f2;
+    background-color: #ebebeb; /*color: #f0f0f0;*/
+    vertical-align: middle;
+}
+
+.home-buttons
+{
+    padding: 6px 8px 6px 8px;
+    color: #3B5998;
+    background-color: #C3D2F9;
+    border-top: 1px solid #d4dae8;
+    border-bottom: 1px solid #d4dae8;
+    border-left: 1px solid #d4dae8;
+    border-right: 1px solid #d4dae8;
+}
+
+.object-buttons a, .search-buttons a, .subobject-buttons a, .home-buttons a
+{
+    /* color: #1F497D;*/
+}
+
+.object-message, .search-message
+{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px black;
+    background-color: #ffffaa;
+}
+
+.subobject-panel
+{
+    border: solid 1px #77eeff;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+}
+
+.dashboard-container
+{
+    font-family: Tahoma;
+    width: 300px;
+    float: left;
+    border: solid 1px #9C9E73;
+}
+
+.dashboard-header
+{
+    font-family: Tahoma;
+    width: 300px;
+    height: 20px;
+    background-color: #C3C49C;
+    font-weight: bold;
+    color: black;
+    vertical-align: middle;
+}
+
+.dashboard-iframe
+{
+    font-family: Tahoma;
+    width: 300px;
+    height: 320px;
+}
+
+.gantt- .gantt-PendingAssignment, .gantt-PendingHelpdesk, .gantt-PendingPlanning
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px blue;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #bbbbff;
+}
+
+.gantt-PendingApproval
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px blue;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #bbbbff;
+}
+
+.gantt-PendingAssignment
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px blue;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #bbbbff;
+}
+
+.gantt-PendingExecution
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px green;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #bbffbb;
+}
+
+
+.gantt-Rejected, .gantt-Cancelled, .gantt-Close
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px gray;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #eeeeee;
+}
+
+.gantt-PendingClosure
+{
+    height: 16px;
+    width: 95%;
+    border: solid 1px cyan;
+    font-family: Tahoma;
+    font-size: 8pt;
+    background-color: #bbffff;
+}
+
+.gantt-background
+{
+    background-color: #ffffff;
+    border: solid 1px #cccccc;
+    font-family: Tahoma;
+    font-size: 8pt;
+    padding: 1px 1px 1px 1px;
+    height: 0px;
+}
+
+.gantt-rangeheader
+{
+    background-color: #dddddd;
+    border: solid 1px #cccccc;
+    font-family: Tahoma;
+    font-size: 7pt;
+    font-weight: normal;
+    padding: 0px 1px 0px 1px;
+    height: 0px;
+}
+
+.gantt-today
+{
+    background-color: #ddddff;
+    border: solid 1px #cccccc;
+    font-family: Tahoma;
+    font-size: 8pt;
+    padding: 1px 1px 1px 1px;
+    height: 0px;
+}
+
+.gantt-weekend
+{
+    background-color: #dddddd;
+    border: solid 1px #cccccc;
+    font-family: Tahoma;
+    font-size: 8pt;
+    font-weight: normal;
+    padding: 1px 1px 1px 1px;
+    height: 0px;
+}
+
+.gantt-title
+{
+    background-color: #dddddd;
+    border: solid 1px #cccccc;
+    font-family: Tahoma;
+    font-size: 8pt;
+    font-weight: normal;
+    height: 0px;
+}
+
+.gantt-tooltip-body
+{
+    width: 250px;
+    background-color: #ffffff;
+    border: solid 1px #cccccc;
+    padding: 2px 4px 2px 4px;
+}
+
+.gantt-tooltip-header
+{
+    width: 260px;
+    background-color: #ddddff;
+    border: solid 1px #bbbbff;
+    padding: 2px 4px 2px 4px;
+}
+
+.gantt-complete
+{
+    height: 4px;
+    background-color: black;
+    border: solid 1px black;
+}
+
+/*----------------------------------------------
+ CSS for charts
+----------------------------------------------*/
+
+.chartsubmitbutton
+{
+    font-family: Verdana, Sans-Serif;
+    font-size: 8pt;
+    background-color: #ddddff;
+    border: solid 1px #608161;
+}
+.chartdroparea
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    border-style: groove;
+    border-width: thin;
+    padding: 2px;
+}
+
+.chartsetuparea
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    border-bottom-width: 2px;
+    border-bottom-style: ridge;
+    padding: 2px;
+}
+
+
+
+.advancedreportagggroupheader
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: #0000A3;
+    background-color: #ddffdd;
+    padding: 2px;
+}
+
+.advancedreportgroup
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    background-color: #ffffdd;
+    padding: 2px;
+}
+
+.advancedreportitem
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    background-color: white;
+    padding: 2px;
+}
+
+.reportgridpager
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    padding: 4px;
+}
+
+.advancedreportaltitem
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    background-color: #eeeeee;
+    padding: 2px;
+}
+
+.reporttitle
+{
+    background: transparent url(../../images/reportTop.gif) top left;
+    font-weight: bold;
+    font-size: 9pt;
+    font-family: Tahoma;
+    color: white;
+    height: 25px;
+}
+
+
+.advancedreportungroupcolheader
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: black;
+    background-color: #ddddff;
+}
+
+.advancedreportgroupcolheader
+{
+    font-family: Tahoma;
+    font-size: 8pt;
+    color: blue;
+    background-color: #ddddff;
+}
+
+
+.advancedreportdropnormal
+{
+    background-color: #ddddff;
+}
+
+.advancedreportdropover_agg
+{
+    border: solid 1px #0000ff;
+}
+
+.advancedreportdropover_ungroup
+{
+    border: solid 1px black;
+    background-color: Black;
+}
+
+
+.advancedreportdropover_ungrouppivot
+{
+    border: solid 1px black;
+    background-color: Black;
+}
+
+
+.advancedreportdropover_groupY
+{
+    border: solid 2px #7777ff;
+    background-color: #7777ff;
+}
+
+
+.advancedreportdropover_groupx
+{
+    border: solid 1px #7777ff;
+    background-color: #7777ff;
+}
+
+.reportheaderbuttonnormal
+{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+    border: solid 1px #4A6F9B;
+    cursor: pointer;
+    height: 21px;
+    height: 21px;
+}
+
+
+.reportheaderbuttonmouseover
+{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+    background-color: #6085B0;
+    border: solid 1px #6085B0;
+    cursor: pointer;
+    height: 21px;
+    width: 21px;
+}
+
+.advancedreportbuttonnormal
+{
+    border: solid 1px #AED3F0;
+    cursor: pointer;
+    height: 21px;
+    width: 21px;
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+    background-color: #AED3F0;
+}
+
+
+.advancedreportbuttonmouseover
+{
+    background-color: #8BBEE7;
+    border: solid 1px #3F668F;
+    cursor: pointer;
+    height: 21px;
+    width: 21px;
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+}
+
+.reportbarleft
+{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+    border-right-style: solid;
+    border-right-color: #103B5D;
+    border-right-width: 1px;
+    border-top-style: solid;
+    border-top-color: #103B5D;
+    border-top-width: 1px;
+    background-color: #AED3F0;
+}
+.reportbackground
+{
+    border-top-width: 2px;
+    border-top-style: groove;
+    border-top-color: #5F3FD6;
+    border-left-style: groove;
+    border-left-width: 2px;
+    border-left-color: #5F3FD6;
+    border-right-style: inset;
+    border-right-width: 2px;
+    border-right-color: #6887BB;
+    border-bottom-style: inset;
+    border-bottom-width: 2px;
+    border-bottom-color: #6887BB;
+}
+
+.reportbarright
+{
+    font-weight: normal;
+    font-size: 9pt;
+    font-family: Tahoma;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #103B5D;
+    background-color: #AED3F0;
+}
+.leftpanelrow
+{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #103B5D;
+}
+
+.parallelviewdivide
+{
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-right-color: #6887BB;
+}
+
+.tabstrip
+{
+    text-align: right;
+    width: 100%;
+    background: #cccccc;
+    padding: 8px 0px 0px 0px;
+    line-height: normal;
+}
+
+.tabstrip ul
+{
+    margin: 0;
+    padding: 3px 0 0 3px;
+    list-style: none;
+}
+.tabstrip li
+{
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+.tabstrip a
+{
+    float: left;
+    background: #eeeeee url("../../images/tab-gray.gif") no-repeat left top;
+    padding: 0 0 0 9px;
+    text-decoration: none;
+    color: #000;
+}
+.tabstrip a span
+{
+    float: left;
+    display: block;
+    background: #eeeeee url("../../images/tab-gray.gif") no-repeat right top;
+    padding: 4px 15px 3px 6px;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.tabstrip a span
+{
+    float: none;
+}
+/* End IE5-Mac hack */
+.tabstrip .selected a span
+{
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+.tabstrip a:hover, .tabstrip a:hover span
+{
+    background-color: #E4F1BC;
+    color: #000;
+}
+.tabstrip .selected a span, .tabstrip .selected a
+{
+    background-color: #E4F1BC;
+    font-weight: bold;
+    color: Blue;
+}
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    z-index: 99999;
+    overflow: auto;
+}
+
+.modalPopup
+{
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 8px 8px 8px 8px;
+    width: 550px;
+    z-index: 100000;
+    overflow: auto;
+}
+
+
+/*----------------------------------------
+   v7.0 styles
+----------------------------------------*/
+.tabstrip-bg
+{
+    background-image: url(../../images/page-bg.gif);
+}
+
+.tabstrip-ver
+{
+    width: 160px;
+    background: none;
+    padding: 0px 0px 0px 0px;
+    line-height: normal;
+    position: fixed;
+    top: 85px;
+    left: 0px;
+}
+
+.tabstrip-ver ul
+{
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+}
+.tabstrip-ver li
+{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.tabstrip-ver a
+{
+    background: none;
+    padding: 0px 0px 0px 0px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+.tabstrip-ver a span
+{
+    display: block;
+    background: none;
+    padding: 8px 12px 8px 12px;
+    border-bottom: solid 1px white;
+    width: 136px;
+    cursor: pointer;
+}
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+.tabstrip-ver a span
+{
+    float: none;
+}
+/* End IE5-Mac hack */
+.tabstrip-ver .selected a span
+{
+}
+.tabstrip-ver a:hover, .tabstrip-ver a:hover span
+{
+    background-color: #E4F1BC;
+    color: #000;
+}
+.tabstrip-ver .selected a
+{
+    padding: 0px 0px 0px 0px;
+    background-color: white;
+}
+
+.tabstrip-ver .selected a span
+{
+    padding: 8px 12px 8px 12px;
+    background-color: white;
+}
+/*
+btn ,tl 
+{	
+    display: inline-block;
+    text-decoration: none; 
+    color: black; 
+    cursor: pointer; 
+    border: solid 1px #bbbbbb;
+    font-weight: bold;
+    background-image: url(../../images/button-gray.gif); 
+}
+
+.btn .tr 
+{ 
+    display: inline-block; 
+    border: solid 1px #ffffff; 
+    background-image: url(../../images/button-gray.gif); 
+    padding: 2px 8px 2px 8px; 
+}
+
+.btn:hover .tr 
+{ 
+    background-image: url(../../images/button-gray-over.gif); 
+}
+*/
+
+/* ---- Buttons ---- */
+
+/* common styles */
+
+
+.btnblack-d, .btnblack-d:hover, .btnblack-d:active, .btnblue-d, .btnblue-d:hover, .btnblue-d:active, .btngray-d, .btngray-d:hover, .btngray-d:active .btnred-d, .btnred-d:hover, .btnred-d:active, .btn-d, .btn-d:hover, .btn-d:active
+{
+    opacity: 0.25;
+    -moz-opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+
+.btn, .btn-d, .btnblack, .btnblack-d, .btnblue, .btnblue-d, .btngray, .btngray-d, .btnred, .btnred-d
+{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-color: #e6e6e6;
+    border: solid 1px #aaaaaa;
+    line-height: 129%;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 6px 8px 6px 8px;
+    filter: none;
+    text-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.btn img, .btn-d img, .btnblack img, .btnblack-d img, .btnblue img, .btnblue-d img, .btngray img, .btngray-d img, .btnred img, .btnred-d img
+{
+    height: 16px;
+    width: 16px;
+}
+
+
+/* standard button */
+
+.btn, .btn-d, .btn:visited, .btn-d:hover, .btn-d:active, .btn-d:visited
+{
+    background-color: #e6e6e6;
+    border-color: #aaaaaa;
+    filter: none;
+}
+
+.btn:hover
+{
+    background-color: white;
+}
+
+/* black button */
+
+.btnblack, .btnblack:visited, .btnblack-d, .btnblack-d:hover, .btnblack-d:active, .btnblack-d:visited
+{
+    color: white;
+    background-color: #222222;
+    border-color: #444444;
+}
+
+.btnblack:hover
+{
+    background-color: #666666;
+    background-color: #2bc3ff;
+    border-color: #666666;
+}
+
+/* blue button */
+
+.btnblue, .btnblue:visited, .btnblue-d, .btnblue-d:hover, .btnblue-d:active, .btnblue-d:visited
+{
+    /*     margin-bottom: 5px;          background-color: #0378b5;     border: solid 1px #88ddff;     */
+    color: #ffffff;
+    background-color: #49afcd !important;
+    border-color: #49afcd;
+    filter: none;
+}
+
+.btnblue:hover
+{
+    background-color: #2bc3ff;
+    border-color: #2bc3ff;
+}
+
+/**** gray button *****/
+
+.btngray, .btngray:visited, .btngray-d, .btngray-d:hover, .btngray-d:active, .btngray-d:visited
+{
+    color: #ffffff;
+    background-color: gray;
+    border-color: gray;
+    filter: none;
+}
+
+.btngray:hover
+{
+    background-color: #aaaaaa;
+    border-color: #aaaaaa;
+}
+
+/* red button */
+
+.btnred, .btnred:visited, .btnred-d, .btnred-d:hover, .btnred-d:active, .btnred-d:visited
+{
+    color: #ffffff;
+    background-color: #FF0000;
+    border-color: #88ddff;
+    filter: none;
+}
+
+.btnred:hover
+{
+    background-color: #aaaaaa;
+    border-color: #aaaaaa;
+}
+
+.down .tr, .down:hover .tr
+{
+    background-image: url(../../images/button-gray-down.gif);
+    color: white;
+}
+
+.div-searchform
+{
+    border: solid 1px #dddddd;
+    background-color: #f7f7f7;
+    padding: 8px 8px 8px 8px;
+    clear: both;
+}
+
+.div-audit
+{
+    padding: 12px 12px 12px 12px;
+    font-family: Tahoma;
+    font-size: 9pt;
+    color: Gray;
+}
+
+.div-edit
+{
+    border: none;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+    min-width: 600px;
+}
+
+.div-tabbuttons
+{
+    padding: 8px 8px 8px 8px;
+}
+
+.div-home
+{
+    border: none;
+    background-color: white;
+    padding: 12px 12px 12px 12px;
+}
+
+.editpage
+{
+    background-color: #eeeeee;
+    font-family: Arial;
+    font-size: 9pt;
+    margin: 0px 0px 0px 0px;
+}
+
+.hint-top
+{
+    padding: 8px 0px 8px 0px;
+}
+
+.hint-top table
+{
+    border: solid 1px #cccc00;
+    background-color: #ffffaa;
+}
+
+.span-inboxdate
+{
+    padding-top: 3px;
+    color: Gray;
+    font-size: 7pt;
+}
+
+.subobject-panel
+{
+    border: solid 5px #5cd2f2;
+    background-color: #f0f0ff;
+    padding: 12px 12px 12px 12px;
+}
+
+
+.separator
+{
+    font-size: 11pt;
+}
+
+.separator2
+{
+    background-color: #6699cc;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12pt;
+    padding: 3px 0px 3px 0px;
+    margin: 10px 0px 15px 0px;
+    clear: both;
+}
+
+.separator-small
+{
+    font-weight: bold;
+    font-size: 9pt;
+    padding: 0px 0px 2px 0px;
+    margin: 8px 0px 12px 0px;
+    clear: both;
+}
+
+.div-objectbase
+{
+    padding: 8px 0px 0px 0px;
+}
+
+.div-edit
+{
+    min-height: 400px;
+}
+
+.dialog
+{
+    padding: 0px 0px 0px 0px;
+    border: solid 4px #0077aa;
+    z-index: 100000;
+}
+
+.dialog-bg
+{
+    background-color: White;
+    filter: alpha(opacity=60);
+    opacity: 0.7;
+    z-index: 99999;
+}
+
+.dialog-title
+{
+    background-color: #0088bb;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px 8px 8px 8px;
+}
+
+.dialog-main
+{
+    background-color: White;
+    padding: 20px 8px 20px 8px;
+}
+
+.dialog-buttons
+{
+    border-top: solid 1px #cccccc;
+    background-color: #dddddd;
+    padding: 12px 8px 12px 8px;
+    text-align: right;
+}
+
+.div-audit table
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+    color: Gray;
+}
+
+.div-audit-int
+{
+    border: solid 1px #dddddd;
+    background-color: #eeeeee;
+}
+
+.div-indent
+{
+    padding-left: 20px;
+}
+
+.text-right
+{
+    text-align: right;
+}
+
+.field-errormessage
+{
+    color: Red;
+    font-weight: bold;
+}
+
+.field-error
+{
+    background-color: white;
+    color: #cc0000;
+}
+
+
+.stateBox
+{
+    background-color: Pink;
+    text-align: center;
+    font-weight: bold;
+    border: .1em solid #900;
+    position: absolute;
+    z-index: -1;
+}
+
+.stateBox-current
+{
+    background-color: LightBlue;
+    text-align: center;
+    font-weight: bold;
+    border: .1em solid #900;
+    position: absolute;
+    z-index: -1;
+}
+
+.actionBox
+{
+    color: White;
+    font-weight: bold;
+    position: absolute;
+    z-index: 4;
+    background-color: Gray;
+    border: .1em solid #900;
+}
+
+.stateBox div
+{
+    font-size: 9px;
+    font-weight: normal;
+}
+
+.stateBox-current div
+{
+    font-size: 9px;
+    font-weight: normal;
+}
+
+
+.field-hint
+{
+    font-family: Segoe UI, Arial;
+    font-size: 8pt;
+    color: Gray;
+}
+
+.text-sub
+{
+    font-family: Tahoma;
+    font-size: 9pt;
+    color: Gray;
+}
+
+.object-base, .object-base input
+{
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.hometitle
+{
+    font-family: Segoe UI Light;
+    padding: 6px 9px 6px 9px;
+    margin-bottom: 4px;
+    font-size: 150%;
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+﻿<RuleDefinitions xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+	<RuleDefinitions.RuleSets>
+		<RuleSet Name="CreateWorksBySchedulerService" ChainingBehavior="Full" Description="{p3:Null}" xmlns:p3="http://schemas.microsoft.com/winfx/2006/xaml">
+			<RuleSet.Rules>
+				<Rule Name="CreateWorksBySchedulerService" ReevaluationBehavior="Always" Priority="0" Description="{p3:Null}" Active="True">
+					<Rule.ThenActions>
+						<RuleStatementAction>
+							<RuleStatementAction.CodeDomStatement>
+								<ns0:CodeExpressionStatement LinePragma="{p3:Null}" xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodeExpressionStatement.Expression>
+										<ns0:CodeMethodInvokeExpression>
+											<ns0:CodeMethodInvokeExpression.Method>
+												<ns0:CodeMethodReferenceExpression MethodName="CreateWorksBySchedulerService">
+													<ns0:CodeMethodReferenceExpression.TargetObject>
+														<ns0:CodeCastExpression TargetType="LogicLayer.OScheduledWork, LogicLayer, Version=6.0.3504.21446, Culture=neutral, PublicKeyToken=null">
+															<ns0:CodeCastExpression.Expression>
+																<ns0:CodePropertyReferenceExpression PropertyName="CurrentObject">
+																	<ns0:CodePropertyReferenceExpression.TargetObject>
+																		<ns0:CodeThisReferenceExpression />
+																	</ns0:CodePropertyReferenceExpression.TargetObject>
+																</ns0:CodePropertyReferenceExpression>
+															</ns0:CodeCastExpression.Expression>
+														</ns0:CodeCastExpression>
+													</ns0:CodeMethodReferenceExpression.TargetObject>
+												</ns0:CodeMethodReferenceExpression>
+											</ns0:CodeMethodInvokeExpression.Method>
+										</ns0:CodeMethodInvokeExpression>
+									</ns0:CodeExpressionStatement.Expression>
+								</ns0:CodeExpressionStatement>
+							</RuleStatementAction.CodeDomStatement>
+						</RuleStatementAction>
+					</Rule.ThenActions>
+					<Rule.Condition>
+						<RuleExpressionCondition Name="{p3:Null}">
+							<RuleExpressionCondition.Expression>
+								<ns0:CodePrimitiveExpression xmlns:ns0="clr-namespace:System.CodeDom;Assembly=System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+									<ns0:CodePrimitiveExpression.Value>
+										<ns1:Boolean xmlns:ns1="clr-namespace:System;Assembly=mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">true</ns1:Boolean>
+									</ns0:CodePrimitiveExpression.Value>
+								</ns0:CodePrimitiveExpression>
+							</RuleExpressionCondition.Expression>
+						</RuleExpressionCondition>
+					</Rule.Condition>
+				</Rule>
+			</RuleSet.Rules>
+		</RuleSet>
+	</RuleDefinitions.RuleSets>
+</RuleDefinitions>
